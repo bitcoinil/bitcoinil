@@ -7,10 +7,16 @@
 
 #include <hash.h>
 #include <tinyformat.h>
+#include <util/strencodings.h>
 
 uint256 CBlockHeader::GetHash() const
 {
     return SerializeHash(*this);
+}
+
+uint256 CBlockHeader::GetPoWHash() const
+{
+  return HashX17(BEGIN(nVersion),END(nNonce));
 }
 
 std::string CBlock::ToString() const

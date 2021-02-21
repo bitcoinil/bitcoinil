@@ -116,6 +116,8 @@ public:
     explicit uint160(const std::vector<unsigned char>& vch) : base_blob<160>(vch) {}
 };
 
+
+
 /** 256-bit opaque blob.
  * @note This type is called uint256 for historical reasons only. It is an
  * opaque blob of 256 bits and has no integer operations. Use arith_uint256 if
@@ -147,6 +149,26 @@ inline uint256 uint256S(const char *str)
 inline uint256 uint256S(const std::string& str)
 {
     uint256 rv;
+    rv.SetHex(str);
+    return rv;
+}
+
+class uint512 : public base_blob<512> {
+public:
+    uint512() {}
+    explicit uint512(const std::vector<unsigned char>& vch) : base_blob<512>(vch) {}
+    
+    uint256 trim256() const
+    {
+        uint256 result;
+        memcpy((void*)&result, (void*)m_data, 32);
+        return result;
+    } 
+};
+
+inline uint512 uint512S(const std::string& str)
+{
+    uint512 rv;
     rv.SetHex(str);
     return rv;
 }

@@ -3,21 +3,21 @@ dnl Distributed under the MIT software license, see the accompanying
 dnl file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 dnl Helper for cases where a qt dependency is not met.
-dnl Output: If qt version is auto, set bitcoin_enable_qt to false. Else, exit.
+dnl Output: If qt version is auto, set bitcoinil_enable_qt to false. Else, exit.
 AC_DEFUN([BITCOIN_QT_FAIL],[
   if test "x$bitcoin_qt_want_version" = xauto && test "x$bitcoin_qt_force" != xyes; then
-    if test "x$bitcoin_enable_qt" != xno; then
+    if test "x$bitcoinil_enable_qt" != xno; then
       AC_MSG_WARN([$1; bitcoin-qt frontend will not be built])
     fi
-    bitcoin_enable_qt=no
-    bitcoin_enable_qt_test=no
+    bitcoinil_enable_qt=no
+    bitcoinil_enable_qt_test=no
   else
     AC_MSG_ERROR([$1])
   fi
 ])
 
 AC_DEFUN([BITCOIN_QT_CHECK],[
-  if test "x$bitcoin_enable_qt" != xno && test "x$bitcoin_qt_want_version" != xno; then
+  if test "x$bitcoinil_enable_qt" != xno && test "x$bitcoin_qt_want_version" != xno; then
     true
     $1
   else
@@ -94,7 +94,7 @@ dnl   BITCOIN_QT_CONFIGURE([MINIMUM-VERSION])
 dnl
 dnl Outputs: See _BITCOIN_QT_FIND_LIBS
 dnl Outputs: Sets variables for all qt-related tools.
-dnl Outputs: bitcoin_enable_qt, bitcoin_enable_qt_dbus, bitcoin_enable_qt_test
+dnl Outputs: bitcoinil_enable_qt, bitcoinil_enable_qt_dbus, bitcoinil_enable_qt_test
 AC_DEFUN([BITCOIN_QT_CONFIGURE],[
   qt_version=">= $1"
   qt_lib_prefix="Qt5"
@@ -216,14 +216,14 @@ AC_DEFUN([BITCOIN_QT_CONFIGURE],[
   dnl enable qt support
   AC_MSG_CHECKING([whether to build ]AC_PACKAGE_NAME[ GUI])
   BITCOIN_QT_CHECK([
-    bitcoin_enable_qt=yes
-    bitcoin_enable_qt_test=yes
+    bitcoinil_enable_qt=yes
+    bitcoinil_enable_qt_test=yes
     if test "x$have_qt_test" = xno; then
-      bitcoin_enable_qt_test=no
+      bitcoinil_enable_qt_test=no
     fi
-    bitcoin_enable_qt_dbus=no
+    bitcoinil_enable_qt_dbus=no
     if test "x$use_dbus" != xno && test "x$have_qt_dbus" = xyes; then
-      bitcoin_enable_qt_dbus=yes
+      bitcoinil_enable_qt_dbus=yes
     fi
     if test "x$use_dbus" = xyes && test "x$have_qt_dbus" = xno; then
       AC_MSG_ERROR([libQtDBus not found. Install libQtDBus or remove --with-qtdbus.])
@@ -232,12 +232,12 @@ AC_DEFUN([BITCOIN_QT_CONFIGURE],[
       AC_MSG_WARN([lupdate is required to update qt translations])
     fi
   ],[
-    bitcoin_enable_qt=no
+    bitcoinil_enable_qt=no
   ])
-  if test x$bitcoin_enable_qt = xyes; then
-    AC_MSG_RESULT([$bitcoin_enable_qt ($qt_lib_prefix)])
+  if test x$bitcoinil_enable_qt = xyes; then
+    AC_MSG_RESULT([$bitcoinil_enable_qt ($qt_lib_prefix)])
   else
-    AC_MSG_RESULT([$bitcoin_enable_qt])
+    AC_MSG_RESULT([$bitcoinil_enable_qt])
   fi
 
   AC_SUBST(QT_PIE_FLAGS)
