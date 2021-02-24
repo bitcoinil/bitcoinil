@@ -7,7 +7,7 @@ and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/bitcoinil/bitcoinil/issues>
 
 To receive security and update notifications, please subscribe to:
 
@@ -96,7 +96,7 @@ ZMQ On Windows
 
 Previously the ZeroMQ notification system was unavailable on Windows
 due to various issues with ZMQ. These have been fixed upstream and
-now ZMQ can be used on Windows. Please see [this document](https://github.com/bitcoin/bitcoin/blob/master/doc/zmq.md) for
+now ZMQ can be used on Windows. Please see [this document](https://github.com/bitcoinil/bitcoinil/blob/master/doc/zmq.md) for
 help with using ZMQ in general.
 
 Nested RPC Commands in Debug Console
@@ -242,7 +242,7 @@ Low-level RPC changes
 
  - A new RPC command `getmemoryinfo` has been added which will return information
    about the memory usage of Bitcoin Core. This was added in conjunction with
-   optimizations to memory management. See [Pull #8753](https://github.com/bitcoin/bitcoin/pull/8753)
+   optimizations to memory management. See [Pull #8753](https://github.com/bitcoinil/bitcoinil/pull/8753)
    for more information.
 
  - A new RPC command `bumpfee` has been added which allows replacing an
@@ -675,7 +675,7 @@ and git merge commit are mentioned.
 - #9839 `eddaa6b` [qa] Make import-rescan.py watchonly check reliable (ryanofsky)
 
 ### Documentation
-- #8332 `806b9e7` Clarify witness branches in transaction.h serialization (dcousens)
+- #8223 `806b9e7` Clarify witness branches in transaction.h serialization (dcousens)
 - #8935 `0306978` Documentation: Building on Windows with WSL (pooleja)
 - #9144 `c98f6b3` Correct waitforblockheight example help text (fanquake)
 - #9407 `041331e` Added missing colons in when running help command (anditto)

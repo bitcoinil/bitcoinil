@@ -6,7 +6,7 @@ This is a new major version release, bringing new features and other improvement
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/bitcoinil/bitcoinil/issues>
 
 Upgrading and downgrading
 =========================
@@ -331,7 +331,7 @@ practice. In future releases, a higher value may also help the network
 as a whole: stored blocks could be served to other nodes.
 
 For further information about pruning, you may also consult the [release
-notes of v0.11.0](https://github.com/bitcoin/bitcoin/blob/v0.11.0/doc/release-notes.md#block-file-pruning).
+notes of v0.11.0](https://github.com/bitcoinil/bitcoinil/blob/v0.11.0/doc/release-notes.md#block-file-pruning).
 
 `NODE_BLOOM` service bit
 ------------------------
@@ -410,9 +410,9 @@ arbitrary TCP connections inside SSL. On e.g. Ubuntu it can be installed with:
 
     sudo apt-get install stunnel4
 
-Then, to tunnel a SSL connection on 28332 to a RPC server bound on localhost on port 18332 do:
+Then, to tunnel a SSL connection on 28223 to a RPC server bound on localhost on port 18223 do:
 
-    stunnel -d 28332 -r 127.0.0.1:18332 -p stunnel.pem -P ''
+    stunnel -d 28223 -r 127.0.0.1:18223 -p stunnel.pem -P ''
 
 It can also be set up system-wide in inetd style.
 
@@ -430,8 +430,8 @@ caching. A sample config for apache2 could look like:
     SSLCertificateKeyFile /etc/apache2/ssl/server.key
 
     <Location /bitcoinrpc>
-        ProxyPass http://127.0.0.1:8332/
-        ProxyPassReverse http://127.0.0.1:8332/
+        ProxyPass http://127.0.0.1:8223/
+        ProxyPassReverse http://127.0.0.1:8223/
         # optional enable digest auth
         # AuthType Digest
         # ...

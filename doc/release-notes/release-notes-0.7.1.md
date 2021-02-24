@@ -4,12 +4,12 @@ Bitcoin version 0.7.1 is now available from:
 This is a bug-fix minor release.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/bitcoin/bitcoin/issues
+  https://github.com/bitcoinil/bitcoinil/issues
 
 Project source code is hosted at github; you can get
 source-only tarballs/zipballs directly from there:
-  https://github.com/bitcoin/bitcoin/tarball/v0.7.1  # .tar.gz
-  https://github.com/bitcoin/bitcoin/zipball/v0.7.1  # .zip
+  https://github.com/bitcoinil/bitcoinil/tarball/v0.7.1  # .tar.gz
+  https://github.com/bitcoinil/bitcoinil/zipball/v0.7.1  # .zip
 
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
 maintained by Matt Corallo to automatically keep 
@@ -77,7 +77,7 @@ Bug fixes
 
 * Clicking on a bitcoin: URI on Windows should now launch Bitcoin-Qt properly.
 
-* When running -testnet, use RPC port 18332 by default.
+* When running -testnet, use RPC port 18223 by default.
 
 * Better detection and handling of corrupt wallet.dat and blkindex.dat files.
   Previous versions would crash with a DB_RUNRECOVERY exception, this

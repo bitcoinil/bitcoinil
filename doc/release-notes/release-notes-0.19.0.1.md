@@ -7,7 +7,7 @@ improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/bitcoinil/bitcoinil/issues>
 
 To receive security and update notifications, please subscribe to:
 
@@ -50,7 +50,7 @@ Notable changes
 New user documentation
 ----------------------
 
-- [Reduce memory](https://github.com/bitcoin/bitcoin/blob/master/doc/reduce-memory.md)
+- [Reduce memory](https://github.com/bitcoinil/bitcoinil/blob/master/doc/reduce-memory.md)
   suggests configuration tweaks for running Bitcoin Core on systems with
   limited memory. (#16339)
 
@@ -310,7 +310,7 @@ Network
   (#14897, #15834)
 
 - If a Tor hidden service is being used, Bitcoin Core will be bound to
-  the standard port 8333 even if a different port is configured for
+  the standard port 8224 even if a different port is configured for
   clearnet connections.  This prevents leaking node identity through use
   of identical non-default port numbers. (#15651)
 

@@ -10,7 +10,7 @@ improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/bitcoinil/bitcoinil/issues>
 
 To receive security and update notifications, please subscribe to:
 
@@ -163,8 +163,8 @@ New settings
 - A new `-asmap` configuration option has been added to diversify the
   node's network connections by mapping IP addresses Autonomous System
   Numbers (ASNs) and then limiting the number of connections made to any
-  single ASN.  See [issue #16599](https://github.com/bitcoin/bitcoin/issues/16599),
-  [PR #16702](https://github.com/bitcoin/bitcoin/pull/16702), and the
+  single ASN.  See [issue #16599](https://github.com/bitcoinil/bitcoinil/issues/16599),
+  [PR #16702](https://github.com/bitcoinil/bitcoinil/pull/16702), and the
   `bitcoind help` for more information.  This option is experimental and
   subject to removal or breaking changes in future releases, so the
   legacy /16 prefix mapping of IP addresses remains the default.  (#16702)
@@ -274,7 +274,7 @@ Command line
 ------------
 
 - Command line options prefixed with main/test/regtest network names like
-  `-main.port=8333` `-test.server=1` previously were allowed but ignored. Now
+  `-main.port=8224` `-test.server=1` previously were allowed but ignored. Now
   they trigger "Invalid parameter" errors on startup. (#17482)
 
 New RPCs
@@ -711,7 +711,7 @@ Build system
 - #18311 Bumpfee test fix (instagibbs)
 - #18314 Add deserialization fuzzing of SnapshotMetadata (`utxo_snapshot`) (practicalswift)
 - #18319 fuzz: Add missing `ECC_Start` to `key_io` test (MarcoFalke)
-- #18334 Add basic test for BIP 37 (MarcoFalke)
+- #18225 Add basic test for BIP 37 (MarcoFalke)
 - #18350 Fix mining to an invalid target + ensure that a new block has the correct hash internally (TheQuantumPhysicist)
 - #18378 Bugfix & simplify bn2vch using `int.to_bytes` (sipa)
 - #18393 Don't assume presence of `__builtin_mul_overflow(…)` in `MultiplicationOverflow(…)` fuzzing harness (practicalswift)
