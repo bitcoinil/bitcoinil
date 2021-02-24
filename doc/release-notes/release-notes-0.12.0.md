@@ -273,7 +273,7 @@ with `-txconfirmtarget=<m>` (default: `2`).
 
 Sometimes, it is not possible to give good estimates, or an estimate
 at all. Therefore, a fallback value can be set with `-fallbackfee=<f>`
-(default: `0.0002` BTC/kB).
+(default: `0.0002` BTCIL/kB).
 
 At all times, Bitcoin Core will cap fees at `-maxtxfee=<x>` (default:
 0.10) BTC.

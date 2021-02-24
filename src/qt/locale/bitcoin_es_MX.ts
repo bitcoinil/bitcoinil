@@ -66,13 +66,13 @@
         <translation>Direcciones de recibo</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Estas son tus direcciones de Bitcoin para enviar pagos. Siempre revisa el monto y la dirección de envío antes de enviar monedas.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your BitcoinIL addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <translation>These are your BitcoinIL addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</translation>
     </message>
     <message>
@@ -421,9 +421,9 @@ Haga clic para habilitar la actividad de red nuevamente.</translation>
         <translation>Pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
         <translation> 
-Solicitar pagos (genera códigos QR y bitcoin: URI)
+Solicitar pagos (genera códigos QR y bitcoinil: URI)
  </translation>
     </message>
     <message>
@@ -515,8 +515,8 @@ Solicitar pagos (genera códigos QR y bitcoin: URI)
         <translation>&amp;Receiving addresses</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation>Open a bitcoin: URI</translation>
+        <source>Open a bitcoinil: URI</source>
+        <translation>Open a bitcoinil: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1122,7 +1122,7 @@ Solicitar pagos (genera códigos QR y bitcoin: URI)
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open bitcoinil URL</source>
         <translation>Abrir la URI de bitcoin</translation>
     </message>
     <message>
@@ -1703,8 +1703,8 @@ Solicitar pagos (genera códigos QR y bitcoin: URI)
         <translation>Monto</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation>Enter a Bitcoin address (e.g. %1)</translation>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
+        <translation>Enter a BitcoinIL address (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2736,8 +2736,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Introducir una etiqueta para esta dirección para añadirla a la lista de direcciones utilizadas</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</translation>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</translation>
     </message>
     <message>
         <source>Pay To:</source>

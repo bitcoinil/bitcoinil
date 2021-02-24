@@ -42,7 +42,7 @@
         <translation>Ukuthola amakheli</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Lawa amakheli akho e-Bitcoin okuthumela izinkokhelo. Njalo hlola inani nekheli elitholwayo ngaphambi kokuthumela izinhlamvu zemali.</translation>
     </message>
     <message>

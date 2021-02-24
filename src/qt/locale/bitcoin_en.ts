@@ -85,12 +85,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>These are your Bitcoin addresses for receiving payments. Use the &apos;Create new receiving address&apos; button in the receive tab to create new addresses.
+        <source>These are your BitcoinIL addresses for receiving payments. Use the &apos;Create new receiving address&apos; button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -537,7 +537,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="-281"/>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -658,7 +658,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a bitcoinil: URI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1430,7 +1430,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     <name>OpenURIDialog</name>
     <message>
         <location filename="../forms/openuridialog.ui" line="+14"/>
-        <source>Open bitcoin URI</source>
+        <source>Open bitcoinil URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2166,7 +2166,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+108"/>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3520,7 +3520,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+58"/>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

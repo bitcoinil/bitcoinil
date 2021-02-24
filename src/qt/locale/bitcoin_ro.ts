@@ -66,7 +66,7 @@
         <translation>Adresa de primire</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Acestea sunt adresele tale Bitcoin pentru efectuarea platilor. Intotdeauna verifica atent suma de plata si adresa beneficiarului inainte de a trimite monede.</translation>
     </message>
     <message>
@@ -406,7 +406,7 @@
         <translation>Bara de unelte</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
         <translation>Cereţi plăţi (generează coduri QR şi bitcoin-uri: URls)</translation>
     </message>
     <message>
@@ -1438,7 +1438,7 @@
         <translation>Cantitate</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>Introduceţi o adresă Bitcoin (de exemplu %1)</translation>
     </message>
     <message>
@@ -2339,8 +2339,8 @@ Nota: Cum taxa este calculata per byte, o taxa de "100 satoshi per kB" pentru o 
         <translation>Introduceţi eticheta pentru ca această adresa să fie introdusă în lista de adrese folosite</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>un mesaj a fost ataşat la bitcoin: URI care va fi stocat cu tranzacţia pentru referinţa dvs. Notă: Acest mesaj nu va fi trimis către reţeaua bitcoin.</translation>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>un mesaj a fost ataşat la bitcoinil: URI care va fi stocat cu tranzacţia pentru referinţa dvs. Notă: Acest mesaj nu va fi trimis către reţeaua bitcoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>

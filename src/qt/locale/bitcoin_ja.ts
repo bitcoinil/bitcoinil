@@ -66,11 +66,11 @@
         <translation>受取用アドレス</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>これらは、あなたが知っている送信先の Bitcoin アドレスです。コインを送る前に必ず、金額と受取用アドレスを確認してください。</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your BitcoinIL addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>これらは支払いを受け取るための、あなたの Bitcoin アドレスです。新しいアドレスを作成するには受取タブ内の「新しい受取用アドレスを作成」ボタンを使用します。</translation>
     </message>
@@ -424,7 +424,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>タブツールバー</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
         <translation>支払いをリクエストする（QRコードと bitcoin:で始まるURIを生成する）</translation>
     </message>
     <message>
@@ -512,8 +512,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>受取用アドレス一覧(&amp;R)...</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation>bitcoin: URIを開く</translation>
+        <source>Open a bitcoinil: URI</source>
+        <translation>bitcoinil: URIを開く</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1099,7 +1099,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open bitcoinil URL</source>
         <translation>bitcoin URIを開く</translation>
     </message>
     <message>
@@ -1616,7 +1616,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>金額</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>Bitcoin アドレスを入力してください (例: %1)</translation>
     </message>
     <message>
@@ -2629,8 +2629,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>このアドレスに対するラベルを入力することで、送金したことがあるアドレスの一覧に追加することができます</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>bitcoin: URIに添付されていたメッセージです。これは参照用として取引とともに保存されます。注意: メッセージは Bitcoin ネットワーク上へ送信されません。</translation>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>bitcoinil: URIに添付されていたメッセージです。これは参照用として取引とともに保存されます。注意: メッセージは Bitcoin ネットワーク上へ送信されません。</translation>
     </message>
     <message>
         <source>Pay To:</source>

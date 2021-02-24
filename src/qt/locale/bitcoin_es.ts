@@ -66,11 +66,11 @@
         <translation>Direcciones de recepción</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Estas son sus direcciones Bitcoin para enviar pagos. Compruebe siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your BitcoinIL addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Estas son sus direcciones Bitcoin para la recepción de pagos. Use el botón 'Crear una nueva dirección para recepción' en la pestaña Recibir para crear nuevas direcciones.
 Firmar solo es posible con correos del tipo Legacy.</translation>
@@ -424,7 +424,7 @@ Firmar solo es posible con correos del tipo Legacy.</translation>
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
         <translation>Solicitar pagos (genera código QR y URL's de Bitcoin)</translation>
     </message>
     <message>
@@ -516,8 +516,8 @@ Firmar solo es posible con correos del tipo Legacy.</translation>
         <translation>Direcciones de recepción</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation>Abrir una bitcoin: URI</translation>
+        <source>Open a bitcoinil: URI</source>
+        <translation>Abrir una bitcoinil: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1127,7 +1127,7 @@ Firmar solo es posible con correos del tipo Legacy.</translation>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open bitcoinil URL</source>
         <translation>Abrir URI de bitcoin</translation>
     </message>
     <message>
@@ -1708,7 +1708,7 @@ Firmar solo es posible con correos del tipo Legacy.</translation>
         <translation>Cantidad</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>Ingrese una dirección de Bitcoin (por ejemplo, %1)</translation>
     </message>
     <message>
@@ -2729,7 +2729,7 @@ Nota: Dado que la comisión se calcula por byte, una comisión de "100 satoshis 
         <translation>Introduzca una etiqueta para esta dirección para añadirla a la lista de direcciones utilizadas</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation>Un mensaje que se adjuntó a la bitcoin: URL que será almacenada con la transacción para su referencia. Nota: Este mensaje no se envía a través de la red Bitcoin.</translation>
     </message>
     <message>

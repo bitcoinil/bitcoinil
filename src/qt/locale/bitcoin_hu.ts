@@ -66,11 +66,11 @@
         <translation>Fogadási címek</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Ezek a te  Bitcoin címeid kifizetések küldéséhez. Mindíg ellenőrizd az összeget és a fogadó címet mielőtt coinokat küldenél.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your BitcoinIL addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Ezek a Bitcoin címeid amelyeken fogadni tudsz Bitcoin utalásokat. Az "Új cím létrehozása" gombbal tudsz új címet létrehozni. Aláírni csak korábbi egyessel kezdődő címekkel lehet.</translation>
     </message>
@@ -423,7 +423,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Fül eszköztár</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
         <translation>Fizetési kérelem (QR-kódot és "bitcoin:" URI azonosítót hoz létre)</translation>
     </message>
     <message>
@@ -515,7 +515,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>&amp;Fogadó címek</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a bitcoinil: URI</source>
         <translation>Bitcoin URI megnyitása</translation>
     </message>
     <message>
@@ -1121,7 +1121,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open bitcoinil URL</source>
         <translation>Nyisd meg a bitcoin címedet</translation>
     </message>
     <message>
@@ -1698,7 +1698,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Összeg</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>Ad meg egy Bitcoin címet (pl: %1)</translation>
     </message>
     <message>
@@ -2731,7 +2731,7 @@ Figyelem: Mivel bájtonként lesz a dj kiszámolva ezért a "100 satoshi per kB"
         <translation>Adjon egy címkét ehhez a címhez, hogy bekerüljön a használt címek közé</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation>Sporočilo, ki ste ga pripeli na URI tipa bitcoin:. Shranjeno bo skupaj s podatki o transakciji. Opomba: Sporočilo ne bo poslano preko omrežja Bitcoin.</translation>
     </message>
     <message>

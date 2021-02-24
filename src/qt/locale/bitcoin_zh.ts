@@ -66,7 +66,7 @@
         <translation>接收地址</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>这些是你的比特币支付地址。在发送之前，一定要核对金额和接收地址。</translation>
     </message>
     <message>
@@ -414,7 +414,7 @@
         <translation>标签工具栏</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
         <translation>请求支付(生成二维码和比特币链接)</translation>
     </message>
     <message>
@@ -490,7 +490,7 @@
         <translation>&amp;接受地址</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a bitcoinil: URI</source>
         <translation>打开比特币: URI</translation>
     </message>
     <message>
@@ -1326,7 +1326,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>输入此地址的标签，将其添加到使用的地址列表中</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation>附在比特币上的消息:URI将与交易一起存储，供参考。注意：此信息不会通过比特币网络发送。</translation>
     </message>
     </context>

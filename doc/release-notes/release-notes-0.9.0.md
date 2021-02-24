@@ -306,7 +306,7 @@ GUI:
 - OS X: Added NSHighResolutionCapable flag to Info.plist for better font
   rendering on Retina displays.
 - OS X: Fix bitcoin-qt startup crash when clicking dock icon
-- Linux: Fix Gnome bitcoin: URI handler
+- Linux: Fix Gnome bitcoinil: URI handler
 
 Miscellaneous:
 

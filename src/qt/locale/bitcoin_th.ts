@@ -66,7 +66,7 @@
         <translation>ที่อยู่ในการรับ</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>ที่อยู่ Bitcoin ของคุณสำหรับการส่งการชำระเงิน โปรดตรวจสอบจำนวนเงินและที่อยู่รับก่อนที่จะส่งเหรียญ</translation>
     </message>
     <message>
@@ -322,8 +322,8 @@
         <translation>แถบเครื่องมือ</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>เรียกเก็บ การชำระเงิน (สร้าง QR codes และ bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
+        <translation>เรียกเก็บ การชำระเงิน (สร้าง QR codes และ bitcoinil: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>

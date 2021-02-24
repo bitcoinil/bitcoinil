@@ -66,11 +66,11 @@
         <translation>Adreces de recepció</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Aquestes són les vostres adreces de Bitcoin per enviar els pagaments. Sempre reviseu l'import i l'adreça del destinatari abans de transferir monedes.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your BitcoinIL addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Aquestes son les teves adreces de Bitcoin per rebre pagaments. Utilitza el botó "Crear nova adreça de recepció" de la pestanya de recepció per crear una nova adreça.
 Només és possible firmar amb adreces del tipus "legacy".</translation>
@@ -424,8 +424,8 @@ Només és possible firmar amb adreces del tipus "legacy".</translation>
         <translation>Barra d'eines de les pestanyes</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Sol·licita pagaments (genera codis QR i bitcoin: URI)</translation>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
+        <translation>Sol·licita pagaments (genera codis QR i bitcoinil: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -516,8 +516,8 @@ Només és possible firmar amb adreces del tipus "legacy".</translation>
         <translation>Adreces de &amp;recepció</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation>Obrir un bitcoin: URI</translation>
+        <source>Open a bitcoinil: URI</source>
+        <translation>Obrir un bitcoinil: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1128,7 +1128,7 @@ Això és ideal per a carteres de mode només lectura.</translation>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open bitcoinil URL</source>
         <translation>Obre Bitcoin URI</translation>
     </message>
     <message>
@@ -1705,7 +1705,7 @@ Això és ideal per a carteres de mode només lectura.</translation>
         <translation>Import</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>Introduïu una adreça de Bitcoin (p. ex. %1)</translation>
     </message>
     <message>
@@ -2738,8 +2738,8 @@ Nota: Com que la comissió es calcula en funció dels bytes, una comissió de "1
         <translation>Introduïu una etiqueta per a aquesta adreça per afegir-la a la llista d'adreces utilitzades</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Un missatge que s'ha adjuntat al bitcoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Bitcoin.</translation>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Un missatge que s'ha adjuntat al bitcoinil: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Bitcoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>

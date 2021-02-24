@@ -66,7 +66,7 @@
         <translation>Mga address na tatanggap</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Ito ang iyong mga Bitcoin address para sa pagpapadala ng bayad. Laging suriin ang halaga at ang address na tatanggap bago magpadala ng coins.</translation>
     </message>
     <message>
@@ -418,8 +418,8 @@
         <translation>Tabs toolbar</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Humiling ng bayad (lumilikha ng QR codes at bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
+        <translation>Humiling ng bayad (lumilikha ng QR codes at bitcoinil: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1446,7 +1446,7 @@
         <translation>Halaga</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>I-enter ang Bitcoin address (e.g. %1)</translation>
     </message>
     <message>
@@ -2416,8 +2416,8 @@ Tandaan: Dahil ang bayad  ay kinakalkula sa bawat-byte na batayan, ang bayad ng 
         <translation>Mag-enter ng label para sa address na ito upang idagdag ito sa listahan ng mga gamit na address.</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Mensahe na nakalakip sa bitcoin: URI na kung saan maiimbak kasama ang transaksyon para sa iyong sanggunian. Tandaan: Ang mensaheng ito ay hindi ipapadala sa network ng Bitcoin.</translation>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Mensahe na nakalakip sa bitcoinil: URI na kung saan maiimbak kasama ang transaksyon para sa iyong sanggunian. Tandaan: Ang mensaheng ito ay hindi ipapadala sa network ng Bitcoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>

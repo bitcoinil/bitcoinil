@@ -66,7 +66,7 @@
         <translation>Enderezos de recepción</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Estes son os teus enderezos de Bitcoin para enviar pagamentos. Asegurate sempre de comprobar a cantidade e maila dirección antes de enviar moedas.</translation>
     </message>
     <message>
@@ -418,7 +418,7 @@
         <translation>Barra de ferramentas das pestanas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
         <translation>Solicita pagamentos (xera un código QR e bitocin : URIs)</translation>
     </message>
     <message>
@@ -494,7 +494,7 @@
         <translation>&amp;Enderezos de recepción</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a bitcoinil: URI</source>
         <translation>Abre una URI de Bitcoin</translation>
     </message>
     <message>
@@ -1069,8 +1069,8 @@
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
-        <translation>Open bitcoin URI</translation>
+        <source>Open bitcoinil URL</source>
+        <translation>Open bitcoinil URL</translation>
     </message>
     <message>
         <source>URI:</source>
@@ -1526,8 +1526,8 @@
         <translation>Amount</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation>Enter a Bitcoin address (e.g. %1)</translation>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
+        <translation>Enter a BitcoinIL address (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2511,8 +2511,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Enter a label for this address to add it to the list of used addresses</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</translation>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</translation>
     </message>
     <message>
         <source>Pay To:</source>

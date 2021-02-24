@@ -66,7 +66,7 @@
         <translation>អាសយដ្ឋានដែលទទួល</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>ទាំងនេះ​គឺជាអាសយដ្ឋាន Bitcoin របស់អ្នកសម្រាប់ធ្វើការផ្ញើការបង់ប្រាក់។ តែងតែពិនិត្យមើលចំនួនប្រាក់ និងអាសយដ្ឋានដែលទទួល មុនពេលផ្ញើប្រាក់។</translation>
     </message>
     <message>

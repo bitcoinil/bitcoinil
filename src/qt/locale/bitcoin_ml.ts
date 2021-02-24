@@ -66,11 +66,11 @@
         <translation>സ്വീകരിക്കുന്ന വിലാസങ്ങൾ</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>പേയ്മെന്റുകൾ അയയ്ക്കുന്നതിനുള്ള നിങ്ങളുടെ ബിറ്റ്കോയിൻ വിലാസങ്ങളാണ് ഇവ. നാണയങ്ങൾ അയയ്ക്കുന്നതിനുമുമ്പ് എല്ലായ്പ്പോഴും തുകയും സ്വീകരിക്കുന്ന വിലാസവും പരിശോധിക്കുക.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your BitcoinIL addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>ഇവയാണ് പണം  സ്വീകരിയ്ക്കുന്നതിനായുള്ള താങ്കളുടെ ബിറ്റ്കോയിൻ വിലാസങ്ങൾ. പുതിയ വിലാസങ്ങൾ കൂട്ടിച്ചേർക്കുന്നതിനായി ' പുതിയ വിലാസം സൃഷ്ടിയ്ക്കുക ' എന്ന ബട്ടൺ അമർത്തുക.
 'ലെഗസി' തരത്തിന്റെ വിലാസങ്ങളിൽ മാത്രമേ സൈൻ ചെയ്യാൻ കഴിയൂ.</translation>
@@ -424,7 +424,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>ടാബുകളുടെ ടൂൾബാർ</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
         <translation>പേയ്‌മെന്റുകൾ അഭ്യർത്ഥിക്കുക (QR കോഡുകളും ബിറ്റ്കോയിനും സൃഷ്ടിക്കുന്നു: URI- കൾ)</translation>
     </message>
     <message>
@@ -508,7 +508,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>&amp;വിലാസങ്ങൾ അയയ്ക്കുന്നു</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a bitcoinil: URI</source>
         <translation>ഒരു ബിറ്റ്കോയിൻ തുറക്കുക: URI</translation>
     </message>
     <message>

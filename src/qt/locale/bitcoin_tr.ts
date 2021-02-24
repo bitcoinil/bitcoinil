@@ -62,7 +62,7 @@
         <translation>Alıcı adresler</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Bunlar Bitcoinleriniz için gönderici adreslerinizdir.
 Gönderim yapmadan önce her zaman tutarı ve alıcı adresi kontrol ediniz.</translation>
     </message>

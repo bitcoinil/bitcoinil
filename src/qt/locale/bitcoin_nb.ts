@@ -66,11 +66,11 @@
         <translation>Mottager adresser</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Dette er dine Bitcoin adresser for å sende  å sende betalinger. Husk å sjekke beløp og mottager adresser før du sender mynter.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your BitcoinIL addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Dette er dine Bitcoin adresser for å motta betalinger. Bruk 'Lag ny mottaksadresse' knappen i motta tabben for å lage nye adresser. Signering er bare mulig for adresser av typen 'legacy'.</translation>
     </message>
@@ -423,7 +423,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Hjelpelinje for fliker</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
         <translation>Be om betalinger (genererer QR-koder og bitcoin-URIer)</translation>
     </message>
     <message>
@@ -515,8 +515,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>&amp;Mottaker adresser</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation>Åpne en bitcoin: URI</translation>
+        <source>Open a bitcoinil: URI</source>
+        <translation>Åpne en bitcoinil: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1122,7 +1122,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open bitcoinil URL</source>
         <translation>Åpne bitcoin URI</translation>
     </message>
     <message>
@@ -1703,7 +1703,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Beløp</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>Oppgi en Bitcoin-adresse (f.eks. %1)</translation>
     </message>
     <message>
@@ -2712,7 +2712,7 @@ Merk: Siden avgiften er beregnet per byte-basis, vil et gebyr på "100 satoshis 
         <translation>Skriv inn en merkelapp for denne adressen for å legge den til listen av brukte adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation>En melding som var tilknyttet bitcoinen: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over Bitcoin-nettverket.</translation>
     </message>
     <message>

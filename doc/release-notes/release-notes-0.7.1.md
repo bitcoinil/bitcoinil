@@ -75,7 +75,7 @@ Dependency changes
 Bug fixes
 ---------
 
-* Clicking on a bitcoin: URI on Windows should now launch Bitcoin-Qt properly.
+* Clicking on a bitcoinil: URI on Windows should now launch Bitcoin-Qt properly.
 
 * When running -testnet, use RPC port 18223 by default.
 

@@ -67,7 +67,7 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Recibiendo dirección</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Estas son sus direcciones de Bitcoin para enviar pagos. Siempre verifique el monto y la dirección de recepción antes de enviar monedas.</translation>
     </message>
     <message>
@@ -387,8 +387,8 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Barra de herramientas de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Solicitar pagos (genera códigos QR y bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
+        <translation>Solicitar pagos (genera códigos QR y bitcoinil: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1307,7 +1307,7 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Cantidad</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>Ingrese una dirección de Bitcoin (por ejemplo, %1)</translation>
     </message>
     <message>

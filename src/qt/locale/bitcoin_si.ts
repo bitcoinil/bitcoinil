@@ -54,7 +54,7 @@
         <translation>ලබන ලිපින</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>මේවා ඔබගේ ගෙවීම් යැවීම සඳහා වන බිට්කොයින් ලිපින වේ. කාසි යැවීමට පෙර සෑම විටම මුදල සහ ලැබීමේ ලිපිනය පරීක්ෂා කරන්න.</translation>
     </message>
     <message>

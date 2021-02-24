@@ -190,7 +190,7 @@
         <translation>Marii</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>Nyora kero ye Bitcoin (sekuti %1)</translation>
     </message>
     <message>

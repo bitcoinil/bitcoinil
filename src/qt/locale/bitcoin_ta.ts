@@ -66,7 +66,7 @@
         <translation>முகவரிகள் பெறப்படுகின்றன</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>இவை பணம் அனுப்புவதற்கு உங்களின் பிட்காயின் முகவரிகள். பிட்காயின்களை அனுப்புவதற்கு முன் எப்பொழுதும் தொகையும் பெறுதலையும் சரிபார்க்கவும்.</translation>
     </message>
     <message>
@@ -418,7 +418,7 @@
         <translation>தாவல்கள் கருவிப்பட்டி</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
         <translation>கொடுப்பனவுகளை கோருதல் (QR குறியீடுகள் மற்றும் bitcoin உருவாக்குகிறது: URI கள்)</translation>
     </message>
     <message>
@@ -503,7 +503,7 @@
         <translation>முகவரிகள் பெறுதல்</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a bitcoinil: URI</source>
         <translation>திற பிட்காயின்: URI</translation>
     </message>
     <message>
@@ -1519,7 +1519,7 @@
         <translation>விலை</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>ஒரு விக்கிபீடியா முகவரியை உள்ளிடவும் (எ.கா. %1)</translation>
     </message>
     <message>
@@ -2432,7 +2432,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>இந்த முகவரியை பயன்படுத்தப்பட்ட முகவரிகளின் பட்டியலில் சேர்க்க ஒரு லேபிளை உள்ளிடவும்.</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation>பிட்காயினுடன் இணைக்கப்பட்ட செய்தி: உங்கள் எதிர்கால குறிப்புக்காக பரிவர்த்தனையுடன் யூஆர்ஐ சேமிக்கப்படும். குறிப்பு: இந்த செய்தி பிட்காயின் வலையமைப்பிற்கு அனுப்பப்படாது.</translation>
     </message>
     <message>

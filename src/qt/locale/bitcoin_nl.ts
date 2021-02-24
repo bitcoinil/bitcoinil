@@ -66,11 +66,11 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Dit zijn uw Bitcoinadressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw bitcoins verzendt.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your BitcoinIL addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Dit zijn uw Bitcoin adressen voor het ontvangen van betalingen. Gebruik de 'Nieuw ontvangst adres maken' knop in de ontvangst tab om een nieuwe adres te maken.
 Ondertekenen is alleen mogelijk met adressen van het type 'legacy'.</translation>
@@ -424,8 +424,8 @@ Ondertekenen is alleen mogelijk met adressen van het type 'legacy'.</translation
         <translation>Tab-werkbalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR-codes en bitcoin: URI's)</translation>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
+        <translation>Vraag betaling aan (genereert QR-codes en bitcoinil: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -516,8 +516,8 @@ Ondertekenen is alleen mogelijk met adressen van het type 'legacy'.</translation
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation>Open een bitcoin: URI</translation>
+        <source>Open a bitcoinil: URI</source>
+        <translation>Open een bitcoinil: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1128,7 +1128,7 @@ Dit is ideaal voor alleen-lezen portommonees.</translation>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open bitcoinil URL</source>
         <translation>Open bitcoin-URI</translation>
     </message>
     <message>
@@ -1705,7 +1705,7 @@ Dit is ideaal voor alleen-lezen portommonees.</translation>
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>Voer een Bitcoinadres in (bijv. %1)</translation>
     </message>
     <message>
@@ -2739,8 +2739,8 @@ Vb. een offline %1 portemonee, of een PSBT-combatiebele hardware portemonee.</tr
         <translation>Vul een label voor dit adres in om het aan de lijst met gebruikte adressen toe te voegen</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Een bericht dat werd toegevoegd aan de bitcoin: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Bitcoinnetwerk.</translation>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Een bericht dat werd toegevoegd aan de bitcoinil: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Bitcoinnetwerk.</translation>
     </message>
     <message>
         <source>Pay To:</source>

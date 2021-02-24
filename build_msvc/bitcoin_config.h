@@ -30,7 +30,7 @@
 #define COPYRIGHT_HOLDERS_FINAL "The Bitcoin Core developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "Bitcoin Core"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "BitcoinIL Core"
 
 /* Copyright year */
 #define COPYRIGHT_YEAR 2019
@@ -250,7 +250,7 @@
 #define PACKAGE_BUGREPORT "https://github.com/bitcoinil/bitcoinil/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Bitcoin Core"
+#define PACKAGE_NAME "BitcoinIL Core"
 
 /* Define to the full name and version of this package. */
 #define PACKAGE_STRING "Bitcoin Core 0.21.0"

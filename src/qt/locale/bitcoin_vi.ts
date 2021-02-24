@@ -66,7 +66,7 @@
         <translation>Địa chỉ đang nhận</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Đây là những địa chỉ đang thực hiện thanh toán. Luôn kiểm tra số lượng và địa chỉ nhận trước khi gửi coins.</translation>
     </message>
     <message>
@@ -418,8 +418,8 @@
         <translation>Các thanh công cụ</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Yêu cầu thanh toán (tạo QR code và bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
+        <translation>Yêu cầu thanh toán (tạo QR code và bitcoinil: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -494,8 +494,8 @@
         <translation>&amp;Các địa chỉ đang nhận</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation>Mở một bitcoin: URI</translation>
+        <source>Open a bitcoinil: URI</source>
+        <translation>Mở một bitcoinil: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1077,7 +1077,7 @@
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open bitcoinil URL</source>
         <translation>Mở bitcoin URI</translation>
     </message>
     <message>
@@ -1582,7 +1582,7 @@
         <translation>Số lượng</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>Nhập một Bitcoin address (e.g. %1)</translation>
     </message>
     <message>
@@ -2591,8 +2591,8 @@ Lưu ý: Vì phí được tính trên cơ sở mỗi byte, nên phí "100 satos
         <translation>Nhập một label cho cái address này để thêm vào danh sách địa chỉ đã sử dụng</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Một tin nhắn được đính kèm với số bitcoin: URI mà sẽ được lưu giữ với transaction dành cho tài liệu tham khảo. Lưu ý: Tin nhắn này sẽ không được gửi thông qua Bitcoin network.</translation>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Một tin nhắn được đính kèm với số bitcoinil: URI mà sẽ được lưu giữ với transaction dành cho tài liệu tham khảo. Lưu ý: Tin nhắn này sẽ không được gửi thông qua Bitcoin network.</translation>
     </message>
     <message>
         <source>Pay To:</source>

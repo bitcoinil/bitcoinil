@@ -66,11 +66,11 @@
         <translation>العنوان الرقمي المُرسَل إليه</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>هذه هي عناوين البيتكوين لإرسال المدفوعات. دائما تحقق من المبلغ وعنوان المستلم قبل الإرسال.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your BitcoinIL addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>هذه هي عناوين بتكوين الخاصة بك لتلقي المدفوعات. استخدم الزر "إنشاء عنوان استلام جديد" في علامة تبويب الاستلام لإنشاء عناوين جديدة.
 التوقيع ممكن فقط مع عناوين من النوع "قديم".</translation>
@@ -420,7 +420,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>شريط أدوات علامات التبويب</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
         <translation>أطلب دفعات (يولد كودات الرمز المربع وبيت كوين: العناوين المعطاة)</translation>
     </message>
     <message>
@@ -508,7 +508,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>&amp;عناوين الإستقبال</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a bitcoinil: URI</source>
         <translation>افتح عملة بيتكوين: URI</translation>
     </message>
     <message>
@@ -1096,7 +1096,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open bitcoinil URL</source>
         <translation>افتح بتكوين URI</translation>
     </message>
     <message>
@@ -1625,7 +1625,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>مبلغ</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>ادخل عنوان محفطة البتكوين (مثال %1)</translation>
     </message>
     <message>
@@ -2486,7 +2486,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>أدخل تسمية لهذا العنوان لإضافته إلى قائمة العناوين المستخدمة</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation>الرسالة التي تم إرفاقها مع البتكوين: العنوان الذي سيتم تخزينه مع المعاملة للرجوع إليه. ملاحظة: لن يتم إرسال هذه الرسالة عبر شبكة البتكوين.</translation>
     </message>
     <message>

@@ -62,7 +62,7 @@
         <translation>收款地址</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>這些是你要付款過去的 Bitcoin 位址。在付款之前，務必要檢查金額和收款位址是否正確。</translation>
     </message>
     <message>
@@ -338,8 +338,8 @@
         <translation>說明 &amp;H</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>要求付款 (產生QR碼 bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
+        <translation>要求付款 (產生QR碼 bitcoinil: URIs)</translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -436,7 +436,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
         <translation>輸入一個 Bitcoin 位址 (例如 %1)</translation>
     </message>
     <message>

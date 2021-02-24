@@ -68,7 +68,7 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>alamat-alamat penerimaan</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitcoinIL addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Ini adalah alamat Bitcoin anda untuk pembayaran. Periksa jumlah dan alamat penerima sebelum membuat penghantaran koin sentiasa.</translation>
     </message>
     <message>
@@ -421,8 +421,8 @@ Alihkan fail data ke dalam tab semasa</translation>
 </translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Request payments (generates QR codes and bitcoin: URIs)
+        <source>Request payments (generates QR codes and bitcoinil: URIs)</source>
+        <translation>Request payments (generates QR codes and bitcoinil: URIs)
 </translation>
     </message>
     <message>
@@ -491,8 +491,8 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>&amp;Receiving addresses</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation>Open a bitcoin: URI</translation>
+        <source>Open a bitcoinil: URI</source>
+        <translation>Open a bitcoinil: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1055,8 +1055,8 @@ Alihkan fail data ke dalam tab semasa</translation>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
-        <translation>Open bitcoin URI</translation>
+        <source>Open bitcoinil URL</source>
+        <translation>Open bitcoinil URL</translation>
     </message>
     <message>
         <source>URI:</source>
@@ -1513,8 +1513,8 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>Amount</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation>Enter a Bitcoin address (e.g. %1)</translation>
+        <source>Enter a BitcoinIL address (e.g. %1)</source>
+        <translation>Enter a BitcoinIL address (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2470,8 +2470,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Enter a label for this address to add it to the list of used addresses</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</translation>
+        <source>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>A message that was attached to the bitcoinil: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</translation>
     </message>
     <message>
         <source>Pay To:</source>
