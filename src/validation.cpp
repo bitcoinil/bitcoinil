@@ -1160,10 +1160,8 @@ bool ReadBlockFromDisk(CBlock& block, const FlatFilePos& pos, const Consensus::P
     }
 
     // Check the header
-    if (block.GetHash() != consensusParams.hashGenesisBlock){    
-        if (!CheckProofOfWork(block.GetPoWHash(), block.nBits, consensusParams))
-            return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
-    }
+    if (!CheckProofOfWork(block.GetHash(), block.nBits, consensusParams))
+        return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
     // Signet only: check block solution
     if (consensusParams.signet_blocks && !CheckSignetBlockSolution(block, consensusParams)) {
         return error("ReadBlockFromDisk: Errors in block solution at %s", pos.ToString());
@@ -3342,10 +3340,8 @@ static bool FindUndoPos(BlockValidationState &state, int nFile, FlatFilePos &pos
 static bool CheckBlockHeader(const CBlockHeader& block, BlockValidationState& state, const Consensus::Params& consensusParams, bool fCheckPOW = true)
 {
     // Check proof of work matches claimed amount
-    if (block.GetHash() != consensusParams.hashGenesisBlock){
-        if (fCheckPOW && !CheckProofOfWork(block.GetPoWHash(), block.nBits, consensusParams))
-            return state.Invalid(BlockValidationResult::BLOCK_INVALID_HEADER, "high-hash", "proof of work failed");
-    }
+    if (fCheckPOW && !CheckProofOfWork(block.GetHash(), block.nBits, consensusParams))
+        return state.Invalid(BlockValidationResult::BLOCK_INVALID_HEADER, "high-hash", "proof of work failed");
     return true;
 }
 

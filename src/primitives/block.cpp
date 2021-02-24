@@ -11,12 +11,10 @@
 
 uint256 CBlockHeader::GetHash() const
 {
-    return SerializeHash(*this);
-}
-
-uint256 CBlockHeader::GetPoWHash() const
-{
-  return HashX17(BEGIN(nVersion),END(nNonce));
+    if (nVersion == 1)
+        return SerializeHash(*this); //Genesis Block
+    else
+        return HashX17(BEGIN(nVersion),END(nNonce));
 }
 
 std::string CBlock::ToString() const
