@@ -333,7 +333,7 @@ Mempool and transaction relay
   segwit versions) are now accepted into the mempool, relayed, and
   mined.  Attempting to spend those outputs remains forbidden by policy
   ("non-standard").  When this change has been widely deployed, wallets
-  and services can accept any valid bech32 Bitcoin address without
+  and services can accept any valid bech32 BitcoinIL address without
   concern that transactions paying future segwit versions will become
   stuck in an unconfirmed state. (#15846)
 

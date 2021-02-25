@@ -351,7 +351,7 @@
         <translation>प्रॉक्सी &lt;b&gt; चालू है &lt;/b&gt; : %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
+        <source>Send coins to a BitcoinIL address</source>
         <translation>इस पते पर बिटकौइन भेजें</translation>
     </message>
     <message>

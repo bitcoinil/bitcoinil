@@ -294,7 +294,7 @@
         <translation>正在為磁碟區塊重建索引...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
+        <source>Send coins to a BitcoinIL address</source>
         <translation>付款至一個 Bitcoin 位址</translation>
     </message>
     <message>
