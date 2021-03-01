@@ -423,7 +423,6 @@ crypto_libbitcoin_crypto_base_a_SOURCES = \
   crypto/fugue.c \
   crypto/shabal.c \
   crypto/whirlpool.c \
-  crypto/sha2.c \
   crypto/haval.c \
   crypto/skein.c \  
   crypto/sha1.cpp \
