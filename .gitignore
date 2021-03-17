@@ -92,8 +92,8 @@ src/qt/bitcoin-qt.includes
 *.qm
 Makefile
 !depends/Makefile
-src/qt/bitcoin-qt
-Bitcoin-Qt.app
+src/qt/bitcoinil-qt
+BitcoinIL-Qt.app
 background.tiff*
 
 # Qt Creator
@@ -101,7 +101,7 @@ Makefile.am.user
 
 # Unit-tests
 Makefile.test
-bitcoin-qt_test
+bitcoinil-qt_test
 
 # Resources cpp
 qrc_*.cpp
