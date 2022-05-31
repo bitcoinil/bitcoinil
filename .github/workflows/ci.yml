@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: ["btil-next"]
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  build:
+    name: Build and Test
+    timeout-minutes: 15
+    runs-on: ${{ matrix.os }}
+    # To use Remote Caching, uncomment the next lines and follow the steps below.
+    # env:
+    #  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+    #  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build
+        run: yarn build --filter=bitcoin-il
+
+      - name: Force push to destination branch
+        uses: ad-m/github-push-action@v0.5.0
+        with:
+          # Token for the repo
+          # Can be passed in using $\{{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Destination branch to push changes
+          branch: static
+          # Use force push to fully overwrite the destination branch
+          force: true
+          # We have to push from the folder where files were generated.
+          # Same were the new repo was initialized in the previous step
+          directory: ./apps/bitcoin-il/dist

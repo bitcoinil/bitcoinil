@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "tsconfig/electron.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["packages/renderer/src/*"]
+    }
+  }
+}

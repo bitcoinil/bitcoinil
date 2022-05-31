@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "tools/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "cnc": "yarn dev --scope=\"ui-dev\" --scope=\"ui-next\" --scope=\"@djitsu/themes\" --no-deps",
+    "codebitcoin": "code . && yarn dev --filter=bitcoin-il --filter=app-layout",
+    "codebitcoin:ladel": "code . && yarn dev --filter=bitcoin-il --filter=app-layout --filter=ui-dev"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  }
+}

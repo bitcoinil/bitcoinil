@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+  "Display": "Electron",
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "allowJs": false,
+    "skipLibCheck": false,
+    "esModuleInterop": false,
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react"
+  }
+}

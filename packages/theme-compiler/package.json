@@ -1,0 +1,38 @@
+{
+  "name": "@djitsu/theme-compiler",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "source": "./src/index.ts",
+  "license": "MIT",
+  "bin": {
+    "theme-compiler": "./dist/theme-compiler.js"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "clean": "rimraf dist .turbo node_modules"
+  },
+  "devDependencies": {
+    "@types/less": "^3.0.3",
+    "@types/lodash": "^4.14.180",
+    "@types/object-path": "^0.11.1",
+    "@types/rimraf": "^3.0.2",
+    "@types/yargs": "^17.0.10",
+    "scripts": "*",
+    "tsconfig": "*",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "less": "^4.1.2",
+    "lodash": "^4.17.21",
+    "monaco-vscode-textmate-theme-converter": "^0.1.7",
+    "object-path": "^0.11.8",
+    "rimraf": "^3.0.2",
+    "yaml": "^1.10.2",
+    "yargs": "^17.4.1"
+  }
+}

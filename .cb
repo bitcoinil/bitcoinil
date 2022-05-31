@@ -1,0 +1,352 @@
+explorer:
+  rows:
+    - style:
+        align-items: center
+        column-gap: 6px
+      items:
+      - type: container
+        style:
+          background: var(--vscode-textBlockQuote-background)
+          height: 34px
+          width: 34px
+          margin: 2px
+          border-radius: 4px
+          # transform: scale(0.8)
+          border: 1px solid var(--vscode-interactive-inactiveCodeBorder)
+        items:
+        - type: text
+          text: ⟑
+          style:
+            font-size: 42px
+            line-height: 32px
+            transform: translateY(-4px) translateX(0.7px)
+            width: 30px
+            text-align: center
+            color: var(--vscode-charts-blue)
+      - type: container
+        items:
+        - type: text
+          text: DJITSU
+          style:
+            font-weight: bold
+        - type: text
+          text: M2
+          style:
+            font-size: 0.8em
+
+    # tools/ui-dev
+    - style:
+        padding: 0 0 0 17px
+      glob:
+        - "tools/ui-dev/**"
+        - "tools/*"
+        - ".*"
+        - "*.*"
+      items:
+      - type: svg
+        svg: node_modules/@ladle/react/lib/app/favicon.svg
+        style: 
+          flex: 0 0 auto
+          background: var(--vscode-textBlockQuote-background)
+          padding: 2px
+          margin-right: 4px
+          border-radius: 4px
+          width: 18px
+          height: 18px
+          display: flex
+          align-items: center
+          justify-content: center
+
+      - type: container
+        style:
+          display: flex
+          column-gap: 12px
+          width: 100%
+          padding: 0 12px 0 0
+        items:
+          - text: "tools/ui-dev"
+            style:
+              margin-right: auto
+              background: var(--vscode-inputValidation-infoBackground)
+              padding: 1px 5px
+              border-radius: 4px
+            type: text
+          - markdown: "[localhost:61000](http://localhost:61000)"
+            type: markdown
+
+
+    # apps/blog
+    - style:
+        padding: 0 0 0 17px
+      glob:
+        - "apps/blog/**"
+        - "apps/*"
+        - ".*"
+        - "*.*"
+      items:
+      - type: svg
+        svg: https://raw.githubusercontent.com/bestofjs/bestofjs-webui/master/public/logos/remix.svg
+        style: 
+          flex: 0 0 auto
+          background: var(--vscode-textBlockQuote-background)
+          padding: 2px
+          margin-right: 4px
+          border-radius: 4px
+          width: 18px
+          height: 18px
+          display: flex
+          align-items: center
+          justify-content: center
+
+      - type: container
+        style:
+          display: flex
+          column-gap: 12px
+          width: 100%
+          padding: 0 12px 0 0
+        items:
+          - text: "apps/blog"
+            style:
+              margin-right: auto
+              background: var(--vscode-inputValidation-warningBackground)
+              padding: 1px 5px
+              border-radius: 4px
+            type: text
+          - markdown: "[localhost:3000](http://localhost:3000)"
+            type: markdown
+
+    # apps/admin
+    - style:
+        padding: 0 0 0 17px
+      glob:
+        - "apps/admin/**"
+        - "apps/*"
+        - ".*"
+        - "*.*"
+      items:
+      - type: svg
+        svg: https://raw.githubusercontent.com/gilbarbara/logos/master/logos/vitejs.svg
+        style: 
+          flex: 0 0 auto
+          background: var(--vscode-textBlockQuote-background)
+          padding: 2px
+          margin-right: 4px
+          border-radius: 4px
+          width: 18px
+          height: 18px
+          display: flex
+          align-items: center
+          justify-content: center
+
+      - type: container
+        style:
+          display: flex
+          column-gap: 12px
+          width: 100%
+          padding: 0 12px 0 0
+        items:
+          - text: "apps/admin"
+            style:
+              margin-right: auto
+              background: var(--vscode-inputValidation-errorBackground)
+              padding: 1px 5px
+              border-radius: 4px
+            type: text
+          - markdown: "[localhost:3001](http://localhost:3001)"
+            type: markdown
+
+    # apps/api
+    - style:
+        padding: 0 0 0 17px
+      glob:
+        - "apps/api/**"
+        - "apps/*"
+        - ".*"
+        - "*.*"
+      items:
+      - type: svg
+        svg: https://raw.githubusercontent.com/maxogden/hexbin/gh-pages/vector/nodejs2.svg
+        style: 
+          flex: 0 0 auto
+          background: var(--vscode-textBlockQuote-background)
+          padding: 2px
+          margin-right: 4px
+          border-radius: 4px
+          width: 18px
+          height: 18px
+          display: flex
+          align-items: center
+          justify-content: center
+
+      - type: container
+        style:
+          display: flex
+          column-gap: 12px
+          width: 100%
+          padding: 0 12px 0 0
+        items:
+          - text: "apps/api"
+            style:
+              margin-right: auto
+              background: var(--vscode-progressBar-background)
+              padding: 1px 5px
+              border-radius: 4px
+            type: text
+          - markdown: "[localhost:5011](http://localhost:5011)"
+            type: markdown
+    
+    # apps/desktop
+    - style:
+        padding: 0 0 0 17px
+      glob:
+        - "apps/desktop/**"
+        - "apps/*"
+        - ".*"
+        - "*.*"
+      items:
+      - type: svg
+        svg: https://raw.githubusercontent.com/bestofjs/bestofjs-webui/master/public/logos/electron.svg
+        style: 
+          flex: 0 0 auto
+          background: var(--vscode-textBlockQuote-background)
+          padding: 2px
+          margin-right: 4px
+          border-radius: 4px
+          width: 18px
+          height: 18px
+          display: flex
+          align-items: center
+          justify-content: center
+
+      - type: container
+        style:
+          display: flex
+          column-gap: 12px
+          width: 100%
+          padding: 0 12px 0 0
+        items:
+          - text: "apps/desktop"
+            style:
+              margin-right: auto
+              background: var(--vscode-editor-findMatchBack)
+              padding: 1px 5px
+              border-radius: 4px
+            type: text
+          - markdown: "[localhost:7777](http://localhost:7777)"
+            type: markdown
+            elementStyle:
+              text-overflow: ellipsis
+              overflow: hidden;
+
+    # apps/storefront
+    - style:
+        padding: 0 0 0 17px
+      glob:
+        - "apps/storefront/**"
+        - "apps/*"
+        - ".*"
+        - "*.*"
+      items:
+      - type: svg
+        svg: https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg
+        style: 
+          flex: 0 0 auto
+          background: var(--vscode-textBlockQuote-background)
+          padding: 2px
+          margin-right: 4px
+          border-radius: 4px
+          width: 18px
+          height: 18px
+          display: flex
+          align-items: center
+          justify-content: center
+
+      - type: container
+        style:
+          display: flex
+          column-gap: 12px
+          width: 100%
+          padding: 0 12px 0 0
+        items:
+          - text: "apps/storefront"
+            style:
+              margin-right: auto
+              background: var(--vscode-listFilterWidget-background)
+              padding: 1px 5px
+              border-radius: 4px
+            type: text
+          - markdown: "[localhost:3002](http://localhost:3002)"
+            type: markdown
+            elementStyle:
+              text-overflow: ellipsis
+              overflow: hidden;
+
+    # apps/ssred
+    - style:
+        padding: 0 0 0 17px
+      glob:
+        - "apps/ssred/**"
+        - "apps/*"
+        - ".*"
+        - "*.*"
+      items:
+      - type: svg
+        svg: https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg
+        style: 
+          flex: 0 0 auto
+          background: var(--vscode-textBlockQuote-background)
+          padding: 2px
+          margin-right: 4px
+          border-radius: 4px
+          width: 18px
+          height: 18px
+          display: flex
+          align-items: center
+          justify-content: center
+
+      - type: container
+        style:
+          display: flex
+          column-gap: 12px
+          width: 100%
+          padding: 0 12px 0 0
+        items:
+          - text: "apps/ssred"
+            style:
+              margin-right: auto
+              background: var(--vscode-listFilterWidget-background)
+              padding: 1px 5px
+              border-radius: 4px
+            type: text
+          - markdown: "[localhost:7456](http://localhost:7456)"
+            type: markdown
+            elementStyle:
+              text-overflow: ellipsis
+              overflow: hidden;
+
+
+# --vscode-charts-lines: rgba(204, 204, 204, 0.5);
+# --vscode-charts-red: #c24038;
+# --vscode-charts-blue: #3794ff;
+# --vscode-charts-yellow: #d19a66;
+# --vscode-charts-orange: #d18616;
+# --vscode-charts-green: #89d185;
+# --vscode-charts-purple: #b180d7;
+
+# --vscode-terminal-ansiBlack: #3f4451# --vscode-terminal-ansiRed: #e05561;
+# --vscode-terminal-ansiGreen: #8cc265;
+# --vscode-terminal-ansiYellow: #d18f52;
+# --vscode-terminal-ansiBlue: #4aa5f0;
+# --vscode-terminal-ansiMagenta: #c162de;
+# --vscode-terminal-ansiCyan: #42b3c2;
+# --vscode-terminal-ansiWhite: #e6e6e6;
+# --vscode-terminal-ansiBrightBlack: #4f5666;
+# --vscode-terminal-ansiBrightRed: #ff616e;
+# --vscode-terminal-ansiBrightGreen: #a5e075;
+# --vscode-terminal-ansiBrightYellow: #f0a45d;
+# --vscode-terminal-ansiBrightBlue: #4dc4ff;
+# --vscode-terminal-ansiBrightMagenta: #de73ff;
+# --vscode-terminal-ansiBrightCyan: #4cd1e0;
+# --vscode-terminal-ansiBrightWhite: #d7dae0;
+# --vscode-interactive-activeCodeBorder: #3794ff;
+# --vscode-interactive-inactiveCodeBorder: #323842;

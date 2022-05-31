@@ -1,0 +1,20 @@
+name: ayu-and-one-theme
+title: Ayu and One Theme
+version: 1.0.0
+variants:
+  - title: Ayu Light
+    less: ayu.less
+    type: vsc
+    source: ayu.json
+  - title: One Dark Pro
+    less: one-dark-pro.less
+    type: vsc
+    source: one-dark-pro.json
+  - title: One Darker
+    less: one-dark-pro.less
+    type: vsc
+    source: one-darker-pro.json
+  - title: One Dark Flat
+    less: one-dark-pro.less
+    type: vsc
+    source: one-dark-flat.json

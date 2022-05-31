@@ -1,0 +1,50 @@
+{
+  "name": "ui-dev",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "ladle serve --open none",
+    "dep_dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+    "lint": "TIMING=1 eslint src --fix",
+    "ladle": "ladle serve",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@djitsu/themes": "*",
+    "@types/jest": "^26.0.22",
+    "@types/react": "^17.0.13",
+    "@types/react-dom": "^17.0.8",
+    "eslint": "^7.32.0",
+    "jest": "^26.6.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "scripts": "*",
+    "tsconfig": "*",
+    "tsup": "^5.10.1",
+    "typescript": "^4.5.3",
+    "ui-next": "*",
+    "app-layout": "*"
+  },
+  "jest": {
+    "preset": "scripts/jest/node"
+  },
+  "dependencies": {
+    "@ladle/react": "^0.8.5",
+    "antd": "^4.19.4"
+  },
+  "workspaces": {
+    "nohoist": [
+      "ui-next"
+    ]
+  }
+}
