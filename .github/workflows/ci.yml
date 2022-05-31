@@ -55,7 +55,7 @@ jobs:
           # Can be passed in using $\{{ secrets.GITHUB_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Destination branch to push changes
-          branch: main
+          branch: static
           # Use force push to fully overwrite the destination branch
           force: true
           # We have to push from the folder where files were generated.
