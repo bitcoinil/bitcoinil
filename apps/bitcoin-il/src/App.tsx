@@ -111,6 +111,7 @@ function App(): JSX.Element {
 
   return (
     <div className="App">
+      😄
       <Support />
       <Header navigate={navigate} />
       {renderRoutes()}
