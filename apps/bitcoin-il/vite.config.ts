@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [reactRefresh()],
-  base: '/bitcoinil.org',
+  base: '/bitcoinil.org/',
   server: {
     hmr: {
       protocol: "ws",
