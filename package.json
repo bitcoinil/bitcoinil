@@ -14,9 +14,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "cnc": "yarn dev --scope=\"ui-dev\" --scope=\"ui-next\" --scope=\"@djitsu/themes\" --no-deps",
     "codebitcoin": "code . && yarn dev --filter=bitcoin-il --filter=app-layout",
-    "codebitcoin:ladel": "code . && yarn dev --filter=bitcoin-il --filter=app-layout --filter=ui-dev",
-    "extract": "lingui extract",
-    "compile": "lingui compile"
+    "codebitcoin:ladel": "code . && yarn dev --filter=bitcoin-il --filter=app-layout --filter=ui-dev"
   },
   "devDependencies": {
     "prettier": "^2.5.1",

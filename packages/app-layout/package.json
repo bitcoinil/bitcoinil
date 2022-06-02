@@ -18,8 +18,6 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@lingui/cli": "^3.13.3",
     "@types/jest": "^26.0.22",
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
@@ -35,7 +33,6 @@
     "preset": "scripts/jest/node"
   },
   "dependencies": {
-    "@lingui/react": "^3.13.3",
     "antd": "^4.19.4",
     "styled-components": "^5.3.5"
   }
