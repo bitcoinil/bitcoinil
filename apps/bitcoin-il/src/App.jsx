@@ -8,6 +8,7 @@ import { FormattedMessage } from 'react-intl'
 // import { BrowserRouter as Router } from 'react-router-dom'
 
 import { IntlProvider } from 'react-intl'
+import locales from '@bitil/locales'
 
 function App() {
   const { language, setLanguage, messages } = useIntl()
@@ -20,13 +21,13 @@ function App() {
   // return <BitCoinIlSite setLanguage={setLanguage} />
   return (
     <IntlProvider
-      messages={messages[language]}
+      messages={locales[language]}
       locale={language}
       defaultLocale="en"
     >
       {/* <Header /> */}
       <h4>NOT TRANSLATED - HERE IS NEW MESSAGE</h4>
-      <button onClick={() => setLanguage('il')}>Use Il</button>
+      <button onClick={() => setLanguage('he')}>Use Il</button>
       <p>
         <FormattedMessage
           id="app.text"
@@ -40,7 +41,7 @@ function App() {
       />
       <h1>
         ********* THIS IS IN apps/bitcoin-il **************
-        <button onClick={() => setLanguage('il')}>CHANGE TO IL</button>
+        <button onClick={() => setLanguage('he')}>CHANGE TO IL</button>
       </h1>
     </IntlProvider>
   )

@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@djitsu/themes": "*",
+    "@bitil/locales": "*",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/parser": "^5.16.0",
