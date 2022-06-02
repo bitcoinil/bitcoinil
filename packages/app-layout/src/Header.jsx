@@ -3,34 +3,51 @@ import React from "react"
 import styled from "styled-components"
 import HeaderMenu from "./HeaderMenu"
 import LanguageSelect from "./LanguageSelect"
-// import { useNavigate } from "react-router-dom"
+import { FormattedMessage, IntlProvider } from "react-intl"
+import { useIntl } from "./hooks/useIntl"
 
-export default function Header({ navigate }) {
+import { useNavigate } from "react-router-dom"
+
+export default function Header({ setLanguage }) {
+  const navigate = useNavigate()
+  // const { setLanguage } = useIntl()
   return (
-    <StyledHeader>
-      <div className="left">
-        <p
-          className="logo"
-          onClick={() => {
-            navigate("/")
-          }}
-        >
-          TODO: Logo
-        </p>
-      </div>
-      <div className="middle">
-        <HeaderMenu navigate={navigate} />
-      </div>
-      <div className="right">
-        <LanguageSelect />
-      </div>
-    </StyledHeader>
+    <IntlProvider>
+      <StyledHeader>
+        <div className="left">
+          <button onClick={() => setLanguage("il")}>
+            ******* In app-layout package
+          </button>
+          <p
+            className="logo"
+            onClick={() => {
+              // navigate("/")
+            }}
+          >
+            TODO: Logo
+          </p>
+          <FormattedMessage
+            id="app.text"
+            defaultMessage="This is some text"
+            description="Link on react page"
+          />
+        </div>
+        <div className="middle">
+          <HeaderMenu
+          // navigate={navigate} />
+          />
+        </div>
+        <div className="right">
+          <LanguageSelect />
+        </div>
+      </StyledHeader>
+    </IntlProvider>
   )
 }
 
 const StyledHeader = styled.div`
   display: flex;
-  height: 40px;
+  /* height: 40px; */
   padding: 0 70px;
   align-items: center;
   justify-content: space-between;
