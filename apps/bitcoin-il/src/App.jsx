@@ -8,107 +8,122 @@ import 'antd/dist/antd.css' // or 'antd/dist/antd.less'
 // INTL
 import { IntlProvider, FormattedMessage, FormattedNumber } from 'react-intl'
 
+const messagesInFrench = {
+  myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}"
+}
+
 function App() {
   const navigate = useNavigate()
 
   const renderRoutes = () => {
     return (
-      <Routes>
-        {mainMenuItems.map((menuItem, i) => {
-          const { submenu } = menuItem
+      <IntlProvider messages={messagesInFrench} locale="fr" defaultLocale="en">
+        <p>
+          <FormattedMessage
+            id="myMessage"
+            defaultMessage="Today is {ts, date, ::yyyyMMdd}"
+            values={{ ts: Date.now() }}
+          />
+          <br />
+          <FormattedNumber value={19} style="currency" currency="EUR" />
+        </p>
+        <Routes>
+          {mainMenuItems.map((menuItem, i) => {
+            const { submenu } = menuItem
 
-          if (submenu) {
-            return submenu.map((subMenuItem, ii) => {
-              return (
-                <Route
-                  key={`submenu-item-${ii}`}
-                  path={`/${subMenuItem.key}`}
-                  element={subMenuItem.element}
-                />
-              )
-            })
-          }
+            if (submenu) {
+              return submenu.map((subMenuItem, ii) => {
+                return (
+                  <Route
+                    key={`submenu-item-${ii}`}
+                    path={`/${subMenuItem.key}`}
+                    element={subMenuItem.element}
+                  />
+                )
+              })
+            }
 
-          return (
-            <Route
-              key={i}
-              path={`/${menuItem.key}`}
-              element={menuItem.element}
-            />
-          )
-        })}
-        {/* <Route
+            return (
+              <Route
+                key={i}
+                path={`/${menuItem.key}`}
+                element={menuItem.element}
+              />
+            )
+          })}
+          {/* <Route
           path="/individuals"
           element={
             <RoutePage
               title="Individuals"
               subtitle="Bitcoin for Individuals"
               body={<h1>Individual Body</h1>}
-            />
-          }
+              />
+            }
         />
         <Route
-          path="/businesses"
-          element={
-            <RoutePage
-              title="Businesses"
-              subtitle="Bitcoin for Businesses"
-              body={<h1>Businesses Body</h1>}
-            />
-          }
+        path="/businesses"
+        element={
+          <RoutePage
+          title="Businesses"
+          subtitle="Bitcoin for Businesses"
+          body={<h1>Businesses Body</h1>}
+          />
+        }
         />
         <Route
-          path="/developers"
-          element={
-            <RoutePage
-              title="Developers"
-              subtitle="Developer Info"
-              body={<h1>Developers Body</h1>}
-            />
-          }
+        path="/developers"
+        element={
+          <RoutePage
+          title="Developers"
+          subtitle="Developer Info"
+          body={<h1>Developers Body</h1>}
+          />
+        }
         />
         <Route
-          path="/getting-started"
-          element={
-            <RoutePage
-              title="Getting Started"
-              subtitle="Getting Started"
-              body={<h1>Getting Started Body</h1>}
-            />
-          }
+        path="/getting-started"
+        element={
+          <RoutePage
+          title="Getting Started"
+          subtitle="Getting Started"
+          body={<h1>Getting Started Body</h1>}
+          />
+        }
         />
         <Route
-          path="/how-it-works"
-          element={
-            <RoutePage
-              title="How It Works"
-              subtitle="How It Works"
-              body={<h1>How it Works Body</h1>}
-            />
-          }
+        path="/how-it-works"
+        element={
+          <RoutePage
+          title="How It Works"
+          subtitle="How It Works"
+          body={<h1>How it Works Body</h1>}
+          />
+        }
         />
         <Route
           path="/white-paper"
           element={
             <RoutePage
-              title="White Paper"
-              subtitle="White Paper"
+            title="White Paper"
+            subtitle="White Paper"
               body={<h1>White Paper Body</h1>}
+              />
+            }
             />
-          }
-        />
-        <Route
-          path="/innovation"
-          element={
-            <RoutePage
+            <Route
+            path="/innovation"
+            element={
+              <RoutePage
               title="Innovations"
               subtitle="Innovations"
               body={<h1>Innovations Body</h1>}
-            />
-          }
-        /> */}
-        <Route path="*" element={<Home />} />
-      </Routes>
+              />
+            }
+          /> */}
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </IntlProvider>
     )
   }
 
