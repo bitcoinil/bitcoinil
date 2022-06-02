@@ -14,7 +14,7 @@ export default function Header({ navigate }) {
             navigate("/")
           }}
         >
-          OGOL
+          Logo
         </p>
       </div>
       <div className="middle">
