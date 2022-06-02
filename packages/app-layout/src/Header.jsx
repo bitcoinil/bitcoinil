@@ -2,6 +2,7 @@ import { Button, Menu } from "antd"
 import React from "react"
 import styled from "styled-components"
 import HeaderMenu from "./HeaderMenu"
+import LanguageSelect from "./LanguageSelect"
 // import { useNavigate } from "react-router-dom"
 
 export default function Header({ navigate }) {
@@ -20,7 +21,9 @@ export default function Header({ navigate }) {
       <div className="middle">
         <HeaderMenu navigate={navigate} />
       </div>
-      <div className="right">Language</div>
+      <div className="right">
+        <LanguageSelect />
+      </div>
     </StyledHeader>
   )
 }
