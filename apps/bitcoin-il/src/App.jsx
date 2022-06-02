@@ -5,7 +5,10 @@ import { Route, Routes, useNavigate } from 'react-router-dom'
 import 'antd/dist/antd.css' // or 'antd/dist/antd.less'
 // import { useNavigate } from 'react-router-dom'
 
-function App(): JSX.Element {
+// INTL
+import { IntlProvider, FormattedMessage, FormattedNumber } from 'react-intl'
+
+function App() {
   const navigate = useNavigate()
 
   const renderRoutes = () => {

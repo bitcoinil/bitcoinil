@@ -2,7 +2,7 @@ import { Button, Menu } from "antd"
 import React from "react"
 import styled from "styled-components"
 import HeaderMenu from "./HeaderMenu"
-import { useNavigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
 
 export default function Header({ navigate }) {
   return (
