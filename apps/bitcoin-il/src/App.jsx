@@ -1,32 +1,26 @@
 import '@djitsu/themes/dist/themes/main-theme/main-theme-main-light.css'
-import { Support, Header, RoutePage, mainMenuItems } from 'app-layout'
-import * as React from 'react'
-import { Route, Routes, useNavigate } from 'react-router-dom'
 import 'antd/dist/antd.css' // or 'antd/dist/antd.less'
+import { Header, mainMenuItems, Support } from 'app-layout'
+import * as React from 'react'
 // import { useNavigate } from 'react-router-dom'
 
-// INTL
-import { IntlProvider, FormattedMessage, FormattedNumber } from 'react-intl'
+import { useIntl } from 'app-layout'
 
-const messagesInFrench = {
-  myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}"
-}
+import { IntlProvider } from 'react-intl'
+
+import { Route, Routes, useNavigate } from 'react-router-dom'
 
 function App() {
+  const { language, messages } = useIntl()
   const navigate = useNavigate()
 
   const renderRoutes = () => {
     return (
-      <IntlProvider messages={messagesInFrench} locale="fr" defaultLocale="en">
-        <p>
-          <FormattedMessage
-            id="myMessage"
-            defaultMessage="Today is {ts, date, ::yyyyMMdd}"
-            values={{ ts: Date.now() }}
-          />
-          <br />
-          <FormattedNumber value={19} style="currency" currency="EUR" />
-        </p>
+      <IntlProvider
+        messages={messages[language]}
+        locale={language}
+        defaultLocale="en"
+      >
         <Routes>
           {mainMenuItems.map((menuItem, i) => {
             const { submenu } = menuItem
