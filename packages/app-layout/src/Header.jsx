@@ -15,7 +15,7 @@ export default function Header({ navigate }) {
             navigate("/")
           }}
         >
-          Logo
+          TODO: Logo
         </p>
       </div>
       <div className="middle">
