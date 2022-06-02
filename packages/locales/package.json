@@ -1,0 +1,20 @@
+{
+  "name": "@bitil/locales",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "clean": "rimraf .turbo node_modules dist"
+  },
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "tsconfig": "*",
+    "scripts": "*"
+  }
+}
