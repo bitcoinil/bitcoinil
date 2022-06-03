@@ -1,3 +1,4 @@
 export const messages_he = {
-  "app.text": "זהו טקסט כלשהו בשפה שנבחרה",
+  'app.text': 'זהו טקסט כלשהו בשפה שנבחרה',
+  'page.individuals.title': 'יחידים'
 }

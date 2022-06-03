@@ -1,9 +1,7 @@
-import { Button, Menu } from "antd"
-import React from "react"
-import styled from "styled-components"
-import HeaderMenu from "./HeaderMenu"
-import LanguageSelect from "./LanguageSelect"
-// import { useNavigate } from "react-router-dom"
+import React from 'react'
+import styled from 'styled-components'
+import HeaderMenu from './HeaderMenu'
+import LanguageSelect from './LanguageSelect'
 
 export default function Header({ navigate, FormattedMessage, setLanguage }) {
   return (
@@ -12,10 +10,10 @@ export default function Header({ navigate, FormattedMessage, setLanguage }) {
         <p
           className="logo"
           onClick={() => {
-            navigate("/")
+            navigate('/')
           }}
         >
-          LogoHere
+          Log
         </p>
       </div>
       <div className="middle">
