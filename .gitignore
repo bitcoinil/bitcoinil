@@ -13,3 +13,4 @@ public/dist
 .turbo
 apps/ssred/.vscode/settings.json
 .vscode/settings.json
+apps/bitcoin-il/.vscode/settings.json
