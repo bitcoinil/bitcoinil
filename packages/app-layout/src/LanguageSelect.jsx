@@ -9,11 +9,6 @@ export default function LanguageSelect({ setLanguage, FormattedMessage }) {
   const { language, messages, availableLanguages } = intl
 
   return (
-    // <IntlProvider
-    //   messages={messages[language]}
-    //   locale={language}
-    //   defaultLocale="en"
-    // >
     <StyledLanguageSelect>
       <Select
         onChange={(e) => {
@@ -32,13 +27,7 @@ export default function LanguageSelect({ setLanguage, FormattedMessage }) {
           )
         })}
       </Select>
-      <FormattedMessage
-        id="app.text"
-        defaultMessage="This is some text"
-        description="Link on react page"
-      />
     </StyledLanguageSelect>
-    // </IntlProvider>
   )
 }
 
