@@ -19,12 +19,15 @@ export default function LanguageSelect({ setLanguage, FormattedMessage }) {
         onChange={(e) => {
           setLanguage(e)
         }}
-        defaultValue="en"
+        defaultValue={availableLanguages[0].icon}
       >
         {availableLanguages.map((avLang) => {
           return (
-            <Select.Option key={`select-language-${avLang}`} value={avLang}>
-              {avLang}
+            <Select.Option
+              key={`select-language-${avLang.name}`}
+              value={avLang.name}
+            >
+              {avLang.icon}
             </Select.Option>
           )
         })}

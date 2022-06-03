@@ -11,7 +11,7 @@ import { FormattedMessage, IntlProvider } from 'react-intl'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 
 function App() {
-  const { language, messages, setLanguage } = useIntl()
+  const { language, messages, setLanguage, locale } = useIntl()
   const navigate = useNavigate()
 
   const renderRoutes = () => {
@@ -49,18 +49,9 @@ function App() {
   return (
     <IntlProvider
       messages={messages[language]}
-      locale={language === 'il' ? 'he' : language}
+      locale={locale}
       defaultLocale="en"
     >
-      <button onClick={() => setLanguage('il')}>Switch To He</button>
-      <p>
-        YOYOYOYO{'          '}
-        <FormattedMessage
-          id="app.text"
-          defaultMessage="This is some text"
-          description="Link on react page"
-        />
-      </p>
       <div className="App">
         <Support />
         <Header

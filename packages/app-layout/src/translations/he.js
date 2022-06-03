@@ -1,3 +1,3 @@
-export const messages_il = {
+export const messages_he = {
   "app.text": "זהו טקסט כלשהו בשפה שנבחרה",
 }

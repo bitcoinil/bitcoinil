@@ -1,22 +1,32 @@
 /* eslint-disable no-unreachable */
 
-import { useState } from "react"
+import React, { useState } from "react"
 import { messages_en } from "../translations/en"
-import { messages_il } from "../translations/il"
+import { messages_he } from "../translations/he"
 
 export const useIntl = () => {
   const [language, setLanguage] = useState("en")
+  const [locale, setLocale] = useState("en")
 
   const messages = {
-    il: messages_il,
+    he: messages_he,
     en: messages_en,
   }
 
-  const availableLanguages = ["en", "il"]
+  React.useEffect(() => {
+    if (language === "he") setLocale("il")
+    setLocale(language)
+  }, [language])
+
+  const availableLanguages = [
+    { name: "en", icon: "🇬🇧", locale: "en" },
+    { name: "he", icon: "🇮🇱", locale: "il" },
+  ]
   return {
     language,
     setLanguage,
     messages,
     availableLanguages,
+    locale,
   }
 }

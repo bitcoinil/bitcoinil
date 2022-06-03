@@ -15,7 +15,7 @@ export default function Header({ navigate, FormattedMessage, setLanguage }) {
             navigate("/")
           }}
         >
-          TODO: Logo
+          LogoHere
         </p>
       </div>
       <div className="middle">
