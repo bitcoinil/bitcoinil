@@ -2,11 +2,10 @@ import { Menu } from "antd"
 import React, { useState } from "react"
 import styled from "styled-components"
 import { mainMenuItems } from "./mainMenuItems"
-import { useNavigate } from "react-router-dom"
 
-export default function HeaderMenu() {
+export default function HeaderMenu({ navigate }) {
   const [current, setCurrent] = useState("mail")
-  const navigate = useNavigate()
+
   const onClick = (e) => {
     setCurrent(e.key)
     navigate(`/${e.key}`)

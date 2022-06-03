@@ -8,7 +8,6 @@ import RoutePage from "./RoutePage"
 import { mainMenuItems } from "./mainMenuItems"
 import { useIntl } from "./hooks/useIntl"
 import LanguageSelect from "./LanguageSelect"
-import BitCoinIlSite from "./BitcoinIlSite"
 
 export { NewTabLink } from "./NewTabLink"
 // export { CounterButton } from "./CounterButton"
@@ -23,5 +22,4 @@ export {
   useIntl,
   LanguageSelect,
   mainMenuItems,
-  BitCoinIlSite,
 }
