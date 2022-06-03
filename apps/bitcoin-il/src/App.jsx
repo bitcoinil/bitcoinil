@@ -6,12 +6,12 @@ import * as React from 'react'
 
 import { useIntl } from 'app-layout'
 
-import { IntlProvider } from 'react-intl'
+import { FormattedMessage, IntlProvider } from 'react-intl'
 
 import { Route, Routes, useNavigate } from 'react-router-dom'
 
 function App() {
-  const { language, messages } = useIntl()
+  const { language, messages, setLanguage } = useIntl()
   const navigate = useNavigate()
 
   const renderRoutes = () => {
@@ -122,11 +122,30 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Support />
-      <Header navigate={navigate} />
-      {renderRoutes()}
-    </div>
+    <IntlProvider
+      messages={messages[language]}
+      locale={language}
+      defaultLocale="en"
+    >
+      <button onClick={() => setLanguage('il')}>Switch To He</button>
+      <p>
+        YOYOYOYO{'          '}
+        <FormattedMessage
+          id="app.text"
+          defaultMessage="This is some text"
+          description="Link on react page"
+        />
+      </p>
+      <div className="App">
+        <Support />
+        <Header
+          setLanguage={setLanguage}
+          FormattedMessage={FormattedMessage}
+          navigate={navigate}
+        />
+        {renderRoutes()}
+      </div>
+    </IntlProvider>
   )
 }
 
