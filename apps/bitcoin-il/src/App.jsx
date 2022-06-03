@@ -49,7 +49,7 @@ function App() {
   return (
     <IntlProvider
       messages={messages[language]}
-      locale={language}
+      locale={language === 'il' ? 'he' : language}
       defaultLocale="en"
     >
       <button onClick={() => setLanguage('il')}>Switch To He</button>
