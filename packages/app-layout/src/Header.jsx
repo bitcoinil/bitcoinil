@@ -6,7 +6,6 @@ import LanguageSelect from "./LanguageSelect"
 // import { useNavigate } from "react-router-dom"
 
 export default function Header({ navigate, FormattedMessage, setLanguage }) {
-  console.log("What is Headers setLang?", setLanguage)
   return (
     <StyledHeader>
       <div className="left">
