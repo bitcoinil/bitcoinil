@@ -4,12 +4,9 @@ import styled from 'styled-components'
 // @ts-ignore
 import HeaderMenu from './HeaderMenu'
 // @ts-ignore
-import { useIntl } from './hooks/useIntl'
-// @ts-ignore
 import LanguageSelect from './LanguageSelect'
 
 export default function Header(): JSX.Element {
-  const { setLanguage } = useIntl()
   const navigate = useNavigate()
   return (
     <StyledHeader>
@@ -24,7 +21,7 @@ export default function Header(): JSX.Element {
         </p>
       </div>
       <div className="middle">
-        <HeaderMenu navigate={navigate} />
+        <HeaderMenu />
       </div>
       <div className="right">
         <LanguageSelect />
