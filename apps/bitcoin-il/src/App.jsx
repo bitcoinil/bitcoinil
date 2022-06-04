@@ -1,22 +1,17 @@
 import '@djitsu/themes/dist/themes/main-theme/main-theme-main-light.css'
 import 'antd/dist/antd.css' // or 'antd/dist/antd.less'
 import * as React from 'react'
+import { IntlProvider } from 'react-intl'
+import { Route, Routes } from 'react-router-dom'
+import DevTools from './DevTools'
 import Header from './Header'
 // import { useNavigate } from 'react-router-dom'
-
 import { useIntl } from './hooks/useIntl'
-
-import Support from './support'
-
 import { mainMenuItems } from './mainMenuItems'
-
-import { FormattedMessage, IntlProvider } from 'react-intl'
-
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import Support from './support'
 
 function App() {
   const { language, messages, setLanguage, locale } = useIntl()
-  const navigate = useNavigate()
 
   const renderRoutes = () => {
     return (
@@ -57,12 +52,9 @@ function App() {
       defaultLocale="en"
     >
       <div className="App">
+        <DevTools />
         <Support />
-        <Header
-          setLanguage={setLanguage}
-          FormattedMessage={FormattedMessage}
-          navigate={navigate}
-        />
+        <Header />
         {renderRoutes()}
       </div>
     </IntlProvider>
