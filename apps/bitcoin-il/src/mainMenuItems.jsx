@@ -81,6 +81,96 @@ export const mainMenuItems = [
     ]
   },
   {
+    label: 'Resources',
+    key: 'resources-menu',
+    submenu: [
+      {
+        label: 'Resources',
+        key: 'resources',
+        element: (
+          <RoutePage
+            id="resources"
+            title="Resources"
+            subtitle="Useful websites and resources about Bitcoin."
+            body={<h1>Individuals Body</h1>}
+          />
+        )
+      },
+      {
+        label: 'Exchanges',
+        key: 'exchanges',
+        element: (
+          <RoutePage
+            title="Exchanges"
+            id="exchanges"
+            subtitle="Places to buy bitcoin in exchange for other currencies."
+            body={<h1>Business Body</h1>}
+          />
+        )
+      },
+      {
+        label: 'Community',
+        key: 'community',
+        element: (
+          <RoutePage
+            id="Community"
+            title="community"
+            subtitle="Bitcoin for Community"
+            body={<h1>Developers Body</h1>}
+          />
+        )
+      },
+      {
+        label: 'Documentation',
+        key: 'documentation',
+        element: (
+          <RoutePage
+            id="documentation"
+            title="Documentation"
+            subtitle="Learn Bitcoin and start building Bitcoin-based applications."
+            body={<h1>Getting Started Body</h1>}
+          />
+        )
+      },
+      {
+        label: 'Vocabulary',
+        key: 'vocabulary',
+        element: (
+          <RoutePage
+            id="vocabulary"
+            title="Vocabulary"
+            subtitle="Bitcoin provides a new approach to payments and, as such, there are some new words that might become a part of your vocabulary."
+            body={<h1>How It Works Body</h1>}
+          />
+        )
+      },
+      {
+        label: 'Events',
+        key: 'events',
+        element: (
+          <RoutePage
+            id="events"
+            title="White Paper"
+            subtitle="Find events, conferences and meetups all over the world. Subscribe to the RSS feed."
+            body={<h1>White Paper Body</h1>}
+          />
+        )
+      },
+      {
+        label: 'BitCoin Core',
+        key: 'core',
+        element: (
+          <RoutePage
+            id="core"
+            title="BitCoin Core"
+            subtitle="Helping you keep Bitcoin decentralized."
+            body={<h1>White Paper Body</h1>}
+          />
+        )
+      }
+    ]
+  },
+  {
     label: 'Innovation',
     key: 'innovation',
     element: (
