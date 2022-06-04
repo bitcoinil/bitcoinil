@@ -10,7 +10,7 @@ import { useIntl } from './hooks/useIntl'
 import { mainMenuItems } from './mainMenuItems'
 import Support from './support'
 
-function App() {
+function App(): JSX.Element {
   const { language, messages, setLanguage, locale } = useIntl()
 
   const renderRoutes = () => {
@@ -47,6 +47,7 @@ function App() {
 
   return (
     <IntlProvider
+      // @ts-ignore
       messages={messages[language]}
       locale={locale}
       defaultLocale="en"
