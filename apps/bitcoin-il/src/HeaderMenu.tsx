@@ -3,6 +3,8 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 
+import Arrow from './img/ico_angle.svg'
+
 //@ts-ignore
 import { mainMenuItems } from './mainMenuItems'
 import { ClickedMenuItemData, MainMenuItem } from './Interfaces'
@@ -23,7 +25,14 @@ export default function HeaderMenu(): JSX.Element {
         console.log('🌠', item)
         if (item.submenu) {
           return (
-            <Menu.SubMenu key={item.key} title={item.label}>
+            <Menu.SubMenu
+              key={item.key}
+              title={
+                <p className="collapsable-menu">
+                  {item.label} <img className="menu-arrow" src={Arrow} />
+                </p>
+              }
+            >
               {item.submenu.map((subItem: MainMenuItem) => {
                 return <Menu.Item key={subItem.key}>{subItem.label}</Menu.Item>
               })}
@@ -32,7 +41,7 @@ export default function HeaderMenu(): JSX.Element {
         }
         return (
           <Menu.Item key={item.key} onClick={() => console.log(item)}>
-            {item.label}
+            <p>{item.label}</p>
           </Menu.Item>
         )
       })}
@@ -50,6 +59,22 @@ const StyledAppMenu = styled(Menu)`
   &.ant-menu {
     background: transparent;
     border-bottom: none;
+
+    p {
+      margin: 0;
+    }
+
+    .menu-arrow {
+      transition: all 200ms;
+    }
+
+    .collapsable-menu {
+      transition: all 200ms;
+      &:hover > .menu-arrow {
+        transition: all 200ms;
+        transform: rotate(180deg);
+      }
+    }
 
     > li {
       &::after {
