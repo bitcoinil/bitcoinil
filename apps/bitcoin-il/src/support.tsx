@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import BitcoinButton from './BitcoinSiteButton'
 import { colors } from './colors'
 
-const Support = () => {
+const Support = (): JSX.Element => {
   const [isExtended, setIsExtended] = React.useState(false)
   const [showModal, setShowModal] = React.useState(false)
 
