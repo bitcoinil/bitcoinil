@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { useIntl } from './hooks/useIntl'
 import { AvailableLanguageData } from './Interfaces'
 
-export default function LanguageSelect() {
+export default function LanguageSelect(): JSX.Element {
   const intl = useIntl()
   const { setLanguage, availableLanguages } = intl
 
