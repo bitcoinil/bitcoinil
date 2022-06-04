@@ -1,8 +1,13 @@
-import React from "react"
-import styled from "styled-components"
-import { colors } from "./colors"
+import * as React from 'react'
+import styled from 'styled-components'
+import { colors } from './colors'
+import { BitCoinSiteButtonProps } from './Interfaces'
 
-export default function BitcoinButton({ onClick, children }) {
+export default function BitcoinButton({
+  onClick,
+  children
+}: BitCoinSiteButtonProps): JSX.Element {
+  // @ts-ignore
   return <StyledButton onClick={onClick}>{children}</StyledButton>
 }
 
