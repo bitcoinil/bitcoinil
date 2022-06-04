@@ -4,13 +4,7 @@ import styled from 'styled-components'
 import { FormattedMessage } from 'react-intl'
 
 import HeroBg from './img/hero-bg.svg'
-
-interface RoutePageProps {
-  title: string
-  subtitle: string
-  body: JSX.Element
-  id: string
-}
+import { RoutePageProps } from './Interfaces'
 
 export default function RoutePage({
   title = 'title Prop',
@@ -51,8 +45,8 @@ const StyledRoutePage = styled.div`
   min-height: 100vh;
 
   .page-title {
-    background: black;
-    background-image: src('${HeroBg}');
+    /* background: black; */
+    background-image: url('${HeroBg}');
     min-height: 400px;
     display: flex;
     align-items: center;
