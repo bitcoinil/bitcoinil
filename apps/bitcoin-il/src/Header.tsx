@@ -1,9 +1,16 @@
-import React from 'react'
+import * as React from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+// @ts-ignore
 import HeaderMenu from './HeaderMenu'
+// @ts-ignore
+import { useIntl } from './hooks/useIntl'
+// @ts-ignore
 import LanguageSelect from './LanguageSelect'
 
-export default function Header({ navigate, FormattedMessage, setLanguage }) {
+export default function Header(): JSX.Element {
+  const { setLanguage } = useIntl()
+  const navigate = useNavigate()
   return (
     <StyledHeader>
       <div className="left">
@@ -20,10 +27,7 @@ export default function Header({ navigate, FormattedMessage, setLanguage }) {
         <HeaderMenu navigate={navigate} />
       </div>
       <div className="right">
-        <LanguageSelect
-          setLanguage={setLanguage}
-          FormattedMessage={FormattedMessage}
-        />
+        <LanguageSelect />
       </div>
     </StyledHeader>
   )
