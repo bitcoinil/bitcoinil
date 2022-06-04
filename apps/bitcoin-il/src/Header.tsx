@@ -17,7 +17,7 @@ export default function Header(): JSX.Element {
             navigate('/')
           }}
         >
-          Log
+          LogoHere
         </p>
       </div>
       <div className="middle">
