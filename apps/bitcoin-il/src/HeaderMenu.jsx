@@ -1,10 +1,10 @@
-import { Menu } from "antd"
-import React, { useState } from "react"
-import styled from "styled-components"
-import { mainMenuItems } from "./mainMenuItems"
+import { Menu } from 'antd'
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import { mainMenuItems } from './mainMenuItems'
 
 export default function HeaderMenu({ navigate }) {
-  const [current, setCurrent] = useState("mail")
+  const [current, setCurrent] = useState('mail')
 
   const onClick = (e) => {
     setCurrent(e.key)
