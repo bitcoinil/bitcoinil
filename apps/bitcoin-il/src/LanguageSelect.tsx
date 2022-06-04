@@ -1,8 +1,10 @@
 import { Select } from 'antd'
-import React from 'react'
+import * as React from 'react'
 // import { FormattedMessage, IntlProvider } from "react-intl"
 import styled from 'styled-components'
+// @ts-ignore
 import { useIntl } from './hooks/useIntl'
+import { AvailableLanguageData } from './Interfaces'
 
 export default function LanguageSelect() {
   const intl = useIntl()
@@ -16,7 +18,7 @@ export default function LanguageSelect() {
         }}
         defaultValue={availableLanguages[0].icon}
       >
-        {availableLanguages.map((avLang) => {
+        {availableLanguages.map((avLang: AvailableLanguageData) => {
           return (
             <Select.Option
               key={`select-language-${avLang.name}`}
