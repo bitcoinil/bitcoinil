@@ -1,23 +1,30 @@
 import { Menu } from 'antd'
-import React, { useState } from 'react'
+import * as React from 'react'
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
+
+//@ts-ignore
 import { mainMenuItems } from './mainMenuItems'
+import { ClickedMenuItemData, MainMenuItem } from './Interfaces'
 
-export default function HeaderMenu({ navigate }) {
-  const [current, setCurrent] = useState('mail')
+export default function HeaderMenu(): JSX.Element {
+  const [current, setCurrent] = React.useState('mail')
 
-  const onClick = (e) => {
+  const navigate = useNavigate()
+
+  const onClick = (e: ClickedMenuItemData) => {
     setCurrent(e.key)
     navigate(`/${e.key}`)
   }
 
   return (
     <StyledAppMenu onClick={onClick} selectedKeys={[current]} mode="horizontal">
-      {mainMenuItems.map((item) => {
+      {mainMenuItems.map((item: MainMenuItem) => {
+        console.log('🌠', item)
         if (item.submenu) {
           return (
             <Menu.SubMenu key={item.key} title={item.label}>
-              {item.submenu.map((subItem) => {
+              {item.submenu.map((subItem: MainMenuItem) => {
                 return <Menu.Item key={subItem.key}>{subItem.label}</Menu.Item>
               })}
             </Menu.SubMenu>
@@ -33,6 +40,7 @@ export default function HeaderMenu({ navigate }) {
   )
 }
 
+// @ts-ignore
 const StyledAppMenu = styled(Menu)`
   width: 80vw;
   display: flex;
