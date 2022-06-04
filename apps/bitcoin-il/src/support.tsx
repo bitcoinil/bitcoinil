@@ -1,16 +1,19 @@
-import { Modal } from "antd"
-import React, { useState } from "react"
-import styled from "styled-components"
-import BitcoinButton from "./BitcoinSiteButton"
-import { colors } from "./colors"
+import { Modal } from 'antd'
+import * as React from 'react'
+import styled from 'styled-components'
+
+// @ts-ignore
+import BitcoinButton from './BitcoinSiteButton'
+import { colors } from './colors'
 
 const Support = () => {
-  const [isExtended, setIsExtended] = useState(false)
-  const [showModal, setShowModal] = useState(false)
+  const [isExtended, setIsExtended] = React.useState(false)
+  const [showModal, setShowModal] = React.useState(false)
 
   return (
     <StyledSupport
-      onClick={!isExtended ? () => setIsExtended(true) : null}
+      onClick={() => (!isExtended ? () => setIsExtended(true) : null)}
+      // @ts-ignore
       isExtended={isExtended}
     >
       {!isExtended ? (
@@ -55,6 +58,7 @@ const Support = () => {
                   <input placeholder="Or custom amount (USD)" />
                 </div>
                 <div className="single-input">
+                  {/* @ts-ignore */}
                   <input placeHolder="Optional Message For Your Wallet" />
                 </div>
               </div>
@@ -123,14 +127,18 @@ const StyledModal = styled(Modal)`
 const StyledSupport = styled.div`
   transition: all 300ms;
   font-size: 11.5px;
-  cursor: ${(props) => (props.isExtended ? null : "pointer")};
-  height: ${(props) => (props.isExtended ? "133px" : "38px")};
+  // @ts-ignore
+  cursor: ${(props) => (props.isExtended ? null : 'pointer')};
+  // @ts-ignore
+  height: ${(props) => (props.isExtended ? '133px' : '38px')};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: ${(props) => (props.isExtended ? "#0000000" : colors.whiteText)};
+  // @ts-ignore
+  color: ${(props) => (props.isExtended ? '#0000000' : colors.whiteText)};
   background: ${(props) =>
+    // @ts-ignore
     props.isExtended ? colors.dullAccent : colors.accent};
 
   p {
