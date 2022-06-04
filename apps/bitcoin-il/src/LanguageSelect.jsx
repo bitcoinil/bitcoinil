@@ -1,12 +1,12 @@
-import { Select } from "antd"
-import React from "react"
+import { Select } from 'antd'
+import React from 'react'
 // import { FormattedMessage, IntlProvider } from "react-intl"
-import styled from "styled-components"
-import { useIntl } from "./hooks/useIntl"
+import styled from 'styled-components'
+import { useIntl } from './hooks/useIntl'
 
-export default function LanguageSelect({ setLanguage, FormattedMessage }) {
+export default function LanguageSelect() {
   const intl = useIntl()
-  const { language, messages, availableLanguages } = intl
+  const { setLanguage, availableLanguages } = intl
 
   return (
     <StyledLanguageSelect>
@@ -31,6 +31,4 @@ export default function LanguageSelect({ setLanguage, FormattedMessage }) {
   )
 }
 
-const StyledLanguageSelect = styled.div`
-  height: 110px;
-`
+const StyledLanguageSelect = styled.div``
