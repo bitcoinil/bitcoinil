@@ -1,36 +1,41 @@
-import { Select } from 'antd'
+import { Menu } from 'antd'
 import * as React from 'react'
 // import { FormattedMessage, IntlProvider } from "react-intl"
 import styled from 'styled-components'
-// @ts-ignore
 import { useIntl } from './hooks/useIntl'
-import { AvailableLanguageData } from './Interfaces'
 
 export default function LanguageSelect(): JSX.Element {
   const intl = useIntl()
   const { setLanguage, availableLanguages } = intl
+  const [current, setCurrent] = React.useState('en')
+
+  const onClick = (e: any) => {
+    setLanguage(e.key)
+    setCurrent(e.key)
+  }
 
   return (
-    <StyledLanguageSelect>
-      <Select
-        onChange={(e) => {
-          setLanguage(e)
-        }}
-        defaultValue={availableLanguages[0].icon}
+    <StyledLanguageSelect
+      onClick={onClick}
+      selectedKeys={[current]}
+      mode="horizontal"
+    >
+      <Menu.SubMenu
+        key={'lang'}
+        title={<p className="collapsable-menu">{current}</p>}
       >
-        {availableLanguages.map((avLang: AvailableLanguageData) => {
+        {availableLanguages.map((avLang) => {
           return (
-            <Select.Option
-              key={`select-language-${avLang.name}`}
-              value={avLang.name}
-            >
-              {avLang.icon}
-            </Select.Option>
+            <Menu.Item key={avLang.name} onClick={() => console.log(avLang)}>
+              <p>{avLang.name}</p>
+            </Menu.Item>
           )
         })}
-      </Select>
+      </Menu.SubMenu>
     </StyledLanguageSelect>
   )
 }
 
-const StyledLanguageSelect = styled.div``
+const StyledLanguageSelect = styled(Menu)`
+  width: 400px;
+`
