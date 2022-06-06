@@ -83,7 +83,6 @@ const AppMenu = ({}) => {
   )
 }
 
-// @ts-ignore
 const StyledAppMenu = styled(Menu)`
   &.ant-menu {
     background: transparent;
