@@ -1,6 +1,5 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-// @ts-ignore
 import App from './App'
 import { BrowserRouter as Router } from 'react-router-dom'
 
