@@ -1,9 +1,7 @@
 import * as React from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
-// @ts-ignore
 import HeaderMenu from './HeaderMenu'
-// @ts-ignore
 import LanguageSelect from './LanguageSelect'
 
 export default function Header(): JSX.Element {
