@@ -81,6 +81,7 @@ export const StyledAppMenu = styled.div`
           height: 0;
         }
         &.ant-menu-item {
+          color: pink;
           &::after {
             width: 0;
             height: 0;
