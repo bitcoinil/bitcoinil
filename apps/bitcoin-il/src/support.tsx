@@ -1,9 +1,7 @@
 import { Modal } from 'antd'
 import * as React from 'react'
 import styled from 'styled-components'
-
-// @ts-ignore
-import BitcoinButton from './BitcoinSiteButton'
+import SiteButton from './BitcoinSiteButton'
 import { colors } from './colors'
 
 const Support = (): JSX.Element => {
@@ -11,62 +9,64 @@ const Support = (): JSX.Element => {
   const [showModal, setShowModal] = React.useState(false)
 
   return (
-    <StyledSupport
-      onClick={() => (!isExtended ? () => setIsExtended(true) : null)}
-      // @ts-ignore
-      isExtended={isExtended}
-    >
-      {!isExtended ? (
-        <p>Bitcoin.Il Needs Your Support</p>
-      ) : (
-        <>
-          <span onClick={() => setIsExtended(false)} className="close">
-            X
-          </span>
-          <p className="margin-bottom">
-            Bitcoin Il is a community funded project, donations are appreciated
-            and used to improve the website.
-          </p>
-          <BitcoinButton onClick={() => setShowModal(true)}>
-            Make a Donation
-          </BitcoinButton>
-          {showModal ? (
-            <StyledModal
-              title={null}
-              visible={showModal}
-              footer={null}
-              onCancel={() => setShowModal(false)}
-            >
-              <h1 className="modal-title">Donate to Bitcoin Il</h1>
-              <p>Use this QR code or address below</p>
-              <p>ADD QR CODE</p>
-              <p>Add address</p>
-              <div className="buttons-container">
-                <BitcoinButton>
-                  <p className="button-top">$5.00</p>
-                </BitcoinButton>
-                <BitcoinButton>
-                  <p className="button-top">$10.00</p>
-                </BitcoinButton>
-                <BitcoinButton>
-                  <p className="button-top">$20.00</p>
-                </BitcoinButton>
-              </div>
-              <div className="input-container">
-                <div className="two-inputs">
-                  <input placeholder="Or custom amount? (BTC)" />
-                  <input placeholder="Or custom amount (USD)" />
+    <>
+      <StyledSupport
+        onClick={() => {
+          setIsExtended(!isExtended)
+        }}
+        className={isExtended ? 'extended' : 'minimized'}
+      >
+        {!isExtended ? (
+          <p>Bitcoin.Il Needs Your Support</p>
+        ) : (
+          <>
+            <span onClick={() => setIsExtended(false)} className="close">
+              X
+            </span>
+            <p className="margin-bottom">
+              Bitcoin Il is a community funded project, donations are
+              appreciated and used to improve the website.
+            </p>
+            <SiteButton onClick={() => setShowModal(true)}>
+              <p>Make a Donation</p>
+            </SiteButton>
+            {showModal ? (
+              <StyledModal
+                title={null}
+                visible={showModal}
+                footer={null}
+                onCancel={() => setShowModal(false)}
+              >
+                <h1 className="modal-title">Donate to Bitcoin Il</h1>
+                <p>Use this QR code or address below</p>
+                <p>ADD QR CODE</p>
+                <p>Add address</p>
+                <div className="buttons-container">
+                  <SiteButton>
+                    <p className="button-top">$5.00</p>
+                  </SiteButton>
+                  <SiteButton>
+                    <p className="button-top">$10.00</p>
+                  </SiteButton>
+                  <SiteButton>
+                    <p className="button-top">$20.00</p>
+                  </SiteButton>
                 </div>
-                <div className="single-input">
-                  {/* @ts-ignore */}
-                  <input placeHolder="Optional Message For Your Wallet" />
+                <div className="input-container">
+                  <div className="two-inputs">
+                    <input placeholder="Or custom amount? (BTC)" />
+                    <input placeholder="Or custom amount (USD)" />
+                  </div>
+                  <div className="single-input">
+                    <input placeholder="Optional Message For Your Wallet" />
+                  </div>
                 </div>
-              </div>
-            </StyledModal>
-          ) : null}
-        </>
-      )}
-    </StyledSupport>
+              </StyledModal>
+            ) : null}
+          </>
+        )}
+      </StyledSupport>
+    </>
   )
 }
 
@@ -127,19 +127,23 @@ const StyledModal = styled(Modal)`
 const StyledSupport = styled.div`
   transition: all 300ms;
   font-size: 11.5px;
-  // @ts-ignore
-  cursor: ${(props) => (props.isExtended ? null : 'pointer')};
-  // @ts-ignore
-  height: ${(props) => (props.isExtended ? '133px' : '38px')};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // @ts-ignore
-  color: ${(props) => (props.isExtended ? '#0000000' : colors.whiteText)};
-  background: ${(props) =>
-    // @ts-ignore
-    props.isExtended ? colors.dullAccent : colors.accent};
+
+  &.extended {
+    height: 133px;
+    color: #000000;
+    background: ${colors.dullAccent};
+  }
+
+  &.minimized {
+    cursor: pointer;
+    height: 38px;
+    ${colors.whiteText};
+    background: ${colors.accent};
+  }
 
   p {
     margin: 0;
