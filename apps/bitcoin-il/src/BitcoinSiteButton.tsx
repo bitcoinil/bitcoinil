@@ -1,12 +1,12 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { colors } from './colors'
-import { BitCoinSiteButtonProps as SomeCoolButtonProps } from './Interfaces'
+import { SiteButtonProps } from './Interfaces'
 
 export default function SiteButton({
   onClick = () => {},
   children
-}: SomeCoolButtonProps): JSX.Element {
+}: SiteButtonProps) {
   return <StyledButton onClick={() => onClick}>{children}</StyledButton>
 }
 

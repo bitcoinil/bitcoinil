@@ -23,8 +23,9 @@ export interface AvailableLanguageData {
   name: string
 }
 
-export interface BitCoinSiteButtonProps {
-  onClick: Function
+export interface SiteButtonProps {
+  onClick?: Function
+  children: React.ReactNode
 }
 
 export interface TranslationDictionary {
