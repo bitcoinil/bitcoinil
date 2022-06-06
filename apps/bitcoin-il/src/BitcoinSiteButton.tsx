@@ -1,18 +1,16 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { colors } from './colors'
-import { BitCoinSiteButtonProps } from './Interfaces'
+import { BitCoinSiteButtonProps as SomeCoolButtonProps } from './Interfaces'
 
-export default function BitcoinButton({
-  onClick,
+export default function SiteButton({
+  onClick = () => {},
   children
-}: BitCoinSiteButtonProps): JSX.Element {
-  // @ts-ignore
-  return <StyledButton onClick={onClick}>{children}</StyledButton>
+}: SomeCoolButtonProps): JSX.Element {
+  return <StyledButton onClick={() => onClick}>{children}</StyledButton>
 }
 
 const StyledButton = styled.button`
-  background: red;
   border: none;
   background: ${colors.accent};
   color: ${colors.whiteText};
