@@ -25,7 +25,6 @@ export interface AvailableLanguageData {
 
 export interface BitCoinSiteButtonProps {
   onClick: Function
-  children: typeof React.Children
 }
 
 export interface TranslationDictionary {
@@ -35,5 +34,4 @@ export interface TranslationDictionary {
 export interface StyledSupportProps {
   onClick: Function
   isExtended: boolean
-  children: React.ReactChildren
 }
