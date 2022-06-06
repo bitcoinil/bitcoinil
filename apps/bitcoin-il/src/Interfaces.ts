@@ -35,3 +35,7 @@ export interface StyledSupportProps {
   onClick: Function
   isExtended: boolean
 }
+
+export interface Messages {
+  [key: string]: TranslationDictionary
+}

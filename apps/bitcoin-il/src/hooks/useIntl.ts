@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Messages, TranslationDictionary } from '../Interfaces'
 import { messages_en } from '../translations/en'
 import { messages_he } from '../translations/he'
 
@@ -6,7 +7,7 @@ export const useIntl = () => {
   const [language, setLanguage] = React.useState('en')
   const [locale, setLocale] = React.useState('en')
 
-  const messages = {
+  const messages: Messages = {
     he: messages_he,
     en: messages_en
   }
