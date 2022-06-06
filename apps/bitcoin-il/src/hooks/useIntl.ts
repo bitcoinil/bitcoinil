@@ -1,5 +1,3 @@
-/* eslint-disable no-unreachable */
-
 import * as React from 'react'
 import { messages_en } from '../translations/en'
 import { messages_he } from '../translations/he'
