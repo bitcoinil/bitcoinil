@@ -27,3 +27,13 @@ export interface BitCoinSiteButtonProps {
   onClick: Function
   children: typeof React.Children
 }
+
+export interface TranslationDictionary {
+  [key: string]: string
+}
+
+export interface StyledSupportProps {
+  onClick: Function
+  isExtended: boolean
+  children: React.ReactChildren
+}
