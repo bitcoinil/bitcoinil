@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import { Route, Routes } from 'react-router-dom'
 import { mainMenuItems } from './mainMenuItems'
+import HomePage from './HomePage'
 
 function App(): JSX.Element {
   const { language, messages, locale } = useIntl()
@@ -37,7 +38,7 @@ function App(): JSX.Element {
         )
       })}
 
-      <Route path="*" element={'HOME PAGE HERE'} />
+      <Route path="*" element={<HomePage />} />
     </Routes>
   )
 
