@@ -2,7 +2,6 @@ import '@djitsu/themes/dist/themes/main-theme/main-theme-main-light.css'
 import 'antd/dist/antd.css' // or 'antd/dist/antd.less'
 import * as React from 'react'
 import { IntlProvider } from 'react-intl'
-import RenderRoutes from './RenderRoutes'
 import DevTools from './DevTools'
 import Header from './Header'
 // import { useNavigate } from 'react-router-dom'
@@ -44,14 +43,14 @@ function App(): JSX.Element {
 
   return (
     <AppStyleWrap>
-      {/* <Helmet>
+      <Helmet>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap"
           rel="stylesheet"
         />
-      </Helmet> */}
+      </Helmet>
       <IntlProvider
         messages={messages[language]}
         locale={locale}
@@ -72,5 +71,6 @@ export default App
 
 const AppStyleWrap = styled.div`
   font-family: 'Titillium Web', sans-serif;
-  font-weight: 400;
+  font-weight: bolder;
+  letter-spacing: 0.4px;
 `
