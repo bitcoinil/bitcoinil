@@ -4,8 +4,6 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { useIntl } from './hooks/useIntl'
 
-type ButtonEvent = React.MouseEvent<HTMLButtonElement>
-
 export default function LanguageSelect(): JSX.Element {
   const intl = useIntl()
   const { setLanguage, availableLanguages } = intl
@@ -42,6 +40,9 @@ const StyledLanguageSelect = styled.div`
     &.ant-menu {
       background: transparent;
       border-bottom: none;
+    }
+
+    &-item {
     }
 
     p {
