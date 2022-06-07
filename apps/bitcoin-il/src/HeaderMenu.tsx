@@ -21,7 +21,6 @@ export default function HeaderMenu(): JSX.Element {
     <StyledAppMenu>
       <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
         {mainMenuItems.map((item: any) => {
-          console.log('🌠', item)
           if (item.submenu) {
             return (
               <Menu.SubMenu
