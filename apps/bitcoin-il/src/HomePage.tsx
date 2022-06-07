@@ -2,6 +2,7 @@ import * as React from 'react'
 import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
 import HomepageButtons from './HomepageButtons'
+import WhatIsBitcoin from './WhatIsBitcoin'
 
 export default function HomePage(): JSX.Element {
   return (
@@ -14,6 +15,7 @@ export default function HomePage(): JSX.Element {
         />
       </h1>
       <HomepageButtons />
+      <WhatIsBitcoin />
     </StyledHomePage>
   )
 }
