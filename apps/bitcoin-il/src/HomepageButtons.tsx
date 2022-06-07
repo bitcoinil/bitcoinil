@@ -2,28 +2,39 @@ import * as React from 'react'
 import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
 import SiteButton from './BitcoinSiteButton'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function HomepageButtons(): JSX.Element {
-  //   const navigate = useNavigate()
+  const navigate = useNavigate()
   return (
     <StyledHomepageButtons>
       <div className="homepage-buttons">
-        <SiteButton type="primary">
+        <SiteButton
+          onClick={() => {
+            navigate('/getting-started')
+          }}
+          type="primary"
+        >
           <FormattedMessage
             id={`homepage.get-started-button`}
             defaultMessage={`Get Started With BitCoin Il`}
             description={`Get Started`}
           />
         </SiteButton>
-        <SiteButton type="default">
+        <SiteButton
+          onClick={() => {
+            console.log('The Clickening')
+            navigate('/choose-your-wallet')
+          }}
+          type="default"
+        >
           <FormattedMessage
             id={`homepage.choose-your-wallet`}
             defaultMessage={`Choose Your Wallet`}
             description={`Choose Wallet`}
           />
         </SiteButton>
-        <SiteButton type="default">
+        <SiteButton onClick={() => navigate('/buy')} type="default">
           <FormattedMessage
             id={`homepage.buy-bitcoin`}
             defaultMessage={`Buy Bitcoin`}
