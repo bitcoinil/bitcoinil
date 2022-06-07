@@ -1,0 +1,10 @@
+{
+	"New Styled Component": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "nsc",
+		"body": [
+			"const ${1:name} = styled.${2:element}``",
+		],
+		"description": "New Styled Component"
+	}
+}

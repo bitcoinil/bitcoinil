@@ -1,0 +1,28 @@
+{
+	"New TSX Component": {
+		"scope": "javascript,typescript,typescriptreact,plaintext",
+		"prefix": "ntc",
+		"body": [
+			"import * as React from 'react'",
+			"import { FormattedMessage } from 'react-intl'",
+			"import styled from 'styled-components'",
+			"",
+			"export default function ${1:Name}(): JSX.Element {",
+			"return (",
+			"<${2:Styled Component Name}>",
+			"<h1>",
+			"<FormattedMessage",
+			"id={`page.home.title`}",
+			"defaultMessage={`Bitcoin is an innovative payment network and a new kind of money.`}",
+			"description={`Homepage Title`}",
+			"/>",
+			"</h1>",
+			"    </${2:Styled Component Name}>",
+			"  )",
+			"}",
+			"",
+			"const ${2:Styled Component Name} = styled.div``",
+		],
+		"description": "New TSX Component"
+	}
+}

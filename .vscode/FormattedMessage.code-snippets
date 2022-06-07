@@ -1,0 +1,14 @@
+{
+	"New Formatted Message": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "nfm",
+		"body": [
+			"<FormattedMessage",
+			"id={`${1:id}`}",
+			"defaultMessage={`${2:Message}`}",
+			"description={`${3:Description}`}",
+			"/>",
+		],
+		"description": "New Formatted Message"
+	}
+}
