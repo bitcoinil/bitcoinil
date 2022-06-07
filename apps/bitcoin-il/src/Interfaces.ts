@@ -25,6 +25,7 @@ export interface AvailableLanguageData {
 
 export interface SiteButtonProps {
   onClick?: Function
+  type?: any
   children: React.ReactNode
 }
 
