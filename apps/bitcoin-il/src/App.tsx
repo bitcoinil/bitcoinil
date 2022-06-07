@@ -7,11 +7,12 @@ import Header from './Header'
 // import { useNavigate } from 'react-router-dom'
 import { useIntl } from './hooks/useIntl'
 import Support from './support'
-import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import { Route, Routes } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import { mainMenuItems } from './mainMenuItems'
 import HomePage from './HomePage'
+import { nonMenuRoutes } from './nonMenuRoutes'
 
 function App(): JSX.Element {
   const { language, messages, locale } = useIntl()
@@ -35,6 +36,17 @@ function App(): JSX.Element {
 
         return (
           <Route key={i} path={`/${menuItem.key}`} element={menuItem.element} />
+        )
+      })}
+
+      {nonMenuRoutes.map((route) => {
+        console.log({ route })
+        return (
+          <Route
+            key={route.key}
+            path={`/${route.path}`}
+            element={route.element}
+          />
         )
       })}
 
