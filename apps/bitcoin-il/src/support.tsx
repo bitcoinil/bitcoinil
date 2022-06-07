@@ -1,8 +1,10 @@
 import { Modal } from 'antd'
 import * as React from 'react'
+import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
 import SiteButton from './BitcoinSiteButton'
 import { colors } from './colors'
+import CloseButton from './img/ico_close.svg'
 
 const Support = (): JSX.Element => {
   const [isExtended, setIsExtended] = React.useState(false)
@@ -17,17 +19,31 @@ const Support = (): JSX.Element => {
         className={isExtended ? 'extended' : 'minimized'}
       >
         {!isExtended ? (
-          <p>Bitcoin.Il Needs Your Support</p>
+          <p>
+            <FormattedMessage
+              id={`support.cta`}
+              defaultMessage={`Bitcoin.Il Needs Your Support`}
+              description={`CTA`}
+            />
+          </p>
         ) : (
           <>
             <span onClick={() => setIsExtended(false)} className="close">
-              X
+              <img src={CloseButton} />
             </span>
             <p className="margin-bottom">
-              Bitcoin Il is a community funded project, donations are
-              appreciated and used to improve the website.
+              <FormattedMessage
+                id={`support.title`}
+                defaultMessage={`Bitcoin Il is a community funded project, donations are appreciated and used to improve the website.`}
+                description={`Homepage Title`}
+              />
             </p>
-            <SiteButton onClick={() => setShowModal(true)}>
+
+            <SiteButton
+              onClick={() => {
+                setShowModal(true)
+              }}
+            >
               <p>Make a Donation</p>
             </SiteButton>
             {showModal ? (
@@ -133,16 +149,19 @@ const StyledSupport = styled.div`
   justify-content: center;
 
   &.extended {
-    height: 133px;
+    height: 205px;
     color: #000000;
     background: ${colors.dullAccent};
+    font-size: 16px;
   }
 
   &.minimized {
     cursor: pointer;
-    height: 38px;
-    ${colors.whiteText};
+    height: 55px;
+    color: ${colors.whiteText};
     background: ${colors.accent};
+    font-size: 16px;
+    font-weight: bolder;
   }
 
   p {
@@ -150,13 +169,14 @@ const StyledSupport = styled.div`
   }
 
   .margin-bottom {
-    margin-bottom: 22px;
+    margin-bottom: 45px;
   }
 
   .close {
     position: absolute;
-    top: 15px;
-    right: 30px;
+    top: 40px;
+    right: 80px;
     cursor: pointer;
+    font-weight: bolder;
   }
 `
