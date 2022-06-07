@@ -16,10 +16,11 @@ const StyledButton = styled.button`
   color: ${colors.whiteText};
   font-weight: 600;
   cursor: pointer;
-  padding: 2px 14px;
+  padding: 6px 41px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 13px;
 
   p {
     margin: 0;
