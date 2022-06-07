@@ -27,7 +27,6 @@ export default function RoutePage({
           />
         </h1>
         <h3>
-          {subtitle}
           <FormattedMessage
             id={`page.${id}.subtitle`}
             defaultMessage={`${subtitle} (placeholder)`}
