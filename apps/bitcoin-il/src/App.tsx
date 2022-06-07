@@ -58,7 +58,7 @@ function App(): JSX.Element {
         defaultLocale="en"
       >
         <div className="App">
-          <DevTools />
+          {/* <DevTools /> */}
           <Support />
           <Header />
           {renderRoutes()}
