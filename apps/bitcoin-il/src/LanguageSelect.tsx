@@ -38,7 +38,7 @@ export default function LanguageSelect(): JSX.Element {
 
 const StyledLanguageSelect = styled.div`
   .ant-menu {
-    width: 400px;
+    width: 80px;
     &.ant-menu {
       background: transparent;
       border-bottom: none;
