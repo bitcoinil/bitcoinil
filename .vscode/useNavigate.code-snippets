@@ -1,0 +1,11 @@
+{
+	"useNavigate": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "useNav",
+		"body": [
+			"import {useNavigate} from 'react-router-dom'",
+			"const navigate = useNavigate()"
+		],
+		"description": "useNav"
+	}
+}
