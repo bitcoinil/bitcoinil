@@ -30,7 +30,7 @@ export default function Header(): JSX.Element {
 
 const StyledHeader = styled.div`
   display: flex;
-  height: 40px;
+  height: 60px;
   padding: 0 70px;
   align-items: center;
   justify-content: space-between;
