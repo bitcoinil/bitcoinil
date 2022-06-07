@@ -7,11 +7,12 @@ import { ClickedMenuItemData, MainMenuItem } from './Interfaces'
 import { mainMenuItems } from './mainMenuItems'
 
 export default function HeaderMenu(): JSX.Element {
-  const [current, setCurrent] = React.useState('mail')
+  const [current, setCurrent] = React.useState('innovation')
 
   const navigate = useNavigate()
 
   const onClick = (e: ClickedMenuItemData) => {
+    console.log('asdjkhasdkjhasdkj')
     setCurrent(e.key)
     navigate(`/${e.key}`)
   }
@@ -39,7 +40,7 @@ export default function HeaderMenu(): JSX.Element {
             )
           }
           return (
-            <Menu.Item key={item.key} onClick={() => console.log(item)}>
+            <Menu.Item key={item.key} onClick={() => onClick}>
               <p>{item.label}</p>
             </Menu.Item>
           )
@@ -81,7 +82,6 @@ export const StyledAppMenu = styled.div`
           height: 0;
         }
         &.ant-menu-item {
-          color: pink;
           &::after {
             width: 0;
             height: 0;
