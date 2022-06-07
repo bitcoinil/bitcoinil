@@ -9,7 +9,7 @@
 			"",
 			"export default function ${1:Name}(): JSX.Element {",
 			"return (",
-			"<${2:Styled Component Name}>",
+			"<Styled${1:Name}>",
 			"<h1>",
 			"<FormattedMessage",
 			"id={`page.home.title`}",
@@ -17,11 +17,11 @@
 			"description={`Homepage Title`}",
 			"/>",
 			"</h1>",
-			"    </${2:Styled Component Name}>",
+			"    </Styled${1:Name}>",
 			"  )",
 			"}",
 			"",
-			"const ${2:Styled Component Name} = styled.div``",
+			"const Styled${1:Name} = styled.div``",
 		],
 		"description": "New TSX Component"
 	}
