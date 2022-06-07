@@ -1,0 +1,11 @@
+{
+	"Import AntD": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "iant",
+		"body": [
+			"import * as Ant from 'antd'",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+}
