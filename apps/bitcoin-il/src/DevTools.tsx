@@ -21,6 +21,7 @@ const StyledDevTools = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  background: white;
 
   button {
     font-size: 18px;
