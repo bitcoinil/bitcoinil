@@ -9,10 +9,9 @@ export default function SiteButton({
   children,
   type = 'default'
 }: SiteButtonProps) {
-  console.log({ type })
   return (
     <StyledButton>
-      <Ant.Button type={type} onClick={() => onClick}>
+      <Ant.Button type={type} onClick={() => onClick()}>
         {children}
       </Ant.Button>
     </StyledButton>
