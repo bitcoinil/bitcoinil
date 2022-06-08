@@ -13,6 +13,7 @@ import { Helmet } from 'react-helmet'
 import { mainMenuItems } from './mainMenuItems'
 import HomePage from './HomePage'
 import { nonMenuRoutes } from './nonMenuRoutes'
+import { phoneDevices } from './breakpoints'
 
 function App(): JSX.Element {
   const { language, messages, locale } = useIntl()
@@ -86,4 +87,8 @@ const AppStyleWrap = styled.div`
   font-family: 'Titillium Web', sans-serif;
   font-weight: bolder;
   letter-spacing: 0.4px;
+
+  ${phoneDevices} {
+    width: 100vw;
+  }
 `
