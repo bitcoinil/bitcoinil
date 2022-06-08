@@ -2,6 +2,7 @@ import { Menu } from 'antd'
 import * as React from 'react'
 // import { FormattedMessage, IntlProvider } from "react-intl"
 import styled from 'styled-components'
+import { phoneDevices } from './breakpoints'
 import { useIntl } from './hooks/useIntl'
 
 export default function LanguageSelect(): JSX.Element {
@@ -35,6 +36,10 @@ export default function LanguageSelect(): JSX.Element {
 }
 
 const StyledLanguageSelect = styled.div`
+  ${phoneDevices} {
+    display: none;
+  }
+
   .ant-menu {
     width: 80px;
     &.ant-menu {

@@ -3,6 +3,7 @@ import * as React from 'react'
 import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
 import SiteButton from './BitcoinSiteButton'
+import { phoneDevices } from './breakpoints'
 import { colors } from './colors'
 import CloseButton from './img/ico_close.svg'
 
@@ -143,6 +144,10 @@ const StyledModal = styled(Modal)`
 `
 
 const StyledSupport = styled.div`
+  ${phoneDevices} {
+    display: none;
+  }
+
   transition: all 300ms;
   font-size: 11.5px;
   display: flex;
