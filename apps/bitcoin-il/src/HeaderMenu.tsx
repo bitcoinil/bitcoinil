@@ -2,6 +2,7 @@ import { Menu } from 'antd'
 import * as React from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+import { phoneDevices } from './breakpoints'
 import Arrow from './img/ico_angle.svg'
 import { MainMenuItem } from './Interfaces'
 import { mainMenuItems } from './mainMenuItems'
@@ -89,6 +90,10 @@ const StyledAppMenu = styled.div`
           }
         }
       }
+    }
+
+    ${phoneDevices} {
+      display: none;
     }
   }
 `
