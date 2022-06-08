@@ -2,13 +2,10 @@ import * as React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { phoneDevices } from './breakpoints'
+import BurgerMenuMenu from './BurgerMenuMenu'
 
 const BurgerMenu = () => {
   const [burgerOpen, setBurgerOpen] = useState(false)
-
-  window.onscroll = () => {
-    setBurgerOpen(false)
-  }
 
   const toggleBurger = () => {
     setBurgerOpen(!burgerOpen)
@@ -30,7 +27,7 @@ const BurgerMenu = () => {
         <span className="line line3"></span>
       </div>
       <div className={`slide-out ${burgerOpen ? 'open' : 'closed'}`}>
-        MENU HERE
+        <BurgerMenuMenu setMenuOpen={setBurgerOpen} />
       </div>
       <div
         className={`on-click-outside ${burgerOpen ? 'open' : 'closed'}`}
@@ -46,6 +43,7 @@ export default BurgerMenu
 
 const BurgerWrap = styled.div`
   transition: all 400ms;
+  display: none;
 
   ${phoneDevices} {
     display: unset;
@@ -137,8 +135,8 @@ const BurgerWrap = styled.div`
     }
 
     .slide-out {
-      height: 0;
-      z-index: 9999999999999;
+      height: 1px;
+      z-index: 5;
       overflow: hidden;
       width: 100vw;
       position: absolute;
@@ -150,22 +148,20 @@ const BurgerWrap = styled.div`
 
       &.open {
         transition: all 400ms;
-        height: 400px;
+        height: 500px;
       }
     }
 
     .on-click-outside {
-      background: transparent;
       height: 100vh;
       width: 100vw;
       transition: e all 400ms;
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
 
       &.closed {
-        height: 0px;
+        display: none;
       }
     }
   }
