@@ -52,4 +52,10 @@ const StyledHeader = styled.div`
       transition: all 200ms;
     }
   }
+
+  ${phoneDevices} {
+    .middle {
+      display: none;
+    }
+  }
 `

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import PlayBtn from './img/play-btn.svg'
 import YouTube from 'react-youtube'
 import { CloseCircleOutlined } from '@ant-design/icons'
+import { phoneDevices } from './breakpoints'
 
 export default function WhatIsBitcoin(): JSX.Element {
   const [showModal, setShowModal] = React.useState(false)
@@ -51,6 +52,9 @@ export default function WhatIsBitcoin(): JSX.Element {
 }
 
 const StyledWhatIsBitcoin = styled.div`
+  ${phoneDevices} {
+    display: none;
+  }
   margin-top: 80px;
   font-size: 16px;
   cursor: pointer;

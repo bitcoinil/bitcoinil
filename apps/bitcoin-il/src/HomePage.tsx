@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
+import { phoneDevices } from './breakpoints'
 import HomepageButtons from './HomepageButtons'
 import WhatIsBitcoin from './WhatIsBitcoin'
 
@@ -21,6 +22,10 @@ export default function HomePage(): JSX.Element {
 }
 
 const StyledHomePage = styled.div`
+  ${phoneDevices} {
+    padding: 50px 30px 50px;
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,6 +37,11 @@ const StyledHomePage = styled.div`
   }
 
   h1 {
+    ${phoneDevices} {
+      font-size: 32px;
+      margin: 0 0 20px 0;
+    }
+
     font-size: 51px;
     text-align: center;
     margin: 0px 185px 45px;

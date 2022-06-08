@@ -41,3 +41,7 @@ export interface StyledSupportProps {
 export interface Messages {
   [key: string]: TranslationDictionary
 }
+
+export interface BurgerMenuMenuProps {
+  setMenuOpen: Function
+}

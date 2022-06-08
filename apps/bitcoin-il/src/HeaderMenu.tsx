@@ -1,6 +1,5 @@
 import { Menu } from 'antd'
 import * as React from 'react'
-import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { phoneDevices } from './breakpoints'
 import Arrow from './img/ico_angle.svg'
@@ -90,10 +89,6 @@ const StyledAppMenu = styled.div`
           }
         }
       }
-    }
-
-    ${phoneDevices} {
-      display: none;
     }
   }
 `
