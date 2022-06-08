@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
 import SiteButton from './BitcoinSiteButton'
 import { useNavigate } from 'react-router-dom'
+import { phoneDevices } from './breakpoints'
 
 export default function HomepageButtons(): JSX.Element {
   const navigate = useNavigate()
@@ -58,6 +59,14 @@ const StyledHomepageButtons = styled.div`
 
     button {
       margin-right: 10px;
+    }
+
+    ${phoneDevices} {
+      flex-direction: column;
+
+      button {
+        margin-bottom: 10px;
+      }
     }
   }
 `
