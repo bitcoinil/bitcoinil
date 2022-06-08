@@ -6,16 +6,14 @@ import { phoneDevices } from './breakpoints'
 import Arrow from './img/ico_angle.svg'
 import { MainMenuItem } from './Interfaces'
 import { mainMenuItems } from './mainMenuItems'
+import { NavLink } from 'react-router-dom'
 
 export default function HeaderMenu(): JSX.Element {
   const [current, setCurrent] = React.useState('innovation')
 
-  const navigate = useNavigate()
-
   const onClick = (e: any) => {
     console.log('asdjkhasdkjhasdkj')
     setCurrent(e.key)
-    navigate(`/${e.key}`)
   }
 
   return (
@@ -34,7 +32,9 @@ export default function HeaderMenu(): JSX.Element {
               >
                 {item.submenu.map((subItem: MainMenuItem) => {
                   return (
-                    <Menu.Item key={subItem.key}>{subItem.label}</Menu.Item>
+                    <Menu.Item key={subItem.key}>
+                      <NavLink to={`/${subItem.key}`}>{subItem.label}</NavLink>
+                    </Menu.Item>
                   )
                 })}
               </Menu.SubMenu>
