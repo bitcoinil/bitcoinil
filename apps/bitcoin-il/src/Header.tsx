@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+import { phoneDevices } from './breakpoints'
+import BurgerMenu from './BurgerMenu'
 import HeaderMenu from './HeaderMenu'
 import LanguageSelect from './LanguageSelect'
 
@@ -23,12 +25,18 @@ export default function Header(): JSX.Element {
       </div>
       <div className="right">
         <LanguageSelect />
+        <BurgerMenu />
       </div>
     </StyledHeader>
   )
 }
 
 const StyledHeader = styled.div`
+  ${phoneDevices} {
+    justify-content: space-between;
+    padding: 0 25px;
+  }
+
   display: flex;
   height: 60px;
   padding: 0 70px;
