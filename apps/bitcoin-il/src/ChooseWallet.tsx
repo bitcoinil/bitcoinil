@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export default function ChooseWallet(): JSX.Element {
   return (
-    <StyledChooseYourWallet>
+    <StyledChooseYourWallet id="ChooseWallet">
       <h1>
         <FormattedMessage
           id={`page.home.title`}

@@ -15,7 +15,7 @@ export default function LanguageSelect(): JSX.Element {
   }
 
   return (
-    <StyledLanguageSelect>
+    <StyledLanguageSelect id="LanguageSelect">
       <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
         <Menu.SubMenu
           key={'lang'}

@@ -13,6 +13,7 @@ const Support = (): JSX.Element => {
   return (
     <>
       <StyledSupport
+        id="Support"
         onClick={() => {
           setIsExtended(!isExtended)
         }}
@@ -48,6 +49,7 @@ const Support = (): JSX.Element => {
             </SiteButton>
             {showModal ? (
               <StyledModal
+                id="StyledModal-Supports"
                 title={null}
                 visible={showModal}
                 footer={null}

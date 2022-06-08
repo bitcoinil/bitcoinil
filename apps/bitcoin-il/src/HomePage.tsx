@@ -6,7 +6,7 @@ import WhatIsBitcoin from './WhatIsBitcoin'
 
 export default function HomePage(): JSX.Element {
   return (
-    <StyledHomePage>
+    <StyledHomePage id="HomePage">
       <h1>
         <FormattedMessage
           id={`page.home.title`}

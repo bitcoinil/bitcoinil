@@ -20,7 +20,7 @@ const App = (): JSX.Element => {
   }, [])
 
   return (
-    <AppRouter>
+    <AppRouter id="AppRouter-App">
       <Theme>
         <StyledApp>
           <GlobalStyle />
@@ -64,7 +64,11 @@ const AppMenu = ({}) => {
   )
 
   return (
-    <StyledAppMenu mode="horizontal" selectedKeys={[currentKey]}>
+    <StyledAppMenu
+      id="StyledAppMenu-App"
+      mode="horizontal"
+      selectedKeys={[currentKey]}
+    >
       <Menu.Item
         key="home"
         icon={<HomeOutlined />}

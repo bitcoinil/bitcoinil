@@ -20,7 +20,7 @@ export default function WhatIsBitcoin(): JSX.Element {
   }
 
   return (
-    <StyledWhatIsBitcoin onClick={() => setShowModal(true)}>
+    <StyledWhatIsBitcoin id="WhatIsBitcoin" onClick={() => setShowModal(true)}>
       <div className="play-area">
         <img src={PlayBtn} />
         <FormattedMessage

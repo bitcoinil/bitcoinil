@@ -7,7 +7,7 @@ import LanguageSelect from './LanguageSelect'
 export default function Header(): JSX.Element {
   const navigate = useNavigate()
   return (
-    <StyledHeader>
+    <StyledHeader id="Header">
       <div className="left">
         <p
           className="logo"

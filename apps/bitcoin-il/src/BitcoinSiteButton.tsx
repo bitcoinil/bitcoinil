@@ -10,7 +10,7 @@ export default function SiteButton({
   type = 'default'
 }: SiteButtonProps) {
   return (
-    <StyledButton>
+    <StyledButton id="SiteButton">
       <Ant.Button type={type} onClick={() => onClick()}>
         {children}
       </Ant.Button>

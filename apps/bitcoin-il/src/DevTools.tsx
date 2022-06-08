@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export default function DevTools() {
   return (
-    <StyledDevTools>
+    <StyledDevTools id="DevTools">
       <h1>DEV TOOLS</h1>
       <button onClick={() => console.clear()}>Clear Console</button>
     </StyledDevTools>
