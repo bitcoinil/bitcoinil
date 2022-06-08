@@ -4,7 +4,7 @@ import App from './App'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 ReactDOM.render(
-  <Router>
+  <Router basename={import.meta.env.BASE_URL}>
     <React.StrictMode>
       <App />
     </React.StrictMode>
