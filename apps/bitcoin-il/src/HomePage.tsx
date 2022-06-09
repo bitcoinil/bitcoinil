@@ -13,7 +13,7 @@ export default function HomePage(): JSX.Element {
       <h1>
         <FormattedMessage
           id={`page.home.title`}
-          defaultMessage={`Bitcoin is an innovative payment network and a new kind of money.`}
+          defaultMessage={`Bitcoin Il is an innovative payment network and a new kind of money.`}
           description={`Homepage Title`}
         />
       </h1>
