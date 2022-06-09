@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
 import { phoneDevices } from './breakpoints'
 import HomepageButtons from './HomepageButtons'
+import QuickOverview from './QuickOverview'
 import WhatIsBitcoin from './WhatIsBitcoin'
 
 export default function HomePage(): JSX.Element {
@@ -17,6 +18,7 @@ export default function HomePage(): JSX.Element {
       </h1>
       <HomepageButtons />
       <WhatIsBitcoin />
+      <QuickOverview />
     </StyledHomePage>
   )
 }
