@@ -6,6 +6,7 @@ import IndividualImage from './img/ico_individuals.svg'
 import BusinessImage from './img/ico_business.svg'
 import DevelopersImage from './img/ico_developers.svg'
 import OverviewBG from './img/overview-bg.svg'
+import { phoneDevices } from './breakpoints'
 
 export interface QuickOverviewBox {
   index: Number
@@ -111,6 +112,10 @@ const StyledQuickOverview = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    ${phoneDevices} {
+      flex-direction: column;
+    }
   }
 
   width: 100vw;

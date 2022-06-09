@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
 import { QuickOverviewBox } from './QuickOverview'
 import { NavLink } from 'react-router-dom'
+import { phoneDevices } from './breakpoints'
 
 const QuickOverviewBox: React.FC<QuickOverviewBox> = ({
   index,
@@ -54,6 +55,11 @@ const StyledQuickOverviewBox = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 30px;
+
+  ${phoneDevices} {
+    width: 80vw;
+    flex-direction: row;
+  }
 
   &:hover {
     opacity: 0.6;
