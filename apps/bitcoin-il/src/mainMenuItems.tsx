@@ -1,7 +1,8 @@
 import * as React from 'react'
+import { MainMenuItem } from './Interfaces'
 import RoutePage from './RoutePage'
 
-export const mainMenuItems = [
+export const mainMenuItems: MainMenuItem[] = [
   {
     label: 'Introduction',
     key: 'intro-menu',

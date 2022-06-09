@@ -3,13 +3,12 @@ export interface ClickedMenuItemData {
   key: string
   keyPath: [string]
 }
-
 export interface MainMenuItem {
-  key: string
   label: string
-  submenu: [MainMenuItem]
+  key: string
+  submenu?: MainMenuItem[]
+  element?: React.ReactNode
 }
-
 export interface RoutePageProps {
   title: string
   subtitle: string
