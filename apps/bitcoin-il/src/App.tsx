@@ -14,6 +14,7 @@ import { mainMenuItems } from './mainMenuItems'
 import HomePage from './HomePage'
 import { nonMenuRoutes } from './nonMenuRoutes'
 import { phoneDevices } from './breakpoints'
+import Footer from './Footer'
 
 function App(): JSX.Element {
   const { language, messages, locale } = useIntl()
@@ -41,7 +42,6 @@ function App(): JSX.Element {
       })}
 
       {nonMenuRoutes.map((route) => {
-        console.log({ route })
         return (
           <Route
             key={route.key}
@@ -76,6 +76,7 @@ function App(): JSX.Element {
           <Header />
           {renderRoutes()}
         </div>
+        <Footer />
       </IntlProvider>
     </AppStyleWrap>
   )
