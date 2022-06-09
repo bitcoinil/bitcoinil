@@ -8,6 +8,7 @@ import worldwide from './img/main_ico_worldwide.svg'
 import bitcoinImg from './img/bitcoin-img.svg'
 import SiteButton from './BitcoinSiteButton'
 import { NavLink } from 'react-router-dom'
+import { phoneDevices } from './breakpoints'
 
 interface GetStartedWithBitcoinProps {}
 
@@ -82,8 +83,18 @@ const StyledGetStartedWithBitcoin = styled.div`
     &-body {
       &-top {
         display: flex;
-        &-left {
+        ${phoneDevices} {
+          flex-direction: column-reverse;
+        }
+
+        &-left,
+        &-right {
           width: 45vw;
+          ${phoneDevices} {
+            width: 95vw;
+          }
+        }
+        &-left {
           padding: 30px;
 
           &-detail {
@@ -98,10 +109,12 @@ const StyledGetStartedWithBitcoin = styled.div`
           }
         }
         &-right {
-          width: 45vw;
           display: flex;
           align-items: center;
           justify-content: center;
+          img {
+            max-width: 90vw;
+          }
         }
       }
       &-bottom {
