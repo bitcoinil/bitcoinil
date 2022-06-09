@@ -16,7 +16,6 @@ const QuickOverviewBox: React.FC<QuickOverviewBox> = ({
   baseFormattedMessage,
   link
 }) => {
-  console.log(imgSrc)
   return (
     <NavLink to={link}>
       <StyledQuickOverviewBox id="QuickOverviewBox">

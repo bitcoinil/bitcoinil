@@ -67,7 +67,6 @@ export default function QuickOverview(): JSX.Element {
       </h1>
       <div className="boxes">
         {boxes.map((boxInfo: QuickOverviewBox, i: number) => {
-          console.log(boxInfo)
           const {
             imgSrc,
             index,

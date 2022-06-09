@@ -9,10 +9,6 @@ import { phoneDevices } from './breakpoints'
 export default function WhatIsBitcoin(): JSX.Element {
   const [showModal, setShowModal] = React.useState(false)
 
-  React.useEffect(() => {
-    console.log({ showModal })
-  }, [showModal])
-
   const opts = {
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
