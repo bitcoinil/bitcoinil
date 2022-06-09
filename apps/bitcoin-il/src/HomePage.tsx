@@ -2,6 +2,7 @@ import * as React from 'react'
 import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
 import { phoneDevices } from './breakpoints'
+import GetStartedWithBitcoin from './GetStartedWithBitcoin'
 import HomepageButtons from './HomepageButtons'
 import QuickOverview from './QuickOverview'
 import WhatIsBitcoin from './WhatIsBitcoin'
@@ -19,6 +20,7 @@ export default function HomePage(): JSX.Element {
       <HomepageButtons />
       <WhatIsBitcoin />
       <QuickOverview />
+      <GetStartedWithBitcoin />
     </StyledHomePage>
   )
 }
