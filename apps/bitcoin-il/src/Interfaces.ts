@@ -45,3 +45,15 @@ export interface Messages {
 export interface BurgerMenuMenuProps {
   setMenuOpen: Function
 }
+
+export interface QuickOverviewBox {
+  index: Number
+  imgSrc: string
+  id: string
+  titleDefaultMessage: string
+  titleDescription: string
+  subtitleDefaultMessage: string
+  subtitleDescription: string
+  baseFormattedMessage?: String
+  link: string
+}
