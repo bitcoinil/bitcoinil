@@ -20,10 +20,10 @@ export default function Header(): JSX.Element {
           LogoHere
         </p>
       </div>
-      <div className="middle">
+      <div className="header-middle">
         <HeaderMenu />
       </div>
-      <div className="right">
+      <div className="header-right">
         <LanguageSelect />
         <BurgerMenu />
       </div>
@@ -54,7 +54,7 @@ const StyledHeader = styled.div`
   }
 
   ${phoneDevices} {
-    .middle {
+    .header-middle {
       display: none;
     }
   }
