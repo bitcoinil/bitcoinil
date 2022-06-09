@@ -102,6 +102,7 @@ const StyledQuickOverview = styled.div`
   margin-top: 50px;
   padding: 300px 0;
   background: url(${OverviewBG}) top no-repeat;
+  background-size: cover;
 
   h1 {
     color: white;
