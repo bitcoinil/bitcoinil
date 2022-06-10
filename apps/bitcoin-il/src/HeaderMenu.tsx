@@ -11,7 +11,6 @@ export default function HeaderMenu(): JSX.Element {
   const [current, setCurrent] = React.useState('innovation')
 
   const onClick = (e: any) => {
-    console.log('asdjkhasdkjhasdkj')
     setCurrent(e.key)
   }
 
@@ -41,6 +40,7 @@ export default function HeaderMenu(): JSX.Element {
           }
           return (
             <Menu.Item key={item.key} onClick={() => console.log(item)}>
+              <NavLink to={`/${item.key}`}></NavLink>
               <p>{item.label}</p>
             </Menu.Item>
           )

@@ -14,9 +14,8 @@ const CardsDisplay: React.FC<CardsDisplayProps> = ({ cards }) => {
     <StyledCardsDisplay id="CardsDisplay">
       <div className="body-cards">
         {cards.map((card: BodyCard, i: number) => {
-          console.log(card)
           return (
-            <Card>
+            <Card key={`card-${i}`}>
               <img src={card.img} />
               <h1>
                 <FormattedMessage

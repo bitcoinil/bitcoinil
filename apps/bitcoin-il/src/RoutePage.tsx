@@ -12,13 +12,10 @@ export default function RoutePage({
   body = <h1>body prop</h1>,
   id = ''
 }: RoutePageProps): JSX.Element {
-  console.log(id)
-
   return (
     <StyledRoutePage id="RoutePage">
       <div className="page-title">
         <h1>
-          {/* {title} */}
           <br />
           <FormattedMessage
             id={`page.${id}.title`}

@@ -17,7 +17,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
         </div>
         <div className="footer-main-body">
           <div className="footer-main-body-left">
-            <p className="footer-main-body-left-title">
+            <span className="footer-main-body-left-title">
               <FormattedMessage
                 id={`page.footer.support`}
                 defaultMessage={`Support BitCoin Il`}
@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
                   description={`Donate`}
                 />
               </SiteButton>
-            </p>
+            </span>
             <p className="footer-main-body-left-link">
               <FormattedMessage
                 id={`footer.support-message`}
@@ -43,7 +43,10 @@ const Footer: React.FC<FooterProps> = ({}) => {
             {mainMenuItems.map((menuItem) => {
               if (!menuItem.submenu) return null
               return (
-                <div className="footer-main-body-right-menu-column">
+                <div
+                  key={menuItem.label}
+                  className="footer-main-body-right-menu-column"
+                >
                   <p className="title">
                     <FormattedMessage
                       id={`footer.menu-item.title-${menuItem.label}`}
