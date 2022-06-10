@@ -15,6 +15,7 @@ const TimelineComp: React.FC<TimelineCompProps> = ({ items }) => {
   if (!items) return null
   return (
     <StyledTimelineComp id="TimelineComp">
+      {'       '}
       <VerticalTimeline>
         {items.map((item: JSX.Element, i: number) => {
           return (
