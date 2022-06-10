@@ -1,4 +1,5 @@
 import * as React from 'react'
+import IndividualsBody from './IndividualsBody'
 import { MainMenuItem } from './Interfaces'
 import RoutePage from './RoutePage'
 
@@ -15,7 +16,7 @@ export const mainMenuItems: MainMenuItem[] = [
             id="individuals"
             title="Individuals"
             subtitle="Bitcoin for Individuals"
-            body={<h1>Individuals Body</h1>}
+            body={<IndividualsBody />}
           />
         )
       },
