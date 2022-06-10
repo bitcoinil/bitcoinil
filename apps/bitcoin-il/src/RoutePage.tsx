@@ -41,24 +41,28 @@ const StyledRoutePage = styled.div`
   min-height: 100vh;
 
   .page-title {
-    /* background: black; */
     background-image: url('${HeroBg}');
     background-size: cover;
     min-height: 400px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
     flex-direction: column;
     text-align: center;
 
     h1 {
+      margin-top: 25px;
       color: white;
       text-align: center;
+      font-size: 40px;
+      font-weight: bolder;
     }
 
     h3 {
       color: #9d9d9d;
       max-width: 65vw;
+      font-weight: bold;
+      font-size: 22px;
     }
 
     .trans-bel {
