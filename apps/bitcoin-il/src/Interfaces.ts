@@ -25,6 +25,7 @@ export interface AvailableLanguageData {
 export interface SiteButtonProps {
   onClick?: Function
   type?: any
+  className?: any
   children: React.ReactNode
 }
 
@@ -55,4 +56,13 @@ export interface QuickOverviewBox {
   subtitleDescription: string
   baseFormattedMessage?: String
   link: string
+}
+
+export interface IndividualsBodyProps {}
+
+export interface IndividualCard {
+  img: string
+  title: string
+  text: string
+  id: string
 }
