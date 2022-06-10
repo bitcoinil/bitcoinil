@@ -60,7 +60,7 @@ export interface QuickOverviewBox {
 
 export interface IndividualsBodyProps {}
 
-export interface IndividualCard {
+export interface BodyCard {
   img: string
   title: string
   text: string

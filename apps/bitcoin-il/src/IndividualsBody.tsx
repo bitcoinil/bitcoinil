@@ -12,9 +12,10 @@ import simple from './img/ico_simple.svg'
 import { phoneDevices } from './breakpoints'
 import SiteButton from './BitcoinSiteButton'
 import { NavLink } from 'react-router-dom'
-import { IndividualCard, IndividualsBodyProps } from './Interfaces'
+import { BodyCard, IndividualsBodyProps } from './Interfaces'
+import CardsDisplay from './CardsDisplay'
 
-const individualCards: IndividualCard[] = [
+const individualCards: BodyCard[] = [
   {
     img: mobile,
     title: 'Mobile payments made easy',
@@ -56,30 +57,7 @@ const individualCards: IndividualCard[] = [
 const IndividualsBody: React.FC<IndividualsBodyProps> = ({}) => {
   return (
     <StyledIndividualsBody id="IndividualsBody">
-      <div className="individuals-body-cards">
-        {individualCards.map((card: IndividualCard, i: number) => {
-          console.log(card)
-          return (
-            <Card>
-              <img src={card.img} />
-              <h1>
-                <FormattedMessage
-                  id={`page.individuals.${card.id}.title`}
-                  defaultMessage={card.title}
-                  description={card.title}
-                />
-              </h1>
-              <p>
-                <FormattedMessage
-                  id={`page.individuals.${card.id}.text`}
-                  defaultMessage={card.text}
-                  description={card.text}
-                />
-              </p>
-            </Card>
-          )
-        })}
-      </div>
+      <CardsDisplay cards={individualCards} />
       <div className="individuals-button">
         <NavLink to="/getting-started">
           <SiteButton type="primary">Get Started With BitCoin Il</SiteButton>
@@ -97,34 +75,12 @@ const StyledIndividualsBody = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  .individuals-body-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .individuals-button {
     margin: 50px;
     align-self: center;
 
     button {
       padding: 35px;
-    }
-  }
-
-  .ant-card {
-    width: 300px;
-    margin: 20px;
-
-    ${phoneDevices} {
-      width: 95vw;
-    }
-
-    &-body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
     }
   }
 `
