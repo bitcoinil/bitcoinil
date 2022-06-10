@@ -184,5 +184,71 @@ export const mainMenuItems: MainMenuItem[] = [
         body={<h1>Innovation Body</h1>}
       />
     )
+  },
+  {
+    label: 'Participate',
+    key: 'participate',
+    submenu: [
+      {
+        label: 'Support BitCoin',
+        key: 'support',
+        element: (
+          <RoutePage
+            id="Support"
+            title="Support"
+            subtitle="Bitcoin for Support"
+            body={<>Support</>}
+          />
+        )
+      },
+      {
+        label: 'Buy BitCoin',
+        key: 'Buy',
+        element: (
+          <RoutePage
+            title="Buy"
+            id="Buy"
+            subtitle="Bitcoin - Buy"
+            body={<>BUY</>}
+          />
+        )
+      },
+      {
+        label: 'Running a full node',
+        key: 'full-node',
+        element: (
+          <RoutePage
+            id="full-node"
+            title="full-node"
+            subtitle="Bitcoin for full-node"
+            body={<h1>Full Node</h1>}
+          />
+        )
+      },
+      {
+        label: 'Development',
+        key: 'development',
+        element: (
+          <RoutePage
+            id="development"
+            title="Development"
+            subtitle="Bitcoin for Development"
+            body={<h1>Development Body</h1>}
+          />
+        )
+      }
+    ]
+  },
+  {
+    label: 'FAQ',
+    key: 'FAQ',
+    element: (
+      <RoutePage
+        id="FAQ"
+        title="FAQ"
+        subtitle="Bitcoin for FAQ"
+        body={<h1>FAQ Body</h1>}
+      />
+    )
   }
 ]
