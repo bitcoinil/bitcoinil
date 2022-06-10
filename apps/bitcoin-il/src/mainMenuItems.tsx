@@ -1,4 +1,5 @@
 import * as React from 'react'
+import BusinessBody from './BusinessesBody'
 import IndividualsBody from './IndividualsBody'
 import { MainMenuItem } from './Interfaces'
 import RoutePage from './RoutePage'
@@ -28,7 +29,7 @@ export const mainMenuItems: MainMenuItem[] = [
             title="Business"
             id="business"
             subtitle="Bitcoin for Business"
-            body={<h1>Business Body</h1>}
+            body={<BusinessBody />}
           />
         )
       },
