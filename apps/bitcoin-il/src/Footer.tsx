@@ -42,7 +42,6 @@ const Footer: React.FC<FooterProps> = ({}) => {
           <div className="footer-main-body-right">
             {mainMenuItems.map((menuItem) => {
               if (!menuItem.submenu) return null
-              console.log(menuItem.submenu)
               return (
                 <div className="footer-main-body-right-menu-column">
                   <p className="title">
@@ -53,15 +52,14 @@ const Footer: React.FC<FooterProps> = ({}) => {
                     />
                   </p>
                   <ul>
-                    {menuItem.submenu.map((i, ii) => {
-                      console.log({ i })
+                    {menuItem.submenu.map((subMenuItem, ii) => {
                       return (
-                        <NavLink key={ii} to={`/${i.key}`}>
+                        <NavLink key={ii} to={`/${subMenuItem.key}`}>
                           <li>
                             <FormattedMessage
-                              id={`footer.menu-item-${i.key}`}
-                              defaultMessage={i.label}
-                              description={i.label}
+                              id={`footer.menu-item-${subMenuItem.key}`}
+                              defaultMessage={subMenuItem.label}
+                              description={subMenuItem.label}
                             />
                           </li>
                         </NavLink>
@@ -88,7 +86,7 @@ const StyledFooter = styled.div`
   align-items: center;
   justify-content: center;
   max-width: 100vw;
-
+  overflow: hidden;
   h1 {
     color: white;
   }
