@@ -29,7 +29,6 @@ const TimelineComp: React.FC<TimelineCompProps> = ({ items }) => {
         {/* <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
           date="2011 - present"
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<h1>1</h1>}
@@ -132,9 +131,6 @@ export default TimelineComp
 const StyledTimelineComp = styled.div`
   width: 100vw;
 
-  .icon {
-  }
-
   .vertical-timeline-element-icon {
     display: flex;
     align-items: center;
@@ -144,5 +140,9 @@ const StyledTimelineComp = styled.div`
       margin: 0;
       font-weight: bolder;
     }
+  }
+
+  .vertical-timeline-element-content-arrow {
+    border-top: 2px solid red;
   }
 `
