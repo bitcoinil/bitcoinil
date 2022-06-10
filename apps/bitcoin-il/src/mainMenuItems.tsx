@@ -54,8 +54,8 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="getting-started"
-            title="Getting Started"
-            subtitle="Bitcoin for Getting Started"
+            title="Getting started with Bitcoin Il"
+            subtitle="Using Bitcoin to transact is easy and accessible to everyone."
             body={<GettingStartedBody />}
           />
         )
