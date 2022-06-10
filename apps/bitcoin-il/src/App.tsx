@@ -2,19 +2,17 @@ import '@djitsu/themes/dist/themes/main-theme/main-theme-main-light.css'
 import 'antd/dist/antd.css' // or 'antd/dist/antd.less'
 import * as React from 'react'
 import { IntlProvider } from 'react-intl'
-import DevTools from './DevTools'
 import Header from './Header'
-// import { useNavigate } from 'react-router-dom'
-import { useIntl } from './hooks/useIntl'
-import Support from './support'
-import styled from 'styled-components'
-import { Route, Routes } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
-import { mainMenuItems } from './mainMenuItems'
-import HomePage from './HomePage'
-import { nonMenuRoutes } from './nonMenuRoutes'
+import { Route, Routes } from 'react-router-dom'
+import styled from 'styled-components'
 import { phoneDevices } from './breakpoints'
 import Footer from './Footer'
+import HomePage from './HomePage'
+import { useIntl } from './hooks/useIntl'
+import { mainMenuItems } from './mainMenuItems'
+import { nonMenuRoutes } from './nonMenuRoutes'
+import Support from './support'
 
 function App(): JSX.Element {
   const { language, messages, locale } = useIntl()
@@ -50,7 +48,6 @@ function App(): JSX.Element {
           />
         )
       })}
-
       <Route path="*" element={<HomePage />} />
     </Routes>
   )
