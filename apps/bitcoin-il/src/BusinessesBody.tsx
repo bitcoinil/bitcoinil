@@ -12,7 +12,7 @@ import pci from './img/ico_pci.svg'
 import transparency from './img/ico_transparency.svg'
 import visib from './img/ico_visib.svg'
 
-import { BodyCard, IndividualsBodyProps } from './Interfaces'
+import { BodyCard, BusinessBodyProps } from './Interfaces'
 
 const businessCards: BodyCard[] = [
   {
@@ -59,7 +59,7 @@ const businessCards: BodyCard[] = [
   }
 ]
 
-const BusinessBody: React.FC<IndividualsBodyProps> = ({}) => {
+const BusinessBody: React.FC<BusinessBodyProps> = ({}) => {
   return (
     <StyledIndividualsBody id="IndividualsBody">
       <CardsDisplay cards={businessCards} />

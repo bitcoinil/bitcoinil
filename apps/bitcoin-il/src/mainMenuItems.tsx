@@ -1,6 +1,7 @@
 import * as React from 'react'
 import BusinessBody from './BusinessesBody'
 import IndividualsBody from './IndividualsBody'
+import InnovationBody from './InnovationBody'
 import { MainMenuItem } from './Interfaces'
 import RoutePage from './RoutePage'
 
@@ -179,9 +180,9 @@ export const mainMenuItems: MainMenuItem[] = [
     element: (
       <RoutePage
         id="innovation"
-        title="Innovation"
-        subtitle="Bitcoin for Innovation"
-        body={<h1>Innovation Body</h1>}
+        title="Innovation in Payment Systems"
+        subtitle="Bitcoin isn't just about sending money. It has many features and opens many possibilities that the community is still exploring. Here are some of the technologies currently being researched, and in some cases, being turned into real products and services. The most interesting uses of Bitcoin are probably still to be discovered."
+        body={<InnovationBody />}
       />
     )
   },

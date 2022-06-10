@@ -60,6 +60,10 @@ export interface QuickOverviewBox {
 
 export interface IndividualsBodyProps {}
 
+export interface InnovationBodyProps {}
+
+export interface BusinessBodyProps {}
+
 export interface BodyCard {
   img: string
   title: string
