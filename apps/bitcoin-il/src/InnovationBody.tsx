@@ -112,15 +112,15 @@ const innovationCards: BodyCard[] = [
 
 const InnovationBody: React.FC<InnovationBodyProps> = ({}) => {
   return (
-    <StyledIndividualsBody id="IndividualsBody">
+    <StyledInnovationBody id="IndividualsBody">
       <CardsDisplay cards={innovationCards} />
-    </StyledIndividualsBody>
+    </StyledInnovationBody>
   )
 }
 
 export default InnovationBody
 
-const StyledIndividualsBody = styled.div`
+const StyledInnovationBody = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

@@ -64,6 +64,8 @@ export interface InnovationBodyProps {}
 
 export interface BusinessBodyProps {}
 
+export interface SupportBodyProps {}
+
 export interface BodyCard {
   img: string
   title: string

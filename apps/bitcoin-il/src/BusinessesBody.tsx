@@ -61,20 +61,20 @@ const businessCards: BodyCard[] = [
 
 const BusinessBody: React.FC<BusinessBodyProps> = ({}) => {
   return (
-    <StyledIndividualsBody id="IndividualsBody">
+    <StyledBusinessBody id="IndividualsBody">
       <CardsDisplay cards={businessCards} />
       <div className="individuals-button">
         <NavLink to="/getting-started">
           <SiteButton type="primary">Get Started With BitCoin Il</SiteButton>
         </NavLink>
       </div>
-    </StyledIndividualsBody>
+    </StyledBusinessBody>
   )
 }
 
 export default BusinessBody
 
-const StyledIndividualsBody = styled.div`
+const StyledBusinessBody = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

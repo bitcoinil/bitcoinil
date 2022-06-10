@@ -4,6 +4,7 @@ import IndividualsBody from './IndividualsBody'
 import InnovationBody from './InnovationBody'
 import { MainMenuItem } from './Interfaces'
 import RoutePage from './RoutePage'
+import SupportBody from './SupportBody'
 
 export const mainMenuItems: MainMenuItem[] = [
   {
@@ -196,9 +197,9 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="Support"
-            title="Support"
-            subtitle="Bitcoin for Support"
-            body={<>Support</>}
+            title="Support Bitcoin Il"
+            subtitle="Bitcoin Il was born from a small community and has grown fast. There are a lot of things you can do to support it and help others learn more."
+            body={<SupportBody />}
           />
         )
       },
