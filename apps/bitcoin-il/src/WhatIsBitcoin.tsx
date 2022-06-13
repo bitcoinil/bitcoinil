@@ -30,7 +30,6 @@ export default function WhatIsBitcoin(): JSX.Element {
         <div
           onClick={(e) => {
             e.stopPropagation()
-            console.log('CLICK')
             setShowModal(false)
           }}
           className="modal"

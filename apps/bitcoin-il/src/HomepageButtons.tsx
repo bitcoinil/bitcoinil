@@ -24,7 +24,6 @@ export default function HomepageButtons(): JSX.Element {
         </SiteButton>
         <SiteButton
           onClick={() => {
-            console.log('The Clickening')
             navigate('/choose-your-wallet')
           }}
           type="default"
