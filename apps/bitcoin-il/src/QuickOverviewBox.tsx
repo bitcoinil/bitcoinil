@@ -22,18 +22,20 @@ const QuickOverviewBox: React.FC<QuickOverviewBox> = ({
         <img src={imgSrc} />
         <div className="box-text">
           <h4>
-            <FormattedMessage
+            {/* <FormattedMessage
               id={`${baseFormattedMessage}.individuals`}
               defaultMessage={titleDefaultMessage}
               description={titleDescription}
-            />
+            /> */}
+            {titleDefaultMessage}
           </h4>
           <p>
-            <FormattedMessage
+            {/* <FormattedMessage
               id={`${baseFormattedMessage}.individuals.learnmore`}
               defaultMessage={subtitleDefaultMessage}
               description={subtitleDescription}
-            />
+            /> */}
+            {subtitleDefaultMessage}
           </p>
         </div>
       </StyledQuickOverviewBox>

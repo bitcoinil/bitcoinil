@@ -12,9 +12,9 @@ export interface QuickOverviewBox {
   index: Number
   imgSrc: string
   id: string
-  titleDefaultMessage: string
+  titleDefaultMessage: JSX.Element
   titleDescription: string
-  subtitleDefaultMessage: string
+  subtitleDefaultMessage: JSX.Element
   subtitleDescription: string
   baseFormattedMessage?: String
   link: string
@@ -26,9 +26,22 @@ const boxes: any = [
     index: 0,
     imgSrc: IndividualImage,
     id: 'individuals',
-    titleDefaultMessage: 'Individuals',
+    titleDefaultMessage: (
+      <FormattedMessage
+        id={`box.individuals.title`}
+        defaultMessage={`Individuals`}
+        description={`box.individuals.title`}
+      />
+    ),
+
     titleDescription: 'individuals',
-    subtitleDefaultMessage: 'Learn More',
+    subtitleDefaultMessage: (
+      <FormattedMessage
+        id={`box.individuals.subtext`}
+        defaultMessage={`Learn More`}
+        description={`box.individuals.subtext`}
+      />
+    ),
     subtitleDescription: 'learn more',
     link: '/individuals'
   },
@@ -36,9 +49,22 @@ const boxes: any = [
     index: 0,
     imgSrc: BusinessImage,
     id: 'businesses',
-    titleDefaultMessage: 'Businesses',
+    titleDefaultMessage: (
+      <FormattedMessage
+        id={`box.business.title`}
+        defaultMessage={`Businesses`}
+        description={`box.business.title`}
+      />
+    ),
+
     titleDescription: 'businesses',
-    subtitleDefaultMessage: 'Learn More',
+    subtitleDefaultMessage: (
+      <FormattedMessage
+        id={`box.business.subtext`}
+        defaultMessage={`Learn More`}
+        description={`box.business.subtext`}
+      />
+    ),
     subtitleDescription: 'learn more',
     link: '/businesses'
   },
@@ -46,9 +72,23 @@ const boxes: any = [
     index: 0,
     imgSrc: DevelopersImage,
     id: 'developers',
-    titleDefaultMessage: 'Developers',
+    titleDefaultMessage: (
+      <FormattedMessage
+        id={`box.devs.title`}
+        defaultMessage={`Developers`}
+        description={`box.devs.title`}
+      />
+    ),
+
     titleDescription: 'developers',
-    subtitleDefaultMessage: 'Learn More',
+    subtitleDefaultMessage: (
+      <FormattedMessage
+        id={`box.devs.subtext`}
+        defaultMessage={`Learn More`}
+        description={`box.business.subtext`}
+      />
+    ),
+
     subtitleDescription: 'learn more',
     link: '/developers'
   }
