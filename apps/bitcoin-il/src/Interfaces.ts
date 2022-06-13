@@ -68,8 +68,8 @@ export interface SupportBodyProps {}
 
 export interface BodyCard {
   img: string
-  title: string
-  text: string
+  title: JSX.Element
+  text: JSX.Element
   id: string
 }
 
@@ -91,4 +91,7 @@ export interface HowItWorksProps {}
 
 export interface AlternatingTwoColumnRowProps {
   index: number
+  imgSrc: string
+  titleText: string
+  bodyText: string
 }
