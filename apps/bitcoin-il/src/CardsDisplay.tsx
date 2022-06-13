@@ -17,20 +17,8 @@ const CardsDisplay: React.FC<CardsDisplayProps> = ({ cards }) => {
           return (
             <Card key={`card-${i}`}>
               <img src={card.img} />
-              <h1>
-                <FormattedMessage
-                  id={`page.individuals.${card.id}.title`}
-                  defaultMessage={card.title}
-                  description={card.title}
-                />
-              </h1>
-              <p>
-                <FormattedMessage
-                  id={`page.individuals.${card.id}.text`}
-                  defaultMessage={card.text}
-                  description={card.text}
-                />
-              </p>
+              <h1>{card.title}</h1>
+              <p>{card.text}</p>
             </Card>
           )
         })}
