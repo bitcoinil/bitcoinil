@@ -96,7 +96,7 @@ export const mainMenuItems: MainMenuItem[] = [
         label: (
           <FormattedMessage
             id={`mainMenu.how-it-works.label`}
-            defaultMessage={'How It Works'}
+            defaultMessage={'How does Bitcoin work?'}
             description={`mainMenu how it works`}
           />
         ),
@@ -105,7 +105,7 @@ export const mainMenuItems: MainMenuItem[] = [
           <RoutePage
             id="how-it-works"
             title="How It Works"
-            subtitle="Bitcoin for How It Works"
+            subtitle="This is a question often surrounded by confusion, so here's a quick explanation!"
             body={<HowItWorks />}
           />
         )
