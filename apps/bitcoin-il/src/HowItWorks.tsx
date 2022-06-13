@@ -123,24 +123,17 @@ const howItWorksItems: HowItWorksItem[] = [
 const HowItWorks: React.FC<HowItWorksProps> = ({}) => {
   return (
     <StyledHowItWorks id="HowItWorks">
-      <h1>
-        <FormattedMessage
-          id={`page.home.title`}
-          defaultMessage={`HowItWorks`}
-          description={`HowItWorks`}
-        />
-        {howItWorksItems.map((item, i) => {
-          console.log(item)
-          return (
-            <AlternatingTwoColumnRow
-              index={i}
-              imgSrc={item.imgSrc}
-              titleText={item.titleText}
-              bodyText={item.bodyText}
-            />
-          )
-        })}
-      </h1>
+      {howItWorksItems.map((item, i) => {
+        console.log(item)
+        return (
+          <AlternatingTwoColumnRow
+            index={i}
+            imgSrc={item.imgSrc}
+            titleText={item.titleText}
+            bodyText={item.bodyText}
+          />
+        )
+      })}
     </StyledHowItWorks>
   )
 }
