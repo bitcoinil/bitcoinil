@@ -9,6 +9,7 @@ import RoutePage from './RoutePage'
 import SupportBody from './SupportBody'
 import { FormattedMessage } from 'react-intl'
 import ResourcesBody from './ResourcesBody'
+import CommunityBody from './CommunityBody'
 
 export const mainMenuItems: MainMenuItem[] = [
   {
@@ -189,9 +190,9 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="Community"
-            title="community"
-            subtitle="Bitcoin for Community"
-            body={<h1>Developers Body</h1>}
+            title="Bitcoin Communities"
+            subtitle="Find interesting people, groups and communities related to Bitcoin."
+            body={<CommunityBody />}
           />
         )
       },
