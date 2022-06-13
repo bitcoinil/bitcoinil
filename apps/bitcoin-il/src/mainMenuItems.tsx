@@ -7,14 +7,27 @@ import InnovationBody from './InnovationBody'
 import { MainMenuItem } from './Interfaces'
 import RoutePage from './RoutePage'
 import SupportBody from './SupportBody'
+import { FormattedMessage } from 'react-intl'
 
 export const mainMenuItems: MainMenuItem[] = [
   {
-    label: 'Introduction',
+    label: (
+      <FormattedMessage
+        id={`mainMenu.intro.label`}
+        defaultMessage={'Introduction'}
+        description={`mainMenu item intro`}
+      />
+    ),
     key: 'intro-menu',
     submenu: [
       {
-        label: 'Individuals',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.individuals.label`}
+            defaultMessage={'Individuals'}
+            description={`mainMenu item intro`}
+          />
+        ),
         key: 'individuals',
         element: (
           <RoutePage
@@ -26,7 +39,13 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'Businesses',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.businesses.label`}
+            defaultMessage={'Businesses'}
+            description={`mainMenu Business Label`}
+          />
+        ),
         key: 'businesses',
         element: (
           <RoutePage
@@ -38,7 +57,13 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'Developers',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.devs.label`}
+            defaultMessage={'Developers'}
+            description={`mainMenu Devs Label`}
+          />
+        ),
         key: 'developers',
         element: (
           <RoutePage
@@ -50,7 +75,13 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'Getting Started',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.gettings-started.label`}
+            defaultMessage={`Getting Started`}
+            description={`mainMenu getting started label`}
+          />
+        ),
         key: 'getting-started',
         element: (
           <RoutePage
@@ -62,7 +93,13 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'How It Works',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.how-it-works.label`}
+            defaultMessage={'How It Works'}
+            description={`mainMenu how it works`}
+          />
+        ),
         key: 'how-it-works',
         element: (
           <RoutePage
@@ -74,7 +111,13 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'White Paper',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.white-paper.label`}
+            defaultMessage={`White Paper`}
+            description={`mainMenu white paper label`}
+          />
+        ),
         key: 'white-paper',
         element: (
           <RoutePage
@@ -88,11 +131,23 @@ export const mainMenuItems: MainMenuItem[] = [
     ]
   },
   {
-    label: 'Resources',
+    label: (
+      <FormattedMessage
+        id={`mainMenu.resources.label`}
+        defaultMessage={'Resources'}
+        description={`mainMenu resources label`}
+      />
+    ),
     key: 'resources-menu',
     submenu: [
       {
-        label: 'Resources',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.resources.label`}
+            defaultMessage={'Resources'}
+            description={`mainMenu.resources.label`}
+          />
+        ),
         key: 'resources',
         element: (
           <RoutePage
@@ -104,7 +159,13 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'Exchanges',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.exchanges.label`}
+            defaultMessage={'Exchanges'}
+            description={`mainMenu.exchanges.label`}
+          />
+        ),
         key: 'exchanges',
         element: (
           <RoutePage
@@ -116,7 +177,13 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'Community',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.community.label`}
+            defaultMessage={`Community`}
+            description={`mainMenu.community.label`}
+          />
+        ),
         key: 'community',
         element: (
           <RoutePage
@@ -128,7 +195,13 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'Documentation',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.docs.label`}
+            defaultMessage={`Documentation`}
+            description={`mainMenu.docs.label`}
+          />
+        ),
         key: 'documentation',
         element: (
           <RoutePage
@@ -140,7 +213,13 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'Vocabulary',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.vocab.label`}
+            defaultMessage={`Vocabulary`}
+            description={`mainMenu.vocab.label`}
+          />
+        ),
         key: 'vocabulary',
         element: (
           <RoutePage
@@ -152,7 +231,14 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'Events',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.events.label`}
+            defaultMessage={`Events`}
+            description={`mainMenu.events.label`}
+          />
+        ),
+
         key: 'events',
         element: (
           <RoutePage
@@ -164,7 +250,13 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'BitCoin Core',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.core.label`}
+            defaultMessage={`BitCoin Il Core`}
+            description={`mainMenu.core.label`}
+          />
+        ),
         key: 'core',
         element: (
           <RoutePage
@@ -178,7 +270,13 @@ export const mainMenuItems: MainMenuItem[] = [
     ]
   },
   {
-    label: 'Innovation',
+    label: (
+      <FormattedMessage
+        id={`mainMenu.innovation.label`}
+        defaultMessage={`Innovation`}
+        description={`mainMenu.innovation.label`}
+      />
+    ),
     key: 'innovation',
     element: (
       <RoutePage
@@ -190,11 +288,24 @@ export const mainMenuItems: MainMenuItem[] = [
     )
   },
   {
-    label: 'Participate',
+    label: (
+      <FormattedMessage
+        id={`mainMenu.participate.label`}
+        defaultMessage={`Participate`}
+        description={`mainMenu.participate.label`}
+      />
+    ),
     key: 'participate',
     submenu: [
       {
-        label: 'Support BitCoin',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.cupport.label`}
+            defaultMessage={`Support BitCoin Il`}
+            description={`mainMenu.cupport.label`}
+          />
+        ),
+
         key: 'support',
         element: (
           <RoutePage
@@ -206,7 +317,14 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'Buy BitCoin',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.buy.label`}
+            defaultMessage={`Buy BitCoin Il`}
+            description={`mainMenu.buy.label`}
+          />
+        ),
+
         key: 'Buy',
         element: (
           <RoutePage
@@ -218,7 +336,14 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'Running a full node',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.run-node.label`}
+            defaultMessage={`Running a full Node`}
+            description={`mainMenu.run-node.label`}
+          />
+        ),
+
         key: 'full-node',
         element: (
           <RoutePage
@@ -230,7 +355,13 @@ export const mainMenuItems: MainMenuItem[] = [
         )
       },
       {
-        label: 'Development',
+        label: (
+          <FormattedMessage
+            id={`mainMenu.development.label`}
+            defaultMessage={`Development`}
+            description={`mainMenu.development.label`}
+          />
+        ),
         key: 'development',
         element: (
           <RoutePage
@@ -244,7 +375,14 @@ export const mainMenuItems: MainMenuItem[] = [
     ]
   },
   {
-    label: 'FAQ',
+    label: (
+      <FormattedMessage
+        id={`mainMenu.faq.label`}
+        defaultMessage={`FAQ`}
+        description={`mainMenu.faq.label`}
+      />
+    ),
+
     key: 'FAQ',
     element: (
       <RoutePage

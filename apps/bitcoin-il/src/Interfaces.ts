@@ -4,7 +4,7 @@ export interface ClickedMenuItemData {
   keyPath: [string]
 }
 export interface MainMenuItem {
-  label: string
+  label: JSX.Element
   key: string
   submenu?: MainMenuItem[]
   element?: React.ReactNode

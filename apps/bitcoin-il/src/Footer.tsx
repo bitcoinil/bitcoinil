@@ -40,31 +40,16 @@ const Footer: React.FC<FooterProps> = ({}) => {
             </p>
           </div>
           <div className="footer-main-body-right">
-            {mainMenuItems.map((menuItem) => {
+            {mainMenuItems.map((menuItem, i) => {
               if (!menuItem.submenu) return null
               return (
-                <div
-                  key={menuItem.label}
-                  className="footer-main-body-right-menu-column"
-                >
-                  <p className="title">
-                    <FormattedMessage
-                      id={`footer.menu-item.title-${menuItem.label}`}
-                      defaultMessage={menuItem.label}
-                      description={`Description`}
-                    />
-                  </p>
+                <div key={i} className="footer-main-body-right-menu-column">
+                  <p className="title">{menuItem.label}</p>
                   <ul>
                     {menuItem.submenu.map((subMenuItem, ii) => {
                       return (
                         <NavLink key={ii} to={`/${subMenuItem.key}`}>
-                          <li>
-                            <FormattedMessage
-                              id={`footer.menu-item-${subMenuItem.key}`}
-                              defaultMessage={subMenuItem.label}
-                              description={subMenuItem.label}
-                            />
-                          </li>
+                          <li>{subMenuItem.label}</li>
                         </NavLink>
                       )
                     })}
