@@ -50,9 +50,9 @@ export interface QuickOverviewBox {
   index: Number
   imgSrc: string
   id: string
-  titleDefaultMessage: string
+  titleDefaultMessage: JSX.Element
   titleDescription: string
-  subtitleDefaultMessage: string
+  subtitleDefaultMessage: JSX.Element
   subtitleDescription: string
   baseFormattedMessage?: String
   link: string
@@ -92,6 +92,6 @@ export interface HowItWorksProps {}
 export interface AlternatingTwoColumnRowProps {
   index: number
   imgSrc: string
-  titleText: string
-  bodyText: string
+  titleText: JSX.Element
+  bodyText: JSX.Element
 }
