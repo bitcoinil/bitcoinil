@@ -8,6 +8,7 @@ import { MainMenuItem } from './Interfaces'
 import RoutePage from './RoutePage'
 import SupportBody from './SupportBody'
 import { FormattedMessage } from 'react-intl'
+import ResourcesBody from './ResourcesBody'
 
 export const mainMenuItems: MainMenuItem[] = [
   {
@@ -154,7 +155,7 @@ export const mainMenuItems: MainMenuItem[] = [
             id="resources"
             title="Resources"
             subtitle="Useful websites and resources about Bitcoin."
-            body={<h1>Individuals Body</h1>}
+            body={<ResourcesBody />}
           />
         )
       },
