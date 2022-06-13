@@ -6,7 +6,7 @@
 			"<FormattedMessage",
 			"id={`${1:id}`}",
 			"defaultMessage={`${2:Message}`}",
-			"description={`${3:Description}`}",
+			"description={`${1:id}`}",
 			"/>",
 		],
 		"description": "New Formatted Message"
