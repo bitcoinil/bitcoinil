@@ -12,7 +12,6 @@ export default function RoutePage({
   body = <h1>body prop</h1>,
   id = ''
 }: RoutePageProps): JSX.Element {
-  console.log({ title, subtitle, body, id })
   return (
     <StyledRoutePage id="RoutePage">
       <div className="page-title">

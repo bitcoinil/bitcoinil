@@ -86,3 +86,9 @@ export interface TimelineItemProps {
   buttonText: string
   buttonOnClick: Function
 }
+
+export interface HowItWorksProps {}
+
+export interface AlternatingTwoColumnRowProps {
+  index: number
+}

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import BusinessBody from './BusinessesBody'
 import GettingStartedBody from './GettingStartedBody'
+import HowItWorks from './HowItWorks'
 import IndividualsBody from './IndividualsBody'
 import InnovationBody from './InnovationBody'
 import { MainMenuItem } from './Interfaces'
@@ -68,7 +69,7 @@ export const mainMenuItems: MainMenuItem[] = [
             id="how-it-works"
             title="How It Works"
             subtitle="Bitcoin for How It Works"
-            body={<h1>How It Works Body</h1>}
+            body={<HowItWorks />}
           />
         )
       },
