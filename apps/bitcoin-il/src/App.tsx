@@ -13,7 +13,9 @@ import { useIntl } from './hooks/useIntl'
 import { mainMenuItems } from './mainMenuItems'
 import { nonMenuRoutes } from './nonMenuRoutes'
 import Support from './support'
+import locales from '@bitil/locales'
 
+console.log('LCOALES! :D', locales)
 function App(): JSX.Element {
   const { language, messages, locale } = useIntl()
 
@@ -63,7 +65,8 @@ function App(): JSX.Element {
         />
       </Helmet>
       <IntlProvider
-        messages={messages[language]}
+        // @ts-ignore
+        messages={locales[language]}
         locale={locale}
         defaultLocale="en"
       >

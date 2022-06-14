@@ -1,17 +1,630 @@
 {
-  "app.text": {
-    "defaultMessage": "This is some text",
-    "description": "Link on react page"
+  "box.business.subtext": {
+    "defaultMessage": "Learn More",
+    "description": "box.business.subtext"
   },
-  "foo": {
-    "defaultMessage": "To buy a shoe, <a>visit our website</a> and <cta>buy a shoe</cta>"
+  "box.business.title": {
+    "defaultMessage": "Businesses",
+    "description": "box.business.title"
   },
-  "main-title": {
-    "defaultMessage": "This is some text",
-    "description": "Link on react page"
+  "box.devs.subtext": {
+    "defaultMessage": "Learn More",
+    "description": "box.business.subtext"
   },
-  "sub-title": {
-    "defaultMessage": "This is some text",
-    "description": "Link on react page"
+  "box.devs.title": {
+    "defaultMessage": "Developers",
+    "description": "box.devs.title"
+  },
+  "box.individuals.subtext": {
+    "defaultMessage": "Learn More",
+    "description": "box.individuals.subtext"
+  },
+  "box.individuals.title": {
+    "defaultMessage": "Individuals",
+    "description": "box.individuals.title"
+  },
+  "businessCard.control.text": {
+    "defaultMessage": "Any business that accepts credit cards or PayPal knows the problem of payments that are later reversed. Chargeback frauds result in limited market reach and increased prices, which in turn penalizes customers. Bitcoin payments are irreversible and secure, meaning that the cost of fraud is no longer pushed onto the shoulders of the merchants.",
+    "description": "business cards text"
+  },
+  "businessCard.international.text": {
+    "defaultMessage": "Sending bitcoins across borders is as easy as sending them across the street. There are no banks to make you wait three business days, no extra fees for making an international transfer, and no special limitations on the minimum or maximum amount you can send.",
+    "description": "business cards text"
+  },
+  "businessCard.lowfee.text": {
+    "defaultMessage": "There is no fee to receive bitcoins, and many wallets let you control how large a fee to pay when spending. Most wallets have reasonable default fees, and higher fees can encourage faster confirmation of your transactions. Fees are unrelated to the amount transferred, so it's possible to send 100,000 bitcoins for the same fee it costs to send 1 bitcoin.",
+    "description": "business cards text"
+  },
+  "businessCard.multi-sig.text": {
+    "defaultMessage": "Bitcoin also includes a multi-signature feature which allows bitcoins to be spent only if a subset of a group of people authorize the transaction. This can be used by a board of directors, for example, to prevent members from making expenditures without enough consent from other members, as well as to track which members permitted particular transactions.",
+    "description": "business cards text"
+  },
+  "businessCard.pci.text": {
+    "defaultMessage": "Accepting credit cards online typically requires extensive security checks in order to comply with the PCI standard. Bitcoin still requires you to secure your wallet and your payment requests, however, you do not carry the costs and responsibilities that come with processing sensitive information from your customers like with credit card numbers.",
+    "description": "business cards text"
+  },
+  "businessCard.transparency.text": {
+    "defaultMessage": "Many organizations are required to produce accounting documents about their activity. Using Bitcoin allows you to offer the highest level of transparency since you can provide information to verify balances and transactions through the block chain. For example, non-profit organizations can allow the public to see how much they receive in donations.",
+    "description": "business cards text"
+  },
+  "businessCard.visib.text": {
+    "defaultMessage": "Bitcoin is an emerging market of new customers who are searching for ways to spend their bitcoins. Accepting them is a good way to get new customers and give your business some new visibility. Accepting a new payment method has often shown to be a clever practice for online businesses.",
+    "description": "business cards text"
+  },
+  "businessCards.control.title": {
+    "defaultMessage": "Protection against fraud",
+    "description": "business cards title"
+  },
+  "businessCards.international.title": {
+    "defaultMessage": "Fast international payments",
+    "description": "business cards title"
+  },
+  "businessCards.lowfee.title": {
+    "defaultMessage": "Choose your own fees",
+    "description": "business cards title"
+  },
+  "businessCards.multi-sig.title": {
+    "defaultMessage": "Multi-signature",
+    "description": "business cards title"
+  },
+  "businessCards.pci.title": {
+    "defaultMessage": "No PCI compliance required",
+    "description": "business cards title"
+  },
+  "businessCards.transparency.title": {
+    "defaultMessage": "Accounting Transparency",
+    "description": "business cards title"
+  },
+  "businessCards.visib.title": {
+    "defaultMessage": "Get some free visibility",
+    "description": "business cards title"
+  },
+  "community.bitcointalk.text": {
+    "defaultMessage": "BitcoinTalk Forum",
+    "description": "Description"
+  },
+  "community.facebook.text": {
+    "defaultMessage": "Facebook - MUST ADD PROPER ADDRESS",
+    "description": "Description"
+  },
+  "community.reddit.text": {
+    "defaultMessage": "BitCoin Stack Exchange (Q&A)",
+    "description": "Description"
+  },
+  "community.twitter.text": {
+    "defaultMessage": "Twitter - MUST ADD PROPER ADDRESS",
+    "description": "Description"
+  },
+  "communityCard.X.text": {
+    "defaultMessage": "Sending bitcoins across borders is as easy as sending them across the street. There are no banks to make you wait three business days, no extra fees for making an international transfer, and no special limitations on the minimum or maximum amount you can send.",
+    "description": "Description"
+  },
+  "communityCards.forum.title": {
+    "defaultMessage": "Forums",
+    "description": "individuals card forum title"
+  },
+  "communityCards.international.title": {
+    "defaultMessage": "Fast international payments",
+    "description": "individuals card international title"
+  },
+  "communityCards.meetups.title": {
+    "defaultMessage": "Meetups",
+    "description": "individuals card meetups title"
+  },
+  "communityCards.social.title": {
+    "defaultMessage": "Social Networks",
+    "description": "individuals card social title"
+  },
+  "footer.donate": {
+    "defaultMessage": "Donate",
+    "description": "Donate"
+  },
+  "footer.support-message": {
+    "defaultMessage": "TODO: BITCOIN LINK FOR DONATIONS",
+    "description": "BITCOIN LINK FOR DONATIONS"
+  },
+  "homepage.buy-bitcoin": {
+    "defaultMessage": "Buy Bitcoin",
+    "description": "Buy"
+  },
+  "homepage.choose-your-wallet": {
+    "defaultMessage": "Choose Your Wallet",
+    "description": "Choose Wallet"
+  },
+  "homepage.get-started-button": {
+    "defaultMessage": "Get Started With BitCoin Il",
+    "description": "Get Started"
+  },
+  "homepage.what-is-bitcoin": {
+    "defaultMessage": "What Is Bitcoin?",
+    "description": "What Is Bitcoin?"
+  },
+  "howitworks-balances-subtitle": {
+    "defaultMessage": "The block chain is a shared public ledger on which the entire Bitcoin network relies. All confirmed transactions are included in the block chain. It allows Bitcoin wallets to calculate their spendable balance so that new transactions can be verified thereby ensuring they're actually owned by the spender. The integrity and the chronological order of the block chain are enforced with cryptography.",
+    "description": "howitworks-balances-title"
+  },
+  "howitworks-balances-title": {
+    "defaultMessage": "Balances - How It Works",
+    "description": "howitworks-XXXX-title"
+  },
+  "howitworks-basics-subtitle": {
+    "defaultMessage": "As a new user, you can get started with Bitcoin without understanding the technical details. Once you've installed a Bitcoin wallet on your computer or mobile phone, it will generate your first Bitcoin address and you can create more whenever you need one. You can disclose your addresses to your friends so that they can pay you or vice versa. In fact, this is pretty similar to how email works, except that Bitcoin addresses should be used only once.",
+    "description": "howitworks-basics-tsubitle"
+  },
+  "howitworks-basics-title": {
+    "defaultMessage": "The basics for a new user",
+    "description": "howitworks-basics-title"
+  },
+  "howitworks-processing-subtitle": {
+    "defaultMessage": "Mining is a distributed consensus system that is used to confirm pending transactions by including them in the block chain. It enforces a chronological order in the block chain, protects the neutrality of the network, and allows different computers to agree on the state of the system. To be confirmed, transactions must be packed in a block that fits very strict cryptographic rules that will be verified by the network. These rules prevent previous blocks from being modified because doing so would invalidate all the subsequent blocks. Mining also creates the equivalent of a competitive lottery that prevents any individual from easily adding new blocks consecutively to the block chain. In this way, no group or individuals can control what is included in the block chain or replace parts of the block chain to roll back their own spends.",
+    "description": "howitworks-processing-subtitle"
+  },
+  "howitworks-processing-title": {
+    "defaultMessage": "Processing - mining",
+    "description": "howitworks-processing-title"
+  },
+  "howitworks-rabbit-hole-subtitle": {
+    "defaultMessage": "This is just a short summary of Bitcoin. If you want to learn more of the details, you can read the original paper that describes its design, the developer documentation, or explore the Bitcoin wiki.",
+    "description": "howitworks-rabbit-hole-subtitle"
+  },
+  "howitworks-rabbit-hole-title": {
+    "defaultMessage": "Going down the rabbit hole",
+    "description": "howitworks-rabbit-hole-title"
+  },
+  "howitworks-transactions-subtitle": {
+    "defaultMessage": "A transaction is a transfer of value between Bitcoin wallets that gets included in the block chain. Bitcoin wallets keep a secret piece of data called a private key or seed, which is used to sign transactions, providing a mathematical proof that they have come from the owner of the wallet. The signature also prevents the transaction from being altered by anybody once it has been issued. All transactions are broadcast to the network and usually begin to be confirmed within 10-20 minutes, through a process called mining.",
+    "description": "howitworks-transactions-subtitle"
+  },
+  "howitworks-transactions-title": {
+    "defaultMessage": "Transactions - private keys",
+    "description": "howitworks-transaction-title"
+  },
+  "individualCard.X.text": {
+    "defaultMessage": "With Bitcoin, there's no credit card number that malicious actors can collect in order to steal from you. In fact, it's even possible in some cases to send a payment without revealing your identity, almost like with physical money. You should, however, take note that some effort can be required to protect your privacy.",
+    "description": "Description"
+  },
+  "individualCards.anon.title": {
+    "defaultMessage": "Protect your identity",
+    "description": "individuals card anon title"
+  },
+  "individualCards.international.title": {
+    "defaultMessage": "Fast international payments",
+    "description": "individuals card international title"
+  },
+  "individualCards.lock.title": {
+    "defaultMessage": "Security and control over your money",
+    "description": "individuals card lock title"
+  },
+  "individualCards.lowfee.title": {
+    "defaultMessage": "Choose your own fees",
+    "description": "individuals card lowfee title"
+  },
+  "individualCards.mobile.title": {
+    "defaultMessage": "Mobile payments made easy",
+    "description": "individuals card mobile title"
+  },
+  "individualCards.simple.title": {
+    "defaultMessage": "Works everywhere, anytime",
+    "description": "individuals card simple title"
+  },
+  "innovationCards.accessibility.text": {
+    "defaultMessage": "With Bitcoin, all payments in the world can be fully interoperable. Bitcoin allows any bank, business or individual to securely send and receive payments anywhere at any time, with or without a bank account. Bitcoin is available in a large number of countries that still remain out of reach for most payment systems due to their own limitations. Bitcoin increases global access to commerce and it can help international trades to flourish.",
+    "description": "innovation cards X text"
+  },
+  "innovationCards.accessibility.title": {
+    "defaultMessage": "Global accessibility",
+    "description": "Description"
+  },
+  "innovationCards.automatization.text": {
+    "defaultMessage": "Automated services usually have to deal with costs and limitations of cash, or credit card payments. This includes all kinds of vending machines, from train tickets to soda machines. Bitcoin is suited to be used in a new generation of automated services to cut their operating costs. Imagine self-driving taxis or a store where you can pay for your purchases without waiting in line. Many ideas are possible.",
+    "description": "innovation cards X text"
+  },
+  "innovationCards.automization.title": {
+    "defaultMessage": "Automated solutions",
+    "description": "Description"
+  },
+  "innovationCards.control.text": {
+    "defaultMessage": "An unprecedented level of security is possible with Bitcoin. The network provides users with protection against most prevalent types of fraud like chargebacks or unwanted charges, and bitcoins are impossible to counterfeit. Users can backup or encrypt their wallets. Hardware wallets make it very difficult to steal or lose money. Bitcoin is designed to allow its users to have complete control over their money.",
+    "description": "innovation cards X text"
+  },
+  "innovationCards.control.title": {
+    "defaultMessage": "Control against fraud",
+    "description": "Description"
+  },
+  "innovationCards.crowdfunding.text": {
+    "defaultMessage": "Bitcoin can be used to run Kickstarter-like crowdfunding campaigns, in which individuals pledge money to a project that is taken from them only if enough pledges are received to meet the target. Such assurance contracts are processed by the Bitcoin protocol, which prevents a transaction from taking place until all conditions have been met. Learn more about the technology behind crowdfunding.",
+    "description": "innovation cards X text"
+  },
+  "innovationCards.crowdfunding.title": {
+    "defaultMessage": "Crowdfunding",
+    "description": "Description"
+  },
+  "innovationCards.decentralization.title": {
+    "defaultMessage": "Resilience and decentralization",
+    "description": "Description"
+  },
+  "innovationCards.dectralization.text": {
+    "defaultMessage": "By way of decentralization, Bitcoin created a different type of payment network with an increased level of resilience and redundancy. Bitcoin can handle millions of dollars in trades without requiring military protection. With no central point of failure such as a data center, attacking the network is difficult. Bitcoin could represent an interesting step forward in securing local and global financial systems.",
+    "description": "innovation cards X text"
+  },
+  "innovationCards.donation.text": {
+    "defaultMessage": "Bitcoin has been a particularly efficient solution for tips and donations. Sending a payment only requires one click and receiving donations can be as simple as displaying a QR code. Donations can be visible for the public, giving increased transparency for non-profit organizations. In cases of emergencies such as natural disasters, Bitcoin donations could contribute to a faster international response.",
+    "description": "innovation cards X text"
+  },
+  "innovationCards.donation.title": {
+    "defaultMessage": "Tips and Donations",
+    "description": "Description"
+  },
+  "innovationCards.efficiency.text": {
+    "defaultMessage": "With the use of cryptography, secure payments are possible without slow and costly middlemen. A Bitcoin transaction can be much cheaper than its alternatives and be completed in a short time. This means Bitcoin holds some potential to become a common way to transfer any currency in the future. Bitcoin could also play a role in reducing poverty in many countries by cutting high transaction fees on workers' salary.",
+    "description": "innovation cards X text"
+  },
+  "innovationCards.efficiency.title": {
+    "defaultMessage": "Cost efficiency",
+    "description": "Description"
+  },
+  "innovationCards.mediation.text": {
+    "defaultMessage": "Bitcoin can be used to develop innovative dispute mediation services using multiple signatures. Such services could make it possible for a third party to approve or reject a transaction in case of disagreement between the other parties without having control of their money. Since these services would be compatible with any user and merchant using Bitcoin, this would likely lead to free competition and higher quality standards.",
+    "description": "innovation cards X text"
+  },
+  "innovationCards.mediation.title": {
+    "defaultMessage": "Dispute Mediation",
+    "description": "Description"
+  },
+  "innovationCards.micro-payments.title": {
+    "defaultMessage": "Micro Payments",
+    "description": "Description"
+  },
+  "innovationCards.microPayments.text": {
+    "defaultMessage": "Imagine listening to Internet radio paid by the second, viewing web pages with a small tip for each ad not shown, or buying bandwidth from a WiFi hotspot by the kilobyte. Bitcoin is efficient enough to make all of these ideas possible. Learn more about the technology behind Bitcoin micropayments or about future upgrades currently being designed and implemented to make micropayments more accessible.",
+    "description": "innovation cards X text"
+  },
+  "innovationCards.multiSignature.text": {
+    "defaultMessage": "Multiple signatures allow a transaction to be accepted by the network only if a certain number of a defined group of persons agree to sign the transaction. This could be used by a board of directors to prevent any member to spend parts of their treasury without other members' consent. This can also be used by banks to prevent theft by blocking payments above a threshold if the user does not provide additional credentials.",
+    "description": "innovation cards X text"
+  },
+  "innovationCards.multiSignature.title": {
+    "defaultMessage": "Multi-signature Accounts",
+    "description": "Description"
+  },
+  "innovationCards.transparency.text": {
+    "defaultMessage": "All Bitcoin transactions are public and transparent and the identity of the people behind transactions are private by default. This allows individuals and organizations to work with flexible transparency rules. For instance, a business can choose to reveal certain transactions and balances only to certain employees just like a non-profit organization is free to allow the public to see how much they receive in daily and monthly donations.",
+    "description": "innovation cards X text"
+  },
+  "innovationCards.transparency.title": {
+    "defaultMessage": "Flexible Transparency",
+    "description": "Description"
+  },
+  "innovationCards.trust.text": {
+    "defaultMessage": "Bitcoin offers solutions to many of the trust problems that plague banks. With selective accounting transparency, digital contracts, and irreversible transactions, Bitcoin can be used as a ground to restore trust and agreement. Crooked banks cannot cheat the system to make a profit at the expense of other banks or the public. A future in which major banks would support Bitcoin could help to reinstate integrity and trust in financial institutions.",
+    "description": "innovation cards X text"
+  },
+  "innovationCards.trust.title": {
+    "defaultMessage": "Trust and integrity",
+    "description": "Description"
+  },
+  "mainMenu.businesses.label": {
+    "defaultMessage": "Businesses",
+    "description": "mainMenu Business Label"
+  },
+  "mainMenu.buy.label": {
+    "defaultMessage": "Buy BitCoin Il",
+    "description": "mainMenu.buy.label"
+  },
+  "mainMenu.community.label": {
+    "defaultMessage": "Community",
+    "description": "mainMenu.community.label"
+  },
+  "mainMenu.core.label": {
+    "defaultMessage": "BitCoin Il Core",
+    "description": "mainMenu.core.label"
+  },
+  "mainMenu.cupport.label": {
+    "defaultMessage": "Support BitCoin Il",
+    "description": "mainMenu.cupport.label"
+  },
+  "mainMenu.development.label": {
+    "defaultMessage": "Development",
+    "description": "mainMenu.development.label"
+  },
+  "mainMenu.devs.label": {
+    "defaultMessage": "Developers",
+    "description": "mainMenu Devs Label"
+  },
+  "mainMenu.docs.label": {
+    "defaultMessage": "Documentation",
+    "description": "mainMenu.docs.label"
+  },
+  "mainMenu.events.label": {
+    "defaultMessage": "Events",
+    "description": "mainMenu.events.label"
+  },
+  "mainMenu.exchanges.label": {
+    "defaultMessage": "Exchanges",
+    "description": "mainMenu.exchanges.label"
+  },
+  "mainMenu.faq.label": {
+    "defaultMessage": "FAQ",
+    "description": "mainMenu.faq.label"
+  },
+  "mainMenu.gettings-started.label": {
+    "defaultMessage": "Getting Started",
+    "description": "mainMenu getting started label"
+  },
+  "mainMenu.how-it-works.label": {
+    "defaultMessage": "How does Bitcoin work?",
+    "description": "mainMenu how it works"
+  },
+  "mainMenu.individuals.label": {
+    "defaultMessage": "Individuals",
+    "description": "mainMenu item intro"
+  },
+  "mainMenu.innovation.label": {
+    "defaultMessage": "Innovation",
+    "description": "mainMenu.innovation.label"
+  },
+  "mainMenu.intro.label": {
+    "defaultMessage": "Introduction",
+    "description": "mainMenu item intro"
+  },
+  "mainMenu.participate.label": {
+    "defaultMessage": "Participate",
+    "description": "mainMenu.participate.label"
+  },
+  "mainMenu.resources.label": {
+    "defaultMessage": "Resources",
+    "description": "mainMenu.resources.label"
+  },
+  "mainMenu.run-node.label": {
+    "defaultMessage": "Running a full Node",
+    "description": "mainMenu.run-node.label"
+  },
+  "mainMenu.vocab.label": {
+    "defaultMessage": "Vocabulary",
+    "description": "mainMenu.vocab.label"
+  },
+  "mainMenu.white-paper.label": {
+    "defaultMessage": "White Paper",
+    "description": "mainMenu white paper label"
+  },
+  "page.footer.support": {
+    "defaultMessage": "Support BitCoin Il",
+    "description": "Support"
+  },
+  "page.getting-started-how-to-accept": {
+    "defaultMessage": "How To Accept Bitcoin",
+    "description": "How To Accept"
+  },
+  "page.getting-started-how-to-use": {
+    "defaultMessage": "How To Use Bitcoin",
+    "description": "How To Start"
+  },
+  "page.home.get-started-main-text": {
+    "defaultMessage": "Bitcoin Il uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.",
+    "description": "Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system."
+  },
+  "page.home.get-started-title": {
+    "defaultMessage": "Get Started With Bitcoin",
+    "description": "GetStartedWithBitcoin"
+  },
+  "page.home.get-started.instant": {
+    "defaultMessage": "Low Processing Fees",
+    "description": "Low Processing Fees"
+  },
+  "page.home.title": {
+    "defaultMessage": "Bitcoin Il is an innovative payment network and a new kind of money.",
+    "description": "Homepage Title"
+  },
+  "resourceCards.charts.bitaps": {
+    "defaultMessage": "bitaps.com",
+    "description": "resourceCards.charts.bitaps"
+  },
+  "resourceCards.charts.blockcypher": {
+    "defaultMessage": "blockcypher",
+    "description": "resourceCards.charts.blockcypher"
+  },
+  "resourceCards.charts.go-bitcoin": {
+    "defaultMessage": "BitCoinAverage",
+    "description": "resourceCards.charts.bitcoin-average"
+  },
+  "resourceCards.charts.mempool": {
+    "defaultMessage": "mempool.space",
+    "description": "resourceCards.charts.mempool"
+  },
+  "resourceCards.charts.satoshi": {
+    "defaultMessage": "Statoshi.info",
+    "description": "resourceCards.charts.satoshi"
+  },
+  "resourceCards.charts.title": {
+    "defaultMessage": "Charts and Statistics",
+    "description": "individuals card charts title"
+  },
+  "resourceCards.charts.tradeblock": {
+    "defaultMessage": "BitCoinCharts.com",
+    "description": "resourceCards.charts.tradeblock"
+  },
+  "resourceCards.directories.exchanges": {
+    "defaultMessage": "Exchanges",
+    "description": "resourceCards.directories.exchanges"
+  },
+  "resourceCards.directories.exchanges-bitrawr": {
+    "defaultMessage": "Exchanges",
+    "description": "resourceCards.directories.exchanges-bitrawr"
+  },
+  "resourceCards.directories.exchanges-bitrawr.post-link-text": {
+    "defaultMessage": "bitrawr.com",
+    "description": "resourceCards.directories.exchanges-bitrawr.post-link-text"
+  },
+  "resourceCards.directories.exchanges.post-link-text": {
+    "defaultMessage": "buybitcoinworldwide.com",
+    "description": "resourceCards.directories.exchanges.post-link-text"
+  },
+  "resourceCards.directories.merchant-tools": {
+    "defaultMessage": "Merchant Tools",
+    "description": "resourceCards.directories.merchant-tools"
+  },
+  "resourceCards.directories.merchant-tools.post-link-text": {
+    "defaultMessage": "en.bitcoin.it",
+    "description": "resourceCards.directories.merchant-tools.post-link-text"
+  },
+  "resourceCards.directories.merchants-99": {
+    "defaultMessage": "Merchants",
+    "description": "resourceCards.directories.merchants-99"
+  },
+  "resourceCards.directories.merchants-99.post-link-text": {
+    "defaultMessage": "99BitCoins.com",
+    "description": "resourceCards.directories.merchants-99.post-link-text"
+  },
+  "resourceCards.directories.merchants-coinMap": {
+    "defaultMessage": "Merchants",
+    "description": "resourceCards.directories.merchants-coinMap"
+  },
+  "resourceCards.directories.merchants-coinMap.post-link-text": {
+    "defaultMessage": "CoinMap.org",
+    "description": "resourceCards.directories.merchants-coinMap.post-link-text"
+  },
+  "resourceCards.directories.merchants-spend": {
+    "defaultMessage": "Merchants",
+    "description": "resourceCards.directories.merchants-spend"
+  },
+  "resourceCards.directories.merchants-spend.post-link-text": {
+    "defaultMessage": "SpendABit.io",
+    "description": "resourceCards.directories.merchants-spend.post-link-text"
+  },
+  "resourceCards.directories.merchants-wide": {
+    "defaultMessage": "Merchants",
+    "description": "resourceCards.directories.merchants-wide"
+  },
+  "resourceCards.directories.merchants-wide.post-link-text": {
+    "defaultMessage": "BitCoinWide.com",
+    "description": "resourceCards.directories.merchants-wide.post-link-text"
+  },
+  "resourceCards.directories.projects": {
+    "defaultMessage": "Projects",
+    "description": "resourceCards.directories.projects"
+  },
+  "resourceCards.directories.projects.post-link-text": {
+    "defaultMessage": "BitcoinProjects.net",
+    "description": "resourceCards.directories.projects.post-link-text"
+  },
+  "resourceCards.directories.title": {
+    "defaultMessage": "Directories",
+    "description": "individuals card lock title"
+  },
+  "resourceCards.directories.wallets": {
+    "defaultMessage": "Wallets",
+    "description": "resourceCards.directories.wallets"
+  },
+  "resourceCards.directories.wallets.post-link-text": {
+    "defaultMessage": "bitcoin.org",
+    "description": "resourceCards.directories.wallets.post-link-text"
+  },
+  "resourceCards.docus.bubble": {
+    "defaultMessage": "BitCoin Beyond The Bubble",
+    "description": "resourceCards.charts.bubble"
+  },
+  "resourceCards.docus.evolution": {
+    "defaultMessage": "Evolution of BitCoin",
+    "description": "resourceCards.charts.evolution"
+  },
+  "resourceCards.docus.magic-money": {
+    "defaultMessage": "Magic Money: The Bitcoin Revolution",
+    "description": "resourceCards.charts.magic-money"
+  },
+  "resourceCards.docus.phenom": {
+    "defaultMessage": "The BitCoin Phenomenon",
+    "description": "resourceCards.charts.phenom"
+  },
+  "resourceCards.docus.title": {
+    "defaultMessage": "Documentaries",
+    "description": "individuals card international title"
+  },
+  "resourceCards.docus.ulterior": {
+    "defaultMessage": "Ulterior States",
+    "description": "resourceCards.charts.ulterior"
+  },
+  "resourceCards.guides.bitcoiner": {
+    "defaultMessage": "Bitcoiner.Guide",
+    "description": "resourceCards.guides.bitcoiner"
+  },
+  "resourceCards.guides.coldcard": {
+    "defaultMessage": "Coldcard",
+    "description": "resourceCards.guides.coldcard"
+  },
+  "resourceCards.guides.node": {
+    "defaultMessage": "Node.guide",
+    "description": "resourceCards.guides.node"
+  },
+  "resourceCards.guides.title": {
+    "defaultMessage": "Guides",
+    "description": "Guides"
+  },
+  "resourceCards.learn-res.title": {
+    "defaultMessage": "Learning Resources",
+    "description": "individuals card mobile title"
+  },
+  "resourceCards.lowfee.title": {
+    "defaultMessage": "Vouchers",
+    "description": "individuals card lowfee title"
+  },
+  "resourceCards.vouchers.Gyft": {
+    "defaultMessage": "Gyft",
+    "description": "resourceCards.vouchers.Gyft"
+  },
+  "resourceCards.vouchers.bitrefill": {
+    "defaultMessage": "Bitrefill",
+    "description": "resourceCards.vouchers.bitrefill"
+  },
+  "resourceCards.vouchers.opendime": {
+    "defaultMessage": "OpenDime",
+    "description": "resourceCards.vouchers.opendime"
+  },
+  "resourceCards.vouchers.phenom": {
+    "defaultMessage": "Fold",
+    "description": "resourceCards.vouchers.fold"
+  },
+  "resources.khan.text": {
+    "defaultMessage": "Khan Academy",
+    "description": "Description"
+  },
+  "resources.mining.text": {
+    "defaultMessage": "BitCoinMining.com",
+    "description": "Description"
+  },
+  "resources.podcast.text": {
+    "defaultMessage": "BitCoin Knowledge Podcast",
+    "description": "Description"
+  },
+  "resources.resources.text": {
+    "defaultMessage": "Resources",
+    "description": "Description"
+  },
+  "resources.satoshi.text": {
+    "defaultMessage": "IamSatoshi",
+    "description": "Description"
+  },
+  "resources.talk.text": {
+    "defaultMessage": "Lets Talk BitCoin",
+    "description": "Description"
+  },
+  "resources.weusecoins.text": {
+    "defaultMessage": "We Use Coins",
+    "description": "Description"
+  },
+  "resources.wiki.text": {
+    "defaultMessage": "BitCoin Wiki",
+    "description": "Description"
+  },
+  "support.cta": {
+    "defaultMessage": "Bitcoin.Il Needs Your Support",
+    "description": "CTA"
+  },
+  "support.title": {
+    "defaultMessage": "Bitcoin Il is a community funded project, donations are appreciated and used to improve the website.",
+    "description": "Homepage Title"
+  },
+  "tlWMX4": {
+    "defaultMessage": "Get A Quick Overview For",
+    "description": "QuickOverview"
   }
 }
