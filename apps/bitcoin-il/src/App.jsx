@@ -3,7 +3,12 @@ import React, { useEffect } from 'react'
 import { BitCoinIlSite, Header } from 'app-layout'
 
 import { useIntl } from 'app-layout'
-import { FormattedMessage } from 'react-intl'
+import {
+  FormattedDisplayName,
+  FormattedList,
+  FormattedMessage,
+  FormattedPlural
+} from 'react-intl'
 
 // import { BrowserRouter as Router } from 'react-router-dom'
 
@@ -13,7 +18,7 @@ import locales from '@bitil/locales'
 function App() {
   const { language, setLanguage, messages } = useIntl()
 
-  console.log(messages[language])
+  console.log('PROCESS:', import.meta.env.BASE_URL)
 
   useEffect(() => {
     console.log('🐕️', language)
@@ -33,6 +38,40 @@ function App() {
           id="app.text"
           defaultMessage="This is some text"
           description="Link on react page"
+        />
+        <FormattedMessage
+          id="main-title"
+          defaultMessage="This is some text"
+          description="Link on react page"
+        />
+        <FormattedMessage
+          id="sub-title"
+          defaultMessage="This is some text"
+          description="Link on react page"
+        />
+        <FormattedPlural
+          id="plural-example"
+          value={12}
+          one="sample"
+          other="samples"
+        />
+        <FormattedDisplayName type="language" value="zh-Hans-SG" />
+        <FormattedList type="conjunction" value={['Me', 'myself', 'I']} />
+        <FormattedMessage
+          id="foo"
+          defaultMessage="To buy a shoe, <a>visit our website</a> and <cta>buy a shoe</cta>"
+          values={{
+            a: (chunks) => (
+              <a
+                class="external_link"
+                target="_blank"
+                href="https://www.example.com/shoe"
+              >
+                {chunks}
+              </a>
+            ),
+            cta: (chunks) => <strong class="important">{chunks}</strong>
+          }}
         />
       </p>
       <BitCoinIlSite

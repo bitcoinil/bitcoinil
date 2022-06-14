@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2021"],
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "isolatedModules": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+  },
+  "extends": "tsconfig/library.json",
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

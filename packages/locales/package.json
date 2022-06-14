@@ -10,9 +10,12 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc -w",
+    "locales": "node ../locale-handler/dist/locale-handler.js compile ./src/lib --base $PWD --clean=false dotenv_config_debug=true",
+    "dev-locales": "nodemon -w src -e less,json,yaml --exec \"yarn locales\"",
     "clean": "rimraf .turbo node_modules dist"
   },
   "devDependencies": {
+    "@bitil/locale-handler": "*",
     "eslint": "^8.16.0",
     "tsconfig": "*",
     "scripts": "*"
