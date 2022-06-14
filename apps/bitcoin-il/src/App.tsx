@@ -18,7 +18,9 @@ import locales from '@bitil/locales'
 console.log('LCOALES! :D', locales)
 function App(): JSX.Element {
   const { language, messages, locale } = useIntl()
+  const [ln, setLn] = React.useState('en')
 
+  console.log('language?', { language, locale })
   const renderRoutes = () => (
     <Routes>
       {mainMenuItems.map((menuItem, i) => {
@@ -66,11 +68,14 @@ function App(): JSX.Element {
       </Helmet>
       <IntlProvider
         // @ts-ignore
-        messages={locales[language]}
+        messages={locales[ln]}
         locale={locale}
         defaultLocale="en"
       >
         <div className="App">
+          <div onClick={() => setLn(v => v === 'en' ? 'he' : 'en')}>
+            <h1>SWITCH {ln}</h1>
+          </div>
           {/* <DevTools /> */}
           <Support />
           <Header />
