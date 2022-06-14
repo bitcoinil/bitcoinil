@@ -17,6 +17,9 @@ import locales from '@bitil/locales'
 
 console.log('LCOALES! :D', locales)
 function App(): JSX.Element {
+  // const { language, messages, locale } = useIntl()
+  const [ln, setLn] = React.useState('en')
+  const { messages, locale } = useIntl()
   const [language, setLanguage] = React.useState('en')
 
   console.log('language?', { language })
@@ -72,12 +75,9 @@ function App(): JSX.Element {
         defaultLocale="en"
       >
         <div className="App">
-          <div onClick={() => setLanguage(v => v === 'en' ? 'he' : 'en')}>
-            <h1>SWITCH {language}</h1>
-          </div>
           {/* <DevTools /> */}
           <Support />
-          <Header setLanguage={setLanguage} />
+          <Header setLanguage={setLn} />
           {renderRoutes()}
         </div>
         <Footer />

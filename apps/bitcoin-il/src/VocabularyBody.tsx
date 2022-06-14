@@ -271,10 +271,17 @@ const StyledVocabulary = styled.div`
     width: 45vw;
     font-size: 30px;
     border-right: 1px solid #b9b9c350;
+    position: sticky;
+    top: 0;
   }
 
   .right {
     width: 65vw;
+
+    li {
+      padding: 50px;
+      border-bottom: 1px solid #b9b9c350;
+    }
 
     h3 {
       color: ${colors.accent};
