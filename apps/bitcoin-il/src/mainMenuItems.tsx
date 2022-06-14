@@ -146,9 +146,9 @@ export const mainMenuItems: MainMenuItem[] = [
       {
         label: (
           <FormattedMessage
-            id={`mainMenu.resources.label`}
+            id={`mainMenu.resources.submenu.label`}
             defaultMessage={'Resources'}
-            description={`mainMenu.resources.label`}
+            description={`mainMenu.resources.submenu-label`}
           />
         ),
         key: 'resources',

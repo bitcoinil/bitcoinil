@@ -45,7 +45,7 @@ const communityCards: BodyCard[] = [
         <li>
           <a href="https://bitcoin.stackexchange.com/">
             <FormattedMessage
-              id={`community.reddit.text`}
+              id={`community.stack-exchange.text`}
               defaultMessage={`BitCoin Stack Exchange (Q&A)`}
               description={`Description`}
             />

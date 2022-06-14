@@ -7,7 +7,7 @@ export default function ChooseWallet(): JSX.Element {
     <StyledChooseYourWallet id="ChooseWallet">
       <h1>
         <FormattedMessage
-          id={`page.home.title`}
+          id={`page.choose-wallet.title`}
           defaultMessage={`Choose Your Wallet`}
           description={`Homepage Title`}
         />

@@ -323,7 +323,7 @@ const resourceCards: BodyCard[] = [
             <FormattedMessage
               id={`resourceCards.charts.tradeblock`}
               defaultMessage={`TradeBlock`}
-              description={`resourceCards.charts.tradeblock`}
+              description={`resourceCards charts tradeblock`}
             />
           </a>
         </li>
@@ -331,9 +331,9 @@ const resourceCards: BodyCard[] = [
         <li>
           <a href="https://bitcoincharts.com/charts/">
             <FormattedMessage
-              id={`resourceCards.charts.tradeblock`}
+              id={`resourceCards.charts.bitcoin-charts`}
               defaultMessage={`BitCoinCharts.com`}
-              description={`resourceCards.charts.tradeblock`}
+              description={`resourceCards.charts.bitcoin-charts`}
             />
           </a>
         </li>
@@ -345,7 +345,7 @@ const resourceCards: BodyCard[] = [
             <FormattedMessage
               id={`resourceCards.charts.go-bitcoin`}
               defaultMessage={`GoBitCoin.io`}
-              description={`resourceCards.charts.go-bitcoin`}
+              description={`resourceCards charts go-bitcoin`}
             />
           </a>
         </li>
@@ -353,7 +353,7 @@ const resourceCards: BodyCard[] = [
         <li>
           <a href="https://bitcoinaverage.com/en/bitcoin-price/btc-to-usd">
             <FormattedMessage
-              id={`resourceCards.charts.go-bitcoin`}
+              id={`resourceCards.charts.btc-to-usd`}
               defaultMessage={`BitCoinAverage`}
               description={`resourceCards.charts.bitcoin-average`}
             />
