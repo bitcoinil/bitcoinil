@@ -231,22 +231,23 @@ const terms: VocabularyTerm[] = [
 ]
 
 const Vocabulary: React.FC<VocabularyProps> = ({}) => {
+  const leftRef = React.createRef<HTMLDivElement>()
+
   return (
     <StyledVocabulary id="Vocabulary">
-      <div className="left">
-        <ul>
-          {terms.map((term) => {
-            console.log(term)
-            return <li>{term.word}</li>
-          })}
-        </ul>
+      <div>
+        <div className={`left`}>
+          <ul>
+            {terms.map((term, i) => {
+              return <li key={i}>{term.word}</li>
+            })}
+          </ul>
+        </div>
       </div>
       <div className="right">
-        {' '}
-        {terms.map((term) => {
-          console.log(term)
+        {terms.map((term, i) => {
           return (
-            <li>
+            <li key={i}>
               <h3>{term.word}</h3>
               <p>{term.definition}</p>
             </li>
@@ -268,11 +269,17 @@ const StyledVocabulary = styled.div`
   }
 
   .left {
-    width: 45vw;
-    font-size: 30px;
+    width: 35vw;
+    font-size: 20px;
     border-right: 1px solid #b9b9c350;
     position: sticky;
     top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 60px;
+    li {
+      margin-bottom: 10px;
+    }
   }
 
   .right {
