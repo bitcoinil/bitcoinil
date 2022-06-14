@@ -103,3 +103,10 @@ export interface HeaderProps {
 export interface LanguageSelectProps {
   setLanguage: Function
 }
+
+export interface VocabularyProps {}
+
+export interface VocabularyTerm {
+  word: JSX.Element
+  definition: JSX.Element
+}

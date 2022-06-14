@@ -7,7 +7,7 @@
 			"import { FormattedMessage } from 'react-intl'",
 			"import styled from 'styled-components'",
 			"",
-			"interface ${1:Name}Props {}",
+			"export interface ${1:Name}Props {}",
 			"",
 			"const ${1:Name}: React.FC<${1:Name}Props> = ({}) => {",
 			"return (",
