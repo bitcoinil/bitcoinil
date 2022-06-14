@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import { phoneDevices } from './breakpoints'
 import BurgerMenu from './BurgerMenu'
 import HeaderMenu from './HeaderMenu'
+import { HeaderProps } from './Interfaces'
 import LanguageSelect from './LanguageSelect'
 
-export default function Header(): JSX.Element {
+const Header: React.FC<HeaderProps> = ({ setLanguage }) => {
   const navigate = useNavigate()
   return (
     <StyledHeader id="Header">
@@ -24,7 +25,7 @@ export default function Header(): JSX.Element {
         <HeaderMenu />
       </div>
       <div className="header-right">
-        <LanguageSelect />
+        <LanguageSelect setLanguage={setLanguage} />
         <BurgerMenu />
       </div>
     </StyledHeader>
@@ -59,3 +60,5 @@ const StyledHeader = styled.div`
     }
   }
 `
+
+export default Header

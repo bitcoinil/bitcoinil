@@ -15,7 +15,8 @@ import { nonMenuRoutes } from './nonMenuRoutes'
 import Support from './support'
 
 function App(): JSX.Element {
-  const { language, messages, locale } = useIntl()
+  const { messages, locale } = useIntl()
+  const [language, setLanguage] = React.useState('en')
 
   const renderRoutes = () => (
     <Routes>
@@ -70,7 +71,7 @@ function App(): JSX.Element {
         <div className="App">
           {/* <DevTools /> */}
           <Support />
-          <Header />
+          <Header setLanguage={setLanguage} />
           {renderRoutes()}
         </div>
         <Footer />

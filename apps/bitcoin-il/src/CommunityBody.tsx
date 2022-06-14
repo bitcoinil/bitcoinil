@@ -102,7 +102,7 @@ const communityCards: BodyCard[] = [
 
     text: (
       <FormattedMessage
-        id={`communityCard.X.text`}
+        id={`communityCard.meetups.text`}
         defaultMessage={`Similarly to email, you don't need to ask recipients you're sending bitcoin to, to use the same software, wallets or service providers. You just need their bitcoin address and then you can transact with them anytime. The Bitcoin network is always running and never sleeps, even on weekends and holidays.`}
         description={`Description`}
       />
