@@ -18,7 +18,7 @@ const CardsDisplay: React.FC<CardsDisplayProps> = ({ cards }) => {
             <Card key={`card-${i}`}>
               <img src={card.img} />
               <h1>{card.title}</h1>
-              <p>{card.text}</p>
+              <span>{card.text}</span>
             </Card>
           )
         })}

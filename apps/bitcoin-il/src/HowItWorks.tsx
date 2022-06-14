@@ -124,10 +124,10 @@ const HowItWorks: React.FC<HowItWorksProps> = ({}) => {
   return (
     <StyledHowItWorks id="HowItWorks">
       {howItWorksItems.map((item, i) => {
-        console.log(item)
         return (
           <AlternatingTwoColumnRow
             index={i}
+            key={i}
             imgSrc={item.imgSrc}
             titleText={item.titleText}
             bodyText={item.bodyText}

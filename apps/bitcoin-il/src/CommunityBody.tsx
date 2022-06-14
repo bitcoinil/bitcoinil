@@ -7,6 +7,7 @@ import { BodyCard } from './Interfaces'
 import ico_forum from './img/ico_forum.svg'
 import ico_social from './img/ico_social.svg'
 import ico_meetups from './img/ico_meetups.svg'
+import ico_conversation from './img/ico_conversation.svg'
 
 interface CommunityBodyProps {}
 
@@ -101,32 +102,111 @@ const communityCards: BodyCard[] = [
     ),
 
     text: (
-      <FormattedMessage
-        id={`communityCard.X.text`}
-        defaultMessage={`Similarly to email, you don't need to ask recipients you're sending bitcoin to, to use the same software, wallets or service providers. You just need their bitcoin address and then you can transact with them anytime. The Bitcoin network is always running and never sleeps, even on weekends and holidays.`}
-        description={`Description`}
-      />
+      <ul className="list-of-links">
+        <li>
+          <a href="https://bitcoin.org/en/events">
+            <FormattedMessage
+              id={`community.conferences.text`}
+              defaultMessage={`Bitcoin Conferences And Events`}
+              description={`Description`}
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://bitcoin.meetup.com/">
+            <FormattedMessage
+              id={`community.me.text`}
+              defaultMessage={`Bitcoin Meetup Groups`}
+              description={`Description`}
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://bitcointalk.org/index.php?board=86.0">
+            <FormattedMessage
+              id={`community.meetups-bitcoin-talk.text`}
+              defaultMessage={`Bitcoin Meetups On BitcoinTalk`}
+              description={`Description`}
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://en.bitcoin.it/wiki/Meetups">
+            <FormattedMessage
+              id={`community.meetups-wiki.text`}
+              defaultMessage={`Bitcoin Meetups On The Wiki`}
+              description={`Description`}
+            />
+          </a>
+        </li>
+      </ul>
     ),
 
-    id: `simple`
+    id: `meetups`
   },
   {
     // img: international,
-    img: '',
+    img: ico_conversation,
     title: (
       <FormattedMessage
-        id={`communityCards.international.title`}
-        defaultMessage={`Fast international payments`}
+        id={`communityCards.conversation.title`}
+        defaultMessage={`IRC Chat`}
         description={`individuals card international title`}
       />
     ),
 
     text: (
-      <FormattedMessage
-        id={`communityCard.X.text`}
-        defaultMessage={`Sending bitcoins across borders is as easy as sending them across the street. There are no banks to make you wait three business days, no extra fees for making an international transfer, and no special limitations on the minimum or maximum amount you can send.`}
-        description={`Description`}
-      />
+      <ul className="list-of-links">
+        <li>
+          <a href="https://web.libera.chat/#bitcoin-core-dev">
+            <FormattedMessage
+              id={`community.irc-link.text`}
+              defaultMessage={`IRC Channel #bitcoin-core-dev`}
+              description={`Description`}
+            />
+          </a>
+          <FormattedMessage
+            id={`community.on-libera.text`}
+            defaultMessage={` on Libera`}
+            description={`community.on-libera.text`}
+          />
+          <p>
+            <FormattedMessage
+              id={`community.hash-bitcoin`}
+              defaultMessage={`#bitcoin (General Bitcoin-related)`}
+              description={`community.hash-bitcoin`}
+            />
+          </p>
+          <p>
+            <FormattedMessage
+              id={`community.hash-core-dev`}
+              defaultMessage={`#bitcoin-core-dev (Development and technical)`}
+              description={`community.hash-bitcoin`}
+            />
+          </p>
+          <p>
+            <FormattedMessage
+              id={`community.hash-otc`}
+              defaultMessage={`#bitcoin-otc (Over The Counter exchange)`}
+              description={`community.hash-otc`}
+            />
+          </p>
+          <p>
+            <FormattedMessage
+              id={`community.hash-market`}
+              defaultMessage={`#bitcoin-market (Live quotes from markets)`}
+              description={`community.hash-market`}
+            />
+          </p>
+          <p>
+            <FormattedMessage
+              id={`community.hash-mining`}
+              defaultMessage={`#bitcoin-mining (Bitcoin mining related)`}
+              description={`community.hash-mining`}
+            />
+          </p>
+        </li>
+      </ul>
     ),
     id: `international`
   }

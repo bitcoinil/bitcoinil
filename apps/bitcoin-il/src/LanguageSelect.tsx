@@ -4,10 +4,11 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { phoneDevices } from './breakpoints'
 import { useIntl } from './hooks/useIntl'
+import { LanguageSelectProps } from './Interfaces'
 
-export default function LanguageSelect(): JSX.Element {
+const LanguageSelect: React.FC<LanguageSelectProps> = ({ setLanguage }) => {
   const intl = useIntl()
-  const { setLanguage, availableLanguages } = intl
+  const { availableLanguages } = intl
   const [current, setCurrent] = React.useState('en')
 
   const onClick = (e: any) => {
@@ -24,7 +25,7 @@ export default function LanguageSelect(): JSX.Element {
         >
           {availableLanguages.map((avLang) => {
             return (
-              <Menu.Item key={avLang.name} onClick={() => console.log(avLang)}>
+              <Menu.Item key={avLang.name}>
                 <p>{avLang.name}</p>
               </Menu.Item>
             )
@@ -68,3 +69,5 @@ const StyledLanguageSelect = styled.div`
     }
   }
 `
+
+export default LanguageSelect

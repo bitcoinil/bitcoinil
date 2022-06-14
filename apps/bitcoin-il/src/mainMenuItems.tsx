@@ -10,6 +10,7 @@ import SupportBody from './SupportBody'
 import { FormattedMessage } from 'react-intl'
 import ResourcesBody from './ResourcesBody'
 import CommunityBody from './CommunityBody'
+import VocabularyBody from './VocabularyBody'
 
 export const mainMenuItems: MainMenuItem[] = [
   {
@@ -226,9 +227,9 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="vocabulary"
-            title="Vocabulary"
+            title="Some Bitcoin words you might hear"
             subtitle="Bitcoin provides a new approach to payments and, as such, there are some new words that might become a part of your vocabulary."
-            body={<h1>How It Works Body</h1>}
+            body={<VocabularyBody />}
           />
         )
       },

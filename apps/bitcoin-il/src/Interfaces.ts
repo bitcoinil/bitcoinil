@@ -95,3 +95,18 @@ export interface AlternatingTwoColumnRowProps {
   titleText: JSX.Element
   bodyText: JSX.Element
 }
+
+export interface HeaderProps {
+  setLanguage: Function
+}
+
+export interface LanguageSelectProps {
+  setLanguage: Function
+}
+
+export interface VocabularyProps {}
+
+export interface VocabularyTerm {
+  word: JSX.Element
+  definition: JSX.Element
+}
