@@ -25,7 +25,7 @@ const LanguageSelect: React.FC<LanguageSelectProps> = ({ setLanguage }) => {
         >
           {availableLanguages.map((avLang) => {
             return (
-              <Menu.Item key={avLang.name} onClick={() => console.log(avLang)}>
+              <Menu.Item key={avLang.name}>
                 <p>{avLang.name}</p>
               </Menu.Item>
             )
