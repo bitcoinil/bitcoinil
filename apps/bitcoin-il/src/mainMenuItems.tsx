@@ -11,6 +11,7 @@ import { FormattedMessage } from 'react-intl'
 import ResourcesBody from './ResourcesBody'
 import CommunityBody from './CommunityBody'
 import VocabularyBody from './VocabularyBody'
+import ExchangesBody from './ExchangesBody'
 
 export const mainMenuItems: MainMenuItem[] = [
   {
@@ -175,7 +176,7 @@ export const mainMenuItems: MainMenuItem[] = [
             title="Exchanges"
             id="exchanges"
             subtitle="Places to buy bitcoin in exchange for other currencies."
-            body={<h1>Business Body</h1>}
+            body={<ExchangesBody />}
           />
         )
       },
