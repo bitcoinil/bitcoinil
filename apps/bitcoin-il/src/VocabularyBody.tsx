@@ -231,7 +231,28 @@ const terms: VocabularyTerm[] = [
 ]
 
 const Vocabulary: React.FC<VocabularyProps> = ({}) => {
-  const leftRef = React.createRef<HTMLDivElement>()
+  const flashElement = (el: HTMLElement | null) => {
+    if (!el) return
+
+    const duration = 300
+
+    el.style.opacity = '0.2'
+    window.setTimeout(() => {
+      el.style.opacity = '1'
+    }, duration)
+    window.setTimeout(() => {
+      el.style.opacity = '0.2'
+    }, duration * 2)
+    window.setTimeout(() => {
+      el.style.opacity = '1'
+    }, duration * 3)
+    window.setTimeout(() => {
+      el.style.opacity = '0.2'
+    }, duration * 4)
+    window.setTimeout(() => {
+      el.style.opacity = '1'
+    }, duration * 5)
+  }
 
   return (
     <StyledVocabulary id="Vocabulary">
@@ -239,7 +260,20 @@ const Vocabulary: React.FC<VocabularyProps> = ({}) => {
         <div className={`left`}>
           <ul>
             {terms.map((term, i) => {
-              return <li key={i}>{term.word}</li>
+              return (
+                <li
+                  className="dict-word-link"
+                  onClick={() => {
+                    document
+                      .getElementById(`word-${i}`)
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                    flashElement(document.getElementById(`word-${i}`))
+                  }}
+                  key={i}
+                >
+                  {term.word}
+                </li>
+              )
             })}
           </ul>
         </div>
@@ -247,7 +281,7 @@ const Vocabulary: React.FC<VocabularyProps> = ({}) => {
       <div className="right">
         {terms.map((term, i) => {
           return (
-            <li key={i}>
+            <li key={i} id={`word-${i}`}>
               <h3>{term.word}</h3>
               <p>{term.definition}</p>
             </li>
@@ -298,6 +332,16 @@ const StyledVocabulary = styled.div`
 
     p {
       font-size: 18px;
+    }
+  }
+
+  .dict-word-link {
+    cursor: pointer;
+
+    transition: opacity 400ms;
+    &:hover {
+      transition: opacity 400ms;
+      opacity: 0.6;
     }
   }
 `
