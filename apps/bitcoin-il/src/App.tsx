@@ -15,14 +15,9 @@ import { nonMenuRoutes } from './nonMenuRoutes'
 import Support from './support'
 import locales from '@bitil/locales'
 
-console.log('LCOALES! :D', locales)
 function App(): JSX.Element {
   // const { language, messages, locale } = useIntl()
   const [ln, setLn] = React.useState('en')
-  const { messages, locale } = useIntl()
-  const [language, setLanguage] = React.useState('en')
-
-  console.log('language?', { language })
   const renderRoutes = () => (
     <Routes>
       {mainMenuItems.map((menuItem, i) => {
@@ -70,8 +65,8 @@ function App(): JSX.Element {
       </Helmet>
       <IntlProvider
         // @ts-ignore
-        messages={locales[language]}
-        locale={language}
+        messages={locales[ln]}
+        locale={ln}
         defaultLocale="en"
       >
         <div className="App">
