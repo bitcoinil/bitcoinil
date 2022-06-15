@@ -152,8 +152,8 @@ const StyledExchangesBody = styled.div`
     position: sticky;
     top: 0;
     left: 0;
-    height: 100vh;
     padding-top: 60px;
+
     li {
       margin-bottom: 10px;
     }
