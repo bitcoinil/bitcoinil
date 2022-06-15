@@ -110,3 +110,5 @@ export interface VocabularyTerm {
   word: JSX.Element
   definition: JSX.Element
 }
+
+export interface ExchangesBodyProps {}

@@ -1,8 +1,6 @@
 import * as React from 'react'
-import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
-
-export interface ExchangesBodyProps {}
+import { ExchangesBodyProps } from './Interfaces'
 
 const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
   return (
