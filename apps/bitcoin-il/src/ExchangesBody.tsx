@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { colors } from './colors'
 import { ExchangesBodyProps } from './Interfaces'
 import { Menu } from 'antd'
+import { FormattedMessage } from 'react-intl'
 
 export interface Exchange {
   name: JSX.Element
@@ -22,31 +23,124 @@ export interface ExchangeLocation {
 
 const exhchanges: ExchangeLocation[] = [
   {
-    location: <p>'Hi'</p>,
-    exchanges: [{ name: <>NAME</>, link: 'string' }]
+    location: (
+      <FormattedMessage
+        id={`exchangeMenuItem.international.label`}
+        defaultMessage={`International`}
+        description={`exchangeMenuItem.international.label`}
+      />
+    ),
+    exchanges: [
+      {
+        name: (
+          <FormattedMessage
+            id={`exchange.menuItem.someExchange`}
+            defaultMessage={`Some Exchange ...`}
+            description={`someExchange`}
+          />
+        ),
+        link: 'string'
+      }
+    ]
   },
   {
-    location: <p>'Peer-to-Peer (P2P)'</p>,
-    exchanges: [{ name: <>NAME</>, link: 'string' }]
+    location: (
+      <FormattedMessage
+        id={`exchange.menuItem.peer2peer`}
+        defaultMessage={`P2P`}
+        description={`peer2peer`}
+      />
+    ),
+    exchanges: [
+      {
+        name: (
+          <FormattedMessage
+            id={`exchange.menuItem.p2p.exchange.0.label`}
+            defaultMessage={`Some Peer To Peer Excahnge`}
+            description={`p2p.exchange.0.label`}
+          />
+        ),
+        link: 'string'
+      }
+    ]
   },
   {
-    location: <p>'Asia'</p>,
+    location: (
+      <FormattedMessage
+        id={`exchange.menuItem.asia.label`}
+        defaultMessage={`Asia`}
+        description={`asia.label`}
+      />
+    ),
     cities: [
       {
-        city: <>Bahrain</>,
-        exchanges: [{ name: <>NAME</>, link: 'string' }],
+        city: (
+          <FormattedMessage
+            id={`exchange.menuItem.bahrain`}
+            defaultMessage={`Bahrain`}
+            description={`bahrain`}
+          />
+        ),
+        exchanges: [
+          {
+            name: (
+              <FormattedMessage
+                id={`exchange.menuItem.bahrain.exhange.label`}
+                defaultMessage={`Some Bahrainian Exchange`}
+                description={`bahrain.exhange.label`}
+              />
+            ),
+            link: 'string'
+          }
+        ],
         flag: `TBD`
       },
       {
-        city: <>Israel</>,
-        exchanges: [{ name: <>NAME</>, link: 'string' }],
+        city: (
+          <FormattedMessage
+            id={`exchange.menuItem.israel`}
+            defaultMessage={`Israel`}
+            description={`israel`}
+          />
+        ),
+        exchanges: [
+          {
+            name: (
+              <FormattedMessage
+                id={`exchange.menuItem.israel.exchange`}
+                defaultMessage={`Some Israeli Exchange`}
+                description={`israel.exchange`}
+              />
+            ),
+            link: 'string'
+          }
+        ],
         flag: 'TBD'
       }
     ]
   }
 ]
 
+const renderCitiesList = (ex: ExchangeLocation) => {
+  return ex?.cities?.map((city, i) => {
+    return (
+      <>
+        <li>{city.city}</li>
+        <ul>
+          {city.exchanges.map((exc, i) => {
+            console.log(exc)
+            return <li>{exc.name}</li>
+          })}
+        </ul>
+      </>
+    )
+  })
+  return <h1>Rendering Citys</h1>
+}
+
 const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
+  const [openTab, setOpenTab] = React.useState(null)
+
   const flashElement = (el: HTMLElement | null) => {
     if (!el) return
 
@@ -76,7 +170,7 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
         <div className={`left`}>
           <ul>
             {exhchanges.map((exchange, i) => {
-              console.log(exchange)
+              // console.log(exchange.location)
               if (!exchange.cities)
                 return (
                   <li
@@ -107,7 +201,7 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
                   </p>
                   <ul>
                     {exchange.cities.map((city, i) => {
-                      console.log({ city })
+                      // console.log({ city })
                       return (
                         <li>
                           <p>{city.city}</p>
@@ -122,11 +216,12 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
         </div>
       </div>
       <div className="right">
-        {exhchanges.map((exchange, i) => {
+        {exhchanges.map((exchange: ExchangeLocation, i: number) => {
+          console.log(exchange.cities)
           return (
             <li key={i} id={`word-${i}`}>
               {exchange.location}
-              <p>Hi hi hih ihi</p>
+              {exchange.cities ? renderCitiesList(exchange) : null}
             </li>
           )
         })}
