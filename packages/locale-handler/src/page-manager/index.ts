@@ -155,6 +155,10 @@ class PageManager {
     }
 
     return {
+      instance: db,
+      updateProperties: (properties: Record<string, any>) =>
+        // @ts-ignore
+        dbHandler.updateProperties(properties),
       read: () => dbHandler.read(),
       get: (key: string) => dbHandler.get(key),
       set: (key: string, value: any) => dbHandler.write(key, value)
@@ -244,6 +248,7 @@ class PageManager {
   private blocks = {}
 
   private blockHandler: BlockHandlers = {
+    // @ts-ignore
     'toggle-block': (
       parentBlockId: string,
       blockName: string,
@@ -336,6 +341,8 @@ class PageManager {
       find: async () => {
         if (cacheObject.db) return cacheObject.dbHandler
 
+        console.log('🪆🪆🪆🪆 what is this?', this)
+        console.log('🪆🪆🪆🪆 what is this blocks?', this.blocks)
         // @ts-ignore
         const dbId = this.blocks.databases.get(dbName)
         console.log('found db id:', dbId)
@@ -351,9 +358,19 @@ class PageManager {
         cacheObject.dbId = dbId
         return db
       },
+      updateProperties: async (properties: any) => {
+        const result = await this.client.databases.update({
+          database_id: cacheObject.dbId,
+          title: cacheObject.db.title as any,
+          properties
+        })
+        console.log('updated database:', result)
+        return result
+      },
       create: async () => {
+        console.log('🚸🚸🚸 db craetion', dbName, dbProperties)
         const res = await this.createDatabase(this.pageId, dbName, dbProperties)
-        console.log('db craeted', res)
+        console.log('🚸🚸🚸 db craeted', res)
         cacheObject.db = res
         cacheObject.dbId = res.id
 
@@ -421,7 +438,7 @@ class PageManager {
             // @ts-ignore
             properties
           }
-          console.log('🍥🔰🥥 Update object', updateObject.properties.Counts)
+          console.log('🍥🔰🥥 Update object', updateObject.properties)
 
           // @ts-ignore
           const updateResponse = await this.client.pages.update(updateObject)
@@ -430,7 +447,11 @@ class PageManager {
         } else {
           console.log('🍥🔰🥥 No result found')
 
-          const properties = PageManager.dataToProperties(dbProperties)
+          const properties = PageManager.dataToProperties(
+            key,
+            data,
+            dbProperties
+          )
           console.log('🍥🔰🥥 Proeprties for write', properties)
 
           const response = await this.client.pages.create({
@@ -778,7 +799,11 @@ class PageManager {
     }
   }
 
-  static dataToProperties(dbProperties: Record<string, any>) {
+  static dataToProperties(
+    key: string,
+    data: any,
+    dbProperties: Record<string, any>
+  ) {
     const [indexName, indexProperty] = Object.entries(dbProperties).find(
       ([dbName, prop]) => prop.type === 'title'
     ) as any
@@ -815,6 +840,7 @@ class PageManager {
         }
       })
       .reduce((acc, exp) => ({ ...acc, ...exp }), {}) as any
+    return properties
   }
 }
 

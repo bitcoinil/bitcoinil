@@ -2,6 +2,7 @@ import 'dotenv/config'
 import { Client } from '@notionhq/client'
 import { ListBlockChildrenResponse } from '@notionhq/client/build/src/api-endpoints'
 import PageManager from './page-manager'
+import { databases } from './language-handler'
 
 // console.log('WE ARE HANDKER!xxx!', process.env.NOTION_PAGE_TITLE)
 
@@ -410,70 +411,225 @@ if (true)
       process.env.XXXNOTION_PAGE_TITLE || DEFAULT_PAGENAME,
       notion
     )
-    // console.log('🥥🥝 WE GOT PAGE MANGER:', page)
-    page.onReady = async () => {
-      console.log('Page Manager loaded and ready:', page)
-      console.log('🥥🥝 Page Manager containers:', page.cache.containers)
-      // page.setOption('showPageName', false)
 
-      // const moarValue = await page.getOption('moar')
-      // console.log('🪩 Received moar value:', moarValue)
+    const doRun = false
+    console.log('🥥🥝 WE GOT PAGE MANGER:', page)
 
-      // console.log('Wait for two seconds and continue')
-      // await new Promise((resolve) => setTimeout(resolve, 2000))
+    const pagePromiseObject = {} as any
+    const pagePromise = new Promise((resolve, reject) => {
+      pagePromiseObject.resolve = resolve
+      pagePromiseObject.reject = reject
+    })
+    const doPagePromise = true
 
-      // // create random set of emojis
-      // const emojis = Array.from({ length: 10 }, () =>
-      //   String.fromCodePoint(
-      //     Math.floor(Math.random() * (0x1f600 - 0x1f64f + 1)) + 0x1f600
-      //   )
-      // )
-      // console.log('Random emojis set:', emojis)
+    if (doRun)
+      page.onReady = async () => {
+        console.log('Page Manager loaded and ready:', page)
+        console.log('🥥🥝 Page Manager containers:', page.cache.containers)
+        // page.setOption('showPageName', false)
 
-      // const setResult = await page.setOption('moar', emojis[0])
-      // console.log('🍔 Set moar value', setResult)
+        // const moarValue = await page.getOption('moar')
+        // console.log('🪩 Received moar value:', moarValue)
 
-      // console.log('Waiting two seconds and getting the value...')
-      // await new Promise((resolve) => setTimeout(resolve, 2000))
-      // const getResult = await page.getOption('moar')
-      // console.log('🍔 Got moar value', getResult)
+        // console.log('Wait for two seconds and continue')
+        // await new Promise((resolve) => setTimeout(resolve, 2000))
 
-      // read lang.json file
-      const data = await (await import('fs/promises')).readFile('./lang.json', 'utf8')
-      // const data = await import('./lang.json')
-      console.log('le data:', data)
+        // // create random set of emojis
+        // const emojis = Array.from({ length: 10 }, () =>
+        //   String.fromCodePoint(
+        //     Math.floor(Math.random() * (0x1f600 - 0x1f64f + 1)) + 0x1f600
+        //   )
+        // )
+        // console.log('Random emojis set:', emojis)
 
-      try {
-        const lang = JSON.parse(data)
-        console.log('🥥🥝 Lang data:', lang)
-        const properties = {
-          "Name": {
-            id: 'title',
-            type: 'title',
-            title: {}
-          },
-          "Counts": {
-            id: 'counts',
-            type: "number",
-            number: {
-              format: 'number_with_commas'
+        // const setResult = await page.setOption('moar', emojis[0])
+        // console.log('🍔 Set moar value', setResult)
+
+        // console.log('Waiting two seconds and getting the value...')
+        // await new Promise((resolve) => setTimeout(resolve, 2000))
+        // const getResult = await page.getOption('moar')
+        // console.log('🍔 Got moar value', getResult)
+
+        // read lang.json file
+        const data = await (
+          await import('fs/promises')
+        ).readFile('./lang.json', 'utf8')
+        // const data = await import('./lang.json')
+        console.log('le data:', data)
+
+        try {
+          const lang = JSON.parse(data)
+          console.log('🥥🥝 Lang data:', lang)
+          const properties = {
+            Name: {
+              id: 'title',
+              type: 'title',
+              title: {}
+            },
+            Counts: {
+              id: 'counts',
+              type: 'number',
+              number: {
+                format: 'number_with_commas'
+              }
             }
           }
+          const langdb = await page.getDatabase('smoothie', properties)
+          // console.log('🥥🥝 Lang DB:', langdb)
+          // const dbdata = await langdb.read()
+          // console.log('🥥🥝 Lang DB data:', dbdata)
+          const writeResult = await langdb.set('some key', {
+            counts: 123
+          })
+          console.log('🥥🥝 Write result:', writeResult)
+        } catch (error) {
+          console.log('🥥🥝 Bad lang data:', error)
+        }
       }
-        const langdb = await page.getDatabase('smoothie', properties)
-        // console.log('🥥🥝 Lang DB:', langdb)
-        // const dbdata = await langdb.read()
-        // console.log('🥥🥝 Lang DB data:', dbdata)
-        const writeResult = await langdb.set('some key', {
-          counts: 123
-        })
-        console.log('🥥🥝 Write result:', writeResult)
+
+    if (doPagePromise)
+      page.onReady = async () => {
+        pagePromiseObject.resolve(page)
+      }
+    await pagePromise
+
+    const kdbs = {}
+
+    const dbCreator = async (dbname: string, db: any) => {
+      console.log('🏁🍆🪩 Creating/validating database:', dbname, db)
+      try {
+        const dbThing = await page.getDatabase(dbname, db.properties)
+        console.log('🏁🍆🪩 dbThing:', dbname, dbThing)
+        Object.assign(kdbs, { [dbname]: { config: db, instance: dbThing } })
+        return kdbs
       } catch (error) {
-        console.log('🥥🥝 Bad lang data:', error)
-
+        console.log('🏁🍆🪩 Error creating database:', dbname, error)
+        throw error
       }
-
     }
+    // Task #1: Create related databases
+
+    console.log('🏁🍆🪩 Datbases:', databases)
+    // @ts-ignore
+    const dbPromises = await Object.entries(databases).reduce(
+      (p, [dbname, db]: [string, any]) => p.then(() => dbCreator(dbname, db)),
+      pagePromise
+    )
+
+    console.log('🏁🍆🪩 Datbase Promises:', dbPromises)
+    // const ndbs = dbPromises.reduce(
+    //   // @ts-ignore
+    //   (acc, [dbname, { config, instance }]: [string, any]) => ({
+    //     // @ts-ignore
+    //     ...acc,
+    //     [dbname]: { config, instance }
+    //   }),
+    //   {}
+    // )
+    // console.log('🏁🍆🪩 NDBS:', ndbs)
+
+    // // Validate related properties
+
+    const dbValidator = async (dbname: string, dbi: any) => {
+      const { config, instance } = dbi
+      console.log('🏁🍆🪩 Validating database:', dbname, {
+        config,
+        instance
+      })
+      if (config.relatedProperties) {
+        const relatedProps = await config.relatedProperties(dbPromises)
+        console.log('🏁🍆🪩 Related props:', dbname, relatedProps)
+        if (Object.entries(relatedProps).length) {
+          const updateResult = await instance.updateProperties(relatedProps)
+          console.log('🏁🍆🪩 Update result:', dbname, updateResult)
+        }
+      }
+    }
+
+    const rdbs = await Object.entries(dbPromises).reduce(
+      // @ts-ignore
+      (p, [dbname, dbi]: [string, any]) =>
+        p.then(() => dbValidator(dbname, dbi)),
+      Promise.resolve(null)
+    )
+
+    // const rdbs = await Promise.all(
+    //   Object.entries(ndbs).map(
+    //     async ([dbname, { config, instance }]: [string, any]) => {
+    //       console.log('🏁🍆🪩 Validating database:', dbname, {
+    //         config,
+    //         instance
+    //       })
+    //       if (config.relatedProperties) {
+    //         const relatedProps = await config.relatedProperties(ndbs)
+    //         console.log('🏁🍆🪩 Related props:', dbname, relatedProps)
+    //         if (Object.entries(relatedProps).length) {
+    //           const updateResult = await instance.updateProperties(relatedProps)
+    //           console.log('🏁🍆🪩 Update result:', dbname, updateResult)
+    //         }
+    //       }
+    //     }
+    //   )
+    // )
+    console.log('🏁🍆🪩 RDBS:', rdbs)
+
+    /////// 777777777777
+
+    // const properties = {
+    //   Key: {
+    //     id: 'title',
+    //     type: 'title',
+    //     title: {}
+    //   },
+    //   Default: {
+    //     id: 'default',
+    //     type: 'text',
+    //     text: {}
+    //   },
+    //   Description: {
+    //     id: 'description',
+    //     type: 'text',
+    //     text: {}
+    //   },
+    // }
+
+    // const langDb = await page.getDatabase('lang', properties)
+
+    const util = await import('node:util')
+    const exec = util.promisify((await import('node:child_process')).exec)
+
+    async function lsExample() {
+      const { stdout, stderr, ...rest } = await exec(
+        'cd ../../apps/bitcoin-il/ && yarn extract-intl'
+      )
+      console.log('stdout:', stdout)
+      console.error('stderr:', stderr)
+      console.log('rest', rest)
+    }
+    // await lsExample()
+
+    const langData = await (
+      await import('fs/promises')
+    ).readFile('../../apps/bitcoin-il/lang.json', 'utf8')
+    // console.log('🥥🥝 Lang data:', langData)
+    try {
+      const data = JSON.parse(langData)
+      // const langdb = await page.getDatabase('language')
+      // const entries = await Promise.all(
+      //   Object.entries(data).map(async ([key, value]: [string, any]) => {
+
+      //     console.log('🥥🥝 Lang data entry:', key, value)
+      //   })
+      // )
+      // console.log('Data:', data)
+    } catch (error) {
+      // console.log('🥥🥝 Bad lang data:', error)
+    }
+
+    // Execute language collector from bitcoin-il app
+    // spawn a process to run the language collector
+    // const langCollector = (await require('child_process')).exec('pwd')
+
     if (page) return true
 
     const response = await notion.search({

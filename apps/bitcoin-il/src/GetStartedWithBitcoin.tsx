@@ -36,8 +36,8 @@ const GetStartedWithBitcoin: React.FC<GetStartedWithBitcoinProps> = ({}) => {
               <img src={instant} />
               <FormattedMessage
                 id={`page.home.get-started.instant`}
-                defaultMessage={`Fast peer-to-peer transactions`}
-                description={`Fast peer-to-peer transactions`}
+                defaultMessage={`Worldwide Payments`}
+                description={`Worldwide Payments`}
               />
             </div>
             <div className="get-started-body-top-left-detail">
@@ -52,8 +52,8 @@ const GetStartedWithBitcoin: React.FC<GetStartedWithBitcoinProps> = ({}) => {
               <img src={lowfee} />
               <FormattedMessage
                 id={`page.home.get-started.instant`}
-                defaultMessage={`Low Processing Fees`}
-                description={`Low Processing Fees`}
+                defaultMessage={`Worldwide Payments`}
+                description={`Worldwide Payments`}
               />
             </div>
           </div>

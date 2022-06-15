@@ -83,29 +83,69 @@
     "defaultMessage": "BitcoinTalk Forum",
     "description": "Description"
   },
+  "community.conferences.text": {
+    "defaultMessage": "Bitcoin Conferences And Events",
+    "description": "Description"
+  },
   "community.facebook.text": {
     "defaultMessage": "Facebook - MUST ADD PROPER ADDRESS",
     "description": "Description"
   },
+  "community.hash-bitcoin": {
+    "defaultMessage": "#bitcoin (General Bitcoin-related)",
+    "description": "community.hash-bitcoin"
+  },
+  "community.hash-core-dev": {
+    "defaultMessage": "#bitcoin-core-dev (Development and technical)",
+    "description": "community.hash-bitcoin"
+  },
+  "community.hash-market": {
+    "defaultMessage": "#bitcoin-market (Live quotes from markets)",
+    "description": "community.hash-market"
+  },
+  "community.hash-mining": {
+    "defaultMessage": "#bitcoin-mining (Bitcoin mining related)",
+    "description": "community.hash-mining"
+  },
+  "community.hash-otc": {
+    "defaultMessage": "#bitcoin-otc (Over The Counter exchange)",
+    "description": "community.hash-otc"
+  },
+  "community.irc-link.text": {
+    "defaultMessage": "IRC Channel #bitcoin-core-dev",
+    "description": "Description"
+  },
+  "community.me.text": {
+    "defaultMessage": "Bitcoin Meetup Groups",
+    "description": "Description"
+  },
+  "community.meetups-bitcoin-talk.text": {
+    "defaultMessage": "Bitcoin Meetups On BitcoinTalk",
+    "description": "Description"
+  },
+  "community.meetups-wiki.text": {
+    "defaultMessage": "Bitcoin Meetups On The Wiki",
+    "description": "Description"
+  },
+  "community.on-libera.text": {
+    "defaultMessage": "on Libera",
+    "description": "community.on-libera.text"
+  },
   "community.reddit.text": {
-    "defaultMessage": "BitCoin Stack Exchange (Q&A)",
+    "defaultMessage": "Reddit's BitCoin Community",
     "description": "Description"
   },
   "community.twitter.text": {
     "defaultMessage": "Twitter - MUST ADD PROPER ADDRESS",
     "description": "Description"
   },
-  "communityCard.X.text": {
-    "defaultMessage": "Sending bitcoins across borders is as easy as sending them across the street. There are no banks to make you wait three business days, no extra fees for making an international transfer, and no special limitations on the minimum or maximum amount you can send.",
-    "description": "Description"
+  "communityCards.conversation.title": {
+    "defaultMessage": "IRC Chat",
+    "description": "individuals card international title"
   },
   "communityCards.forum.title": {
     "defaultMessage": "Forums",
     "description": "individuals card forum title"
-  },
-  "communityCards.international.title": {
-    "defaultMessage": "Fast international payments",
-    "description": "individuals card international title"
   },
   "communityCards.meetups.title": {
     "defaultMessage": "Meetups",
@@ -179,8 +219,28 @@
     "defaultMessage": "Transactions - private keys",
     "description": "howitworks-transaction-title"
   },
-  "individualCard.X.text": {
+  "individualCard.anon.text": {
     "defaultMessage": "With Bitcoin, there's no credit card number that malicious actors can collect in order to steal from you. In fact, it's even possible in some cases to send a payment without revealing your identity, almost like with physical money. You should, however, take note that some effort can be required to protect your privacy.",
+    "description": "Description"
+  },
+  "individualCard.international.text": {
+    "defaultMessage": "Sending bitcoins across borders is as easy as sending them across the street. There are no banks to make you wait three business days, no extra fees for making an international transfer, and no special limitations on the minimum or maximum amount you can send.",
+    "description": "Description"
+  },
+  "individualCard.lock.text": {
+    "defaultMessage": "Bitcoin transactions are secured by mathematics and energy. Cryptographic signatures prevent other people from spending your money. Energy spent by proof of work (PoW) prevents other people from undoing, rearranging or losing your transactions. So long as you take the required steps to protect your wallet, Bitcoin can give you control over your money and a strong level of protection against many types of fraud.",
+    "description": "Description"
+  },
+  "individualCard.lowfee.text": {
+    "defaultMessage": "There is no fee to receive bitcoins, and many wallets let you control how large a fee to pay when spending. Most wallets have reasonable default fees, and higher fees can encourage faster confirmation of your transactions. Fees are unrelated to the amount transferred, so it's possible to send 100,000 bitcoins for the same fee it costs to send 1 bitcoin.",
+    "description": "Description"
+  },
+  "individualCard.mobile.text": {
+    "defaultMessage": "Bitcoin when used on a mobile device allows you to pay with a simple two-step scan-and-pay. There's no need to sign up, swipe your card, type a PIN, or sign anything. All you need to receive Bitcoin payments is to display the QR code in your Bitcoin wallet app and let the other party scan your mobile, or touch the two phones together (using NFC radio technology).",
+    "description": "Description"
+  },
+  "individualCard.simple.text": {
+    "defaultMessage": "Similarly to email, you don't need to ask recipients you're sending bitcoin to, to use the same software, wallets or service providers. You just need their bitcoin address and then you can transact with them anytime. The Bitcoin network is always running and never sleeps, even on weekends and holidays.",
     "description": "Description"
   },
   "individualCards.anon.title": {
@@ -408,8 +468,8 @@
     "description": "GetStartedWithBitcoin"
   },
   "page.home.get-started.instant": {
-    "defaultMessage": "Low Processing Fees",
-    "description": "Low Processing Fees"
+    "defaultMessage": "Worldwide Payments",
+    "description": "Worldwide Payments"
   },
   "page.home.title": {
     "defaultMessage": "Bitcoin Il is an innovative payment network and a new kind of money.",
@@ -626,5 +686,95 @@
   "tlWMX4": {
     "defaultMessage": "Get A Quick Overview For",
     "description": "QuickOverview"
+  },
+  "vocabulary.Address.definition": {
+    "defaultMessage": "A Bitcoin address is similar to a physical address or an email. It is the only information you need to provide for someone to pay you with Bitcoin. An important difference, however, is that each address should only be used for a single transaction."
+  },
+  "vocabulary.Address.word": {
+    "defaultMessage": "Address"
+  },
+  "vocabulary.BTC.definition": {
+    "defaultMessage": "BTC is a common unit used to designate one bitcoin."
+  },
+  "vocabulary.BTC.word": {
+    "defaultMessage": "BTC"
+  },
+  "vocabulary.Bit.definition": {
+    "defaultMessage": "Bit is a common unit used to designate a sub-unit of a bitcoin - 1,000,000 bits is equal to 1 bitcoin (BTC). This unit is usually more convenient for pricing tips, goods and services."
+  },
+  "vocabulary.Bit.word": {
+    "defaultMessage": "Bit"
+  },
+  "vocabulary.Bitcoin.definition": {
+    "defaultMessage": "Bitcoin - with capitalization, is used when describing the concept of Bitcoin, or the entire network itself. e.g. \"I was learning about the Bitcoin protocol today.\" bitcoin - without capitalization, is used to describe bitcoins as a unit of account. e.g. \"I sent ten bitcoins today.\"; it is also often abbreviated BTC or XBT."
+  },
+  "vocabulary.Bitcoin.word": {
+    "defaultMessage": "Bitcoin"
+  },
+  "vocabulary.Block.definition": {
+    "defaultMessage": "A block is a record in the block chain that contains and confirms many waiting transactions. Roughly every 10 minutes, on average, a new block including transactions is appended to the block chain through mining."
+  },
+  "vocabulary.Block.word": {
+    "defaultMessage": "Block"
+  },
+  "vocabulary.BlockChain.definition": {
+    "defaultMessage": "The block chain is a public record of Bitcoin transactions in chronological order. The block chain is shared between all Bitcoin users. It is used to verify the permanence of Bitcoin transactions and to prevent double spending."
+  },
+  "vocabulary.BlockChain.word": {
+    "defaultMessage": "Block Chain"
+  },
+  "vocabulary.Confirmation.definition": {
+    "defaultMessage": "Confirmation means that a transaction has been processed by the network and is highly unlikely to be reversed. Transactions receive a confirmation when they are included in a block and for each subsequent block. Even a single confirmation can be considered secure for low value transactions, although for larger amounts like $1000 USD, it makes sense to wait for 6 confirmations or more. Each confirmation exponentially decreases the risk of a reversed transaction."
+  },
+  "vocabulary.Confirmation.word": {
+    "defaultMessage": "Confirmation"
+  },
+  "vocabulary.Cryptography.definition": {
+    "defaultMessage": "Cryptography is the branch of mathematics that lets us create mathematical proofs that provide high levels of security. Online commerce and banking already uses cryptography. In the case of Bitcoin, cryptography is used to make it impossible for anybody to spend funds from another user's wallet or to corrupt the block chain. It can also be used to encrypt a wallet, so that it cannot be used without a password."
+  },
+  "vocabulary.Cryptography.word": {
+    "defaultMessage": "Cryptography"
+  },
+  "vocabulary.DoubleSpend.definition": {
+    "defaultMessage": "If a malicious user tries to spend their bitcoins to two different recipients at the same time, this is double spending. Bitcoin mining and the block chain are there to create a consensus on the network about which of the two transactions will confirm and be considered valid."
+  },
+  "vocabulary.DoubleSpend.word": {
+    "defaultMessage": "Double Spend"
+  },
+  "vocabulary.HashRate.definition": {
+    "defaultMessage": "The hash rate is the measuring unit of the processing power of the Bitcoin network. The Bitcoin network must make intensive mathematical operations for security purposes. When the network reached a hash rate of 10 Th/s, it meant it could make 10 trillion calculations per second."
+  },
+  "vocabulary.HashRate.word": {
+    "defaultMessage": "Hash Rate"
+  },
+  "vocabulary.Mining.definition": {
+    "defaultMessage": "Bitcoin mining is the process of making computer hardware do mathematical calculations for the Bitcoin network to confirm transactions and increase security. As a reward for their services, Bitcoin miners can collect transaction fees for the transactions they confirm, along with newly created bitcoins. Mining is a specialized and competitive market where the rewards are divided up according to how much calculation is done. Not all Bitcoin users do Bitcoin mining, and it is not an easy way to make money."
+  },
+  "vocabulary.Mining.word": {
+    "defaultMessage": "Mining"
+  },
+  "vocabulary.P2P.definition": {
+    "defaultMessage": "Peer-to-peer refers to systems that work like an organized collective by allowing each individual to interact directly with the others. In the case of Bitcoin, the network is built in such a way that each user is broadcasting the transactions of other users. And, crucially, no bank is required as a third party."
+  },
+  "vocabulary.P2P.word": {
+    "defaultMessage": "P2P"
+  },
+  "vocabulary.PrivateKey.definition": {
+    "defaultMessage": "A private key is a secret piece of data that proves your right to spend bitcoins from a specific wallet through a cryptographic signature. Your private key(s) are stored in your computer if you use a software wallet; they are stored on some remote servers if you use a web wallet. Private keys must never be revealed as they allow you to spend bitcoins for their respective Bitcoin wallet."
+  },
+  "vocabulary.PrivateKey.word": {
+    "defaultMessage": "Private Key"
+  },
+  "vocabulary.Signature.definition": {
+    "defaultMessage": "A cryptographic signature is a mathematical mechanism that allows someone to prove ownership. In the case of Bitcoin, a Bitcoin wallet and its private key(s) are linked by some mathematical magic. When your Bitcoin software signs a transaction with the appropriate private key, the whole network can see that the signature matches the bitcoins being spent. However, there is no way for the world to guess your private key to steal your hard-earned bitcoins."
+  },
+  "vocabulary.Signature.word": {
+    "defaultMessage": "Signature"
+  },
+  "vocabulary.Wallet.definition": {
+    "defaultMessage": "A Bitcoin wallet is loosely the equivalent of a physical wallet on the Bitcoin network. The wallet actually contains your private key(s) which allow you to spend the bitcoins allocated to it in the block chain. Each Bitcoin wallet can show you the total balance of all bitcoins it controls and lets you pay a specific amount to a specific person, just like a real wallet. This is different to credit cards where you are charged by the merchant."
+  },
+  "vocabulary.Wallet.word": {
+    "defaultMessage": "Wallet"
   }
 }

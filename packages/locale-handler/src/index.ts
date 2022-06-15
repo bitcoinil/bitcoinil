@@ -1,1 +1,1 @@
-console.log('Local loader handler')
+console.log('WE ARE HANDLER!')
