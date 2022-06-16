@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { AlternatingTwoColumnRowProps } from './Interfaces'
+import { phoneDevices } from './breakpoints'
 
 const AlternatingTwoColumnRow: React.FC<AlternatingTwoColumnRowProps> = ({
   index,
@@ -31,9 +32,23 @@ export default AlternatingTwoColumnRow
 const StyledAlternatingTwoColumnRow = styled.div`
   display: flex;
   padding: 65px;
+  margin-top: 50px;
+
+  ${phoneDevices} {
+    flex-direction: column;
+    padding: 0;
+
+    img {
+      max-width: 75vw;
+    }
+  }
 
   &.even {
     flex-direction: row-reverse;
+
+    ${phoneDevices} {
+      flex-direction: column;
+    }
   }
 
   &.odd {
