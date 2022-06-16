@@ -114,3 +114,23 @@ export interface VocabularyTerm {
 }
 
 export interface ExchangesBodyProps {}
+
+export interface CoreShortcutBox {
+  image: string
+  title: JSX.Element
+  subtitle: JSX.Element
+  link: string
+}
+export interface CoreBodyProps {}
+
+export interface Link {
+  linkText: string
+  link: string
+  postLinkText: string
+}
+
+export interface CoreBox {
+  img: string
+  title: JSX.Element
+  mainText: JSX.Element
+}
