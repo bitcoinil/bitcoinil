@@ -4,7 +4,7 @@
 		"prefix": "nfm",
 		"body": [
 			"<FormattedMessage",
-			"id={`exchange.menuItem.${1:id}`}",
+			"id={`events.${1:id}`}",
 			"defaultMessage={`${2:Message}`}",
 			"description={`${1:id}`}",
 			"/>",

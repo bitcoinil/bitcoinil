@@ -13,6 +13,7 @@ import CommunityBody from './CommunityBody'
 import VocabularyBody from './VocabularyBody'
 import ExchangesBody from './ExchangesBody'
 import EventsBody from './EventsBody'
+import CoreBody from './CoreBody'
 
 export const mainMenuItems: MainMenuItem[] = [
   {
@@ -268,7 +269,7 @@ export const mainMenuItems: MainMenuItem[] = [
             id="core"
             title="BitCoin Core"
             subtitle="Helping you keep Bitcoin decentralized."
-            body={<h1>White Paper Body</h1>}
+            body={<CoreBody />}
           />
         )
       }
