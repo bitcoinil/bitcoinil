@@ -12,6 +12,7 @@ import ResourcesBody from './ResourcesBody'
 import CommunityBody from './CommunityBody'
 import VocabularyBody from './VocabularyBody'
 import ExchangesBody from './ExchangesBody'
+import EventsBody from './EventsBody'
 
 export const mainMenuItems: MainMenuItem[] = [
   {
@@ -247,9 +248,9 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="events"
-            title="White Paper"
+            title="Conferences and Events"
             subtitle="Find events, conferences and meetups all over the world. Subscribe to the RSS feed."
-            body={<h1>White Paper Body</h1>}
+            body={<EventsBody />}
           />
         )
       },
