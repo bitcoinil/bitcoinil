@@ -7,11 +7,21 @@ import * as Ant from 'antd'
 export default function SiteButton({
   onClick = () => {},
   children,
-  type = 'default'
+  type = 'default',
+  background,
+  color
 }: SiteButtonProps) {
   return (
     <StyledButton id="SiteButton">
-      <Ant.Button type={type} onClick={() => onClick()}>
+      <Ant.Button
+        style={{
+          color: color ? color : '',
+          background: background ? background : '',
+          border: background ? `2px solid ${background}` : ''
+        }}
+        type={type}
+        onClick={() => onClick()}
+      >
         {children}
       </Ant.Button>
     </StyledButton>
