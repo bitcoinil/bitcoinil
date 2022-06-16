@@ -1,6 +1,53 @@
 import * as React from 'react'
 import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
+import { Card } from 'antd'
+
+import ico_download from './img/ico_download.svg'
+
+interface WhitePaperTranslation {
+  link: string
+  language: JSX.Element
+  translatedBy?: {
+    author: JSX.Element
+    link: string
+  }[]
+}
+
+const whitePaperTranslations: WhitePaperTranslation[] = [
+  {
+    link: 'https://bitcoin.org/bitcoin.pdf',
+    language: (
+      <FormattedMessage
+        id={`white-paper.english.label`}
+        defaultMessage={`English (Original)`}
+        description={`english.label`}
+      />
+    )
+  },
+  {
+    link: 'https://bitcoin.org/files/bitcoin-paper/bitcoin_iw.pdf',
+    language: (
+      <FormattedMessage
+        id={`white-paper.hebrew.label`}
+        defaultMessage={`עברית`}
+        description={`hebrew.label`}
+      />
+    ),
+    translatedBy: [
+      {
+        author: (
+          <FormattedMessage
+            id={`white-paper.hebrew.translator0`}
+            defaultMessage={`Meni Rosenfeld`}
+            description={`hebrew.translator0`}
+          />
+        ),
+        link: 'https://twitter.com/MeniRosenfeld'
+      }
+    ]
+  }
+]
 
 export interface WhitePaperBodyProps {}
 
@@ -14,7 +61,31 @@ const WhitePaperBody: React.FC<WhitePaperBodyProps> = ({}) => {
           description={`intro`}
         />
       </h1>
-      <div className="papers">PAPERS HERE</div>
+      <div className="papers">
+        {whitePaperTranslations.map((translation, i) => {
+          console.log(translation)
+          return (
+            <a key={i} href={translation.link}>
+              <Card>
+                <h1>
+                  <img src={ico_download} />
+                  {translation.language}
+                </h1>
+                {translation.translatedBy ? (
+                  <p>
+                    Translated: by{' '}
+                    {translation.translatedBy.map((tranny, i) => {
+                      return <a href={tranny.link}>{tranny.author}</a>
+                    })}
+                  </p>
+                ) : (
+                  <p style={{ visibility: 'hidden' }}>spacer</p>
+                )}
+              </Card>
+            </a>
+          )
+        })}
+      </div>
       <h1>
         <FormattedMessage
           id={`white-paper.do-you-want-translate`}
@@ -33,5 +104,26 @@ const StyledWhitePaperBody = styled.div`
 
   h1 {
     font-weight: bolder;
+  }
+
+  .papers {
+    display: flex;
+    margin: 50px 0;
+    .ant-card {
+      padding: 60px;
+      height: 200px;
+      margin-left: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        margin: 0;
+      }
+
+      img {
+        height: 20px;
+        margin-right: 20px;
+      }
+    }
   }
 `
