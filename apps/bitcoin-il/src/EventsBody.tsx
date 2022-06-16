@@ -64,7 +64,8 @@ const StyledEventsBody = styled.div`
 
   h1 {
     color: ${colors.accent};
-    margin-bottom: 100px;
+    margin: 100px 0;
+    font-weight: bolder;
   }
 
   .more-events {
