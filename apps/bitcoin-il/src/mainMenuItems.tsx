@@ -14,6 +14,7 @@ import VocabularyBody from './VocabularyBody'
 import ExchangesBody from './ExchangesBody'
 import EventsBody from './EventsBody'
 import CoreBody from './CoreBody'
+import WhitePaperBody from './WhitePaperBody'
 
 export const mainMenuItems: MainMenuItem[] = [
   {
@@ -128,9 +129,9 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="white-paper"
-            title="White Paper"
-            subtitle="Bitcoin for White Paper"
-            body={<h1>White Paper Body</h1>}
+            title="Bitcoin: A Peer-to-Peer Electronic Cash System"
+            subtitle="The paper that first introduced Bitcoin"
+            body={<WhitePaperBody />}
           />
         )
       }
