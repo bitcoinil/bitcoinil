@@ -27,6 +27,8 @@ export interface SiteButtonProps {
   type?: any
   className?: any
   children: React.ReactNode
+  color?: string
+  background?: string
 }
 
 export interface TranslationDictionary {
