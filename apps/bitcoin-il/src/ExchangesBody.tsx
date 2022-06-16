@@ -129,7 +129,11 @@ const renderCitiesList = (ex: ExchangeLocation) => {
         <ul>
           {city.exchanges.map((exc, i) => {
             console.log(exc)
-            return <li>{exc.name}</li>
+            return (
+              <li>
+                <a href={exc.link}>{exc.name}</a>
+              </li>
+            )
           })}
         </ul>
       </>
