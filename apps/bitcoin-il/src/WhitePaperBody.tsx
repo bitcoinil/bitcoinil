@@ -2,6 +2,7 @@ import * as React from 'react'
 import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
 import { Card } from 'antd'
+import { phoneDevices } from './breakpoints'
 
 import ico_download from './img/ico_download.svg'
 
@@ -102,17 +103,32 @@ export default WhitePaperBody
 const StyledWhitePaperBody = styled.div`
   padding: 100px;
 
+  ${phoneDevices} {
+    padding: 40px;
+
+    h1 {
+      font-size: 15px;
+    }
+  }
+
   h1 {
     font-weight: bolder;
   }
 
   .papers {
     display: flex;
+    ${phoneDevices} {
+      flex-direction: column;
+    }
     margin: 50px 0;
     .ant-card {
       padding: 60px;
       height: 200px;
       margin-left: 15px;
+      ${phoneDevices} {
+        margin-bottom: 25px;
+        margin-left: 0;
+      }
       display: flex;
       align-items: center;
       justify-content: center;
