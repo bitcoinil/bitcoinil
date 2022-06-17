@@ -10,8 +10,8 @@ export interface MainMenuItem {
   element?: React.ReactNode
 }
 export interface RoutePageProps {
-  title: string
-  subtitle: string
+  title: JSX.Element
+  subtitle: JSX.Element | null
   body: JSX.Element
   id: string
 }
