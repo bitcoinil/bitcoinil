@@ -7,28 +7,30 @@ import HeroBg from './img/hero-bg.svg'
 import { RoutePageProps } from './Interfaces'
 
 export default function RoutePage({
-  title = 'title Prop',
-  subtitle = 'subtitle Prop',
-  body = <h1>body prop</h1>,
-  id = ''
+  title,
+  subtitle,
+  body,
+  id
 }: RoutePageProps): JSX.Element {
   return (
     <StyledRoutePage id="RoutePage">
       <div className="page-title">
         <h1>
           <br />
-          <FormattedMessage
+          {title}
+          {/* <FormattedMessage
             defaultMessage={title}
             description={`test`}
             id={`page.${title}.title`}
-          />
+          /> */}
         </h1>
         <h3>
-          <FormattedMessage
+          {subtitle}
+          {/* <FormattedMessage
             id={`page.${id}.subtitle`}
             defaultMessage={`${subtitle} (placeholder)`}
             description={`${id}'s subhedading`}
-          />
+          /> */}
         </h3>
         <div className="trans-bel"></div>
       </div>
