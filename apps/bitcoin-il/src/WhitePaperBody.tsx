@@ -6,6 +6,10 @@ import { phoneDevices } from './breakpoints'
 
 import ico_download from './img/ico_download.svg'
 
+const s = (whatever: any) => {
+  console.log(s)
+}
+
 interface WhitePaperTranslation {
   link: string
   language: JSX.Element
