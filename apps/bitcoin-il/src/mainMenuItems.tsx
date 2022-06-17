@@ -16,6 +16,7 @@ import EventsBody from './EventsBody'
 import CoreBody from './CoreBody'
 import WhitePaperBody from './WhitePaperBody'
 import BuyBody from './BuyBody'
+import FAQBody from './FAQBody'
 
 export const mainMenuItems: MainMenuItem[] = [
   {
@@ -611,18 +612,18 @@ export const mainMenuItems: MainMenuItem[] = [
         title={
           <FormattedMessage
             id={`mainMenuItem.faq.title`}
-            defaultMessage={`FAQ`}
+            defaultMessage={`Frequently Asked Questions`}
             description={`faq.title`}
           />
         }
         subtitle={
           <FormattedMessage
             id={`mainMenuItem.faq.subtitle`}
-            defaultMessage={`FAQ Subtitle`}
+            defaultMessage={`Find answers to recurring questions and myths about Bitcoin.`}
             description={`faq.subtitle`}
           />
         }
-        body={<h1>FAQ Body</h1>}
+        body={<FAQBody />}
       />
     )
   }
