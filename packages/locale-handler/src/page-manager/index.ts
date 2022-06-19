@@ -64,8 +64,9 @@ class PageManager {
 
   public onReady = () => {}
 
-  protected pageName: string = ''
-  protected pageId: string = ''
+  public pageName: string = ''
+  public pageId: string = ''
+
   private client: Client
   // private cache: Cache = { /**
   public cache: Cache = {
@@ -407,6 +408,19 @@ class PageManager {
               return {
                 [dbName]: {
                   [prop.type]: Number(value)
+                }
+              }
+            }
+            if (prop.type === 'rich_text') {
+              return {
+                [dbName]: {
+                  [prop.type]: [
+                    {
+                      text: {
+                        content: value
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -822,6 +836,19 @@ class PageManager {
           return {
             [dbName]: {
               title: [
+                {
+                  text: {
+                    content: value
+                  }
+                }
+              ]
+            }
+          }
+        }
+        if (prop.type === 'rich_text') {
+          return {
+            [dbName]: {
+              [prop.type]: [
                 {
                   text: {
                     content: value

@@ -1,0 +1,67 @@
+{
+  "object": "database",
+  "id": "eb1eee79-cafb-4fad-a8f7-39ca306665cd",
+  "cover": null,
+  "icon": null,
+  "created_time": "2022-06-15T13:16:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "a634028a-3fa4-404a-a52b-0b8c033f7255"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "a634028a-3fa4-404a-a52b-0b8c033f7255"
+  },
+  "last_edited_time": "2022-06-15T13:26:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "DEMO 2",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "DEMO 2",
+      "href": null
+    }
+  ],
+  "properties": {
+    "Tags": {
+      "id": "E%3Fzq",
+      "name": "Tags",
+      "type": "multi_select",
+      "multi_select": {
+        "options": []
+      }
+    },
+    "DEMO 1 REF": {
+      "id": "yVkf",
+      "name": "DEMO 1 REF",
+      "type": "relation",
+      "relation": {
+        "database_id": "3398eb2f-db4d-4c71-8c87-0d112bba4461",
+        "synced_property_name": "DEMO 2",
+        "synced_property_id": "DLcZ"
+      }
+    },
+    "Name": {
+      "id": "title",
+      "name": "Name",
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "de88965a-988b-4dd7-88ff-ca90bfb1ed7f"
+  },
+  "url": "https://www.notion.so/eb1eee79cafb4fada8f739ca306665cd",
+  "archived": false
+}

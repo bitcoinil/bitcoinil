@@ -1,37 +1,79 @@
-export const databases = {
+import { DatabaseSchema } from "../database.types"
+
+export const databases: DatabaseSchema = {
   language: {
     properties: {
       Key: {
-        id: 'title',
+        name: 'title',
         type: 'title',
         title: {}
       },
       Default: {
-        id: 'default',
+        name: 'defaultMessage',
+        type: 'rich_text',
         rich_text: {}
       },
       Description: {
-        id: 'description',
+        name: 'description',
+        type: 'rich_text',
         rich_text: {}
       },
-    },
-    relatedProperties: (dbs) => ({
       Hebrew: {
-        id: 'hebrew',
+        name: 'hebrew',
         type: 'relation',
-        database_id: dbs['he-language'].instance.instance.id
+        relation: {
+          database_id: 'self::he-language',
+          // synced_property_name: 'Hebrew Translation'
+        }
       },
       English: {
-        id: 'english',
+        name: 'english',
         type: 'relation',
-        database_id: dbs['en-language'].instance.instance.id
+        relation: {
+          database_id: 'self::en-language',
+          // synced_property_name: 'English Translation'
+        }
       },
-    })
+    },
+    relatedProperties: {
+      Hebrew: {
+        name: 'hebrew',
+        type: 'relation',
+        relation: {
+          database_id: 'he-language',
+          // synced_property_name: 'Hebrew Translation'
+        }
+      },
+      English: {
+        name: 'english',
+        type: 'relation',
+        relation: {
+          database_id: 'en-language',
+          // synced_property_name: 'English Translation'
+        }
+      },
+      // Arabic: {
+      //   id: 'arabic',
+      //   type: 'relation',
+      //   relation: {
+      //     database_id: dbs['ar-language'].instance.instance.id,
+      //     synced_property_name: 'Arabic Translation'
+      //   }
+      // },
+      // Russian: {
+      //   id: 'russian',
+      //   type: 'relation',
+      //   relation: {
+      //     database_id: dbs['ru-language'].instance.instance.id,
+      //     synced_property_name: 'Russian Translation'
+      //   }
+      // }
+    }
   },
   'he-language': {
     properties: {
       Message: {
-        id: 'message',
+        name: 'message',
         type: 'title',
         title: {}
       }
@@ -40,11 +82,29 @@ export const databases = {
   'en-language': {
     properties: {
       Message: {
-        id: 'message',
+        name: 'message',
         type: 'title',
         title: {}
       }
     }
-  }
+  },
+  // 'ar-language': {
+  //   properties: {
+  //     Message: {
+  //       id: 'message',
+  //       type: 'title',
+  //       title: {}
+  //     }
+  //   }
+  // },
+  // 'ru-language': {
+  //   properties: {
+  //     Message: {
+  //       id: 'message',
+  //       type: 'title',
+  //       title: {}
+  //     }
+  //   }
+  // }
 
 }
