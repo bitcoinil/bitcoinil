@@ -51,6 +51,7 @@ const StyledRoutePage = styled.div`
     justify-content: start;
     flex-direction: column;
     text-align: center;
+    padding: 50px 0;
 
     h1 {
       margin-top: 25px;

@@ -10,6 +10,7 @@ import ico_invoice from './img/ico_invoice.svg'
 import ico_market from './img/ico_market.svg'
 import ico_doc from './img/ico_doc.svg'
 import ico_voucher from './img/ico_voucher.svg'
+import { phoneDevices } from './breakpoints'
 
 interface ResourcesBodyProps {}
 
@@ -543,5 +544,9 @@ const StyledResourcesBody = styled.div`
     flex-direction: column;
     text-align: center;
     list-style: none;
+  }
+
+  ${phoneDevices} {
+    padding: 0;
   }
 `

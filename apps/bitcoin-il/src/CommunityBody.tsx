@@ -8,6 +8,7 @@ import ico_forum from './img/ico_forum.svg'
 import ico_social from './img/ico_social.svg'
 import ico_meetups from './img/ico_meetups.svg'
 import ico_conversation from './img/ico_conversation.svg'
+import { phoneDevices } from './breakpoints'
 
 interface CommunityBodyProps {}
 
@@ -228,5 +229,9 @@ const StyledCommunityBody = styled.div`
     flex-direction: column;
     text-align: center;
     list-style: none;
+
+    ${phoneDevices} {
+      padding: 0;
+    }
   }
 `
