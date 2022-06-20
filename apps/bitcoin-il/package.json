@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --port 3030 --clearScreen false",
+    "dev": "vite --port 3030 --host --clearScreen false",
     "build": "vite build",
     "deploy": "vercel deploy dist --team=turborepo --confirm",
     "lint": "TIMING=1 eslint src/**/*.tsx --fix && tsc --noEmit",
