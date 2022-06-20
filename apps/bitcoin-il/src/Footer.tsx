@@ -155,10 +155,18 @@ const StyledFooter = styled.div`
         &-right {
           display: flex;
           &-menu-column {
+            ${phoneDevices} {
+              text-align: center;
+              margin-top: 30px;
+            }
             ul {
               padding: 0;
               list-style: none;
               margin-right: 50px;
+
+              ${phoneDevices} {
+                margin: 0;
+              }
 
               li {
               }
