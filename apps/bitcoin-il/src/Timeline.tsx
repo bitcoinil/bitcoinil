@@ -5,6 +5,7 @@ import {
 } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
 import styled from 'styled-components'
+import { phoneDevices } from './breakpoints'
 
 interface TimelineCompProps {
   items: JSX.Element[]
@@ -50,6 +51,10 @@ const StyledTimelineComp = styled.div`
     height: 10px;
     width: 32px;
     background: black;
+
+    ${phoneDevices} {
+      width: 17px;
+    }
   }
 
   .vertical-timeline-element-content {
