@@ -9,6 +9,7 @@ import { colors } from './colors'
 
 import { coreShortcuts, links, mainBoxes, newsCards } from './CoreData'
 import { CoreBodyProps } from './Interfaces'
+import { phoneDevices } from './breakpoints'
 
 const CoreBody: React.FC<CoreBodyProps> = ({}) => {
   return (
@@ -123,6 +124,11 @@ const StyledCoreBody = styled.div`
   display: flex;
   justify-content: center;
 
+  ${phoneDevices} {
+    flex-direction: column;
+    width: 100vw;
+  }
+
   .core {
     &-left {
       border-right: 1px solid #e8e8ed;
@@ -132,6 +138,11 @@ const StyledCoreBody = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      ${phoneDevices} {
+        width: 100vw;
+        padding: 20px;
+      }
 
       button {
         width: 100%;
@@ -180,6 +191,10 @@ const StyledCoreBody = styled.div`
       width: 50vw;
       padding: 50px;
 
+      ${phoneDevices} {
+        width: 100vw;
+      }
+
       &-links {
         li {
           margin-bottom: 25px;
@@ -193,10 +208,19 @@ const StyledCoreBody = styled.div`
         align-items: center;
         justify-content: space-evenly;
 
+        ${phoneDevices} {
+          flex-direction: column;
+        }
+
         .ant-card {
           width: 45%;
           display: flex;
           align-items: center;
+
+          ${phoneDevices} {
+            width: unset;
+            margin-bottom: 25px;
+          }
         }
       }
       .news {
