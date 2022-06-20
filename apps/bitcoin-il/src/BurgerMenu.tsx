@@ -148,7 +148,7 @@ const BurgerWrap = styled.div`
 
       &.open {
         transition: all 400ms;
-        height: 500px;
+        height: auto;
       }
     }
 
