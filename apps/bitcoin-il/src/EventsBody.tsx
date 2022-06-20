@@ -61,6 +61,7 @@ const StyledEventsBody = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 
   h1 {
     color: ${colors.accent};
@@ -79,7 +80,7 @@ const StyledEventsBody = styled.div`
   }
 
   .events-footer {
-    margin-top: 100px;
+    margin: 100px 0;
     justify-content: space-evenly;
     align-items: center;
     display: flex;
