@@ -32,8 +32,10 @@ const BurgerMenuMenu: React.FC<BurgerMenuMenuProps> = ({ setMenuOpen }) => {
             )
           }
           return (
-            <Menu.Item key={item.key} onClick={() => console.log(item)}>
-              <p>{item.label}</p>
+            <Menu.Item key={item.key}>
+              <NavLink to={`/${item.key}`}>
+                <p>{item.label}</p>
+              </NavLink>
             </Menu.Item>
           )
         })}
