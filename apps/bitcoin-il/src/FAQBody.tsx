@@ -2,6 +2,7 @@ import { Divider } from 'antd'
 import * as React from 'react'
 import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
+import { phoneDevices } from './breakpoints'
 import { colors } from './colors'
 
 export interface IndividualFAQ {
@@ -177,6 +178,10 @@ const StyledFAQBody = styled.div`
       position: sticky;
       top: 0;
 
+      ${phoneDevices} {
+        display: none;
+      }
+
       ul {
         list-style: none;
       }
@@ -187,6 +192,10 @@ const StyledFAQBody = styled.div`
 
     &-right {
       width: 70%;
+
+      ${phoneDevices} {
+        width: unset;
+      }
     }
 
     &-category-heading {
