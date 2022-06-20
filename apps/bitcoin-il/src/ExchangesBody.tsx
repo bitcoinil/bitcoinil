@@ -4,6 +4,12 @@ import { colors } from './colors'
 import { ExchangesBodyProps } from './Interfaces'
 import { Menu } from 'antd'
 import { FormattedMessage } from 'react-intl'
+import { phoneDevices, smallDevices } from './breakpoints'
+import { Collapse } from 'antd'
+import ico_badge from './img/ico_badge.svg'
+import { StickyContainer, Sticky } from 'react-sticky'
+
+const { Panel } = Collapse
 
 export interface Exchange {
   name: JSX.Element
@@ -139,7 +145,6 @@ const renderCitiesList = (ex: ExchangeLocation) => {
       </>
     )
   })
-  return <h1>Rendering Citys</h1>
 }
 
 const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
@@ -169,66 +174,108 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
   }
   return (
     <StyledExchangesBody id="ExchangesBody">
-      {/* <h1>ExchangesBody</h1> */}
-      <div>
-        <div className={`left`}>
-          <ul>
-            {exhchanges.map((exchange, i) => {
-              // console.log(exchange.location)
-              if (!exchange.cities)
-                return (
-                  <li
-                    className="dict-word-link"
-                    onClick={() => {
-                      document
-                        .getElementById(`word-${i}`)
-                        ?.scrollIntoView({ behavior: 'smooth' })
-                      flashElement(document.getElementById(`word-${i}`))
-                    }}
-                    key={i}
-                  >
-                    {exchange.location}
-                  </li>
-                )
-              return (
-                <div key={i}>
-                  <p
-                    className="dict-word-link"
-                    onClick={() => {
-                      document
-                        .getElementById(`word-${i}`)
-                        ?.scrollIntoView({ behavior: 'smooth' })
-                      flashElement(document.getElementById(`word-${i}`))
-                    }}
-                  >
-                    {exchange.location}
-                  </p>
-                  <ul>
-                    {exchange.cities.map((city, i) => {
-                      // console.log({ city })
+      <div className="exchanges-warning">
+        <img src={ico_badge} />
+        <FormattedMessage
+          id={`exchanges.warning`}
+          defaultMessage={` Note: Exchanges provide highly varying degrees of safety, security,
+         privacy, and control over your funds and information. Perform your own
+         due diligence and choose a wallet where you will keep your bitcoin
+         before selecting an exchange.`}
+          description={`exhcnages-warning`}
+        />
+      </div>
+      <div className="exchanges-columns">
+        <StickyContainer>
+          <Sticky>
+            {({
+              style = { background: 'red' },
+
+              // the following are also available but unused in this example
+              isSticky,
+              wasSticky,
+              distanceFromTop,
+              distanceFromBottom,
+              calculatedHeight
+            }) => (
+              <div className={`left`}>
+                <ul>
+                  {exhchanges.map((exchange, i) => {
+                    // console.log(exchange.location)
+                    if (!exchange.cities)
                       return (
-                        <li>
-                          <p>{city.city}</p>
+                        <li
+                          className="dict-word-link"
+                          onClick={() => {
+                            document
+                              .getElementById(`word-${i}`)
+                              ?.scrollIntoView({ behavior: 'smooth' })
+                            flashElement(document.getElementById(`word-${i}`))
+                          }}
+                          key={i}
+                        >
+                          {exchange.location}
                         </li>
                       )
-                    })}
-                  </ul>
-                </div>
+                    return (
+                      <div key={i}>
+                        <p
+                          className="dict-word-link"
+                          onClick={() => {
+                            document
+                              .getElementById(`word-${i}`)
+                              ?.scrollIntoView({ behavior: 'smooth' })
+                            flashElement(document.getElementById(`word-${i}`))
+                          }}
+                        >
+                          {exchange.location}
+                        </p>
+                        <ul>
+                          {exchange.cities.map((city, i) => {
+                            // console.log({ city })
+                            return (
+                              <li>
+                                <p>{city.city}</p>
+                              </li>
+                            )
+                          })}
+                        </ul>
+                      </div>
+                    )
+                  })}
+                </ul>
+              </div>
+            )}
+          </Sticky>
+        </StickyContainer>
+        <div className="right">
+          <div className="exchanges-right-mobile">
+            {exhchanges.map((exchange: ExchangeLocation, i: number) => {
+              console.log(exchange.cities)
+              return (
+                <Collapse>
+                  <Panel key={i} header={exchange.location}>
+                    <li key={i} id={`word-${i}`}>
+                      {exchange.location}
+                      {exchange.cities ? renderCitiesList(exchange) : null}
+                    </li>
+                  </Panel>
+                </Collapse>
               )
             })}
-          </ul>
+          </div>
+          <div className="exchanges-right-desktop">
+            {exhchanges.map((exchange: ExchangeLocation, i: number) => {
+              console.log(exchange.cities)
+              return (
+                <li key={i} id={`word-${i}`}>
+                  {exchange.location}
+                  {exchange.cities ? renderCitiesList(exchange) : null}
+                </li>
+              )
+            })}
+          </div>
         </div>
-      </div>
-      <div className="right">
-        {exhchanges.map((exchange: ExchangeLocation, i: number) => {
-          console.log(exchange.cities)
-          return (
-            <li key={i} id={`word-${i}`}>
-              {exchange.location}
-              {exchange.cities ? renderCitiesList(exchange) : null}
-            </li>
-          )
-        })}
       </div>
     </StyledExchangesBody>
   )
@@ -240,8 +287,40 @@ const StyledExchangesBody = styled.div`
   justify-content: center;
   display: flex;
 
+  /* ${phoneDevices} { */
+  flex-direction: column;
+  /* } */
+
   li {
     list-style: none;
+  }
+
+  .exchanges-columns {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  .exchanges-right-desktop {
+    ${phoneDevices} {
+      display: none;
+    }
+  }
+
+  .exchanges-right-mobile {
+    ${smallDevices} {
+      display: none;
+    }
+  }
+
+  .exchanges-warning {
+    background: #fff9f3;
+    margin: 20px;
+    display: flex;
+    padding: 20px;
+
+    img {
+      margin-right: 30px;
+    }
   }
 
   .left {
@@ -256,10 +335,18 @@ const StyledExchangesBody = styled.div`
     li {
       margin-bottom: 10px;
     }
+
+    ${phoneDevices} {
+      display: none;
+    }
   }
 
   .right {
     width: 65vw;
+
+    ${phoneDevices} {
+      width: 95vw;
+    }
 
     li {
       padding: 50px;
