@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
+import { phoneDevices } from './breakpoints'
 import { colors } from './colors'
 import { VocabularyProps, VocabularyTerm } from './Interfaces'
 
@@ -311,6 +312,14 @@ const StyledVocabulary = styled.div`
     left: 0;
     height: 100vh;
     padding-top: 60px;
+
+    ul {
+      ${phoneDevices} {
+        font-size: 17px;
+        padding: 7px;
+      }
+    }
+
     li {
       margin-bottom: 10px;
     }
@@ -322,6 +331,9 @@ const StyledVocabulary = styled.div`
     li {
       padding: 50px;
       border-bottom: 1px solid #b9b9c350;
+      ${phoneDevices} {
+        padding: 10px;
+      }
     }
 
     h3 {
