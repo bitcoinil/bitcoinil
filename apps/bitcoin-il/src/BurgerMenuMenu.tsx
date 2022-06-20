@@ -23,7 +23,11 @@ const BurgerMenuMenu: React.FC<BurgerMenuMenuProps> = ({ setMenuOpen }) => {
               >
                 {item.submenu.map((subItem: MainMenuItem) => {
                   return (
-                    <Menu.Item key={subItem.key}>
+                    <Menu.Item
+                      style={{ background: 'grey', margin: 0, padding: 0 }}
+                      className="grey-submenu-item"
+                      key={subItem.key}
+                    >
                       <NavLink to={`/${subItem.key}`}>{subItem.label}</NavLink>
                     </Menu.Item>
                   )
@@ -55,7 +59,20 @@ const StyledBurgerMenuMenu = styled.div`
     li,
     .ant-menu-item {
       padding: 0 !important;
+      margin: 0 !important;
     }
+  }
+
+  .grey-submenu-item {
+    background-color: pink;
+  }
+
+  .ant-menu-sub {
+    background-color: red;
+  }
+
+  .ant-menu-item {
+    color: green;
   }
 
   .ant-menu,
