@@ -33,7 +33,7 @@ type Props = {
   children: JSX.Element
 }
 const Theme = ({ children }: Props) => {
-  const [selectedTheme, selectedVariant] = ['main-theme', '']
+  const [selectedTheme, selectedVariant] = ['bitil-theme', 'bitil-dark']
   const [activeState, setActiveState] = useState({
     theme: selectedTheme,
     variant: selectedVariant,
@@ -111,9 +111,13 @@ const Theme = ({ children }: Props) => {
         {fontHref && <link rel="stylesheet" href={fontHref} />}
       </Helmet>
       <GlobalStyle />
-      <div className='themer'>
+      <div className="themer">
+        <h1>DEBUG: </h1>
+        <pre>{JSON.stringify(state.debug, null, 2)}</pre>
         <h2>This is theme stuff</h2>
-        <Button type='primary'>IMMA BUTTON</Button>
+        <h1>Current Theme</h1>
+        <pre>{JSON.stringify(activeState, null, 2)}</pre>
+        <Button type="primary">IMMA BUTTON</Button>
 
         <pre>{JSON.stringify(themes, null, 2)}</pre>
         <Button
@@ -133,7 +137,7 @@ export const useTheme = () => useContext(ThemeContext)
 
 const GlobalStyle = createGlobalStyle`
   html body {
-    background: none;
+    /* background: none; */
   }
 `
 
