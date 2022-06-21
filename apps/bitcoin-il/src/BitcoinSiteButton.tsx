@@ -1,8 +1,8 @@
+import { Button } from 'antd'
 import * as React from 'react'
 import styled from 'styled-components'
-import { colors } from './colors'
 import { SiteButtonProps } from './Interfaces'
-import { Button } from 'antd'
+
 export default function SiteButton({
   onClick = () => {},
   children,
@@ -26,4 +26,11 @@ export default function SiteButton({
   )
 }
 
-const StyledButton = styled(Button)``
+const StyledButton = styled(Button)`
+  &.ant-btn {
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`
