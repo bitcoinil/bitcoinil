@@ -7,10 +7,7 @@ import 'react-vertical-timeline-component/style.min.css'
 import styled from 'styled-components'
 import { phoneDevices } from './breakpoints'
 import { colors } from './colors'
-
-interface TimelineCompProps {
-  items: JSX.Element[]
-}
+import { TimelineCompProps } from './Interfaces'
 
 const TimelineComp: React.FC<TimelineCompProps> = ({ items }) => {
   if (!items) return null

@@ -76,7 +76,7 @@ export interface BodyCard {
 }
 
 export interface TimelineCompProps {
-  items: React.ReactNode[]
+  items: JSX.Element[]
 }
 
 export interface GettingStartedBodyProps {}
