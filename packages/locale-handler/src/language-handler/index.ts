@@ -19,16 +19,16 @@ export const databases: DatabaseSchema = {
         rich_text: {}
       },
       Hebrew: {
-        name: 'hebrew',
         type: 'relation',
+        name: 'Hebrew',
         relation: {
           database_id: 'self::he-language',
           // synced_property_name: 'Hebrew Translation'
         }
       },
       English: {
-        name: 'english',
         type: 'relation',
+        name: 'English',
         relation: {
           database_id: 'self::en-language',
           // synced_property_name: 'English Translation'
@@ -37,16 +37,16 @@ export const databases: DatabaseSchema = {
     },
     relatedProperties: {
       Hebrew: {
-        name: 'hebrew',
         type: 'relation',
+        name: 'Hebrew',
         relation: {
           database_id: 'he-language',
           // synced_property_name: 'Hebrew Translation'
         }
       },
       English: {
-        name: 'english',
         type: 'relation',
+        name: 'English',
         relation: {
           database_id: 'en-language',
           // synced_property_name: 'English Translation'

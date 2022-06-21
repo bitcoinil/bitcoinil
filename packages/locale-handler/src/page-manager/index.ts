@@ -641,8 +641,7 @@ class PageManager {
     //   filter: { value: 'database', property: 'object' }
     // })
 
-    // @ts- ignore
-    const myDb = await this.client.databases.create({
+    const createProps = {
       parent: {
         page_id: parentId
       },
@@ -650,12 +649,17 @@ class PageManager {
         {
           type: 'text',
           text: {
-            content: dbName
+            content: dbName,
+            link: null
           }
         }
       ],
       properties
-    })
+    }
+    console.log('😸😸😸 Creating DB - Props:', createProps)
+
+    // @ts-ignore
+    const myDb = await this.client.databases.create(createProps)
 
     // console.log('myDb Result:', myDb)
     console.log('myDb Result:', JSON.stringify(myDb, null, 1))
