@@ -202,7 +202,6 @@ const StyledFAQBody = styled.div`
     }
 
     &-subheading-title {
-      color: black;
       font-weight: bolder;
       font-size: 22px;
     }
