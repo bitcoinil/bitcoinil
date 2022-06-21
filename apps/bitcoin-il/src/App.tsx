@@ -14,6 +14,7 @@ import { mainMenuItems } from './mainMenuItems'
 import { nonMenuRoutes } from './nonMenuRoutes'
 import Support from './support'
 import locales from '@bitil/locales'
+import Theme from './themes'
 
 function App(): JSX.Element {
   // const { language, messages, locale } = useIntl()
@@ -54,30 +55,32 @@ function App(): JSX.Element {
   )
 
   return (
-    <AppStyleWrap id="App">
-      <Helmet>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
-      <IntlProvider
-        // @ts-ignore
-        messages={locales[ln]}
-        locale={ln}
-        defaultLocale="en"
-      >
-        <div className="App">
-          {/* <DevTools /> */}
-          <Support />
-          <Header setLanguage={setLn} />
-          {renderRoutes()}
-        </div>
-        <Footer />
-      </IntlProvider>
-    </AppStyleWrap>
+    <Theme>
+      <AppStyleWrap id="App">
+        <Helmet>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap"
+            rel="stylesheet"
+          />
+        </Helmet>
+        <IntlProvider
+          // @ts-ignore
+          messages={locales[ln]}
+          locale={ln}
+          defaultLocale="en"
+        >
+          <div className="App">
+            {/* <DevTools /> */}
+            <Support />
+            <Header setLanguage={setLn} />
+            {renderRoutes()}
+          </div>
+          <Footer />
+        </IntlProvider>
+      </AppStyleWrap>
+    </Theme>
   )
 }
 
