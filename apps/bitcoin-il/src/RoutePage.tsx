@@ -69,7 +69,6 @@ const StyledRoutePage = styled.div`
     }
 
     .trans-bel {
-      background: white;
     }
   }
 `
