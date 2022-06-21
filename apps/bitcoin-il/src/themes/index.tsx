@@ -116,6 +116,13 @@ const Theme = ({ children }: Props) => {
         <Button type='primary'>IMMA BUTTON</Button>
 
         <pre>{JSON.stringify(themes, null, 2)}</pre>
+        <Button
+          onClick={() => {
+            actions.setTheme('ayu-and-one-theme', 'one-darker')
+          }}
+        >
+          Change to Dark
+        </Button>
       </div>
       {children}
     </ThemeContext.Provider>
