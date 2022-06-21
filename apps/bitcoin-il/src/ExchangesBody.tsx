@@ -313,10 +313,11 @@ const StyledExchangesBody = styled.div`
   }
 
   .exchanges-warning {
-    background: #fff9f3;
+    background: black;
     margin: 20px;
     display: flex;
     padding: 20px;
+    font-size: 20px;
 
     img {
       margin-right: 30px;
