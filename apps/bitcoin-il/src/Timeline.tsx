@@ -6,6 +6,7 @@ import {
 import 'react-vertical-timeline-component/style.min.css'
 import styled from 'styled-components'
 import { phoneDevices } from './breakpoints'
+import { colors } from './colors'
 
 interface TimelineCompProps {
   items: JSX.Element[]
@@ -40,6 +41,7 @@ const StyledTimelineComp = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    background: ${colors.accent};
 
     h1 {
       margin: 0;
@@ -59,5 +61,6 @@ const StyledTimelineComp = styled.div`
 
   .vertical-timeline-element-content {
     box-shadow: none;
+    background: #3d3c3c;
   }
 `
