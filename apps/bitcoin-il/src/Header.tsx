@@ -6,20 +6,21 @@ import BurgerMenu from './BurgerMenu'
 import HeaderMenu from './HeaderMenu'
 import { HeaderProps } from './Interfaces'
 import LanguageSelect from './LanguageSelect'
+import logo from './img/logo.svg'
 
 const Header: React.FC<HeaderProps> = ({ setLanguage }) => {
   const navigate = useNavigate()
   return (
     <StyledHeader id="Header">
       <div className="left">
-        <p
+        <div
           className="logo"
           onClick={() => {
             navigate('/')
           }}
         >
-          LogoHere
-        </p>
+          <img src={logo} />
+        </div>
       </div>
       <div className="header-middle">
         <HeaderMenu />
@@ -51,6 +52,10 @@ const StyledHeader = styled.div`
     &:hover {
       opacity: 0.5;
       transition: all 200ms;
+    }
+
+    img {
+      height: 20px;
     }
   }
 

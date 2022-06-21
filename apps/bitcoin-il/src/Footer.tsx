@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import SiteButton from './BitcoinSiteButton'
 import { phoneDevices } from './breakpoints'
 import { mainMenuItems } from './mainMenuItems'
+import logo from './img/logo.svg'
 
 interface FooterProps {}
 
@@ -60,7 +61,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
   return (
     <StyledFooter id="Footer">
       <div className="logo">
-        <h1>LOGO HERE</h1>
+        <img src={logo} />
       </div>
       <div className="body-wrap">
         <div className="support">{renderSupport()}</div>
@@ -87,6 +88,14 @@ const StyledFooter = styled.div`
 
   h1 {
     color: white;
+  }
+
+  .logo {
+    padding: 50px 0;
+    img {
+      height: 40px;
+      /* padding: 50px 0; */
+    }
   }
 
   .body-wrap {
