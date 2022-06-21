@@ -134,3 +134,10 @@ export interface CoreBox {
   title: JSX.Element
   mainText: JSX.Element
 }
+
+export interface AvailableLanguage {
+  name: string
+  icon: string
+  locale: string
+  longName: string
+}
