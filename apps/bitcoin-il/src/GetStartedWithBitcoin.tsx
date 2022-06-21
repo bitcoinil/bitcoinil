@@ -32,29 +32,31 @@ const GetStartedWithBitcoin: React.FC<GetStartedWithBitcoinProps> = ({}) => {
                 description={`Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.`}
               />
             </p>
-            <div className="get-started-body-top-left-detail">
-              <img src={instant} />
-              <FormattedMessage
-                id={`page.home.get-started.instant`}
-                defaultMessage={`Fast peer-to-peer transactions`}
-                description={`Fast peer-to-peer transactions`}
-              />
-            </div>
-            <div className="get-started-body-top-left-detail">
-              <img src={worldwide} />
-              <FormattedMessage
-                id={`page.home.get-started.worldwide`}
-                defaultMessage={`Worldwide Payments`}
-                description={`Worldwide Payments`}
-              />
-            </div>
-            <div className="get-started-body-top-left-detail">
-              <img src={lowfee} />
-              <FormattedMessage
-                id={`page.home.get-started.lowfee`}
-                defaultMessage={`Low Processing Fees`}
-                description={`Low Processing Fees`}
-              />
+            <div className="get-started-icons-and-words">
+              <div className="get-started-body-top-left-detail">
+                <img src={instant} />
+                <FormattedMessage
+                  id={`page.home.get-started.instant`}
+                  defaultMessage={`Fast peer-to-peer transactions`}
+                  description={`Fast peer-to-peer transactions`}
+                />
+              </div>
+              <div className="get-started-body-top-left-detail">
+                <img src={worldwide} />
+                <FormattedMessage
+                  id={`page.home.get-started.worldwide`}
+                  defaultMessage={`Worldwide Payments`}
+                  description={`Worldwide Payments`}
+                />
+              </div>
+              <div className="get-started-body-top-left-detail">
+                <img src={lowfee} />
+                <FormattedMessage
+                  id={`page.home.get-started.lowfee`}
+                  defaultMessage={`Low Processing Fees`}
+                  description={`Low Processing Fees`}
+                />
+              </div>
             </div>
           </div>
           <div className="get-started-body-top-right">
@@ -78,6 +80,15 @@ const StyledGetStartedWithBitcoin = styled.div`
     &-title {
       font-size: 22px;
       color: ${colors.accent};
+      padding-top: 30px;
+    }
+
+    &-icons-and-words {
+      padding: 50px 0;
+
+      div {
+        margin-bottom: 30px;
+      }
     }
 
     &-body {
