@@ -2,7 +2,7 @@ import * as React from 'react'
 import { themes } from '@djitsu/themes'
 import type { CompiledTheme, CompiledVariant } from '@djitsu/themes'
 import { Helmet } from 'react-helmet'
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { Button } from 'antd'
 
 const { createContext, useContext, useMemo, useState } = React
@@ -39,6 +39,8 @@ const Theme = ({ children }: Props) => {
     variant: selectedVariant,
     isDark: false
   })
+
+  const [showDebug, setShowDebug] = React.useState(false)
 
   const state = {
     themes,
@@ -93,47 +95,72 @@ const Theme = ({ children }: Props) => {
 
   return (
     <ThemeContext.Provider value={[state, actions]}>
-      <Helmet>
-        {hrefLight && (
-          <link
-            rel="stylesheet"
-            href={hrefLight}
-            media={hrefDark && '(prefers-color-scheme: light)'}
-          />
-        )}
-        {hrefDark && (
-          <link
-            rel="stylesheet"
-            href={hrefDark}
-            media="(prefers-color-scheme: dark)"
-          />
-        )}
-        {fontHref && <link rel="stylesheet" href={fontHref} />}
-      </Helmet>
-      <GlobalStyle />
-      <div className="themer">
-        <h1>DEBUG: </h1>
-        <pre>{JSON.stringify(state.debug, null, 2)}</pre>
-        <h2>This is theme stuff</h2>
-        <h1>Current Theme</h1>
-        <pre>{JSON.stringify(activeState, null, 2)}</pre>
-        <Button type="primary">IMMA BUTTON</Button>
+      {showDebug ? (
+        <>
+          <Helmet>
+            {hrefLight && (
+              <link
+                rel="stylesheet"
+                href={hrefLight}
+                media={hrefDark && '(prefers-color-scheme: light)'}
+              />
+            )}
+            {hrefDark && (
+              <link
+                rel="stylesheet"
+                href={hrefDark}
+                media="(prefers-color-scheme: dark)"
+              />
+            )}
+            {fontHref && <link rel="stylesheet" href={fontHref} />}
+          </Helmet>
+          <GlobalStyle />
+          <div className="themer">
+            <h1>DEBUG: </h1>
+            <pre>{JSON.stringify(state.debug, null, 2)}</pre>
+            <h2>This is theme stuff</h2>
+            <h1>Current Theme</h1>
+            <pre>{JSON.stringify(activeState, null, 2)}</pre>
+            <Button type="primary">IMMA BUTTON</Button>
 
-        <pre>{JSON.stringify(themes, null, 2)}</pre>
-        <Button
-          onClick={() => {
-            actions.setTheme('ayu-and-one-theme', 'one-darker')
-          }}
-        >
-          Change to Dark
-        </Button>
-      </div>
+            <pre>{JSON.stringify(themes, null, 2)}</pre>
+            <Button
+              onClick={() => {
+                actions.setTheme('ayu-and-one-theme', 'one-darker')
+              }}
+            >
+              Change to Dark
+            </Button>
+          </div>
+        </>
+      ) : (
+        <DebugButtons>
+          <button onClick={() => setShowDebug(true)}>Theme Debug</button>
+        </DebugButtons>
+      )}
       {children}
     </ThemeContext.Provider>
   )
 }
 
 export const useTheme = () => useContext(ThemeContext)
+
+const DebugButtons = styled.div`
+  position: fixed;
+  top: 0;
+  opacity: 0.2;
+
+  button {
+    cursor: pointer;
+    background: black;
+    color: white;
+    padding: 30px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+`
 
 const GlobalStyle = createGlobalStyle`
   html body {
