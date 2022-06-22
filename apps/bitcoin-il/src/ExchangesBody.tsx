@@ -130,25 +130,37 @@ const exhchanges: ExchangeLocation[] = [
 const renderCitiesList = (ex: ExchangeLocation) => {
   return ex?.cities?.map((city, i) => {
     return (
-      <>
-        <li>{city.city}</li>
+      <div key={i}>
+        <span>{city.city}</span>
         <ul>
-          {city.exchanges.map((exc, i) => {
-            console.log(exc)
+          {city.exchanges.map((exc, ii) => {
             return (
-              <li>
+              <span key={ii}>
                 <a href={exc.link}>{exc.name}</a>
-              </li>
+              </span>
             )
           })}
         </ul>
-      </>
+      </div>
     )
   })
 }
 
 const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
   const [openTab, setOpenTab] = React.useState(null)
+  const leftRef = React.createRef<HTMLDivElement>()
+
+  const scrollEventHandler = () => {
+    console.log('SCROLL')
+  }
+
+  React.useEffect(() => {
+    document.addEventListener('scroll', scrollEventHandler)
+
+    return () => {
+      document.removeEventListener('scroll', scrollEventHandler)
+    }
+  }, [])
 
   const flashElement = (el: HTMLElement | null) => {
     if (!el) return
@@ -186,87 +198,89 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
         />
       </div>
       <div className="exchanges-columns">
-        <StickyContainer>
-          <Sticky>
-            {({
-              style = { background: 'red' },
+        {/* <StickyContainer> */}
+        {/* <Sticky> */}
+        {/* {({
+          style = { background: 'red' },
 
-              // the following are also available but unused in this example
-              isSticky,
-              wasSticky,
-              distanceFromTop,
-              distanceFromBottom,
-              calculatedHeight
-            }) => (
-              <div className={`left`}>
-                <ul>
-                  {exhchanges.map((exchange, i) => {
-                    // console.log(exchange.location)
-                    if (!exchange.cities)
+          // the following are also available but unused in this example
+          isSticky,
+          wasSticky,
+          distanceFromTop,
+          distanceFromBottom,
+          calculatedHeight
+        }) => ( */}
+        <div className={`left`} ref={leftRef}>
+          <ul>
+            {exhchanges.map((exchange, i) => {
+              // console.log(exchange.location)
+              if (!exchange.cities)
+                return (
+                  <li
+                    key={i}
+                    className="dict-word-link"
+                    onClick={() => {
+                      document
+                        .getElementById(`word-${i}`)
+                        ?.scrollIntoView({ behavior: 'smooth' })
+                      flashElement(document.getElementById(`word-${i}`))
+                    }}
+                  >
+                    {exchange.location}
+                  </li>
+                )
+              return (
+                <div key={i}>
+                  <p
+                    className="dict-word-link"
+                    onClick={() => {
+                      document
+                        .getElementById(`word-${i}`)
+                        ?.scrollIntoView({ behavior: 'smooth' })
+                      flashElement(document.getElementById(`word-${i}`))
+                    }}
+                  >
+                    {exchange.location}
+                  </p>
+                  <ul>
+                    {exchange.cities.map((city, i) => {
+                      // console.log({ city })
                       return (
-                        <li
-                          className="dict-word-link"
-                          onClick={() => {
-                            document
-                              .getElementById(`word-${i}`)
-                              ?.scrollIntoView({ behavior: 'smooth' })
-                            flashElement(document.getElementById(`word-${i}`))
-                          }}
-                          key={i}
-                        >
-                          {exchange.location}
+                        <li key={i}>
+                          <p>{city.city}</p>
                         </li>
                       )
-                    return (
-                      <div key={i}>
-                        <p
-                          className="dict-word-link"
-                          onClick={() => {
-                            document
-                              .getElementById(`word-${i}`)
-                              ?.scrollIntoView({ behavior: 'smooth' })
-                            flashElement(document.getElementById(`word-${i}`))
-                          }}
-                        >
-                          {exchange.location}
-                        </p>
-                        <ul>
-                          {exchange.cities.map((city, i) => {
-                            // console.log({ city })
-                            return (
-                              <li>
-                                <p>{city.city}</p>
-                              </li>
-                            )
-                          })}
-                        </ul>
-                      </div>
-                    )
-                  })}
-                </ul>
-              </div>
-            )}
-          </Sticky>
-        </StickyContainer>
-        <div className="right">
-          <div className="exchanges-right-mobile">
-            {exhchanges.map((exchange: ExchangeLocation, i: number) => {
-              console.log(exchange.cities)
-              return (
-                <Collapse>
-                  <Panel key={i} header={exchange.location}>
-                    <li key={i} id={`word-${i}`}>
-                      {exchange.location}
-                      {exchange.cities ? renderCitiesList(exchange) : null}
-                    </li>
-                  </Panel>
-                </Collapse>
+                    })}
+                  </ul>
+                </div>
               )
             })}
+          </ul>
+        </div>
+        {/* )} */}
+        {/* </Sticky> */}
+        {/* </StickyContainer> */}
+        <div className="right">
+          <div className="exchanges-right-mobile">
+            <ul>
+              {exhchanges.map((exchange: ExchangeLocation, i: number) => {
+                // console.log(exchange.cities)
+                return (
+                  <Collapse key={i}>
+                    <Panel key={i} header={exchange.location}>
+                      <li key={i} id={`word-${i}`}>
+                        {exchange.location}
+                        {exchange.cities ? renderCitiesList(exchange) : null}
+                      </li>
+                    </Panel>
+                  </Collapse>
+                )
+              })}
+            </ul>
           </div>
           <div className="exchanges-right-desktop">
             {exhchanges.map((exchange: ExchangeLocation, i: number) => {
-              console.log(exchange.cities)
+              // console.log(exchange.cities)
               return (
                 <li key={i} id={`word-${i}`}>
                   {exchange.location}
