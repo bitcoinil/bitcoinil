@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { phoneDevices } from './breakpoints'
 import { useIntl } from './hooks/useIntl'
 import { LanguageSelectProps, LongNamesForLanguageType } from './Interfaces'
+import ico_angle from './img/ico_angle.svg'
 
 const longNamesForLanguages: LongNamesForLanguageType = {
   he: 'עִברִית',
@@ -27,7 +28,10 @@ const LanguageSelect: React.FC<LanguageSelectProps> = ({ setLanguage }) => {
         <Menu.SubMenu
           key={'lang'}
           title={
-            <p className="collapsable-menu">{longNamesForLanguages[current]}</p>
+            <p className="collapsable-menu">
+              {longNamesForLanguages[current]}{' '}
+              <img className="language-select-down-arrow" src={ico_angle} />
+            </p>
           }
         >
           {availableLanguages.map((avLang) => {
@@ -46,6 +50,16 @@ const LanguageSelect: React.FC<LanguageSelectProps> = ({ setLanguage }) => {
 const StyledLanguageSelect = styled.div`
   ${phoneDevices} {
     display: none;
+  }
+
+  .collapsable-menu {
+    &:hover .language-select-down-arrow {
+      transition: all 200ms;
+      transform: rotate(180deg);
+    }
+    .language-select-down-arrow {
+      transition: all 200ms;
+    }
   }
 
   .ant-menu {
