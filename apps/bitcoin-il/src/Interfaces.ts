@@ -141,3 +141,7 @@ export interface AvailableLanguage {
   locale: string
   longName: string
 }
+
+export interface LongNamesForLanguageType {
+  [key: string]: string
+}

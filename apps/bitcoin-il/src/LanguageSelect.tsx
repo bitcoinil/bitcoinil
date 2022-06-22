@@ -4,7 +4,12 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { phoneDevices } from './breakpoints'
 import { useIntl } from './hooks/useIntl'
-import { LanguageSelectProps } from './Interfaces'
+import { LanguageSelectProps, LongNamesForLanguageType } from './Interfaces'
+
+const longNamesForLanguages: LongNamesForLanguageType = {
+  he: 'עִברִית',
+  en: 'English'
+}
 
 const LanguageSelect: React.FC<LanguageSelectProps> = ({ setLanguage }) => {
   const intl = useIntl()
@@ -21,12 +26,14 @@ const LanguageSelect: React.FC<LanguageSelectProps> = ({ setLanguage }) => {
       <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
         <Menu.SubMenu
           key={'lang'}
-          title={<p className="collapsable-menu">{current}</p>}
+          title={
+            <p className="collapsable-menu">{longNamesForLanguages[current]}</p>
+          }
         >
           {availableLanguages.map((avLang) => {
             return (
               <Menu.Item key={avLang.name}>
-                <p>{avLang.name}</p>
+                <p>{longNamesForLanguages[avLang.name] || 'English'}</p>
               </Menu.Item>
             )
           })}
