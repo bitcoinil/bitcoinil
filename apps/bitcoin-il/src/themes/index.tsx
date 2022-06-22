@@ -7,6 +7,8 @@ import { Button } from 'antd'
 
 const { createContext, useContext, useMemo, useState } = React
 
+const showDebugButton = true
+
 export type ThemeContextValue = [ThemeContextState, ThemeContextActions]
 export interface ThemeContextState {
   themes: CompiledTheme[]
@@ -95,25 +97,25 @@ const Theme = ({ children }: Props) => {
 
   return (
     <ThemeContext.Provider value={[state, actions]}>
+      <Helmet>
+        {hrefLight && (
+          <link
+            rel="stylesheet"
+            href={hrefLight}
+            media={hrefDark && '(prefers-color-scheme: light)'}
+          />
+        )}
+        {hrefDark && (
+          <link
+            rel="stylesheet"
+            href={hrefDark}
+            media="(prefers-color-scheme: dark)"
+          />
+        )}
+        {fontHref && <link rel="stylesheet" href={fontHref} />}
+      </Helmet>
       {showDebug ? (
         <>
-          <Helmet>
-            {hrefLight && (
-              <link
-                rel="stylesheet"
-                href={hrefLight}
-                media={hrefDark && '(prefers-color-scheme: light)'}
-              />
-            )}
-            {hrefDark && (
-              <link
-                rel="stylesheet"
-                href={hrefDark}
-                media="(prefers-color-scheme: dark)"
-              />
-            )}
-            {fontHref && <link rel="stylesheet" href={fontHref} />}
-          </Helmet>
           <GlobalStyle />
           <div className="themer">
             <h1>DEBUG: </h1>
@@ -132,10 +134,17 @@ const Theme = ({ children }: Props) => {
               Change to Dark
             </Button>
           </div>
+          <DebugButtons>
+            <button onClick={() => setShowDebug(false)}>
+              Hide Theme Debug
+            </button>
+          </DebugButtons>
         </>
       ) : (
         <DebugButtons>
-          <button onClick={() => setShowDebug(true)}>Theme Debug</button>
+          {showDebugButton ? (
+            <button onClick={() => setShowDebug(true)}>Show Theme Debug</button>
+          ) : null}
         </DebugButtons>
       )}
       {children}
