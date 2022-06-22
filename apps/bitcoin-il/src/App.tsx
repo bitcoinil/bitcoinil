@@ -54,13 +54,6 @@ function App(): JSX.Element {
     </Routes>
   )
 
-  console.error = (e) => {
-    if (typeof e === 'string') console.log('🛑🛑🛑 ', e)
-    else {
-      console.log('🛑🛑🛑 Supressed Error')
-    }
-  }
-
   return (
     <Theme>
       <AppStyleWrap id="App">
