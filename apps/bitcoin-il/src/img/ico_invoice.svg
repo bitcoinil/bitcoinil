@@ -18,7 +18,7 @@
                                 <g id="Group" transform="translate(14.000000, 10.000000)">
                                     <g id="Rectangle" transform="translate(15.000000, 18.500000) scale(-1, 1) translate(-15.000000, -18.500000) ">
                                         <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                                        <path stroke="#FF9500" stroke-width="1" d="M0.5,36.5 L29.5,36.5 L29.5,0.5 L0.5,0.5 L0.5,36.5 Z"></path>
+                                        <path stroke="#00b3f0" stroke-width="1" d="M0.5,36.5 L29.5,36.5 L29.5,0.5 L0.5,0.5 L0.5,36.5 Z"></path>
                                     </g>
                                     <g id="Rectangle-3">
                                         <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>

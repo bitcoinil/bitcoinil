@@ -23,17 +23,17 @@
                                 <path d="M29.1575657,43.0267391 L29.6712287,49.4301074" id="Path-13" stroke="#1C3C55"></path>
                                 <path d="M29.1001355,42.9189381 L34.9023825,42.9189381" id="Path-14" stroke="#1C3C55"></path>
                                 <path d="M13.8250669,30.1926208 L11.5458499,12.5312017" id="Path-15" stroke="#1C3C55"></path>
-                                <circle id="Oval-4" fill="#FF9500" cx="1.5" cy="16.5" r="1.5"></circle>
-                                <circle id="Oval-4-Copy" fill="#FF9500" cx="11.5" cy="12.5" r="1.5"></circle>
-                                <circle id="Oval-4-Copy-2" fill="#FF9500" cx="2.5" cy="28.5" r="1.5"></circle>
-                                <circle id="Oval-4-Copy-3" fill="#FF9500" cx="25.5" cy="23.5" r="1.5"></circle>
-                                <circle id="Oval-4-Copy-4" fill="#FF9500" cx="13.5" cy="30.5" r="1.5"></circle>
-                                <circle id="Oval-4-Copy-5" fill="#FF9500" cx="31.5" cy="26.5" r="1.5"></circle>
-                                <circle id="Oval-4-Copy-6" fill="#FF9500" cx="26.5" cy="1.5" r="1.5"></circle>
-                                <circle id="Oval-4-Copy-7" fill="#FF9500" cx="32.5" cy="5.5" r="1.5"></circle>
-                                <circle id="Oval-4-Copy-8" fill="#FF9500" cx="8.5" cy="39.5" r="1.5"></circle>
-                                <circle id="Oval-4-Copy-10" fill="#FF9500" cx="29.5" cy="50.5" r="1.5"></circle>
-                                <circle id="Oval-4-Copy-11" fill="#FF9500" cx="35.5" cy="42.5" r="1.5"></circle>
+                                <circle id="Oval-4" fill="#00b3f0" cx="1.5" cy="16.5" r="1.5"></circle>
+                                <circle id="Oval-4-Copy" fill="#00b3f0" cx="11.5" cy="12.5" r="1.5"></circle>
+                                <circle id="Oval-4-Copy-2" fill="#00b3f0" cx="2.5" cy="28.5" r="1.5"></circle>
+                                <circle id="Oval-4-Copy-3" fill="#00b3f0" cx="25.5" cy="23.5" r="1.5"></circle>
+                                <circle id="Oval-4-Copy-4" fill="#00b3f0" cx="13.5" cy="30.5" r="1.5"></circle>
+                                <circle id="Oval-4-Copy-5" fill="#00b3f0" cx="31.5" cy="26.5" r="1.5"></circle>
+                                <circle id="Oval-4-Copy-6" fill="#00b3f0" cx="26.5" cy="1.5" r="1.5"></circle>
+                                <circle id="Oval-4-Copy-7" fill="#00b3f0" cx="32.5" cy="5.5" r="1.5"></circle>
+                                <circle id="Oval-4-Copy-8" fill="#00b3f0" cx="8.5" cy="39.5" r="1.5"></circle>
+                                <circle id="Oval-4-Copy-10" fill="#00b3f0" cx="29.5" cy="50.5" r="1.5"></circle>
+                                <circle id="Oval-4-Copy-11" fill="#00b3f0" cx="35.5" cy="42.5" r="1.5"></circle>
                             </g>
                         </g>
                     </g>

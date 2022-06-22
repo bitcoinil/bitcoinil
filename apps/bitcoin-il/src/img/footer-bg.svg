@@ -20,14 +20,14 @@
                                 <path d="M665,50 L393,14" id="Path-24"></path>
                             </g>
                             <g id="dots" transform="translate(381.000000, 1.000000)">
-                                <circle id="Oval-2" fill="#FF7E00" cx="12.5" cy="12.5" r="3.5"></circle>
-                                <circle id="Oval-2" stroke="#FF7E00" cx="12.5" cy="12.5" r="12.5"></circle>
+                                <circle id="Oval-2" fill="#00b3f0" cx="12.5" cy="12.5" r="3.5"></circle>
+                                <circle id="Oval-2" stroke="#00b3f0" cx="12.5" cy="12.5" r="12.5"></circle>
                             </g>
                             <g id="dots" transform="translate(245.000000, 27.000000)">
-                                <circle id="Oval-2" fill="#FF7E00" cx="17.5" cy="67.5" r="5.5"></circle>
-                                <circle id="Oval-2" stroke="#FF7E00" cx="17.5" cy="67.5" r="17.5"></circle>
-                                <circle id="Oval-2" fill="#FF7E00" cx="1141.5" cy="17.5" r="5.5"></circle>
-                                <circle id="Oval-2" stroke="#FF7E00" cx="1141.5" cy="17.5" r="17.5"></circle>
+                                <circle id="Oval-2" fill="#00b3f0" cx="17.5" cy="67.5" r="5.5"></circle>
+                                <circle id="Oval-2" stroke="#00b3f0" cx="17.5" cy="67.5" r="17.5"></circle>
+                                <circle id="Oval-2" fill="#00b3f0" cx="1141.5" cy="17.5" r="5.5"></circle>
+                                <circle id="Oval-2" stroke="#00b3f0" cx="1141.5" cy="17.5" r="17.5"></circle>
                             </g>
                             <g id="dots" transform="translate(1161.000000, 108.000000)">
                                 <circle id="Oval-2" fill="#C4C4C4" cx="12.5" cy="12.5" r="3.5"></circle>
@@ -46,16 +46,16 @@
                                 <circle id="Oval-2" stroke="#CACACA" cx="12.5" cy="12.5" r="12.5"></circle>
                             </g>
                             <g id="dots" transform="translate(469.000000, 107.000000)">
-                                <circle id="Oval-2" fill="#FF7E00" cx="12.5" cy="12.5" r="3.5"></circle>
-                                <circle id="Oval-2" stroke="#FF7E00" cx="12.5" cy="12.5" r="12.5"></circle>
+                                <circle id="Oval-2" fill="#00b3f0" cx="12.5" cy="12.5" r="3.5"></circle>
+                                <circle id="Oval-2" stroke="#00b3f0" cx="12.5" cy="12.5" r="12.5"></circle>
                             </g>
                             <g id="dots" transform="translate(1569.000000, 2.000000)">
-                                <circle id="Oval-2" fill="#FF7E00" cx="12.5" cy="12.5" r="3.5"></circle>
-                                <circle id="Oval-2" stroke="#FF7E00" cx="12.5" cy="12.5" r="12.5"></circle>
+                                <circle id="Oval-2" fill="#00b3f0" cx="12.5" cy="12.5" r="3.5"></circle>
+                                <circle id="Oval-2" stroke="#00b3f0" cx="12.5" cy="12.5" r="12.5"></circle>
                             </g>
                             <g id="dots" transform="translate(823.000000, 158.000000)">
-                                <circle id="Oval-2" fill="#FF7E00" cx="12.5" cy="12.5" r="3.5"></circle>
-                                <circle id="Oval-2" stroke="#FF7E00" cx="12.5" cy="12.5" r="12.5"></circle>
+                                <circle id="Oval-2" fill="#00b3f0" cx="12.5" cy="12.5" r="3.5"></circle>
+                                <circle id="Oval-2" stroke="#00b3f0" cx="12.5" cy="12.5" r="12.5"></circle>
                             </g>
                         </g>
                     </g>

@@ -12,7 +12,7 @@
                         <g id="icon/Desktop">
                             <g id="Group-3" transform="translate(7.000000, 12.000000)">
                                 <rect id="Rectangle-6" stroke="#1C1F30" x="2.5" y="0.5" width="42" height="30" rx="5"></rect>
-                                <rect id="Rectangle-6" stroke="#FF9500" x="4.5" y="2.5" width="38" height="26" rx="3"></rect>
+                                <rect id="Rectangle-6" stroke="#00b3f0" x="4.5" y="2.5" width="38" height="26" rx="3"></rect>
                                 <path d="M0.522421508,35.5 L47.4775785,35.5 C47.2249641,32.69675 44.8690213,30.5 42,30.5 L6,30.5 C3.13097872,30.5 0.775035897,32.69675 0.522421508,35.5 Z" id="Rectangle-3" stroke="#95AABF" transform="translate(24.000000, 33.000000) rotate(180.000000) translate(-24.000000, -33.000000) "></path>
                             </g>
                         </g>
