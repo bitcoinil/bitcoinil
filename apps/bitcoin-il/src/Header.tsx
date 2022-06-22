@@ -43,7 +43,7 @@ const StyledHeader = styled.div`
   height: 60px;
   padding: 0 70px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   .logo {
     margin: 0;
