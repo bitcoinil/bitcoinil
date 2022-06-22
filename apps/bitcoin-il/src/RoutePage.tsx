@@ -34,13 +34,16 @@ export default function RoutePage({
         </h3>
         <div className="trans-bel"></div>
       </div>
-      <div className="body">{body}</div>
+      <div className="routepage-body">{body}</div>
     </StyledRoutePage>
   )
 }
 
 const StyledRoutePage = styled.div`
   min-height: 100vh;
+
+  .routepage-body {
+  }
 
   .page-title {
     background-image: url('${HeroBg}');
