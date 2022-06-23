@@ -161,3 +161,7 @@ export interface ExchangeLocation {
   exchanges?: Exchange[]
   cities?: ExchangeCountry[]
 }
+
+export interface CardsDisplayProps {
+  cards: BodyCard[]
+}
