@@ -34,8 +34,6 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
   const [isBelowZero, setIsBelowZero] = React.useState(false)
   const [isAtEnd, setIsAtEnd] = React.useState(false)
 
-  console.log(isAtEnd)
-
   const columnsRef = React.createRef<HTMLDivElement>()
   const endRef = React.createRef<HTMLDivElement>()
 
@@ -102,7 +100,7 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
           isBelowZero && !isAtEnd ? 'sticky' : 'unsticky'
         }`}
       >
-        <div className={`exchanges-left `}>
+        <div className={`exchanges-left `} id="style-5">
           <ul>
             {exhchanges.map((exchange, i) => {
               if (!exchange.cities)
@@ -192,7 +190,6 @@ const StyledExchangesBody = styled.div`
   flex-direction: column;
 
   .sticky .exchanges-left {
-    background: red;
     position: fixed;
     top: 0;
     overflow-y: scroll;
@@ -204,11 +201,38 @@ const StyledExchangesBody = styled.div`
   }
 
   .unsticky {
-    background: green;
   }
 
   li {
     list-style: none;
+  }
+
+  #style-5 {
+    scrollbar-width: thin;
+  }
+
+  #style-5::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+  }
+
+  #style-5::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+  }
+
+  #style-5::-webkit-scrollbar-thumb {
+    background-color: ${colors.accent};
+
+    /* background-image: -webkit-gradient(
+      linear,
+      0 0,
+      0 100%,
+      color-stop(0.5, rgba(255, 255, 255, 0.2)),
+      color-stop(0.5, transparent),
+      to(transparent)
+    ); */
   }
 
   .exchanges-columns {
