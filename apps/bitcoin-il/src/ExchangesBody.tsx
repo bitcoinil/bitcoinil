@@ -32,33 +32,33 @@ const renderCitiesList = (ex: ExchangeLocation) => {
 
 const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
   const [isBelowZero, setIsBelowZero] = React.useState(false)
-  const [isAtEnd, setIsAtEnd] = React.useState(0)
+  const [isAtEnd, setIsAtEnd] = React.useState(false)
+
+  console.log(isAtEnd)
 
   const columnsRef = React.createRef<HTMLDivElement>()
+  const endRef = React.createRef<HTMLDivElement>()
 
   const scrollCheckMenuInView = () => {
-    // console.log('before')
-    // if (!columnsRef.current) return
-    // console.log('after')
-    // console.log(columnsRef.current?.getBoundingClientRect().y < 0)
-    // console.log('SCSHCKSAHJCKJSHKAS')
-
-    // if (!columnsRef.current?.getBoundingClientRect()?.y) return
-    // console.log(columnsRef.current?.getBoundingClientRect()?.y <= 0)
     if (!columnsRef.current?.getBoundingClientRect().y) return null
     setIsBelowZero(columnsRef.current?.getBoundingClientRect()?.y <= 0)
-
-    // if () {
-    // setIsBelowZero(columnsRef.current?.getBoundingClientRect().y < 0)
-    // } else {
-    // setIsBelowZero(false)
-    // }
   }
 
   React.useEffect(() => {
     window.addEventListener('scroll', scrollCheckMenuInView)
 
     return () => window.removeEventListener('scroll', scrollCheckMenuInView)
+  })
+
+  const scrollCheckEnderInView = () => {
+    if (!endRef?.current) return
+    setIsAtEnd(endRef.current?.getBoundingClientRect().y < window.innerHeight)
+  }
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', scrollCheckEnderInView)
+
+    return () => window.removeEventListener('scroll', scrollCheckEnderInView)
   })
 
   const flashElement = (el: HTMLElement | null) => {
@@ -98,12 +98,13 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
       </div>
       <div
         ref={columnsRef}
-        className={`exchanges-columns ${isBelowZero ? 'sticky' : 'unsticky'}`}
+        className={`exchanges-columns ${
+          isBelowZero && !isAtEnd ? 'sticky' : 'unsticky'
+        }`}
       >
         <div className={`exchanges-left `}>
           <ul>
             {exhchanges.map((exchange, i) => {
-              // console.log(exchange.location)
               if (!exchange.cities)
                 return (
                   <li
@@ -134,7 +135,6 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
                   </p>
                   <ul>
                     {exchange.cities.map((city, i) => {
-                      // console.log({ city })
                       return (
                         <li key={i}>
                           <p>{city.city}</p>
@@ -147,14 +147,10 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
             })}
           </ul>
         </div>
-        {/* )} */}
-        {/* </Sticky> */}
-        {/* </StickyContainer> */}
         <div className="right">
           <div className="exchanges-right-mobile">
             <ul>
               {exhchanges.map((exchange: ExchangeLocation, i: number) => {
-                // console.log(exchange.cities)
                 return (
                   <Collapse key={i}>
                     <Panel key={i} header={exchange.location}>
@@ -170,7 +166,6 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
           </div>
           <div className="exchanges-right-desktop">
             {exhchanges.map((exchange: ExchangeLocation, i: number) => {
-              // console.log(exchange.cities)
               return (
                 <li key={i} id={`word-${i}`}>
                   {exchange.location}
@@ -181,15 +176,10 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
           </div>
         </div>
       </div>
-      <ReactScrollDetect
-        // index={section}
-        triggerPoint="bottom"
-        onChange={setIsAtEnd}
-      >
-        <DetectSection>
-          <div className="scroll-end-detect">DETECT END OF SCROLLLL</div>
-        </DetectSection>
-      </ReactScrollDetect>
+
+      <div ref={endRef} className="scroll-end-detect">
+        DETECT END OF SCROLLLL
+      </div>
     </StyledExchangesBody>
   )
 }
@@ -199,12 +189,13 @@ export default ExchangesBody
 const StyledExchangesBody = styled.div`
   justify-content: center;
   display: flex;
+  flex-direction: column;
 
   .sticky .exchanges-left {
     background: red;
     position: fixed;
     top: 0;
-    overflow: scroll;
+    overflow-y: scroll;
     height: 100vh;
   }
 
@@ -215,10 +206,6 @@ const StyledExchangesBody = styled.div`
   .unsticky {
     background: green;
   }
-
-  /* ${phoneDevices} { */
-  flex-direction: column;
-  /* } */
 
   li {
     list-style: none;
@@ -307,30 +294,6 @@ const StyledExchangesBody = styled.div`
     background: orange;
     z-index: 999999999999;
     width: 95vw;
+    visibility: hidden;
   }
 `
-
-function useIsInViewport(ref: Element) {
-  console.log(ref)
-  // if (!ref) return null
-  const [isIntersecting, setIsIntersecting] = React.useState(false)
-
-  const observer = React.useMemo(
-    () =>
-      new IntersectionObserver(([entry]) =>
-        setIsIntersecting(entry.isIntersecting)
-      ),
-    []
-  )
-
-  React.useEffect(() => {
-    // if (!ref) return null
-    observer.observe(ref)
-
-    return () => {
-      observer.disconnect()
-    }
-  }, [ref, observer])
-
-  return isIntersecting
-}
