@@ -7,7 +7,7 @@ import { Button } from 'antd'
 
 const { createContext, useContext, useMemo, useState } = React
 
-const showDebugButton = true
+const showDebugButton = false
 
 export type ThemeContextValue = [ThemeContextState, ThemeContextActions]
 export interface ThemeContextState {
