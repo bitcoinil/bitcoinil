@@ -158,6 +158,7 @@ const DebugButtons = styled.div`
   position: fixed;
   top: 0;
   opacity: 0.2;
+  z-index: 99;
 
   button {
     cursor: pointer;

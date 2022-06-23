@@ -4,10 +4,9 @@ import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
 import { phoneDevices, smallDevices } from './breakpoints'
 import { colors } from './colors'
+import { exhchanges } from './ExchangesBodyData'
 import ico_badge from './img/ico_badge.svg'
 import { ExchangeLocation, ExchangesBodyProps } from './Interfaces'
-import { exhchanges } from './ExchangesBodyData'
-import ReactScrollDetect, { DetectSection } from 'react-scroll-detect'
 
 const { Panel } = Collapse
 
@@ -121,7 +120,7 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
               return (
                 <div key={i}>
                   <p
-                    className="dict-word-link"
+                    className="dict-word-link with-side"
                     onClick={() => {
                       document
                         .getElementById(`word-${i}`)
@@ -132,9 +131,18 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
                     {exchange.location}
                   </p>
                   <ul>
-                    {exchange.cities.map((city, i) => {
+                    {exchange.cities.map((city, ii) => {
                       return (
-                        <li key={i}>
+                        <li
+                          className="dict-word-link with-side-border"
+                          onClick={() => {
+                            document
+                              .getElementById(`word-${i}`)
+                              ?.scrollIntoView({ behavior: 'smooth' })
+                            flashElement(document.getElementById(`word-${i}`))
+                          }}
+                          key={i}
+                        >
                           <p>{city.city}</p>
                         </li>
                       )
@@ -207,32 +215,8 @@ const StyledExchangesBody = styled.div`
     list-style: none;
   }
 
-  #style-5 {
-    scrollbar-width: thin;
-  }
-
-  #style-5::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #f5f5f5;
-  }
-
   #style-5::-webkit-scrollbar {
-    width: 10px;
-    background-color: #f5f5f5;
-  }
-
-  #style-5::-webkit-scrollbar-thumb {
-    background-color: ${colors.accent};
-
-    /* background-image: -webkit-gradient(
-      linear,
-      0 0,
-      0 100%,
-      color-stop(0.5, rgba(255, 255, 255, 0.2)),
-      color-stop(0.5, transparent),
-      to(transparent)
-    ); */
+    display: none;
   }
 
   .exchanges-columns {
@@ -270,15 +254,16 @@ const StyledExchangesBody = styled.div`
     width: 35vw;
     font-size: 20px;
     border-right: 1px solid #b9b9c350;
-    padding-top: 60px;
+    background: #282c34;
+    z-index: 1;
+  }
 
-    li {
-      margin-bottom: 10px;
-    }
+  li {
+    margin-bottom: 10px;
+  }
 
-    ${phoneDevices} {
-      display: none;
-    }
+  ${phoneDevices} {
+    display: none;
   }
 
   .right {
@@ -307,10 +292,21 @@ const StyledExchangesBody = styled.div`
   .dict-word-link {
     cursor: pointer;
 
+    margin: 0;
+
     transition: opacity 400ms;
     &:hover {
       transition: opacity 400ms;
       opacity: 0.6;
+    }
+  }
+
+  .with-side-border {
+    font-size: 16px;
+    transition: all 500ms;
+    &:hover {
+      transition: all 500ms;
+      border-right: 5px solid ${colors.accent};
     }
   }
 
