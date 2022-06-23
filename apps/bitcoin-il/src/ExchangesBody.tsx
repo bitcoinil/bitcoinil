@@ -34,6 +34,33 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
   const [isBelowZero, setIsBelowZero] = React.useState(false)
   const [isAtEnd, setIsAtEnd] = React.useState(0)
 
+  const columnsRef = React.createRef<HTMLDivElement>()
+
+  const scrollCheckMenuInView = () => {
+    // console.log('before')
+    // if (!columnsRef.current) return
+    // console.log('after')
+    // console.log(columnsRef.current?.getBoundingClientRect().y < 0)
+    // console.log('SCSHCKSAHJCKJSHKAS')
+
+    // if (!columnsRef.current?.getBoundingClientRect()?.y) return
+    // console.log(columnsRef.current?.getBoundingClientRect()?.y <= 0)
+    if (!columnsRef.current?.getBoundingClientRect().y) return null
+    setIsBelowZero(columnsRef.current?.getBoundingClientRect()?.y <= 0)
+
+    // if () {
+    // setIsBelowZero(columnsRef.current?.getBoundingClientRect().y < 0)
+    // } else {
+    // setIsBelowZero(false)
+    // }
+  }
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', scrollCheckMenuInView)
+
+    return () => window.removeEventListener('scroll', scrollCheckMenuInView)
+  })
+
   const flashElement = (el: HTMLElement | null) => {
     if (!el) return
 
@@ -70,6 +97,7 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
         />
       </div>
       <div
+        ref={columnsRef}
         className={`exchanges-columns ${isBelowZero ? 'sticky' : 'unsticky'}`}
       >
         <div className={`exchanges-left `}>
