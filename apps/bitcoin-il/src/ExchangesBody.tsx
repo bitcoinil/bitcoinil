@@ -13,12 +13,12 @@ const { Panel } = Collapse
 const renderCitiesList = (ex: ExchangeLocation) => {
   return ex?.cities?.map((city, i) => {
     return (
-      <div key={i}>
+      <div key={`city-${i}`}>
         <span>{city.city}</span>
         <ul>
           {city.exchanges.map((exc, ii) => {
             return (
-              <span key={ii}>
+              <span key={`city-exchange-${ii}`}>
                 <a href={exc.link}>{exc.name}</a>
               </span>
             )
@@ -105,7 +105,7 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
               if (!exchange.cities)
                 return (
                   <li
-                    key={i}
+                    key={`exichange-${i}`}
                     className="dict-word-link"
                     onClick={() => {
                       document
@@ -118,7 +118,7 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
                   </li>
                 )
               return (
-                <div key={i}>
+                <div key={`dict-word-${i}`}>
                   <p
                     className="dict-word-link with-side"
                     onClick={() => {
@@ -141,7 +141,7 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
                               ?.scrollIntoView({ behavior: 'smooth' })
                             flashElement(document.getElementById(`word-${i}`))
                           }}
-                          key={i}
+                          key={`side-border-${ii}`}
                         >
                           <p>{city.city}</p>
                         </li>
@@ -158,9 +158,15 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
             <ul>
               {exhchanges.map((exchange: ExchangeLocation, i: number) => {
                 return (
-                  <Collapse key={i}>
-                    <Panel key={i} header={exchange.location}>
-                      <li key={i} id={`word-${i}`}>
+                  <Collapse key={`right-exchanges-${i}`}>
+                    <Panel
+                      key={`right-exchanges-panel-${i}`}
+                      header={exchange.location}
+                    >
+                      <li
+                        key={`right-exchanges-panel-li-${i}`}
+                        id={`word-${i}`}
+                      >
                         {exchange.location}
                         {exchange.cities ? renderCitiesList(exchange) : null}
                       </li>
@@ -173,7 +179,7 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
           <div className="exchanges-right-desktop">
             {exhchanges.map((exchange: ExchangeLocation, i: number) => {
               return (
-                <li key={i} id={`word-${i}`}>
+                <li key={`ex-right-desktop-${i}`} id={`word-${i}`}>
                   {exchange.location}
                   {exchange.cities ? renderCitiesList(exchange) : null}
                 </li>
