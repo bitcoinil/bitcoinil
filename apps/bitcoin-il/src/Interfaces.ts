@@ -155,11 +155,13 @@ export interface ExchangeCountry {
   city: JSX.Element
   exchanges: Exchange[]
   flag: string
+  countryCode?: string
 }
 export interface ExchangeLocation {
   location: JSX.Element
   exchanges?: Exchange[]
   cities?: ExchangeCountry[]
+  countryCode?: string
 }
 
 export interface CardsDisplayProps {

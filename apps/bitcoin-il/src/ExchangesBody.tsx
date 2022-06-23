@@ -7,6 +7,7 @@ import { colors } from './colors'
 import { exhchanges } from './ExchangesBodyData'
 import ico_badge from './img/ico_badge.svg'
 import { ExchangeLocation, ExchangesBodyProps } from './Interfaces'
+import ReactCountryFlag from 'react-country-flag'
 
 const { Panel } = Collapse
 
@@ -14,12 +15,22 @@ const renderCitiesList = (ex: ExchangeLocation) => {
   return ex?.cities?.map((city, i) => {
     return (
       <div key={`city-${i}`}>
-        <span>{city.city}</span>
+        <span className="city-label">
+          {city.countryCode ? (
+            <ReactCountryFlag
+              className="country-flag"
+              countryCode={city.countryCode}
+            />
+          ) : null}
+          {city.city}
+        </span>
         <ul>
           {city.exchanges.map((exc, ii) => {
             return (
               <span key={`city-exchange-${ii}`}>
-                <a href={exc.link}>{exc.name}</a>
+                <a href={exc.link}>
+                  <h4>{exc.name}</h4>
+                </a>
               </span>
             )
           })}
@@ -115,6 +126,11 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
                     }}
                   >
                     {exchange.location}
+                    <ul>
+                      {exchange?.exchanges?.map((ex, ii) => {
+                        return <span>{ex.name}</span>
+                      })}
+                    </ul>
                   </li>
                 )
               return (
@@ -180,7 +196,23 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
             {exhchanges.map((exchange: ExchangeLocation, i: number) => {
               return (
                 <li key={`ex-right-desktop-${i}`} id={`word-${i}`}>
-                  {exchange.location}
+                  <h1 className="country-label">{exchange.location}</h1>
+                  <div className="cities-wrap">
+                    {exchange.exchanges
+                      ? exchange.exchanges.map((ex, i) => {
+                          return (
+                            <li
+                              className="li-no-border-bottom"
+                              key={`exhcnage-no-city-${i}`}
+                            >
+                              <a href={ex.link}>
+                                <h4>{ex.name}</h4>
+                              </a>
+                            </li>
+                          )
+                        })
+                      : null}
+                  </div>
                   {exchange.cities ? renderCitiesList(exchange) : null}
                 </li>
               )
@@ -211,7 +243,7 @@ const StyledExchangesBody = styled.div`
   }
 
   .sticky .exchanges-right-desktop {
-    margin-left: 500px;
+    margin-left: 35vw;
   }
 
   .unsticky {
@@ -273,15 +305,17 @@ const StyledExchangesBody = styled.div`
   }
 
   .right {
-    width: 65vw;
-
     ${phoneDevices} {
       width: 95vw;
     }
 
     li {
-      padding: 50px;
+      padding: 25px;
       border-bottom: 1px solid #b9b9c350;
+
+      &.li-no-border-bottom {
+        border-bottom: 0;
+      }
     }
 
     h3 {
@@ -321,5 +355,29 @@ const StyledExchangesBody = styled.div`
     z-index: 999999999999;
     width: 95vw;
     visibility: hidden;
+  }
+
+  h4 {
+    color: ${colors.accent};
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 50px;
+  }
+
+  .city-label {
+    font-size: 25px;
+  }
+
+  .country-label {
+    font-size: 33px;
+  }
+
+  .country-flag {
+    font-size: 45px !important;
+    margin-right: 10px;
+  }
+
+  .cities-wrap {
+    display: flex;
   }
 `

@@ -16,7 +16,7 @@ export const exhchanges: ExchangeLocation[] = [
         name: (
           <FormattedMessage
             id={`exchange.menuItem.someExchange`}
-            defaultMessage={`Some Exchange ...`}
+            defaultMessage={`Some International Exchange ...`}
             description={`someExchange`}
           />
         ),
@@ -62,6 +62,7 @@ export const exhchanges: ExchangeLocation[] = [
             description={`bahrain`}
           />
         ),
+        countryCode: 'BH',
         exchanges: [
           {
             name: (
@@ -84,6 +85,7 @@ export const exhchanges: ExchangeLocation[] = [
             description={`israel`}
           />
         ),
+        countryCode: 'IL',
         exchanges: [
           {
             name: (
@@ -103,27 +105,28 @@ export const exhchanges: ExchangeLocation[] = [
   {
     location: (
       <FormattedMessage
-        id={`exchange.menuItem.asia.label`}
-        defaultMessage={`Asia`}
-        description={`asia.label`}
+        id={`exchange.menuItem.north-america.label`}
+        defaultMessage={`North America`}
+        description={`north-america.label`}
       />
     ),
     cities: [
       {
         city: (
           <FormattedMessage
-            id={`exchange.menuItem.bahrain`}
-            defaultMessage={`Bahrain`}
-            description={`bahrain`}
+            id={`exchange.menuItem.Canada`}
+            defaultMessage={`Canada`}
+            description={`Canada`}
           />
         ),
+        countryCode: 'CA',
         exchanges: [
           {
             name: (
               <FormattedMessage
-                id={`exchange.menuItem.bahrain.exhange.label`}
-                defaultMessage={`Some Bahrainian Exchange`}
-                description={`bahrain.exhange.label`}
+                id={`exchange.menuItem.canada.exhange.label`}
+                defaultMessage={`Toronto`}
+                description={`canada.exhange.label`}
               />
             ),
             link: 'string'
@@ -134,403 +137,49 @@ export const exhchanges: ExchangeLocation[] = [
       {
         city: (
           <FormattedMessage
-            id={`exchange.menuItem.israel`}
-            defaultMessage={`Israel`}
-            description={`israel`}
+            id={`exchange.menuItem.USA`}
+            defaultMessage={`USA`}
+            description={`USA`}
           />
         ),
+        countryCode: 'US',
         exchanges: [
           {
             name: (
               <FormattedMessage
-                id={`exchange.menuItem.israel.exchange`}
-                defaultMessage={`Some Israeli Exchange`}
-                description={`israel.exchange`}
+                id={`exchange.menuItem.USA.texas`}
+                defaultMessage={`Texas`}
+                description={`USA.texas`}
               />
             ),
             link: 'string'
-          }
-        ],
-        flag: 'TBD'
-      }
-    ]
-  },
-  {
-    location: (
-      <FormattedMessage
-        id={`exchange.menuItem.asia.label`}
-        defaultMessage={`Asia`}
-        description={`asia.label`}
-      />
-    ),
-    cities: [
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.bahrain`}
-            defaultMessage={`Bahrain`}
-            description={`bahrain`}
-          />
-        ),
-        exchanges: [
+          },
           {
             name: (
               <FormattedMessage
-                id={`exchange.menuItem.bahrain.exhange.label`}
-                defaultMessage={`Some Bahrainian Exchange`}
-                description={`bahrain.exhange.label`}
+                id={`exchange.menuItem.USA.detroit`}
+                defaultMessage={`Detroit`}
+                description={`USA.detroit`}
               />
             ),
             link: 'string'
-          }
-        ],
-        flag: `TBD`
-      },
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.israel`}
-            defaultMessage={`Israel`}
-            description={`israel`}
-          />
-        ),
-        exchanges: [
+          },
           {
             name: (
               <FormattedMessage
-                id={`exchange.menuItem.israel.exchange`}
-                defaultMessage={`Some Israeli Exchange`}
-                description={`israel.exchange`}
+                id={`exchange.menuItem.USA.Miami`}
+                defaultMessage={`Miami`}
+                description={`USA.Miami`}
               />
             ),
             link: 'string'
-          }
-        ],
-        flag: 'TBD'
-      }
-    ]
-  },
-  {
-    location: (
-      <FormattedMessage
-        id={`exchange.menuItem.asia.label`}
-        defaultMessage={`Asia`}
-        description={`asia.label`}
-      />
-    ),
-    cities: [
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.bahrain`}
-            defaultMessage={`Bahrain`}
-            description={`bahrain`}
-          />
-        ),
-        exchanges: [
+          },
           {
             name: (
               <FormattedMessage
-                id={`exchange.menuItem.bahrain.exhange.label`}
-                defaultMessage={`Some Bahrainian Exchange`}
-                description={`bahrain.exhange.label`}
-              />
-            ),
-            link: 'string'
-          }
-        ],
-        flag: `TBD`
-      },
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.israel`}
-            defaultMessage={`Israel`}
-            description={`israel`}
-          />
-        ),
-        exchanges: [
-          {
-            name: (
-              <FormattedMessage
-                id={`exchange.menuItem.israel.exchange`}
-                defaultMessage={`Some Israeli Exchange`}
-                description={`israel.exchange`}
-              />
-            ),
-            link: 'string'
-          }
-        ],
-        flag: 'TBD'
-      }
-    ]
-  },
-  {
-    location: (
-      <FormattedMessage
-        id={`exchange.menuItem.asia.label`}
-        defaultMessage={`Asia`}
-        description={`asia.label`}
-      />
-    ),
-    cities: [
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.bahrain`}
-            defaultMessage={`Bahrain`}
-            description={`bahrain`}
-          />
-        ),
-        exchanges: [
-          {
-            name: (
-              <FormattedMessage
-                id={`exchange.menuItem.bahrain.exhange.label`}
-                defaultMessage={`Some Bahrainian Exchange`}
-                description={`bahrain.exhange.label`}
-              />
-            ),
-            link: 'string'
-          }
-        ],
-        flag: `TBD`
-      },
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.israel`}
-            defaultMessage={`Israel`}
-            description={`israel`}
-          />
-        ),
-        exchanges: [
-          {
-            name: (
-              <FormattedMessage
-                id={`exchange.menuItem.israel.exchange`}
-                defaultMessage={`Some Israeli Exchange`}
-                description={`israel.exchange`}
-              />
-            ),
-            link: 'string'
-          }
-        ],
-        flag: 'TBD'
-      }
-    ]
-  },
-  {
-    location: (
-      <FormattedMessage
-        id={`exchange.menuItem.asia.label`}
-        defaultMessage={`Asia`}
-        description={`asia.label`}
-      />
-    ),
-    cities: [
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.bahrain`}
-            defaultMessage={`Bahrain`}
-            description={`bahrain`}
-          />
-        ),
-        exchanges: [
-          {
-            name: (
-              <FormattedMessage
-                id={`exchange.menuItem.bahrain.exhange.label`}
-                defaultMessage={`Some Bahrainian Exchange`}
-                description={`bahrain.exhange.label`}
-              />
-            ),
-            link: 'string'
-          }
-        ],
-        flag: `TBD`
-      },
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.israel`}
-            defaultMessage={`Israel`}
-            description={`israel`}
-          />
-        ),
-        exchanges: [
-          {
-            name: (
-              <FormattedMessage
-                id={`exchange.menuItem.israel.exchange`}
-                defaultMessage={`Some Israeli Exchange`}
-                description={`israel.exchange`}
-              />
-            ),
-            link: 'string'
-          }
-        ],
-        flag: 'TBD'
-      }
-    ]
-  },
-  {
-    location: (
-      <FormattedMessage
-        id={`exchange.menuItem.asia.label`}
-        defaultMessage={`Asia`}
-        description={`asia.label`}
-      />
-    ),
-    cities: [
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.bahrain`}
-            defaultMessage={`Bahrain`}
-            description={`bahrain`}
-          />
-        ),
-        exchanges: [
-          {
-            name: (
-              <FormattedMessage
-                id={`exchange.menuItem.bahrain.exhange.label`}
-                defaultMessage={`Some Bahrainian Exchange`}
-                description={`bahrain.exhange.label`}
-              />
-            ),
-            link: 'string'
-          }
-        ],
-        flag: `TBD`
-      },
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.israel`}
-            defaultMessage={`Israel`}
-            description={`israel`}
-          />
-        ),
-        exchanges: [
-          {
-            name: (
-              <FormattedMessage
-                id={`exchange.menuItem.israel.exchange`}
-                defaultMessage={`Some Israeli Exchange`}
-                description={`israel.exchange`}
-              />
-            ),
-            link: 'string'
-          }
-        ],
-        flag: 'TBD'
-      }
-    ]
-  },
-  {
-    location: (
-      <FormattedMessage
-        id={`exchange.menuItem.asia.label`}
-        defaultMessage={`Asia`}
-        description={`asia.label`}
-      />
-    ),
-    cities: [
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.bahrain`}
-            defaultMessage={`Bahrain`}
-            description={`bahrain`}
-          />
-        ),
-        exchanges: [
-          {
-            name: (
-              <FormattedMessage
-                id={`exchange.menuItem.bahrain.exhange.label`}
-                defaultMessage={`Some Bahrainian Exchange`}
-                description={`bahrain.exhange.label`}
-              />
-            ),
-            link: 'string'
-          }
-        ],
-        flag: `TBD`
-      },
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.israel`}
-            defaultMessage={`Israel`}
-            description={`israel`}
-          />
-        ),
-        exchanges: [
-          {
-            name: (
-              <FormattedMessage
-                id={`exchange.menuItem.israel.exchange`}
-                defaultMessage={`Some Israeli Exchange`}
-                description={`israel.exchange`}
-              />
-            ),
-            link: 'string'
-          }
-        ],
-        flag: 'TBD'
-      }
-    ]
-  },
-  {
-    location: (
-      <FormattedMessage
-        id={`exchange.menuItem.asia.label`}
-        defaultMessage={`Asia`}
-        description={`asia.label`}
-      />
-    ),
-    cities: [
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.bahrain`}
-            defaultMessage={`Bahrain`}
-            description={`bahrain`}
-          />
-        ),
-        exchanges: [
-          {
-            name: (
-              <FormattedMessage
-                id={`exchange.menuItem.bahrain.exhange.label`}
-                defaultMessage={`Some Bahrainian Exchange`}
-                description={`bahrain.exhange.label`}
-              />
-            ),
-            link: 'string'
-          }
-        ],
-        flag: `TBD`
-      },
-      {
-        city: (
-          <FormattedMessage
-            id={`exchange.menuItem.israel`}
-            defaultMessage={`Israel`}
-            description={`israel`}
-          />
-        ),
-        exchanges: [
-          {
-            name: (
-              <FormattedMessage
-                id={`exchange.menuItem.israel.exchange`}
-                defaultMessage={`Some Israeli Exchange`}
-                description={`israel.exchange`}
+                id={`exchange.menuItem.USA.New-York`}
+                defaultMessage={`New York`}
+                description={`USA.New York`}
               />
             ),
             link: 'string'
