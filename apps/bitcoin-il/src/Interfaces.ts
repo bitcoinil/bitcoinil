@@ -145,3 +145,19 @@ export interface AvailableLanguage {
 export interface LongNamesForLanguageType {
   [key: string]: string
 }
+
+export interface Exchange {
+  name: JSX.Element
+  link: string
+}
+
+export interface ExchangeCountry {
+  city: JSX.Element
+  exchanges: Exchange[]
+  flag: string
+}
+export interface ExchangeLocation {
+  location: JSX.Element
+  exchanges?: Exchange[]
+  cities?: ExchangeCountry[]
+}
