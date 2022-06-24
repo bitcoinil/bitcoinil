@@ -60,7 +60,9 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
 
   const scrollCheckEnderInView = () => {
     if (!endRef?.current) return
-    setIsAtEnd(endRef.current?.getBoundingClientRect().y < window.innerHeight)
+    setIsAtEnd(
+      endRef.current?.getBoundingClientRect().y < window.innerHeight - 100
+    )
   }
 
   React.useEffect(() => {
@@ -127,6 +129,7 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
                   >
                     {exchange.location}
                     <ul>
+                      {' '}
                       {exchange?.exchanges?.map((ex, ii) => {
                         return <span>{ex.name}</span>
                       })}
