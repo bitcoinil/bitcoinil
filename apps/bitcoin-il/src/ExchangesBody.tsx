@@ -129,7 +129,7 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
                   >
                     {exchange.location}
                     <ul>
-                      {' '}
+                      {'    '}
                       {exchange?.exchanges?.map((ex, ii) => {
                         return <span>{ex.name}</span>
                       })}
