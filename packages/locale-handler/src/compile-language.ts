@@ -65,9 +65,11 @@ const init = async () => {
   verbose && console.log('🗂 Database ready')
   
   verbose && console.log('🗂 Getting language')
-  const items = await database.read('language')
+  const items = await database.read('language', 3, false)
 
+  console.log('Items:', items)
   console.log('Items:', items.length)
+  
 
   verbose && console.timeLog('init', 'Langauge loaded')
 

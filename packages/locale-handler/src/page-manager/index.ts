@@ -1,9 +1,14 @@
 import { Client } from '@notionhq/client'
-import { ListBlockChildrenResponse } from '@notionhq/client/build/src/api-endpoints'
+import {
+  ListBlockChildrenResponse,
+  QueryDatabaseResponse
+} from '@notionhq/client/build/src/api-endpoints'
+import NotionDatabaseHandler from './database.handler'
 
 type Cache = {
   confBlockId?: string
   containers: Record<string, any>
+  handlers: Record<string, any>
   items: Record<string, string>
   values: Record<string, any>
   fetching: Record<string, Promise<any> | null | false>
@@ -31,7 +36,7 @@ type ABlock = ToggleBlock | DatabaseBlock
 type BlockHandler = {
   find: (children: ListBlockChildrenResponse) => Record<string, any>
   create: () => Promise<any>
-  read: () => Promise<any>
+  read: (pageSize?: number, readAll?: Boolean) => Promise<any>
   write: (key: string, value: any) => Promise<void>
   get: (key?: string) => Promise<any>
 }
@@ -54,11 +59,12 @@ class PageManager {
   public pageName: string = ''
   public pageId: string = ''
 
-  private client: Client
+  public client: Client
   // private cache: Cache = { /**
   public cache: Cache = {
     //  */
     containers: {},
+    handlers: {},
     items: {},
     values: {},
     fetching: {},
@@ -131,10 +137,15 @@ class PageManager {
 
     return {
       instance: db,
+      attachHandler: (handler: NotionDatabaseHandler) => {
+        this.cache.handlers[dbName] = handler
+        cache.handler = handler
+      },
       updateProperties: (properties: Record<string, any>) =>
         // @ts-ignore
         dbHandler.updateProperties(properties),
-      read: () => dbHandler.read(),
+      read: (pageSize?: 100, readAll?: Boolean) =>
+        dbHandler.read(pageSize, readAll),
       getAll: () => 'ALL',
       get: (key: string) => dbHandler.get(key),
       set: (key: string, value: any) => dbHandler.write(key, value)
@@ -308,28 +319,57 @@ class PageManager {
 
         return db
       },
-      read: async () => {
+      read: async (pageSize?: 100, readAll?: true) => {
+        const [indexName] = Object.entries(dbProperties).find(
+          ([dbName, prop]) => prop.type === 'title'
+        ) as any
+
         const items = []
         let cursor
 
         while (true) {
-          const response = await this.client.databases.query({
+          const response = (await this.client.databases.query({
             database_id: cacheObject.dbId,
-            page_size: 100,
+            page_size: pageSize,
+            sorts: [
+              {
+                property: indexName,
+                direction: 'ascending'
+              }
+            ],
             ...(cursor ? { start_cursor: cursor } : {})
-          }) as any
-          if (response.results.length) {
-            items.push(...response.results)
-            console.log('💨 Response of read:', response)
-          }
-          if (response.has_more) {
-            cursor = response.next_cursor
-          } else {
-            break
-          }
+          })) as any
+
+          if (response.results.length) items.push(...response.results)
+
+          if (readAll && response.has_more) cursor = response.next_cursor
+          else break
         }
 
-        return items
+        const valued = PageManager.valuefy(items)
+
+        console.log(
+          'Does the database have a handler attached?',
+          cacheObject.handler
+        )
+        if (cacheObject.handler) {
+          const handler = cacheObject.handler
+          console.log('Handler:', handler)
+
+          const final = await valued.reduce(
+            (p, item) =>
+              p.then(async (results: any[]) => {
+                const hydrated = await handler.hydrateValues(dbName, item.values)
+                console.log('Wet and dry props?', { hydrated })
+                return [...results, { ...item, hydrated }]
+              }),
+            Promise.resolve([])
+          )
+          console.log('Post hydration::', final)
+
+          return final
+        }
+        return valued
       },
       write: async (key: string, data: any) => {
         const [indexName, indexProperty] = Object.entries(dbProperties).find(
@@ -771,6 +811,28 @@ class PageManager {
       : prop.type === 'multi_select'
       ? prop.multi_select.map(({ name }: any) => name).join(', ')
       : `Unsupported prop type: ${prop.type}`
+
+  static valuefy = (items: QueryDatabaseResponse[]) =>
+    items
+      .map((item: any) => ({
+        ...item,
+        properties: Object.entries(item.properties)
+          .map(([name, prop]: [string, any]) => [
+            name,
+            { ...prop, value: PageManager.propertyValue(prop) }
+          ])
+          .reduce((acc, [name, prop]) => ({ ...acc, [name]: prop }), {})
+      }))
+      .map((item) => ({
+        ...item,
+        values: Object.entries(item.properties).reduce(
+          (acc, [name, prop]: [string, any]) => ({
+            ...acc,
+            [name]: prop.value
+          }),
+          {}
+        )
+      }))
 }
 
 export default PageManager

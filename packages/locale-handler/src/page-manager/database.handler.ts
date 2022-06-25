@@ -7,10 +7,10 @@ import {
 } from '../database.types'
 
 class NotionDatabaseHandler {
+  ref: typeof NotionDatabaseHandler
   page: PageManager
   databases: Record<string, DatabaseInstance>
   schema: DatabaseSchema
-
 
   private cache: Record<string, Record<string, any>>
 
@@ -23,7 +23,7 @@ class NotionDatabaseHandler {
     this.cache = {
       databases: {}
     }
-    
+    this.ref = NotionDatabaseHandler
 
     this.init()
   }
@@ -91,7 +91,44 @@ class NotionDatabaseHandler {
       schema: databaseSchema
     }
 
+    handle.attachHandler(this)
+
     return this.cache.databases[databaseName]
+  }
+
+  public hydrateValues = async (dbname: string, values: any) => {
+    // console.log('💥🌪🌧 HYDRATING!', dbname, values)
+    const db = this.cache.databases[dbname]
+    // console.log('💥🌪🌧 HYDRATING Db.props!', dbname, db.props)
+
+    const result = await Object.entries(db.props.wet).reduce(
+      (p, [propName, prop]) =>
+        p.then(async (acc) => {
+          const ref = values[propName]
+          if (ref) {
+            const page = await this.page.client.pages.retrieve({
+              page_id: ref
+            })
+
+            if (page) {
+              // @ts-ignore
+              const value = Object.values(page.properties).find(
+                (v: any) => v.type === 'title'
+              )
+              const actual = PageManager.propertyValue(value)
+
+              return {
+                ...acc,
+                [propName]: actual
+              }
+            }
+          }
+          return acc
+        }),
+      Promise.resolve({})
+    )
+
+    return result
   }
 
   private hydrateProperties = async (dbname: string) => {
@@ -144,19 +181,21 @@ class NotionDatabaseHandler {
       Promise.resolve()
     )
 
-  public set (databaseName: string, databaseKey: string, data: any) {
+  public set(databaseName: string, databaseKey: string, data: any) {
     return this.cache.databases[databaseName].handle.set(databaseKey, data)
   }
-  public get (databaseName: string, databaseKey: string) {
+  public get(databaseName: string, databaseKey: string) {
     return this.cache.databases[databaseName].handle.get(databaseKey)
   }
-  public getAll (databaseName: string) {
-    if (!this.cache.databases[databaseName]) throw new Error(`Database '${databaseName}' not found`)
+  public getAll(databaseName: string) {
+    if (!this.cache.databases[databaseName])
+      throw new Error(`Database '${databaseName}' not found`)
     return this.cache.databases[databaseName].handle.getAll()
   }
-  public read (databaseName: string) {
-    if (!this.cache.databases[databaseName]) throw new Error(`Database '${databaseName}' not found`)
-    return this.cache.databases[databaseName].handle.read()
+  public read(databaseName: string, pageSize?: number, readAll?: boolean) {
+    if (!this.cache.databases[databaseName])
+      throw new Error(`Database '${databaseName}' not found`)
+    return this.cache.databases[databaseName].handle.read(pageSize, readAll)
   }
 }
 
