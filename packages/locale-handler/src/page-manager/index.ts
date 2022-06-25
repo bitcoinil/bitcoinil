@@ -26,20 +26,7 @@ type DatabaseBlock = BaseBlock & {
   rows: () => number
 }
 
-type BlockConfig<K extends string> = Record<
-  K,
-  { type: ToggleBlock['type'] | DatabaseBlock['type'] }
->
-
 type ABlock = ToggleBlock | DatabaseBlock
-
-type BlockSpace = {
-  type?: string
-  id: string
-  keys: () => string[]
-  set: (key: string, value: any) => Promise<void>
-  get: (key: string) => Promise<any>
-}
 
 type BlockHandler = {
   find: (children: ListBlockChildrenResponse) => Record<string, any>
@@ -85,12 +72,6 @@ class PageManager {
     const pageManager = new PageManager(pageId, notion)
     pageManager.pageName = pageName
 
-    // console.log('🍈🍉 Page manager initialized from page name:', {
-    //   pageName,
-    //   pageId,
-    //   pageManager
-    // })
-
     return pageManager
   }
 
@@ -114,7 +95,6 @@ class PageManager {
   }
 
   public async getOption(optionName: string) {
-    console.log('🎀🎈💌 GETTING OPTION:', optionName)
     // @ts-ignore
     return this.blocks.configuration?.get(optionName)
   }
@@ -137,18 +117,12 @@ class PageManager {
       cache,
       properties
     )
-    console.log('🍈🍈🍈 DB Handler', dbName, dbHandler)
 
     // @ts-ignore
     let db = await dbHandler.find()
-    if (db) {
-      console.log('🍈🍈🍈 DB found', dbName, db)
-      await dbHandler.read()
-    } else {
-      console.log('🍈🍈🍈 DB NOT found', dbName, db)
+    if (!db) {
       const res = await dbHandler.create()
       if (res) {
-        console.log('Res of create db:', res)
         // @ts-ignore
         this.blocks.databases.set(dbName, res.id)
         db = res
@@ -161,25 +135,15 @@ class PageManager {
         // @ts-ignore
         dbHandler.updateProperties(properties),
       read: () => dbHandler.read(),
+      getAll: () => 'ALL',
       get: (key: string) => dbHandler.get(key),
       set: (key: string, value: any) => dbHandler.write(key, value)
     }
-    // if (dbId) {
-    //   console.log('🍈🍈🍈 DBTHERE', dbName, dbId)
-    // } else {
-    //   console.log('🍈🍈🍈 DBNOTHERE', dbName)
-    //   const res = await this.createDatabase()
-    //   console.log('Res of create db:', res)
-    //   // @ts-ignore
-    //   this.blocks.databases?.set(dbName, res.id)
-    //   dbId = res.id
-    // }
   }
 
   private async init() {
     await this.initBlocks()
 
-    // console.log('ALL READY', this.cache)
     this.onReady?.()
   }
 
@@ -199,9 +163,7 @@ class PageManager {
 
         let block = actions.find(children)
         if (!block) {
-          // console.log('no block found - create!:', block)
           block = await actions.create()
-          // console.log('block created:', block)
         }
 
         const [results, conf] = await actions.read()
@@ -212,17 +174,6 @@ class PageManager {
           set: actions.write,
           keys: () => Object.keys(cache.values)
         } as ABlock
-
-        // const [results, conf] = actions.read(block.id)
-        // console.log('Block results:', results)
-        // console.log('Block name:', blockName, 'conf:', conf)
-
-        // store in local cache
-        // results.forEach(({ key, value, blockId }: Record<string, string>) => {
-        //   this.cache.items[`${blockName}-${key}`] = blockId
-        //   this.cache.values[`${blockName}-${key}`] =
-        //     PageManager.parseValue(value)
-        // })
 
         return [blockName, blockApp]
       })
@@ -256,41 +207,28 @@ class PageManager {
       cacheObject: Record<string, any>
     ) => ({
       find: (children: ListBlockChildrenResponse) => {
-        // console.log('🪆🪆🪆🪆 FINDING BLOCK', {
-        //   parentBlockId,
-        //   blockName,
-        //   cacheObject,
-        //   children
-        // })
         if (cacheObject.block) return cacheObject.block
 
         const block = this.findToggleBlock(blockName, children)
 
-        // console.log('🪆🪆🪆🪆 BLOCK FIND RESULT', block)
         if (!block) return null
-        // console.log('🪆🪆🪆🪆 FOUND BLOCK', block)
 
         cacheObject.block = block
         cacheObject.blockId = block.id
         return block
       },
       create: async () => {
-        // console.log('🪆🪆🪆🪆 CREATING', { parentBlockId, blockName })
         const res = await this.writeToggleBlock(parentBlockId, blockName, {
           created: new Date().toISOString()
         })
         cacheObject.block = res
         cacheObject.blockId = res.id
-        // console.log('🪆🪆🪆🪆 CREATE CONFIGURATION BLOCK', res)
         return res
       },
       read: async () => {
         const blockId = cacheObject.blockId
-        // console.log('🪆🪆🪆🪆 Reading block:', `"${blockName}"`, blockId)
         const children = await this.getBlock(blockId)
         const [results, config] = this.parseToggleBlock(children)
-
-        // console.log('🪆🪆🪆🪆 Parsed block data:', { results, config })
 
         // store in local cache
         results.forEach(({ key, value, blockId }: Record<string, string>) => {
@@ -306,20 +244,16 @@ class PageManager {
       write: async (key: string, value: any) => {
         const blockId = cacheObject.ids[key]
 
-        console.log('WRITING KEY TO MEAN VALUE:', { key, value, blockId })
         if (!blockId) {
           const result = await this.writeNewToggleValue(
             cacheObject.blockId,
             key,
             value
           )
-          // console.log('✈️ Set result', result)
           cacheObject.ids = { ...(cacheObject.ids || {}), [key]: result.id }
         } else {
           const result = await this.updateToggleValue(blockId, key, value)
-          console.log('✈️ Update result', result)
           return result
-          // console.log('WRITING KEY TO MEAN VALUE:', { key, value, blockId })
         }
         cacheObject.values = {
           ...(cacheObject.values || {}),
@@ -327,7 +261,6 @@ class PageManager {
         }
       },
       get: (key?: string) => {
-        console.log('🚪🚪🚪🚪 GETTING', key, cacheObject.values)
         if (!key) return cacheObject.values
         return cacheObject.values[key]
       }
@@ -342,11 +275,8 @@ class PageManager {
       find: async () => {
         if (cacheObject.db) return cacheObject.dbHandler
 
-        console.log('🪆🪆🪆🪆 what is this?', this)
-        console.log('🪆🪆🪆🪆 what is this blocks?', this.blocks)
         // @ts-ignore
         const dbId = this.blocks.databases.get(dbName)
-        console.log('found db id:', dbId)
 
         if (!dbId) return null
 
@@ -354,7 +284,6 @@ class PageManager {
           database_id: dbId
         })
 
-        console.log('retreived db:', db)
         cacheObject.db = db
         cacheObject.dbId = dbId
         return db
@@ -365,108 +294,95 @@ class PageManager {
           title: cacheObject.db.title as any,
           properties
         })
-        console.log('updated database:', result)
         return result
       },
       create: async () => {
-        console.log('🚸🚸🚸 db craetion', dbName, dbProperties)
         const res = await this.createDatabase(this.pageId, dbName, dbProperties)
-        console.log('🚸🚸🚸 db craeted', res)
-        cacheObject.db = res
-        cacheObject.dbId = res.id
 
-        return res
-      },
-      read: async () => {
-        console.log('🍥🧧🥥 Read DATABASE:')
-        const response = await this.client.databases.query({
-          database_id: cacheObject.dbId
+        const db = await this.client.databases.retrieve({
+          database_id: res.id
         })
 
-        // // write to example.result.json
-        // await (await import('fs/promises')).writeFile('./example.result.json', JSON.stringify(response, null, 2))
+        cacheObject.db = db
+        cacheObject.dbId = res.id
 
-        console.log('🍥🧧🥥 Read response:', response)
+        return db
+      },
+      read: async () => {
+        const items = []
+        let cursor
 
-        return response
+        while (true) {
+          const response = await this.client.databases.query({
+            database_id: cacheObject.dbId,
+            page_size: 100,
+            ...(cursor ? { start_cursor: cursor } : {})
+          }) as any
+          if (response.results.length) {
+            items.push(...response.results)
+            console.log('💨 Response of read:', response)
+          }
+          if (response.has_more) {
+            cursor = response.next_cursor
+          } else {
+            break
+          }
+        }
+
+        return items
       },
       write: async (key: string, data: any) => {
         const [indexName, indexProperty] = Object.entries(dbProperties).find(
           ([dbName, prop]) => prop.type === 'title'
         ) as any
 
-        console.log('🍥🔰🥥 IndexProperty', indexName, indexProperty)
-
-        const properties = Object.entries(data)
-          .map(([key, value]) => {
-            console.log('🍥🔰🥥 Data value', { value, key })
-            const [dbName, prop] = Object.entries(dbProperties).find(
-              ([dbName, property]) => property.id === key
-            ) as any
-            console.log('🍥🔰🥥 Property', prop)
-            if (prop.type === 'number') {
-              return {
-                [dbName]: {
-                  [prop.type]: Number(value)
-                }
-              }
-            }
-            if (prop.type === 'rich_text') {
-              return {
-                [dbName]: {
-                  [prop.type]: [
-                    {
-                      text: {
-                        content: value
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          })
-          .reduce((acc, curr) => ({ ...acc, ...curr }), {})
-        console.log('🍥🔰🥥 Resulting properties object', properties)
-
         // Find row ID
         const queryObject = {
           database_id: cacheObject.dbId,
-          // @ts-ignore
           filter: {
             property: indexName,
-            [indexProperty.type]: {
+            [indexProperty.type as 'rich_text']: {
               equals: key
             }
           }
-        } as any
+        }
 
-        console.log('🍥🔰🥥 query object', queryObject)
         const response = await this.client.databases.query(queryObject)
-        console.log('🍥🔰🥥 Resulting query result', response)
         if (response.results.length) {
-          console.log('🍥🔰🥥 Result', response.results)
+          const resultProperties = (response.results[0] as any).properties
 
-          const updateObject = {
-            // @ts-ignore
-            page_id: response.results[0].id,
-            // @ts-ignore
-            properties
+          // Find the differences
+          const differences = Object.entries(data).filter(
+            ([dataKey, dataValue]: [string, any]) =>
+              dataValue !== PageManager.propertyValue(resultProperties[dataKey])
+          )
+
+          if (differences.length) {
+            const preProperties = differences.reduce(
+              (acc, [key, value]) => ({ ...acc, [key]: value }),
+              {}
+            )
+
+            const properties = PageManager.dataToProperties(
+              preProperties,
+              dbProperties
+            )
+
+            const updateObject = {
+              page_id: response.results[0].id,
+              properties
+            }
+
+            await this.client.pages.update(updateObject)
+
+            return response.results[0].id
           }
-          console.log('🍥🔰🥥 Update object', updateObject.properties)
-
-          // @ts-ignore
-          const updateResponse = await this.client.pages.update(updateObject)
-
-          console.log('🍥🔰🥥 Result of update', updateResponse)
         } else {
-          console.log('🍥🔰🥥 No result found')
-
-          const properties = PageManager.dataToProperties(
+          const properties = PageManager.dataToPropertiesWithKey(
             key,
             data,
             dbProperties
           )
-          console.log('🍥🔰🥥 Proeprties for write', properties)
 
           const response = await this.client.pages.create({
             parent: {
@@ -478,18 +394,8 @@ class PageManager {
             },
             properties
           })
-          console.log('🍥🔰🥥 Write response', response)
+          return response.id
         }
-        // const rowId =
-
-        // const response = await this.client.pages.update({
-        //   page_id: cacheObject.dbId,
-        //   properties: {
-        //     'In stock': {
-        //       checkbox: true,
-        //     },
-        //   },
-        // });
       },
       get: async (key: string) => {}
     })
@@ -528,8 +434,6 @@ class PageManager {
       block_id: blockId,
       page_size: 500
     })
-    // console.log('Response for block:', response)
-    // console.log('Response for block:', JSON.stringify(response, null, 1))
 
     this.cache.blocks[blockId] = response
     prom.resolve(response)
@@ -544,7 +448,6 @@ class PageManager {
       children: [
         {
           type: 'toggle',
-          //...other keys excluded
           toggle: {
             rich_text: [
               {
@@ -561,10 +464,6 @@ class PageManager {
         }
       ]
     })
-    // console.log('Writing response:', response)
-    // console.log('Writing response:', JSON.stringify(response, null, 2))
-
-    // const children = await getBlock(response.results[0].id)
     return response.results[0]
   }
 
@@ -574,15 +473,11 @@ class PageManager {
     data: any,
     linkUrl = ''
   ) {
-    // decode: decodeURI
-    // const keyContent = PageManager.encodeKey(key)
-
     const response = await this.client.blocks.children.append({
       block_id: blockId,
       children: [
         {
           type: 'toggle',
-          //...other keys excluded
           toggle: {
             rich_text: PageManager.getKeyValueRichText(key, data) as any,
             color: 'gray',
@@ -591,18 +486,10 @@ class PageManager {
         }
       ]
     })
-    // console.log('Writing response:', response)
-    // console.log('Writing response:', JSON.stringify(response, null, 2))
-
-    // const children = await getBlock(response.results[0].id)
     return response.results[0]
   }
 
   private async updateToggleValue(blockId: string, key: string, value: any) {
-    // console.log('🍥🍆 WANT TO UPDATE CONFIG', blockId, value)
-    // const key = Object.entries(this.cache.items).find(([k, id]: string[]) => id === blockId)?.[0]
-    // console.log('🍥🍆 WANT TO UPDATE CONFIG KEY', key)
-
     if (!key) throw new Error('Key for blockId not found')
 
     const response = await this.client.blocks.update({
@@ -613,10 +500,7 @@ class PageManager {
       }
     })
 
-    // console.log('🍥🍆  What is response of update?', response)
-    // this.cache.values[key] = value
     const children = await this.getBlock(blockId, true)
-    // console.log('🍥🍆  What is children of update?', children)
     await Promise.all(
       children.results.map((block: any) =>
         this.client.blocks.delete({
@@ -637,10 +521,6 @@ class PageManager {
     dbName: string,
     properties: any
   ) {
-    // const myDb = await this.client.search({
-    //   filter: { value: 'database', property: 'object' }
-    // })
-
     const createProps = {
       parent: {
         page_id: parentId
@@ -656,17 +536,9 @@ class PageManager {
       ],
       properties
     }
-    console.log('😸😸😸 Creating DB - Props:', createProps)
 
     // @ts-ignore
     const myDb = await this.client.databases.create(createProps)
-
-    // console.log('myDb Result:', myDb)
-    console.log('myDb Result:', JSON.stringify(myDb, null, 1))
-    // write to databases.json for inspection
-    //   await (
-    //     await import('fs/promises')
-    //   ).writeFile('./databases.json', JSON.stringify(myDb, null, 2))
 
     return myDb
   }
@@ -698,13 +570,6 @@ class PageManager {
             }
           )
       )
-    // console.log('🥎🎟 RESULTS OF ITEMS:', results)
-
-    // // store in local cache
-    // results.forEach(({ key, value, blockId }: Record<string, string>) => {
-    //   this.cache.items[key] = blockId
-    //   this.cache.values[key] = PageManager.parseValue(value)
-    // })
 
     const configed = results.reduce(
       (acc: any, setting: Record<string, string>) => ({
@@ -713,7 +578,6 @@ class PageManager {
       }),
       {}
     )
-    // console.log('🥎🎟 CONFIGED:', configed)
 
     return [results, configed]
   }
@@ -817,25 +681,37 @@ class PageManager {
     }
   }
 
-  static dataToProperties(
+  static dataToPropertiesWithKey(
     key: string,
     data: any,
     dbProperties: Record<string, any>
   ) {
-    const [indexName, indexProperty] = Object.entries(dbProperties).find(
-      ([dbName, prop]) => prop.type === 'title'
-    ) as any
+    const [indexName] =
+      Object.entries(dbProperties).find(([, prop]) => prop.type === 'title') ||
+      []
 
+    if (!indexName) throw new Error('Index name not found')
+
+    const properties = PageManager.dataToProperties(
+      {
+        [indexName]: key,
+        ...data
+      },
+      dbProperties
+    )
+    return properties
+  }
+
+  static dataToProperties(data: any, dbProperties: Record<string, any>) {
     const properties = Object.entries({
-      [indexProperty.id]: key,
       ...data
     })
-      .map(([key, value]) => {
-        console.log('🍥🔰🥥 Data value', { value, key })
-        const [dbName, prop] = Object.entries(dbProperties).find(
-          ([dbName, property]) => property.id === key
-        ) as any
-        console.log('🍥🔰🥥 Property', prop)
+      .map(([nkey, value]) => {
+        const [dbName, prop] =
+          Object.entries(dbProperties).find(
+            ([dbName, property]) => dbName === nkey
+          ) || ([] as any)
+
         if (prop.type === 'title') {
           return {
             [dbName]: {
@@ -873,6 +749,28 @@ class PageManager {
       .reduce((acc, exp) => ({ ...acc, ...exp }), {}) as any
     return properties
   }
+
+  static propertyValue = (prop: any) =>
+    prop.type === 'rich_text' || prop.type === 'text' || prop.type === 'title'
+      ? prop[prop.type].reduce(
+          (acc: string, rt: any) =>
+            `${acc && acc + ' '}${rt.type === 'text' && rt.text.content}`,
+          ''
+        )
+      : prop.type === 'number' ||
+        prop.type === 'checkbox' ||
+        prop.type === 'created_time' ||
+        prop.type === 'last_edited_time'
+      ? prop[prop.type]
+      : prop.type === 'relation'
+      ? prop.relation.map(({ id }: any) => id).join(', ')
+      : prop.type === 'date'
+      ? `${prop.date.start}${prop.date.end ? ' - ' + prop.date.end : ''}`
+      : prop.type === 'formula'
+      ? prop.formula[prop.formula.type]
+      : prop.type === 'multi_select'
+      ? prop.multi_select.map(({ name }: any) => name).join(', ')
+      : `Unsupported prop type: ${prop.type}`
 }
 
 export default PageManager

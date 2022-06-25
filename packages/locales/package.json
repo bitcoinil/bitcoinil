@@ -11,7 +11,11 @@
     "build": "tsc",
     "dev": "tsc -w",
     "locales": "node ../locale-handler/dist/locale-handler.js compile ./src/lib --base $PWD --clean=false dotenv_config_debug=true",
+    "ingest-language": "node ../locale-handler/dist/index.js compile ./src/lib --base $PWD --clean=false dotenv_config_debug=true --ingest-language --verbose",
+    "compile-language": "node ../locale-handler/dist/index.js compile ./src/lib --base $PWD --clean=false dotenv_config_debug=true --compile-language --verbose",
     "dev-locales": "nodemon -w src -e less,json,yaml --exec \"yarn locales\"",
+    "dev-ingest-language": "nodemon -w src -e less,json,yaml --exec \"yarn ingest-language\"",
+    "dev-compile-language": "nodemon -w src -e less,json,yaml --exec \"yarn compile-language\"",
     "clean": "rimraf .turbo node_modules dist"
   },
   "devDependencies": {
