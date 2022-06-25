@@ -34,6 +34,10 @@ export const databases: DatabaseSchema = {
           // synced_property_name: 'English Translation'
         }
       },
+      LastUpdate: {
+        type: 'last_edited_time',
+        last_edited_time: {}
+      }
     },
     relatedProperties: {
       Hebrew: {
@@ -76,6 +80,10 @@ export const databases: DatabaseSchema = {
         name: 'message',
         type: 'title',
         title: {}
+      },
+      LastUpdate: {
+        type: 'last_edited_time',
+        last_edited_time: {}
       }
     }
   },
@@ -85,6 +93,10 @@ export const databases: DatabaseSchema = {
         name: 'message',
         type: 'title',
         title: {}
+      },
+      LastUpdate: {
+        type: 'last_edited_time',
+        last_edited_time: {}
       }
     }
   },

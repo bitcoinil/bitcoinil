@@ -8,7 +8,7 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && yarn compile-language",
     "dev": "tsc -w",
     "locales": "node ../locale-handler/dist/locale-handler.js compile ./src/lib --base $PWD --clean=false dotenv_config_debug=true",
     "ingest-language": "node ../locale-handler/dist/index.js compile ./src/lib --base $PWD --clean=false dotenv_config_debug=true --ingest-language --verbose",
@@ -21,7 +21,10 @@
   "devDependencies": {
     "@bitil/locale-handler": "*",
     "eslint": "^8.16.0",
-    "tsconfig": "*",
-    "scripts": "*"
+    "scripts": "*",
+    "tsconfig": "*"
+  },
+  "dependencies": {
+    "get-tsconfig": "^4.0.6"
   }
 }

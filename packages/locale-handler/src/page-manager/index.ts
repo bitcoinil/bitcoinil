@@ -39,6 +39,7 @@ type BlockHandler = {
   read: (pageSize?: number, readAll?: Boolean) => Promise<any>
   write: (key: string, value: any) => Promise<void>
   get: (key?: string) => Promise<any>
+  listen: (callback: (data: any) => void) => void
 }
 
 type BlockHandlers = {
@@ -148,7 +149,8 @@ class PageManager {
         dbHandler.read(pageSize, readAll),
       getAll: () => 'ALL',
       get: (key: string) => dbHandler.get(key),
-      set: (key: string, value: any) => dbHandler.write(key, value)
+      set: (key: string, value: any) => dbHandler.write(key, value),
+      listen: (callback: (data: any) => void) => dbHandler.listen(callback)
     }
   }
 
@@ -342,30 +344,27 @@ class PageManager {
 
           if (response.results.length) items.push(...response.results)
 
-          if (readAll && response.has_more) cursor = response.next_cursor
+          if ((typeof readAll === 'undefined' || readAll) && response.has_more)
+            cursor = response.next_cursor
           else break
         }
 
         const valued = PageManager.valuefy(items)
 
-        console.log(
-          'Does the database have a handler attached?',
-          cacheObject.handler
-        )
         if (cacheObject.handler) {
           const handler = cacheObject.handler
-          console.log('Handler:', handler)
 
           const final = await valued.reduce(
             (p, item) =>
               p.then(async (results: any[]) => {
-                const hydrated = await handler.hydrateValues(dbName, item.values)
-                console.log('Wet and dry props?', { hydrated })
+                const hydrated = await handler.hydrateValues(
+                  dbName,
+                  item.values
+                )
                 return [...results, { ...item, hydrated }]
               }),
             Promise.resolve([])
           )
-          console.log('Post hydration::', final)
 
           return final
         }
@@ -437,7 +436,77 @@ class PageManager {
           return response.id
         }
       },
-      get: async (key: string) => {}
+      get: async (key: string) => {},
+      listen: async (callback: () => Promise<void>) => {
+        cacheObject.listenCount = 0
+        cacheObject.last_edited_time = ''
+
+        const filename = `./dist/database-${dbName}-cache.json`
+
+        const readFromDatabase = async () => {
+          const response = await this.client.databases.query({
+            database_id: cacheObject.dbId,
+            sorts: [
+              {
+                property: 'LastUpdate',
+                direction: 'descending'
+              }
+            ]
+          })
+          return response?.results?.[0]
+        }
+        const readFromFile = async () => {
+          // read from file and compare
+
+          try {
+            const fileData = await (
+              await import('fs/promises')
+            ).readFile(filename, 'utf8')
+            if (fileData)
+              try {
+                const parsedData = JSON.parse(fileData)
+                return parsedData
+              } catch (e) {
+                console.log(e)
+              }
+          } catch (e) {
+            console.log(e)
+          }
+        }
+
+        const writeToFile = async (data: any) => {
+          await (
+            await import('fs/promises')
+          ).writeFile(filename, JSON.stringify(data, null, 2))
+        }
+
+        console.log('👂🦻👂 WANT TO LISTEN', dbName, callback)
+        while (true) {
+          const live = await readFromDatabase()
+          // console.log('👂🦻👂 Live response', dbName, live)
+
+          const file = await readFromFile()
+          if (live) {
+            // @ts-ignore
+            if (live.last_edited_time !== file?.last_edited_time) {
+              console.log(
+                '🚨👂🚨🦻🚨👂🚨 DIFFERENCE',
+                // @ts-ignore
+                live.last_edited_time,
+                file?.last_edited_time
+              )
+              // @ts-ignore
+              await callback(live.last_edited_time)
+              await writeToFile(live)
+            }
+          }
+
+          console.log('🦻 Listening', ++cacheObject.listenCount, dbName)
+
+          // sleep for 3 seconds
+          await new Promise((resolve) => setTimeout(resolve, 3000))
+        }
+      }
     })
   }
 
