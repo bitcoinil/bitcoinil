@@ -2,7 +2,7 @@ name: CI For Deploy
 
 on:
   push:
-    branches: ["next-gis"]
+    branches: ["main"]
   pull_request:
     types: [opened, synchronize]
 
@@ -32,7 +32,7 @@ jobs:
           cache: "yarn"
 
       - name: Install dependencies
-        run: yarn
+        run: yarn install
 
       - name: Build
         run: yarn build --filter=bitcoin-il
