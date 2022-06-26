@@ -1,0 +1,89 @@
+{
+ "version": "1.0.0",
+ "themes": [
+  {
+   "base": "ayu-and-one-theme",
+   "name": "ayu-and-one-theme",
+   "title": "Ayu and One Theme",
+   "version": "1.0.0",
+   "variants": [
+    {
+     "css": "ayu-and-one-theme/ayu-and-one-theme.css",
+     "isDark": false,
+     "name": "ayu-and-one-theme",
+     "title": "Ayu Light",
+     "monaco": "ayu-and-one-theme/ayu-and-one-theme.monaco.json"
+    },
+    {
+     "css": "ayu-and-one-theme/one-dark-pro.css",
+     "isDark": true,
+     "name": "one-dark-pro",
+     "title": "One Dark Pro",
+     "monaco": "ayu-and-one-theme/one-dark-pro.monaco.json"
+    },
+    {
+     "css": "ayu-and-one-theme/one-darker.css",
+     "isDark": true,
+     "name": "one-darker",
+     "title": "One Darker",
+     "monaco": "ayu-and-one-theme/one-darker.monaco.json"
+    },
+    {
+     "css": "ayu-and-one-theme/one-dark-flat.css",
+     "isDark": true,
+     "name": "one-dark-flat",
+     "title": "One Dark Flat",
+     "monaco": "ayu-and-one-theme/one-dark-flat.monaco.json"
+    }
+   ]
+  },
+  {
+   "base": "bitil-theme",
+   "fontStylesheet": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap",
+   "name": "bitil-theme",
+   "title": "BitIL Theme",
+   "description": "Main Theme with soothing dark and light modes",
+   "version": "1.0.0",
+   "variants": [
+    {
+     "css": "bitil-theme/bitil-theme-bitil-light.css",
+     "isDark": false,
+     "name": "bitil-light",
+     "title": "BitIL Light Theme",
+     "monaco": "bitil-theme/bitil-theme-bitil-light.monaco.json"
+    },
+    {
+     "css": "bitil-theme/bitil-theme-bitil-dark.css",
+     "isDark": true,
+     "name": "bitil-dark",
+     "title": "BitIL Dark Theme",
+     "monaco": "bitil-theme/bitil-theme-bitil-dark.monaco.json"
+    }
+   ]
+  },
+  {
+   "base": "main-theme",
+   "fontStylesheet": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap",
+   "name": "main-theme",
+   "title": "Main Theme",
+   "description": "Main Theme with soothing dark and light modes",
+   "version": "1.0.0",
+   "variants": [
+    {
+     "css": "main-theme/main-theme-main-light.css",
+     "isDark": false,
+     "name": "main-light",
+     "title": "Main Light Theme",
+     "monaco": "main-theme/main-theme-main-light.monaco.json"
+    },
+    {
+     "css": "main-theme/main-theme-main-dark.css",
+     "isDark": true,
+     "name": "main-dark",
+     "title": "Main Dark Theme",
+     "monaco": "main-theme/main-theme-main-dark.monaco.json"
+    }
+   ]
+  }
+ ]
+}
