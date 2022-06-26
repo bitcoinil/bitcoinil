@@ -2,12 +2,13 @@ name: CI For Deploy
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
-  build:
+  build_and_deploy:
+    name: Build and Deploy to Github Pages
     runs-on: ${{ matrix.os }}
-    name: Build and Test
     timeout-minutes: 15
     # To use Remote Caching, uncomment the next lines and follow the steps below.
     # env:
@@ -32,10 +33,10 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-    - name: create env file for BASE_PATH
-      run: |
-        touch .env
-        echo BASE_PATH=${{ secrets.BASE_PATH }} >> .env
+      - name: create env file for BASE_PATH
+        run: |
+          touch .env
+          echo BASE_PATH=${{ secrets.BASE_PATH }} >> .env
 
       - name: Build
         run: yarn build --filter=bitcoin-il
