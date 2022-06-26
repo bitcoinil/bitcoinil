@@ -27,48 +27,81 @@ const args = arg(
 )
 console.log('ARGZ', args)
 
-const initX = async () => {
-  console.log('ARGZ', args)
-}
+const notionToken = args['--token'] || process.env.NOTION_TOKEN
+const pageName = args['--page'] || process.env.NOTION_PAGE
+const verbose = args['--verbose']
+const loadCached = args['--load-cached']
+let compiling = false
+
+const tsconfig = getTsconfig()
+
+const outputDir = args['--output'] || tsconfig?.config?.compilerOptions?.outDir
+
+const saveDir = args['--save-dir'] || './cached'
 
 const init = async () => {
-  const notionToken = args['--token'] || process.env.NOTION_TOKEN
-  const pageName = args['--page'] || process.env.NOTION_PAGE
-  const verbose = args['--verbose']
-  const loadCached = args['--load-cached']
-  let compiling = false
+  const cachedLoader = () =>
+    useLive().catch(async (ee) => {
+      verbose && console.log('🩱 LIVE CAUGHT CAUGHT CAUGHT', ee)
+      verbose && console.log('🩱 Error Message:', ee.message)
+      verbose && console.log('🩱 Error Code:', ee.code)
+      if (ee.code === 'notionhq_client_request_timeout') await cachedLoader()
+      else await useCached()
+    })
+  const liveLoader = () => useLive().catch(async (ee) => {
+    verbose && console.log('🟣 CAUGHT USE LIVE WITHOUT CACHED', ee)
+    verbose && console.log('🟣 Error Message:', ee.message)
+    verbose && console.log('🟣 Error Code:', ee.code)
+    if (ee.code === 'notionhq_client_request_timeout') await liveLoader()
+  })
 
-  const tsconfig = getTsconfig()
+  if (!args['--load-cached'])
+    await liveLoader()
+  else await useCached().then(cachedLoader)
+}
 
+const useCached = async () => {
+  verbose && console.log('🗂 Using cached data...')
+  await ['en', 'he'].reduce(
+    (p, lang) =>
+      p.then(async () => {
+        try {
+          await fs.copyFile(
+            `${saveDir}/${lang}.wet.json`,
+            `${outputDir}/lib/${lang}.wet.json`
+          )
+          console.log(`Copied ${lang}`)
+        } catch (e) {
+          console.log(`No cached deck for ${lang}`)
+        }
+      }),
+    Promise.resolve()
+  )
+}
+
+const useLive = async () => {
   verbose && console.log('📄 Initializing on page:', pageName)
   verbose && console.time('init')
 
-  const outputDir =
-    args['--output'] || tsconfig?.config?.compilerOptions?.outDir
-
-  const saveDir = args['--save-dir'] || './cached'
-
-  if (!loadCached) {
-    if (!pageName) {
-      console.log(
-        'ℹ️ Please provide a page name with --page or set the environment variable NOTION_PAGE'
-        // 'Pass in page name via cli (e.g. `$ locale-handler --page my-page-name`) or as a env variable named `NOTION_PAGE`'
-      )
-      throw new Error('Page name is required')
-    }
-    if (!notionToken) {
-      console.log(
-        'ℹ️ Please provide a Notion token with --token or set the environment variable NOTION_TOKEN'
-        // 'Pass in page name via cli (e.g. `$ locale-handler --page my-page-name`) or as a env variable named `NOTION_PAGE`'
-      )
-      throw new Error('Notion token is required')
-    }
-    if (!outputDir) {
-      console.log(
-        'ℹ️ Please provide an output directory with --output or set the `{ compilerOptions: { outDir: "./dist" } }` in tsconfig.json'
-      )
-      throw new Error('Output directory is required')
-    }
+  if (!pageName) {
+    console.log(
+      'ℹ️ Please provide a page name with --page or set the environment variable NOTION_PAGE'
+      // 'Pass in page name via cli (e.g. `$ locale-handler --page my-page-name`) or as a env variable named `NOTION_PAGE`'
+    )
+    throw new Error('Page name is required')
+  }
+  if (!notionToken) {
+    console.log(
+      'ℹ️ Please provide a Notion token with --token or set the environment variable NOTION_TOKEN'
+      // 'Pass in page name via cli (e.g. `$ locale-handler --page my-page-name`) or as a env variable named `NOTION_PAGE`'
+    )
+    throw new Error('Notion token is required')
+  }
+  if (!outputDir) {
+    console.log(
+      'ℹ️ Please provide an output directory with --output or set the `{ compilerOptions: { outDir: "./dist" } }` in tsconfig.json'
+    )
+    throw new Error('Output directory is required')
   }
 
   // Initializing a client
@@ -88,25 +121,6 @@ const init = async () => {
   await new Promise((r) => (database.onReady = () => r(null)))
   verbose && console.timeLog('init', 'Database ready')
   verbose && console.log('🗂 Database ready')
-
-  const useCached = async () => {
-  verbose && console.log('🗂 Using cached data...')
-  await ['en', 'he'].reduce(
-      (p, lang) =>
-        p.then(async () => {
-          try {
-            await fs.copyFile(
-              `${saveDir}/${lang}.wet.json`,
-              `${outputDir}/lib/${lang}.wet.json`
-            )
-            console.log(`Copied ${lang}`)
-          } catch (e) {
-            console.log(`No cached deck for ${lang}`)
-          }
-        }),
-      Promise.resolve()
-    )
-  }
 
   const compile = async () => {
     if (compiling) {
@@ -178,19 +192,9 @@ const init = async () => {
     compiling = false
   }
 
-  let noListen = false
+  await compile()
 
-  verbose && console.log('🗂 GETTING READY TO', {noListen, args})
-
-  if (!args['--load-cached']) await compile()
-  else
-    await compile().catch(async (ee) => {
-      console.log('CAUGHT CAUGHT CAUGHT', ee)
-      await useCached()
-      noListen = true
-    })
-
-  if (!noListen && args['--listen']) {
+  if (args['--listen']) {
     console.log('LISTEN!')
     const compiler = (db: string) => async (data: any) => {
       try {

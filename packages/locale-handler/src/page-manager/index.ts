@@ -467,10 +467,10 @@ class PageManager {
                 const parsedData = JSON.parse(fileData)
                 return parsedData
               } catch (e) {
-                console.log(e)
+                console.log('🏓', e)
               }
           } catch (e) {
-            console.log(e)
+            console.log('🪀', e)
           }
         }
 
