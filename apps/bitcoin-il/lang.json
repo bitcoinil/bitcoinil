@@ -135,6 +135,10 @@
     "defaultMessage": "Reddit's BitCoin Community",
     "description": "Description"
   },
+  "community.stack-exchange.text": {
+    "defaultMessage": "BitCoin Stack Exchange (Q&A)",
+    "description": "Description"
+  },
   "community.twitter.text": {
     "defaultMessage": "Twitter - MUST ADD PROPER ADDRESS",
     "description": "Description"
@@ -227,6 +231,30 @@
     "defaultMessage": "BitCoin Meetup Groups",
     "description": "link-0"
   },
+  "exchange.menuItem.Canada": {
+    "defaultMessage": "Canada",
+    "description": "Canada"
+  },
+  "exchange.menuItem.USA": {
+    "defaultMessage": "USA",
+    "description": "USA"
+  },
+  "exchange.menuItem.USA.Miami": {
+    "defaultMessage": "Miami",
+    "description": "USA.Miami"
+  },
+  "exchange.menuItem.USA.New-York": {
+    "defaultMessage": "New York",
+    "description": "USA.New York"
+  },
+  "exchange.menuItem.USA.detroit": {
+    "defaultMessage": "Detroit",
+    "description": "USA.detroit"
+  },
+  "exchange.menuItem.USA.texas": {
+    "defaultMessage": "Texas",
+    "description": "USA.texas"
+  },
   "exchange.menuItem.asia.label": {
     "defaultMessage": "Asia",
     "description": "asia.label"
@@ -239,6 +267,10 @@
     "defaultMessage": "Some Bahrainian Exchange",
     "description": "bahrain.exhange.label"
   },
+  "exchange.menuItem.canada.exhange.label": {
+    "defaultMessage": "Toronto",
+    "description": "canada.exhange.label"
+  },
   "exchange.menuItem.israel": {
     "defaultMessage": "Israel",
     "description": "israel"
@@ -246,6 +278,10 @@
   "exchange.menuItem.israel.exchange": {
     "defaultMessage": "Some Israeli Exchange",
     "description": "israel.exchange"
+  },
+  "exchange.menuItem.north-america.label": {
+    "defaultMessage": "North America",
+    "description": "north-america.label"
   },
   "exchange.menuItem.p2p.exchange.0.label": {
     "defaultMessage": "Some Peer To Peer Excahnge",
@@ -256,7 +292,7 @@
     "description": "peer2peer"
   },
   "exchange.menuItem.someExchange": {
-    "defaultMessage": "Some Exchange ...",
+    "defaultMessage": "Some International Exchange ...",
     "description": "someExchange"
   },
   "exchangeMenuItem.international.label": {
@@ -780,8 +816,12 @@
     "description": "GetStartedWithBitcoin"
   },
   "page.home.get-started.instant": {
-    "defaultMessage": "Worldwide Payments",
-    "description": "Worldwide Payments"
+    "defaultMessage": "Fast peer-to-peer transactions",
+    "description": "Fast peer-to-peer transactions"
+  },
+  "page.home.get-started.lowfee": {
+    "defaultMessage": "Low Processing Fees",
+    "description": "Low Processing Fees"
   },
   "page.home.get-started.worldwide": {
     "defaultMessage": "Worldwide Payments",
@@ -1100,5 +1140,25 @@
   },
   "vocabulary.Wallet.word": {
     "defaultMessage": "Wallet"
+  },
+  "white-paper.do-you-want-translate": {
+    "defaultMessage": "Do you want to translate the paper into your language? Visit the Bitcoin white paper repository on GitHub for instructions and open an issue if you have any questions.",
+    "description": "do-you-want-translate"
+  },
+  "white-paper.english.label": {
+    "defaultMessage": "English (Original)",
+    "description": "english.label"
+  },
+  "white-paper.hebrew.label": {
+    "defaultMessage": "עברית",
+    "description": "hebrew.label"
+  },
+  "white-paper.hebrew.translator0": {
+    "defaultMessage": "Meni Rosenfeld",
+    "description": "hebrew.translator0"
+  },
+  "white-paper.intro": {
+    "defaultMessage": "Satoshi Nakamoto's original paper is still recommended reading for anyone studying how Bitcoin works. Choose which translation of the paper you want to read:",
+    "description": "intro"
   }
 }
