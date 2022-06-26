@@ -14,12 +14,11 @@ import { mainMenuItems } from './mainMenuItems'
 import { nonMenuRoutes } from './nonMenuRoutes'
 import Support from './support'
 import locales from '@bitil/locales'
+import Theme from './themes'
 
-console.log('LCOALES! :D', locales)
 function App(): JSX.Element {
-  const [language, setLanguage] = React.useState('en')
-
-  console.log('language?', { language })
+  // const { language, messages, locale } = useIntl()
+  const [ln, setLn] = React.useState('en')
   const renderRoutes = () => (
     <Routes>
       {mainMenuItems.map((menuItem, i) => {
@@ -56,33 +55,32 @@ function App(): JSX.Element {
   )
 
   return (
-    <AppStyleWrap id="App">
-      <Helmet>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
-      <IntlProvider
-        // @ts-ignore
-        messages={locales[language]}
-        locale={language}
-        defaultLocale="en"
-      >
-        <div className="App">
-          <div onClick={() => setLanguage(v => v === 'en' ? 'he' : 'en')}>
-            <h1>SWITCH {language}</h1>
+    <Theme>
+      <AppStyleWrap id="App">
+        <Helmet>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap"
+            rel="stylesheet"
+          />
+        </Helmet>
+        <IntlProvider
+          // @ts-ignore
+          messages={locales[ln]}
+          locale={ln}
+          defaultLocale="en"
+        >
+          <div className="App">
+            {/* <DevTools /> */}
+            <Support />
+            <Header setLanguage={setLn} />
+            {renderRoutes()}
           </div>
-          {/* <DevTools /> */}
-          <Support />
-          <Header setLanguage={setLanguage} />
-          {renderRoutes()}
-        </div>
-        <Footer />
-      </IntlProvider>
-    </AppStyleWrap>
+          <Footer />
+        </IntlProvider>
+      </AppStyleWrap>
+    </Theme>
   )
 }
 

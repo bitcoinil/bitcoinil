@@ -7,38 +7,43 @@ import HeroBg from './img/hero-bg.svg'
 import { RoutePageProps } from './Interfaces'
 
 export default function RoutePage({
-  title = 'title Prop',
-  subtitle = 'subtitle Prop',
-  body = <h1>body prop</h1>,
-  id = ''
+  title,
+  subtitle,
+  body,
+  id
 }: RoutePageProps): JSX.Element {
   return (
     <StyledRoutePage id="RoutePage">
       <div className="page-title">
         <h1>
           <br />
-          <FormattedMessage
+          {title}
+          {/* <FormattedMessage
             defaultMessage={title}
             description={`test`}
             id={`page.${title}.title`}
-          />
+          /> */}
         </h1>
         <h3>
-          <FormattedMessage
+          {subtitle}
+          {/* <FormattedMessage
             id={`page.${id}.subtitle`}
             defaultMessage={`${subtitle} (placeholder)`}
             description={`${id}'s subhedading`}
-          />
+          /> */}
         </h3>
         <div className="trans-bel"></div>
       </div>
-      <div className="body">{body}</div>
+      <div className="routepage-body">{body}</div>
     </StyledRoutePage>
   )
 }
 
 const StyledRoutePage = styled.div`
   min-height: 100vh;
+
+  .routepage-body {
+  }
 
   .page-title {
     background-image: url('${HeroBg}');
@@ -49,6 +54,7 @@ const StyledRoutePage = styled.div`
     justify-content: start;
     flex-direction: column;
     text-align: center;
+    padding: 50px 0;
 
     h1 {
       margin-top: 25px;
@@ -66,7 +72,6 @@ const StyledRoutePage = styled.div`
     }
 
     .trans-bel {
-      background: white;
     }
   }
 `

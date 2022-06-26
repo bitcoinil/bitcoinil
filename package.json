@@ -13,8 +13,9 @@
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "cnc": "yarn dev --scope=\"ui-dev\" --scope=\"ui-next\" --scope=\"@djitsu/themes\" --no-deps",
-    "codebitcoin": "code . && yarn dev --filter=bitcoin-il --filter=app-layout",
-    "codebitcoin:ladel": "code . && yarn dev --filter=bitcoin-il --filter=app-layout --filter=ui-dev"
+    "codebitcoin": "code . && yarn dev --filter=bitcoin-il --filter=app-layout --filter=@djitsu/themes",
+    "codebitcoin:ladel": "code . && yarn dev --filter=bitcoin-il --filter=app-layout --filter=ui-dev",
+    "extract-intl": "cd apps/bitcoin-il && yarn extract-intl"
   },
   "devDependencies": {
     "prettier": "^2.5.1",

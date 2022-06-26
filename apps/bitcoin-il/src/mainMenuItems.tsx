@@ -11,6 +11,12 @@ import { FormattedMessage } from 'react-intl'
 import ResourcesBody from './ResourcesBody'
 import CommunityBody from './CommunityBody'
 import VocabularyBody from './VocabularyBody'
+import ExchangesBody from './ExchangesBody'
+import EventsBody from './EventsBody'
+import CoreBody from './CoreBody'
+import WhitePaperBody from './WhitePaperBody'
+import BuyBody from './BuyBody'
+import FAQBody from './FAQBody'
 
 export const mainMenuItems: MainMenuItem[] = [
   {
@@ -35,8 +41,22 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="individuals"
-            title="Bitcoin for Individuals"
-            subtitle="Bitcoin is the easiest way to transact at a very low cost."
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.individuals.title`}
+                defaultMessage={`Bitcoin for Individuals`}
+                description={`individuals.title`}
+              />
+            }
+            // "Bitcoin for Individuals"
+            // "Bitcoin is the easiest way to transact at a very low cost."
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.individuals.subtitle`}
+                defaultMessage={`Bitcoin is the easiest way to transact at a very low cost.`}
+                description={`individuals.subtitle`}
+              />
+            }
             body={<IndividualsBody />}
           />
         )
@@ -52,9 +72,22 @@ export const mainMenuItems: MainMenuItem[] = [
         key: 'businesses',
         element: (
           <RoutePage
-            title="Business"
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.business.title`}
+                defaultMessage={`Business`}
+                description={`business.title`}
+              />
+            }
+            // "Business"
             id="business"
-            subtitle="Bitcoin is a very secure and inexpensive way to handle payments."
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.business.subtitle`}
+                defaultMessage={`Bitcoin is a very secure and inexpensive way to handle payments.`}
+                description={`business.subtitle`}
+              />
+            }
             body={<BusinessBody />}
           />
         )
@@ -71,8 +104,20 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="developers"
-            title="Developers"
-            subtitle="Bitcoin for Developers"
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.developers.title`}
+                defaultMessage={`Developers`}
+                description={`developers`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.devleopers.subtitle`}
+                defaultMessage={`Bitcoin for Developers`}
+                description={`devleopers.subtitle`}
+              />
+            }
             body={<h1>Developers Body</h1>}
           />
         )
@@ -89,8 +134,20 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="getting-started"
-            title="Getting started with Bitcoin Il"
-            subtitle="Using Bitcoin to transact is easy and accessible to everyone."
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.getting-started.title`}
+                defaultMessage={`Getting started with Bitcoin Il`}
+                description={`getting-started`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.getting-started.subtitle`}
+                defaultMessage={`Using Bitcoin to transact is easy and accessible to everyone.`}
+                description={`getting-started.subtitle`}
+              />
+            }
             body={<GettingStartedBody />}
           />
         )
@@ -107,8 +164,20 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="how-it-works"
-            title="How It Works"
-            subtitle="This is a question often surrounded by confusion, so here's a quick explanation!"
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.how-it-works.title`}
+                defaultMessage={`How It Works`}
+                description={`how-it-works.title`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.how-it-works.subtitle`}
+                defaultMessage={`This is a question often surrounded by confusion, so here's a quick explanation!`}
+                description={`how-it-works.subtitle`}
+              />
+            }
             body={<HowItWorks />}
           />
         )
@@ -125,9 +194,21 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="white-paper"
-            title="White Paper"
-            subtitle="Bitcoin for White Paper"
-            body={<h1>White Paper Body</h1>}
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.white-paper.title`}
+                defaultMessage={`Bitcoin: A Peer-to-Peer Electronic Cash System`}
+                description={`white-paper`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.white-paper.subtitle`}
+                defaultMessage={`The paper that first introduced Bitcoin`}
+                description={`white-paper.subtitle`}
+              />
+            }
+            body={<WhitePaperBody />}
           />
         )
       }
@@ -146,17 +227,29 @@ export const mainMenuItems: MainMenuItem[] = [
       {
         label: (
           <FormattedMessage
-            id={`mainMenu.resources.label`}
+            id={`mainMenu.resources.submenu.label`}
             defaultMessage={'Resources'}
-            description={`mainMenu.resources.label`}
+            description={`mainMenu.resources.submenu-label`}
           />
         ),
         key: 'resources',
         element: (
           <RoutePage
             id="resources"
-            title="Resources"
-            subtitle="Useful websites and resources about Bitcoin."
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.resources.title`}
+                defaultMessage={`Resources`}
+                description={`resources.title`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.resources.subtitle`}
+                defaultMessage={`Useful websites and resources about Bitcoin.`}
+                description={`resources.subtitle`}
+              />
+            }
             body={<ResourcesBody />}
           />
         )
@@ -172,10 +265,22 @@ export const mainMenuItems: MainMenuItem[] = [
         key: 'exchanges',
         element: (
           <RoutePage
-            title="Exchanges"
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.exhanges.title`}
+                defaultMessage={`Exchanges`}
+                description={`exhanges.title`}
+              />
+            }
             id="exchanges"
-            subtitle="Places to buy bitcoin in exchange for other currencies."
-            body={<h1>Business Body</h1>}
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.exhanges.subtitle`}
+                defaultMessage={`Places to buy bitcoin in exchange for other currencies.`}
+                description={`exhanges.subtitle`}
+              />
+            }
+            body={<ExchangesBody />}
           />
         )
       },
@@ -191,8 +296,20 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="Community"
-            title="Bitcoin Communities"
-            subtitle="Find interesting people, groups and communities related to Bitcoin."
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.communities.title`}
+                defaultMessage={`Bitcoin Communities`}
+                description={`communities.title`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.communities.subtitle`}
+                defaultMessage={`Find interesting people, groups and communities related to Bitcoin.`}
+                description={`communities.subtitle`}
+              />
+            }
             body={<CommunityBody />}
           />
         )
@@ -209,8 +326,20 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="documentation"
-            title="Documentation"
-            subtitle="Learn Bitcoin and start building Bitcoin-based applications."
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.Documentation.title`}
+                defaultMessage={`Documentation`}
+                description={`Documentation.title`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.documentation.subtitle`}
+                defaultMessage={`Learn Bitcoin and start building Bitcoin-based applications.`}
+                description={`documentation.subtitle`}
+              />
+            }
             body={<h1>Getting Started Body</h1>}
           />
         )
@@ -227,8 +356,20 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="vocabulary"
-            title="Some Bitcoin words you might hear"
-            subtitle="Bitcoin provides a new approach to payments and, as such, there are some new words that might become a part of your vocabulary."
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.vocab.title`}
+                defaultMessage={`"Some Bitcoin words you might hear"`}
+                description={`vocab.title`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.vocab.subtitle`}
+                defaultMessage={`Bitcoin provides a new approach to payments and, as such, there are some new words that might become a part of your vocabulary.`}
+                description={`vocab.subtitle`}
+              />
+            }
             body={<VocabularyBody />}
           />
         )
@@ -246,9 +387,21 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="events"
-            title="White Paper"
-            subtitle="Find events, conferences and meetups all over the world. Subscribe to the RSS feed."
-            body={<h1>White Paper Body</h1>}
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.conferences.title`}
+                defaultMessage={`Conferences and Events`}
+                description={`conferences.title`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.conferences.subtitle`}
+                defaultMessage={`Find events, conferences and meetups all over the world. Subscribe to the RSS feed.`}
+                description={`conferences.subtitle`}
+              />
+            }
+            body={<EventsBody />}
           />
         )
       },
@@ -264,9 +417,21 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="core"
-            title="BitCoin Core"
-            subtitle="Helping you keep Bitcoin decentralized."
-            body={<h1>White Paper Body</h1>}
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.core.title`}
+                defaultMessage={`BitCoin Core`}
+                description={`core.title`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.core.subtitle`}
+                defaultMessage={`Helping you keep Bitcoin decentralized.`}
+                description={`core.subtitle`}
+              />
+            }
+            body={<CoreBody />}
           />
         )
       }
@@ -284,8 +449,20 @@ export const mainMenuItems: MainMenuItem[] = [
     element: (
       <RoutePage
         id="innovation"
-        title="Innovation in Payment Systems"
-        subtitle="Bitcoin isn't just about sending money. It has many features and opens many possibilities that the community is still exploring. Here are some of the technologies currently being researched, and in some cases, being turned into real products and services. The most interesting uses of Bitcoin are probably still to be discovered."
+        title={
+          <FormattedMessage
+            id={`mainMenuItem.innovation.title`}
+            defaultMessage={`Innovation in Payment Systems`}
+            description={`innovation.title`}
+          />
+        }
+        subtitle={
+          <FormattedMessage
+            id={`mainMenuItem.innovation.subtitle`}
+            defaultMessage={`Bitcoin isn't just about sending money. It has many features and opens many possibilities that the community is still exploring. Here are some of the technologies currently being researched, and in some cases, being turned into real products and services. The most interesting uses of Bitcoin are probably still to be discovered.`}
+            description={`innovation.subtitle`}
+          />
+        }
         body={<InnovationBody />}
       />
     )
@@ -313,8 +490,20 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="Support"
-            title="Support Bitcoin Il"
-            subtitle="Bitcoin Il was born from a small community and has grown fast. There are a lot of things you can do to support it and help others learn more."
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.support.title`}
+                defaultMessage={`Support Bitcoin Il`}
+                description={`support.title`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.support.subtitle`}
+                defaultMessage={`Bitcoin Il was born from a small community and has grown fast. There are a lot of things you can do to support it and help others learn more.`}
+                description={`support.subtitle`}
+              />
+            }
             body={<SupportBody />}
           />
         )
@@ -331,10 +520,16 @@ export const mainMenuItems: MainMenuItem[] = [
         key: 'Buy',
         element: (
           <RoutePage
-            title="Buy"
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.buy.title`}
+                defaultMessage={`How to buy bitcoin`}
+                description={`buy.title`}
+              />
+            }
             id="Buy"
-            subtitle="Bitcoin - Buy"
-            body={<>BUY</>}
+            subtitle={null}
+            body={<BuyBody />}
           />
         )
       },
@@ -351,8 +546,20 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="full-node"
-            title="full-node"
-            subtitle="Bitcoin for full-node"
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.full-node.title`}
+                defaultMessage={`Running a Full Node`}
+                description={`full-node.title`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.full-node.subtitle`}
+                defaultMessage={`Message`}
+                description={`full-node.subtitle`}
+              />
+            }
             body={<h1>Full Node</h1>}
           />
         )
@@ -369,8 +576,20 @@ export const mainMenuItems: MainMenuItem[] = [
         element: (
           <RoutePage
             id="development"
-            title="Development"
-            subtitle="Bitcoin for Development"
+            title={
+              <FormattedMessage
+                id={`mainMenuItem.development.title`}
+                defaultMessage={`Development`}
+                description={`development.title`}
+              />
+            }
+            subtitle={
+              <FormattedMessage
+                id={`mainMenuItem.development.subtitle`}
+                defaultMessage={`Bitcoin for Development`}
+                description={`development.subtitle`}
+              />
+            }
             body={<h1>Development Body</h1>}
           />
         )
@@ -390,9 +609,21 @@ export const mainMenuItems: MainMenuItem[] = [
     element: (
       <RoutePage
         id="FAQ"
-        title="FAQ"
-        subtitle="Bitcoin for FAQ"
-        body={<h1>FAQ Body</h1>}
+        title={
+          <FormattedMessage
+            id={`mainMenuItem.faq.title`}
+            defaultMessage={`Frequently Asked Questions`}
+            description={`faq.title`}
+          />
+        }
+        subtitle={
+          <FormattedMessage
+            id={`mainMenuItem.faq.subtitle`}
+            defaultMessage={`Find answers to recurring questions and myths about Bitcoin.`}
+            description={`faq.subtitle`}
+          />
+        }
+        body={<FAQBody />}
       />
     )
   }

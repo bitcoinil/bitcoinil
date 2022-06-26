@@ -36,10 +36,6 @@ const StyledHomePage = styled.div`
   justify-content: center;
   padding: 130px 30px 50px;
 
-  .ant-btn {
-    padding: 25px 50px;
-  }
-
   h1 {
     ${phoneDevices} {
       font-size: 32px;

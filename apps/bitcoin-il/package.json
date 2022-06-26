@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --port 3030 --clearScreen false",
+    "dev": "vite --port 3030 --host --clearScreen false",
     "build": "vite build",
     "deploy": "vercel deploy dist --team=turborepo --confirm",
     "lint": "TIMING=1 eslint src/**/*.tsx --fix && tsc --noEmit",
@@ -14,14 +14,19 @@
     "@types/react-vertical-timeline-component": "^3.3.3",
     "@types/react-youtube": "^7.10.0",
     "add": "^2.0.6",
+    "antd": "^4.21.2",
     "react": "^17.0.2",
+    "react-country-flag": "^3.0.2",
     "react-dom": "^17.0.2",
     "react-helmet-async": "^1.3.0",
     "react-intl": "^6.0.3",
+    "react-router-dom": "^6.3.0",
+    "react-scroll-detect": "^1.2.0",
     "react-vertical-timeline-component": "^3.5.2",
     "react-youtube": "^9.0.2",
     "styled-components": "^5.3.5",
-    "yarn": "^1.22.18"
+    "yarn": "^1.22.18",
+    "turbo": "^1.3.0"
   },
   "devDependencies": {
     "@bitil/locales": "*",
@@ -42,6 +47,7 @@
     "typescript": "^4.5.3",
     "ui": "*",
     "ui-next": "*",
-    "vite": "^2.6.14"
+    "vite": "^2.6.14",
+    "vite-plugin-static-copy": "^0.5.1"
   }
 }

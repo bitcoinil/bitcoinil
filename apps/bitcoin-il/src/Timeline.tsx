@@ -5,10 +5,9 @@ import {
 } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
 import styled from 'styled-components'
-
-interface TimelineCompProps {
-  items: JSX.Element[]
-}
+import { phoneDevices } from './breakpoints'
+import { colors } from './colors'
+import { TimelineCompProps } from './Interfaces'
 
 const TimelineComp: React.FC<TimelineCompProps> = ({ items }) => {
   if (!items) return null
@@ -33,12 +32,11 @@ const TimelineComp: React.FC<TimelineCompProps> = ({ items }) => {
 export default TimelineComp
 
 const StyledTimelineComp = styled.div`
-  width: 100vw;
-
   .vertical-timeline-element-icon {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: ${colors.accent};
 
     h1 {
       margin: 0;
@@ -50,9 +48,14 @@ const StyledTimelineComp = styled.div`
     height: 10px;
     width: 32px;
     background: black;
+
+    ${phoneDevices} {
+      width: 17px;
+    }
   }
 
   .vertical-timeline-element-content {
     box-shadow: none;
+    background: #3d3c3c;
   }
 `

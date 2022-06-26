@@ -10,8 +10,8 @@ export interface MainMenuItem {
   element?: React.ReactNode
 }
 export interface RoutePageProps {
-  title: string
-  subtitle: string
+  title: JSX.Element
+  subtitle: JSX.Element | null
   body: JSX.Element
   id: string
 }
@@ -27,6 +27,8 @@ export interface SiteButtonProps {
   type?: any
   className?: any
   children: React.ReactNode
+  color?: string
+  background?: string
 }
 
 export interface TranslationDictionary {
@@ -74,7 +76,7 @@ export interface BodyCard {
 }
 
 export interface TimelineCompProps {
-  items: React.ReactNode[]
+  items: JSX.Element[]
 }
 
 export interface GettingStartedBodyProps {}
@@ -109,4 +111,59 @@ export interface VocabularyProps {}
 export interface VocabularyTerm {
   word: JSX.Element
   definition: JSX.Element
+}
+
+export interface ExchangesBodyProps {}
+
+export interface CoreShortcutBox {
+  image: string
+  title: JSX.Element
+  subtitle: JSX.Element
+  link: string
+}
+export interface CoreBodyProps {}
+
+export interface Link {
+  linkText: string
+  link: string
+  postLinkText: string
+}
+
+export interface CoreBox {
+  img: string
+  title: JSX.Element
+  mainText: JSX.Element
+}
+
+export interface AvailableLanguage {
+  name: string
+  icon: string
+  locale: string
+  longName: string
+}
+
+export interface LongNamesForLanguageType {
+  [key: string]: string
+}
+
+export interface Exchange {
+  name: JSX.Element
+  link: string
+}
+
+export interface ExchangeCountry {
+  city: JSX.Element
+  exchanges: Exchange[]
+  flag: string
+  countryCode?: string
+}
+export interface ExchangeLocation {
+  location: JSX.Element
+  exchanges?: Exchange[]
+  cities?: ExchangeCountry[]
+  countryCode?: string
+}
+
+export interface CardsDisplayProps {
+  cards: BodyCard[]
 }

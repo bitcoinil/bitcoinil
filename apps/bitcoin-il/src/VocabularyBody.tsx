@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
+import { phoneDevices } from './breakpoints'
 import { colors } from './colors'
 import { VocabularyProps, VocabularyTerm } from './Interfaces'
 
@@ -231,22 +232,57 @@ const terms: VocabularyTerm[] = [
 ]
 
 const Vocabulary: React.FC<VocabularyProps> = ({}) => {
+  const flashElement = (el: HTMLElement | null) => {
+    if (!el) return
+
+    const duration = 300
+
+    el.style.opacity = '0.2'
+    window.setTimeout(() => {
+      el.style.opacity = '1'
+    }, duration)
+    window.setTimeout(() => {
+      el.style.opacity = '0.2'
+    }, duration * 2)
+    window.setTimeout(() => {
+      el.style.opacity = '1'
+    }, duration * 3)
+    window.setTimeout(() => {
+      el.style.opacity = '0.2'
+    }, duration * 4)
+    window.setTimeout(() => {
+      el.style.opacity = '1'
+    }, duration * 5)
+  }
+
   return (
     <StyledVocabulary id="Vocabulary">
-      <div className="left">
-        <ul>
-          {terms.map((term) => {
-            console.log(term)
-            return <li>{term.word}</li>
-          })}
-        </ul>
+      <div>
+        <div className={`left`}>
+          <ul>
+            {terms.map((term, i) => {
+              return (
+                <li
+                  className="dict-word-link"
+                  onClick={() => {
+                    document
+                      .getElementById(`word-${i}`)
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                    flashElement(document.getElementById(`word-${i}`))
+                  }}
+                  key={i}
+                >
+                  {term.word}
+                </li>
+              )
+            })}
+          </ul>
+        </div>
       </div>
       <div className="right">
-        {' '}
-        {terms.map((term) => {
-          console.log(term)
+        {terms.map((term, i) => {
           return (
-            <li>
+            <li key={i} id={`word-${i}`}>
               <h3>{term.word}</h3>
               <p>{term.definition}</p>
             </li>
@@ -268,13 +304,37 @@ const StyledVocabulary = styled.div`
   }
 
   .left {
-    width: 45vw;
-    font-size: 30px;
+    width: 35vw;
+    font-size: 20px;
     border-right: 1px solid #b9b9c350;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 60px;
+
+    ul {
+      ${phoneDevices} {
+        font-size: 17px;
+        padding: 7px;
+      }
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
   }
 
   .right {
     width: 65vw;
+
+    li {
+      padding: 50px;
+      border-bottom: 1px solid #b9b9c350;
+      ${phoneDevices} {
+        padding: 10px;
+      }
+    }
 
     h3 {
       color: ${colors.accent};
@@ -284,6 +344,16 @@ const StyledVocabulary = styled.div`
 
     p {
       font-size: 18px;
+    }
+  }
+
+  .dict-word-link {
+    cursor: pointer;
+
+    transition: opacity 400ms;
+    &:hover {
+      transition: opacity 400ms;
+      opacity: 0.6;
     }
   }
 `

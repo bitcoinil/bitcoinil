@@ -1,11 +1,10 @@
 import { Menu } from 'antd'
 import * as React from 'react'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import { phoneDevices } from './breakpoints'
 import Arrow from './img/ico_angle.svg'
 import { MainMenuItem } from './Interfaces'
 import { mainMenuItems } from './mainMenuItems'
-import { NavLink } from 'react-router-dom'
 
 export default function HeaderMenu(): JSX.Element {
   const [current, setCurrent] = React.useState('innovation')

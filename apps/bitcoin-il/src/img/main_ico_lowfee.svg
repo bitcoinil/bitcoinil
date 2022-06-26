@@ -2,12 +2,12 @@
 <title>low processing</title>
 <desc>Created using Figma</desc>
 <g id="Canvas" transform="matrix(2 0 0 2 -10060 -3638)">
-<rect x="5030" y="1819" width="30" height="25" fill="#FFFFFF"/>
+<rect x="5030" y="1819" width="30" height="25" fill="#00000000"/>
 <clipPath id="clip-0" clip-rule="evenodd">
-<path d="M 4815 -244L 6415 -244L 6415 3494L 4815 3494L 4815 -244Z" fill="#FFFFFF"/>
+<path d="M 4815 -244L 6415 -244L 6415 3494L 4815 3494L 4815 -244Z" fill="#00000000"/>
 </clipPath>
 <g id="19/01/18 Bitcoin.org ver3 Desktop 1200px  " clip-path="url(#clip-0)">
-<path d="M 4815 -244L 6415 -244L 6415 3494L 4815 3494L 4815 -244Z" fill="#FFFFFF"/>
+<path d="M 4815 -244L 6415 -244L 6415 3494L 4815 3494L 4815 -244Z" fill="#00000000"/>
 <g id="//Content">
 <g id="Get started with">
 <g id="features">
@@ -15,7 +15,7 @@
 <g id="icon/low processing">
 <g id="icon/low processing">
 <g id="ion-android-arrow-forward - Ionicons">
-<use xlink:href="#path0_fill" transform="matrix(6.12323e-17 1 -1 6.12323e-17 5059.68 1821)" fill="#F7931A"/>
+<use xlink:href="#path0_fill" transform="matrix(6.12323e-17 1 -1 6.12323e-17 5059.68 1821)" fill="#00b3f0"/>
 </g>
 <g id="ion-ios-pricetag - Ionicons">
 <use xlink:href="#path1_fill" transform="translate(5030.3 1819)" fill="#95AABF"/>

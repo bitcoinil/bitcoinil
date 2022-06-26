@@ -155,6 +155,158 @@
     "defaultMessage": "Social Networks",
     "description": "individuals card social title"
   },
+  "core.main.decentralized.mainText": {
+    "defaultMessage": "It is these users who keep Bitcoin decentralized. They individually run their own Bitcoin Core full nodes, and each of those full nodes separately follows the exact same rules to decide which block chain is valid.",
+    "description": "decentralized.mainText "
+  },
+  "core.main.decentralized.title": {
+    "defaultMessage": "Decentralized",
+    "description": "id"
+  },
+  "core.main.no-voting.mainText": {
+    "defaultMessage": "There's no voting or other corruptible process involved: there's just individual software following identical rules—\"math\"—to evaluate identical blocks and coming to identical conclusions about which block chain is valid.",
+    "description": "no-voting.mainText"
+  },
+  "core.main.no-voting.title": {
+    "defaultMessage": "No Voting",
+    "description": "id"
+  },
+  "core.shortcuts.contribute.subtitle": {
+    "defaultMessage": "Code, translations, and more",
+    "description": "contribute"
+  },
+  "core.shortcuts.contribute.title": {
+    "defaultMessage": "Contribute",
+    "description": "contribute"
+  },
+  "core.shortcuts.features.subtitle": {
+    "defaultMessage": "Discover what Bitcoin Core offers",
+    "description": "features"
+  },
+  "core.shortcuts.features.title": {
+    "defaultMessage": "Features",
+    "description": "features"
+  },
+  "core.shortcuts.get-help.subtitle": {
+    "defaultMessage": "Documentation, forums, chat rooms",
+    "description": "get-help"
+  },
+  "core.shortcuts.get-help.title": {
+    "defaultMessage": "Get Help",
+    "description": "get-help"
+  },
+  "core.shortcuts.mainTitle": {
+    "defaultMessage": "Bitcoin Core is programmed to decide which block chain contains valid transactions. The users of Bitcoin Core only accept transactions for that block chain, making it the Bitcoin block chain that everyone else wants to use. For the latest developments related to Bitcoin Core, be sure to visit the project’s official website.",
+    "description": "mainTitle"
+  },
+  "core.shortcuts.releases.subtitle": {
+    "defaultMessage": "For more News, see the complete list",
+    "description": "releases"
+  },
+  "core.shortcuts.releases.title": {
+    "defaultMessage": "Bitcoin Core Releases",
+    "description": "releases"
+  },
+  "core.shortcuts.rss.subtitle": {
+    "defaultMessage": "For more notifications of new releases",
+    "description": "rss"
+  },
+  "core.shortcuts.rss.title": {
+    "defaultMessage": "Subscribe to the RSS feed",
+    "description": "rss"
+  },
+  "core.shortcuts.shared-agreement": {
+    "defaultMessage": "This shared agreement (called consensus) allows people like you to only accept valid bitcoins, enforcing Bitcoin's rules against even the most powerful miners.In addition to improving Bitcoin's decentralization, Bitcoin Core users get:",
+    "description": "shared-agreement"
+  },
+  "events.heading": {
+    "defaultMessage": "Upcoming Events and Conferences",
+    "description": "heading"
+  },
+  "events.link-0": {
+    "defaultMessage": "BitCoin Meetup Groups",
+    "description": "link-0"
+  },
+  "exchange.menuItem.asia.label": {
+    "defaultMessage": "Asia",
+    "description": "asia.label"
+  },
+  "exchange.menuItem.bahrain": {
+    "defaultMessage": "Bahrain",
+    "description": "bahrain"
+  },
+  "exchange.menuItem.bahrain.exhange.label": {
+    "defaultMessage": "Some Bahrainian Exchange",
+    "description": "bahrain.exhange.label"
+  },
+  "exchange.menuItem.israel": {
+    "defaultMessage": "Israel",
+    "description": "israel"
+  },
+  "exchange.menuItem.israel.exchange": {
+    "defaultMessage": "Some Israeli Exchange",
+    "description": "israel.exchange"
+  },
+  "exchange.menuItem.p2p.exchange.0.label": {
+    "defaultMessage": "Some Peer To Peer Excahnge",
+    "description": "p2p.exchange.0.label"
+  },
+  "exchange.menuItem.peer2peer": {
+    "defaultMessage": "P2P",
+    "description": "peer2peer"
+  },
+  "exchange.menuItem.someExchange": {
+    "defaultMessage": "Some Exchange ...",
+    "description": "someExchange"
+  },
+  "exchangeMenuItem.international.label": {
+    "defaultMessage": "International",
+    "description": "exchangeMenuItem.international.label"
+  },
+  "exchanges.warning": {
+    "defaultMessage": "Note: Exchanges provide highly varying degrees of safety, security, privacy, and control over your funds and information. Perform your own due diligence and choose a wallet where you will keep your bitcoin before selecting an exchange.",
+    "description": "exhcnages-warning"
+  },
+  "faq.general": {
+    "defaultMessage": "General",
+    "description": "general"
+  },
+  "faq.help-like-help": {
+    "defaultMessage": "I'd like to learn more. Where can I get help?",
+    "description": "help-like-help"
+  },
+  "faq.help-subtitle-info-here": {
+    "defaultMessage": "here",
+    "description": "help-subtitle-info-here"
+  },
+  "faq.help-title": {
+    "defaultMessage": "Help",
+    "description": "help-title"
+  },
+  "faq.help-wiki": {
+    "defaultMessage": "You can find more information",
+    "description": "help-wiki"
+  },
+  "faq.is-legal": {
+    "defaultMessage": "Is Bitcoin Legal?",
+    "description": "is-legal"
+  },
+  "faq.is-legal.body": {
+    "defaultMessage": "To the best of our knowledge, Bitcoin has not been made illegal by legislation in most jurisdictions. However, some jurisdictions (such as Argentina and Russia) severely restrict or ban foreign currencies. Other jurisdictions (such as Thailand) may limit the licensing of certain entities such as Bitcoin exchanges. Regulators from various jurisdictions are taking steps to provide individuals and businesses with rules on how to integrate this new technology with the formal, regulated financial system. For example, the Financial Crimes Enforcement Network (FinCEN), a bureau in the United States Treasury Department, issued non-binding guidance on how it characterizes certain activities involving virtual currencies.",
+    "description": "is-legal.body"
+  },
+  "faq.legal": {
+    "defaultMessage": "Legal",
+    "description": "legal"
+  },
+  "faq.what-is": {
+    "defaultMessage": "What is BitCoin?",
+    "description": "what-is"
+  },
+  "faq.what-is.body": {
+    "defaultMessage": "Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen. From a user perspective, Bitcoin is pretty much like cash for the Internet. Bitcoin can also be seen as the most prominent triple entry bookkeeping system in existence.",
+    "description": "what-is.body"
+  },
   "footer.donate": {
     "defaultMessage": "Donate",
     "description": "Donate"
@@ -433,7 +585,11 @@
   },
   "mainMenu.resources.label": {
     "defaultMessage": "Resources",
-    "description": "mainMenu.resources.label"
+    "description": "mainMenu resources label"
+  },
+  "mainMenu.resources.submenu.label": {
+    "defaultMessage": "Resources",
+    "description": "mainMenu.resources.submenu-label"
   },
   "mainMenu.run-node.label": {
     "defaultMessage": "Running a full Node",
@@ -446,6 +602,162 @@
   "mainMenu.white-paper.label": {
     "defaultMessage": "White Paper",
     "description": "mainMenu white paper label"
+  },
+  "mainMenuItem.Documentation.title": {
+    "defaultMessage": "Documentation",
+    "description": "Documentation.title"
+  },
+  "mainMenuItem.business.subtitle": {
+    "defaultMessage": "Bitcoin is a very secure and inexpensive way to handle payments.",
+    "description": "business.subtitle"
+  },
+  "mainMenuItem.business.title": {
+    "defaultMessage": "Business",
+    "description": "business.title"
+  },
+  "mainMenuItem.buy.body-message": {
+    "defaultMessage": "The above widget is provided by a third party provider (MoonPay) and is not associated with bitcoin.org. Fees may be higher than some other Bitcoin exchanges.",
+    "description": "buy.body-message"
+  },
+  "mainMenuItem.buy.title": {
+    "defaultMessage": "How to buy bitcoin",
+    "description": "buy.title"
+  },
+  "mainMenuItem.communities.subtitle": {
+    "defaultMessage": "Find interesting people, groups and communities related to Bitcoin.",
+    "description": "communities.subtitle"
+  },
+  "mainMenuItem.communities.title": {
+    "defaultMessage": "Bitcoin Communities",
+    "description": "communities.title"
+  },
+  "mainMenuItem.conferences.subtitle": {
+    "defaultMessage": "Find events, conferences and meetups all over the world. Subscribe to the RSS feed.",
+    "description": "conferences.subtitle"
+  },
+  "mainMenuItem.conferences.title": {
+    "defaultMessage": "Conferences and Events",
+    "description": "conferences.title"
+  },
+  "mainMenuItem.core.subtitle": {
+    "defaultMessage": "Helping you keep Bitcoin decentralized.",
+    "description": "core.subtitle"
+  },
+  "mainMenuItem.core.title": {
+    "defaultMessage": "BitCoin Core",
+    "description": "core.title"
+  },
+  "mainMenuItem.developers.title": {
+    "defaultMessage": "Developers",
+    "description": "developers"
+  },
+  "mainMenuItem.development.subtitle": {
+    "defaultMessage": "Bitcoin for Development",
+    "description": "development.subtitle"
+  },
+  "mainMenuItem.development.title": {
+    "defaultMessage": "Development",
+    "description": "development.title"
+  },
+  "mainMenuItem.devleopers.subtitle": {
+    "defaultMessage": "Bitcoin for Developers",
+    "description": "devleopers.subtitle"
+  },
+  "mainMenuItem.documentation.subtitle": {
+    "defaultMessage": "Learn Bitcoin and start building Bitcoin-based applications.",
+    "description": "documentation.subtitle"
+  },
+  "mainMenuItem.exhanges.subtitle": {
+    "defaultMessage": "Places to buy bitcoin in exchange for other currencies.",
+    "description": "exhanges.subtitle"
+  },
+  "mainMenuItem.exhanges.title": {
+    "defaultMessage": "Exchanges",
+    "description": "exhanges.title"
+  },
+  "mainMenuItem.faq.subtitle": {
+    "defaultMessage": "Find answers to recurring questions and myths about Bitcoin.",
+    "description": "faq.subtitle"
+  },
+  "mainMenuItem.faq.title": {
+    "defaultMessage": "Frequently Asked Questions",
+    "description": "faq.title"
+  },
+  "mainMenuItem.full-node.subtitle": {
+    "defaultMessage": "Message",
+    "description": "full-node.subtitle"
+  },
+  "mainMenuItem.full-node.title": {
+    "defaultMessage": "Running a Full Node",
+    "description": "full-node.title"
+  },
+  "mainMenuItem.getting-started.subtitle": {
+    "defaultMessage": "Using Bitcoin to transact is easy and accessible to everyone.",
+    "description": "getting-started.subtitle"
+  },
+  "mainMenuItem.getting-started.title": {
+    "defaultMessage": "Getting started with Bitcoin Il",
+    "description": "getting-started"
+  },
+  "mainMenuItem.how-it-works.subtitle": {
+    "defaultMessage": "This is a question often surrounded by confusion, so here's a quick explanation!",
+    "description": "how-it-works.subtitle"
+  },
+  "mainMenuItem.how-it-works.title": {
+    "defaultMessage": "How It Works",
+    "description": "how-it-works.title"
+  },
+  "mainMenuItem.individuals.subtitle": {
+    "defaultMessage": "Bitcoin is the easiest way to transact at a very low cost.",
+    "description": "individuals.subtitle"
+  },
+  "mainMenuItem.individuals.title": {
+    "defaultMessage": "Bitcoin for Individuals",
+    "description": "individuals.title"
+  },
+  "mainMenuItem.innovation.subtitle": {
+    "defaultMessage": "Bitcoin isn't just about sending money. It has many features and opens many possibilities that the community is still exploring. Here are some of the technologies currently being researched, and in some cases, being turned into real products and services. The most interesting uses of Bitcoin are probably still to be discovered.",
+    "description": "innovation.subtitle"
+  },
+  "mainMenuItem.innovation.title": {
+    "defaultMessage": "Innovation in Payment Systems",
+    "description": "innovation.title"
+  },
+  "mainMenuItem.resources.subtitle": {
+    "defaultMessage": "Useful websites and resources about Bitcoin.",
+    "description": "resources.subtitle"
+  },
+  "mainMenuItem.resources.title": {
+    "defaultMessage": "Resources",
+    "description": "resources.title"
+  },
+  "mainMenuItem.support.subtitle": {
+    "defaultMessage": "Bitcoin Il was born from a small community and has grown fast. There are a lot of things you can do to support it and help others learn more.",
+    "description": "support.subtitle"
+  },
+  "mainMenuItem.support.title": {
+    "defaultMessage": "Support Bitcoin Il",
+    "description": "support.title"
+  },
+  "mainMenuItem.vocab.subtitle": {
+    "defaultMessage": "Bitcoin provides a new approach to payments and, as such, there are some new words that might become a part of your vocabulary.",
+    "description": "vocab.subtitle"
+  },
+  "mainMenuItem.vocab.title": {
+    "defaultMessage": "\"Some Bitcoin words you might hear\"",
+    "description": "vocab.title"
+  },
+  "mainMenuItem.white-paper.subtitle": {
+    "defaultMessage": "The paper that first introduced Bitcoin",
+    "description": "white-paper.subtitle"
+  },
+  "mainMenuItem.white-paper.title": {
+    "defaultMessage": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+    "description": "white-paper"
+  },
+  "page.choose-wallet.title": {
+    "defaultMessage": "Choose Your Wallet",
+    "description": "Homepage Title"
   },
   "page.footer.support": {
     "defaultMessage": "Support BitCoin Il",
@@ -471,6 +783,10 @@
     "defaultMessage": "Worldwide Payments",
     "description": "Worldwide Payments"
   },
+  "page.home.get-started.worldwide": {
+    "defaultMessage": "Worldwide Payments",
+    "description": "Worldwide Payments"
+  },
   "page.home.title": {
     "defaultMessage": "Bitcoin Il is an innovative payment network and a new kind of money.",
     "description": "Homepage Title"
@@ -479,13 +795,21 @@
     "defaultMessage": "bitaps.com",
     "description": "resourceCards.charts.bitaps"
   },
+  "resourceCards.charts.bitcoin-charts": {
+    "defaultMessage": "BitCoinCharts.com",
+    "description": "resourceCards.charts.bitcoin-charts"
+  },
   "resourceCards.charts.blockcypher": {
     "defaultMessage": "blockcypher",
     "description": "resourceCards.charts.blockcypher"
   },
-  "resourceCards.charts.go-bitcoin": {
+  "resourceCards.charts.btc-to-usd": {
     "defaultMessage": "BitCoinAverage",
     "description": "resourceCards.charts.bitcoin-average"
+  },
+  "resourceCards.charts.go-bitcoin": {
+    "defaultMessage": "GoBitCoin.io",
+    "description": "resourceCards charts go-bitcoin"
   },
   "resourceCards.charts.mempool": {
     "defaultMessage": "mempool.space",
@@ -500,8 +824,8 @@
     "description": "individuals card charts title"
   },
   "resourceCards.charts.tradeblock": {
-    "defaultMessage": "BitCoinCharts.com",
-    "description": "resourceCards.charts.tradeblock"
+    "defaultMessage": "TradeBlock",
+    "description": "resourceCards charts tradeblock"
   },
   "resourceCards.directories.exchanges": {
     "defaultMessage": "Exchanges",

@@ -159,9 +159,5 @@ const StyledIndividualsBody = styled.div`
   .individuals-button {
     margin: 50px;
     align-self: center;
-
-    button {
-      padding: 35px;
-    }
   }
 `

@@ -28,13 +28,13 @@
                                     <circle id="Oval-Copy-5" cx="19" cy="38" r="3"></circle>
                                     <circle id="Oval-Copy-6" cx="34" cy="30" r="3"></circle>
                                 </g>
-                                <circle id="Oval" stroke="#FF9500" cx="19" cy="3" r="3"></circle>
-                                <circle id="Oval-Copy" stroke="#FF9500" cx="34" cy="11" r="3"></circle>
-                                <circle id="Oval-Copy-2" stroke="#FF9500" cx="19" cy="21" r="3"></circle>
-                                <circle id="Oval-Copy-3" stroke="#FF9500" cx="3" cy="11" r="3"></circle>
-                                <circle id="Oval-Copy-4" stroke="#FF9500" cx="3" cy="30" r="3"></circle>
-                                <circle id="Oval-Copy-5" stroke="#FF9500" cx="19" cy="38" r="3"></circle>
-                                <circle id="Oval-Copy-6" stroke="#FF9500" cx="34" cy="30" r="3"></circle>
+                                <circle id="Oval" stroke="#00b3f0" cx="19" cy="3" r="3"></circle>
+                                <circle id="Oval-Copy" stroke="#00b3f0" cx="34" cy="11" r="3"></circle>
+                                <circle id="Oval-Copy-2" stroke="#00b3f0" cx="19" cy="21" r="3"></circle>
+                                <circle id="Oval-Copy-3" stroke="#00b3f0" cx="3" cy="11" r="3"></circle>
+                                <circle id="Oval-Copy-4" stroke="#00b3f0" cx="3" cy="30" r="3"></circle>
+                                <circle id="Oval-Copy-5" stroke="#00b3f0" cx="19" cy="38" r="3"></circle>
+                                <circle id="Oval-Copy-6" stroke="#00b3f0" cx="34" cy="30" r="3"></circle>
                             </g>
                         </g>
                     </g>

@@ -2,12 +2,12 @@
 <title>Worldwide</title>
 <desc>Created using Figma</desc>
 <g id="Canvas" transform="matrix(2 0 0 2 -10062 -3548)">
-<rect x="5031" y="1774" width="28" height="22" fill="#FFFFFF"/>
+<rect x="5031" y="1774" width="28" height="22" fill="#00000000"/>
 <clipPath id="clip-0" clip-rule="evenodd">
-<path d="M 4815 -244L 6415 -244L 6415 3494L 4815 3494L 4815 -244Z" fill="#FFFFFF"/>
+<path d="M 4815 -244L 6415 -244L 6415 3494L 4815 3494L 4815 -244Z" fill="#00000000"/>
 </clipPath>
 <g id="19/01/18 Bitcoin.org ver3 Desktop 1200px  " clip-path="url(#clip-0)">
-<path d="M 4815 -244L 6415 -244L 6415 3494L 4815 3494L 4815 -244Z" fill="#FFFFFF"/>
+<path d="M 4815 -244L 6415 -244L 6415 3494L 4815 3494L 4815 -244Z" fill="#00000000"/>
 <g id="//Content">
 <g id="Get started with">
 <g id="features">
@@ -24,7 +24,7 @@
 <use xlink:href="#path2_fill" transform="matrix(0.939693 0.34202 0.34202 -0.939693 5031.23 1784.9)" fill="#1C3C55"/>
 </g>
 <g id="Oval 3">
-<use xlink:href="#path3_fill" transform="matrix(0.939693 -0.34202 -0.34202 -0.939693 5033.35 1795.67)" fill="#F7931A"/>
+<use xlink:href="#path3_fill" transform="matrix(0.939693 -0.34202 -0.34202 -0.939693 5033.35 1795.67)" fill="#00b3f0"/>
 </g>
 </g>
 </g>

@@ -4,7 +4,7 @@
 		"prefix": "nfm",
 		"body": [
 			"<FormattedMessage",
-			"id={`${1:id}`}",
+			"id={`faq.${1:id}`}",
 			"defaultMessage={`${2:Message}`}",
 			"description={`${1:id}`}",
 			"/>",

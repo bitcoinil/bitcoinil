@@ -1,13 +1,9 @@
 import * as React from 'react'
 import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
-import { BodyCard } from './Interfaces'
+import { BodyCard, CardsDisplayProps } from './Interfaces'
 import { Card } from 'antd'
 import { phoneDevices } from './breakpoints'
-
-interface CardsDisplayProps {
-  cards: BodyCard[]
-}
 
 const CardsDisplay: React.FC<CardsDisplayProps> = ({ cards }) => {
   return (
@@ -39,6 +35,7 @@ const StyledCardsDisplay = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 100vw;
   }
   .ant-card {
     width: 300px;

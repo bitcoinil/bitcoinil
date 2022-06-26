@@ -1,8 +1,8 @@
-name: CI
+name: CI For Deploy
 
 on:
   push:
-    branches: ["main"]
+    branches: ["next-gis"]
   pull_request:
     types: [opened, synchronize]
 
@@ -45,7 +45,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m 'deploy'
-
 
       - name: Force push to destination branch
         uses: ad-m/github-push-action@master

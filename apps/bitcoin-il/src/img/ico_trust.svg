@@ -17,7 +17,7 @@
                                 <g id="Group-2" transform="translate(22.000000, 17.000000)">
                                     <circle id="Oval" stroke="#1C1F30" fill="#FFFFFF" cx="11" cy="11" r="11"></circle>
                                     <path d="M11,22.5 C4.64872538,22.5 -0.5,17.3512746 -0.5,11 C-0.5,4.64872538 4.64872538,-0.5 11,-0.5 C17.3512746,-0.5 22.5,4.64872538 22.5,11 C22.5,17.3512746 17.3512746,22.5 11,22.5 Z M11,21.5 C16.7989899,21.5 21.5,16.7989899 21.5,11 C21.5,5.20101013 16.7989899,0.5 11,0.5 C5.20101013,0.5 0.5,5.20101013 0.5,11 C0.5,16.7989899 5.20101013,21.5 11,21.5 Z" id="Oval" fill="#1C1F30" fill-rule="nonzero"></path>
-                                    <polyline id="Path-4" stroke="#FF9500" stroke-linecap="round" stroke-linejoin="round" points="6 11.7467895 9.97099856 15 17 7"></polyline>
+                                    <polyline id="Path-4" stroke="#00b3f0" stroke-linecap="round" stroke-linejoin="round" points="6 11.7467895 9.97099856 15 17 7"></polyline>
                                 </g>
                             </g>
                         </g>

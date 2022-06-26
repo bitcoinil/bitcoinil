@@ -2,12 +2,12 @@
 <title>fastP2p</title>
 <desc>Created using Figma</desc>
 <g id="Canvas" transform="matrix(2 0 0 2 -10060 -3450)">
-<rect x="5030" y="1725" width="30" height="25" fill="#FFFFFF"/>
+<rect x="5030" y="1725" width="30" height="25" fill="#00000000"/>
 <clipPath id="clip-0" clip-rule="evenodd">
-<path d="M 4815 -244L 6415 -244L 6415 3494L 4815 3494L 4815 -244Z" fill="#FFFFFF"/>
+<path d="M 4815 -244L 6415 -244L 6415 3494L 4815 3494L 4815 -244Z" fill="#00000000"/>
 </clipPath>
 <g id="19/01/18 Bitcoin.org ver3 Desktop 1200px  " clip-path="url(#clip-0)">
-<path d="M 4815 -244L 6415 -244L 6415 3494L 4815 3494L 4815 -244Z" fill="#FFFFFF"/>
+<path d="M 4815 -244L 6415 -244L 6415 3494L 4815 3494L 4815 -244Z" fill="#00000000"/>
 <g id="//Content">
 <g id="Get started with">
 <g id="features">
@@ -18,7 +18,7 @@
 <use xlink:href="#path0_fill" transform="translate(5037 1733.78)" fill="#95AABF"/>
 </g>
 <g id="ion-android-arrow-forward - Ionicons">
-<use xlink:href="#path1_fill" transform="translate(5034 1725.78)" fill="#F7931A"/>
+<use xlink:href="#path1_fill" transform="translate(5034 1725.78)" fill="#00b3f0"/>
 </g>
 <g id="ion-android-arrow-forward - Ionicons">
 <use xlink:href="#path2_fill" transform="translate(5030 1740.78)" fill="#1C3C55"/>
