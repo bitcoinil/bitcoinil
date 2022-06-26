@@ -33,13 +33,12 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: create env file for BASE_PATH
+      - name: Build
         run: |
           touch .env
           echo BASE_PATH=${{ secrets.BASE_PATH }} >> .env
-
-      - name: Build
-        run: yarn build --filter=bitcoin-il
+          yarn build --filter=bitcoin-il
+        env: BASE_PATH: ${{ secrets.BASE_PATH }}
 
       - name: Init new repo in dist folder and commit generated files
         run: |
