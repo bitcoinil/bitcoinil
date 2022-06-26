@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import App from './App'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 
 console.log('BASE_PATH:', import.meta.env.BASE_PATH || '/', {
   env: import.meta.env.BASE_PATH,
