@@ -42,6 +42,9 @@ jobs:
           touch .env
           touch apps/bitcoin-il/.env
           touch packages/locales/.env
+          echo BASE_PATH=${{ secrets.BASE_PATH }} >> .env
+          echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} >> .env
+          echo NOTION_PAGE=${{ secrets.NOTION_PAGE }} >> .env
           echo BASE_PATH=${{ secrets.BASE_PATH }} >> apps/bitcoin-il/.env
           echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} >> packages/locales/.env
           echo NOTION_PAGE=${{ secrets.NOTION_PAGE }} >> packages/locales/.env
