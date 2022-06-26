@@ -38,6 +38,8 @@ const outputDir = args['--output'] || tsconfig?.config?.compilerOptions?.outDir
 
 const saveDir = args['--save-dir'] || './cached'
 
+console.log('😎😎😎 PROCESS.ENV', process.env)
+
 const init = async () => {
   const cachedLoader = () =>
     useLive().catch(async (ee) => {
