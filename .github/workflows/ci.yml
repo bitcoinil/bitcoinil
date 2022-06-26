@@ -36,9 +36,13 @@ jobs:
       - name: Build
         env:
           BASE_PATH: ${{ secrets.BASE_PATH }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_PAGE: ${{ secrets.NOTION_PAGE }}
         run: |
           touch .env
           echo BASE_PATH=${{ secrets.BASE_PATH }} >> .env
+          echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} >> .env
+          echo NOTION_PAGE=${{ secrets.NOTION_PAGE }} >> .env
           yarn build --filter=bitcoin-il
 
       - name: Init new repo in dist folder and commit generated files
