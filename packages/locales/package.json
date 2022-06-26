@@ -8,16 +8,29 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc -w",
+    "build": "tsc && yarn compile-language --silent --load-cached",
+
+    "Xdev": "tsc -w",
+    "dev": "concurrently \"tsc -w\" \"yarn dev-compile-language --listen --load-cached\"",
+    "dev-compile-language": "nodemon -w src -e less,json,yaml --exec \"yarn compile-language\"",
+    "compile-language": "node ../locale-handler/dist/index.js compile ./src/lib --base $PWD --clean=false dotenv_config_debug=true --compile-language --verbose",
+
     "locales": "node ../locale-handler/dist/locale-handler.js compile ./src/lib --base $PWD --clean=false dotenv_config_debug=true",
+
+    "ingest-language": "node ../locale-handler/dist/index.js compile ./src/lib --base $PWD --clean=false dotenv_config_debug=true --ingest-language --verbose",
     "dev-locales": "nodemon -w src -e less,json,yaml --exec \"yarn locales\"",
+    "dev-ingest-language": "nodemon -w src -e less,json,yaml --exec \"yarn ingest-language\"",
+
     "clean": "rimraf .turbo node_modules dist"
   },
   "devDependencies": {
     "@bitil/locale-handler": "*",
+    "concurrently": "^7.2.2",
     "eslint": "^8.16.0",
-    "tsconfig": "*",
-    "scripts": "*"
+    "scripts": "*",
+    "tsconfig": "*"
+  },
+  "dependencies": {
+    "get-tsconfig": "^4.0.6"
   }
 }

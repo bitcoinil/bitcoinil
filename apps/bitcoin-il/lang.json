@@ -231,6 +231,30 @@
     "defaultMessage": "BitCoin Meetup Groups",
     "description": "link-0"
   },
+  "exchange.menuItem.Canada": {
+    "defaultMessage": "Canada",
+    "description": "Canada"
+  },
+  "exchange.menuItem.USA": {
+    "defaultMessage": "USA",
+    "description": "USA"
+  },
+  "exchange.menuItem.USA.Miami": {
+    "defaultMessage": "Miami",
+    "description": "USA.Miami"
+  },
+  "exchange.menuItem.USA.New-York": {
+    "defaultMessage": "New York",
+    "description": "USA.New York"
+  },
+  "exchange.menuItem.USA.detroit": {
+    "defaultMessage": "Detroit",
+    "description": "USA.detroit"
+  },
+  "exchange.menuItem.USA.texas": {
+    "defaultMessage": "Texas",
+    "description": "USA.texas"
+  },
   "exchange.menuItem.asia.label": {
     "defaultMessage": "Asia",
     "description": "asia.label"
@@ -243,6 +267,10 @@
     "defaultMessage": "Some Bahrainian Exchange",
     "description": "bahrain.exhange.label"
   },
+  "exchange.menuItem.canada.exhange.label": {
+    "defaultMessage": "Toronto",
+    "description": "canada.exhange.label"
+  },
   "exchange.menuItem.israel": {
     "defaultMessage": "Israel",
     "description": "israel"
@@ -250,6 +278,10 @@
   "exchange.menuItem.israel.exchange": {
     "defaultMessage": "Some Israeli Exchange",
     "description": "israel.exchange"
+  },
+  "exchange.menuItem.north-america.label": {
+    "defaultMessage": "North America",
+    "description": "north-america.label"
   },
   "exchange.menuItem.p2p.exchange.0.label": {
     "defaultMessage": "Some Peer To Peer Excahnge",
@@ -260,7 +292,7 @@
     "description": "peer2peer"
   },
   "exchange.menuItem.someExchange": {
-    "defaultMessage": "Some Exchange ...",
+    "defaultMessage": "Some International Exchange ...",
     "description": "someExchange"
   },
   "exchangeMenuItem.international.label": {
