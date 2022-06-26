@@ -5,6 +5,8 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 
+console.log('🏘 DOTENV BASE_PATH:', process.env.BASE_PATH)
+
 export default defineConfig({
   plugins: [reactRefresh(),
   
