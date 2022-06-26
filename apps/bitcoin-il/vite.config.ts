@@ -1,6 +1,9 @@
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import { defineConfig } from "vite";
 import { viteStaticCopy } from 'vite-plugin-static-copy'
+import dotenv from 'dotenv'
+dotenv.config()
+
 
 export default defineConfig({
   plugins: [reactRefresh(),
@@ -21,7 +24,7 @@ export default defineConfig({
       }
     })
   ],
-  base: '/bitcoinil.org/',
+  base: process.env.BASE_PATH || '/',
   server: {
     hmr: {
       protocol: "ws",
