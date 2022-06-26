@@ -41,6 +41,7 @@ jobs:
           NOTION_PAGE: ${{ secrets.NOTION_PAGE }}
         run: |
           yarn build --filter=bitcoin-il
+          cp apps/bitcoin-il/dist/index.html apps/bitcoin-il/dist/404.html
 
       - name: Init new repo in dist folder and commit generated files
         run: |
