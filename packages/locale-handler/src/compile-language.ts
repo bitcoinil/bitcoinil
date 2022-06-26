@@ -25,7 +25,6 @@ const args = arg(
   },
   { permissive: true }
 )
-console.log('ARGZ', args)
 
 const notionToken = args['--token'] || process.env.NOTION_TOKEN
 const pageName = args['--page'] || process.env.NOTION_PAGE
@@ -55,7 +54,7 @@ const init = async () => {
     if (ee.code === 'notionhq_client_request_timeout') await liveLoader()
   })
 
-  if (!args['--load-cached'])
+  if (!loadCached)
     await liveLoader()
   else await useCached().then(cachedLoader)
 }
@@ -195,7 +194,7 @@ const useLive = async () => {
   await compile()
 
   if (args['--listen']) {
-    console.log('LISTEN!')
+    verbose && console.log('LISTEN!')
     const compiler = (db: string) => async (data: any) => {
       try {
         console.log('🎆🎆🎆🎆☎️ Data for database language:', data)
