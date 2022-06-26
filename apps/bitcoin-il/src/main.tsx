@@ -3,6 +3,11 @@ import * as ReactDOM from 'react-dom'
 import App from './App'
 import { BrowserRouter as Router } from 'react-router-dom'
 
+console.log('BASE_PATH:', import.meta.env.BASE_PATH || '/', {
+  env: import.meta.env.BASE_PATH,
+  def: '/'
+})
+
 ReactDOM.render(
   <Router basename={import.meta.env.BASE_PATH || '/'}>
     <React.StrictMode>
