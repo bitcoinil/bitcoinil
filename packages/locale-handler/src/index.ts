@@ -4,6 +4,7 @@ const args = arg(
   {
     '--ingest-language': Boolean,
     '--compile-language': Boolean,
+    '--silent': Boolean
   },
   { permissive: true }
 )
@@ -22,4 +23,14 @@ const init = async () => {
   }
 }
 
-init()
+let loaded = false
+while (!loaded) {
+  try {
+    if (args['--silent']) init().catch(() => {})
+    else init()
+    loaded = true
+  } catch (e) {
+    console.log('Error loading:', e)
+    console.log('Language loading failed... trying again...')
+  }
+}

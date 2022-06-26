@@ -198,9 +198,6 @@ class NotionDatabaseHandler {
     return this.cache.databases[databaseName].handle.read(pageSize, readAll)
   }
   public listen(databaseName: string, callback: (data: any) => void | Promise<void>) {
-    console.log('LISTENING TO DATABASE', databaseName, callback)
-    console.log('INVOKING CALLBACK', callback({}))
-
     if (!this.cache.databases[databaseName])
       throw new Error(`Database '${databaseName}' not found`)
     return this.cache.databases[databaseName].handle.listen(callback)

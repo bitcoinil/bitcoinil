@@ -480,28 +480,32 @@ class PageManager {
           ).writeFile(filename, JSON.stringify(data, null, 2))
         }
 
-        console.log('👂🦻👂 WANT TO LISTEN', dbName, callback)
         while (true) {
           const live = await readFromDatabase()
-          // console.log('👂🦻👂 Live response', dbName, live)
 
           const file = await readFromFile()
+          // @ts-ignore
+          console.log(
+            'Checking',
+            dbName,
+            '\nChanged:',
+            // @ts-ignore
+            live?.last_edited_time !== file?.last_edited_time,
+            '\nLive:',
+            // @ts-ignore
+            live?.last_edited_time,
+            '\nFile:',
+            // @ts-ignore
+            file?.last_edited_time,
+          )
           if (live) {
             // @ts-ignore
             if (live.last_edited_time !== file?.last_edited_time) {
-              console.log(
-                '🚨👂🚨🦻🚨👂🚨 DIFFERENCE',
-                // @ts-ignore
-                live.last_edited_time,
-                file?.last_edited_time
-              )
               // @ts-ignore
               await callback(live.last_edited_time)
               await writeToFile(live)
             }
           }
-
-          console.log('🦻 Listening', ++cacheObject.listenCount, dbName)
 
           // sleep for 3 seconds
           await new Promise((resolve) => setTimeout(resolve, 3000))
